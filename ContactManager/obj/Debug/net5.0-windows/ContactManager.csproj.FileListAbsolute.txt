@@ -1,0 +1,36 @@
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.csproj.AssemblyReference.cache
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.Form1.resources
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.csproj.GenerateResource.cache
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.AssemblyInfoInputs.cache
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.AssemblyInfo.cs
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.csproj.CoreCompileInputs.cache
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.exe
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.deps.json
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.runtimeconfig.json
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.runtimeconfig.dev.json
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.dll
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ref\ContactManager.dll
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.pdb
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.dll
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ref\ContactManager.dll
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.pdb
+D:\Google Drive\Schule\Programming_Foundation_II\Semesterprojekt\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.genruntimeconfig.cache
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.exe
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.deps.json
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.runtimeconfig.json
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.runtimeconfig.dev.json
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.dll
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ref\ContactManager.dll
+C:\Work\4_Temp\ContactManager\ContactManager\bin\Debug\net5.0-windows\ContactManager.pdb
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.Form1.resources
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.csproj.GenerateResource.cache
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.AssemblyInfoInputs.cache
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.AssemblyInfo.cs
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.csproj.CoreCompileInputs.cache
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.dll
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ref\ContactManager.dll
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.pdb
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.genruntimeconfig.cache
+C:\Work\4_Temp\ContactManager\ContactManager\obj\Debug\net5.0-windows\ContactManager.csproj.AssemblyReference.cache
