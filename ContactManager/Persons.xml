@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Persons>
+  <Customers>
+    <Customer>
+      <Id>0</Id>
+      <State>Aktiv</State>
+      <Salutation>Herr</Salutation>
+      <Title></Title>
+      <Firstname>Max</Firstname>
+      <Lastname>Muster</Lastname>
+      <Sex>männlich</Sex>
+      <Function>Einkaufsleiter</Function>
+      <CompanyName>Test AG</CompanyName>
+      <CustomerType>A</CustomerType>
+      <Address>
+        <Street>Oberdorfstrasse</Street>
+        <Number>5</Number>
+        <City>Zürich</City>
+        <Zip>8000</Zip>
+        <Country>Schweiz</Country>
+      </Address>
+      <ContactData>
+        <Phone Type="Business">+41-12-123-1234</Phone>
+        <Phone Type="Mobile">+41-12-123-2345</Phone>
+        <Fax>+41-12-123-3456</Fax>
+        <EMail>max.muster@admin.ch</EMail>
+      </ContactData>
+      <Logs>
+        <Log>
+          <Id>0</Id>
+          <Date>11.07.2021</Date>
+          <Time>15:30</Time>
+          <Text>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
+            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
+            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+            est Lorem ipsum dolor sit amet.
+          </Text>
+        </Log>
+      </Logs>
+    </Customer>
+  </Customers>
+  <Employees>
+    <Employee>
+      <Id>0</Id>
+      <State>Aktiv</State>
+      <Salutation>Frau</Salutation>
+      <Title></Title>
+      <Firstname>Anna</Firstname>
+      <Lastname>Bolika</Lastname>
+      <Sex>weiblich</Sex>
+      <Function>Verkaufsleiterin</Function>
+      <DateOfBirth>15.01.1980</DateOfBirth>
+      <Department>Verkauf</Department>
+      <InsuranceNumber>123.1234.1234.12</InsuranceNumber>
+      <Citizenship>Schweiz</Citizenship>
+      <EntryDate>02.01.2015</EntryDate>
+      <SeparationDate></SeparationDate>
+      <LevelOfEmployment>80</LevelOfEmployment>
+      <Level>2</Level>
+      <Address>
+        <Street>Nordstrasse</Street>
+        <Number>6</Number>
+        <City>Goldach</City>
+        <Zip>9403</Zip>
+        <Country>Schweiz</Country>
+      </Address>
+      <ContactData>
+        <Phone Type="Business">+41-23-123-1234</Phone>
+        <Phone Type="Mobile">+41-32-123-1234</Phone>
+        <Phone Type="Private">+41-34-123-1234</Phone>
+        <EMail>anna.bolika@verkauf.ch</EMail>
+      </ContactData>
+    </Employee>
+  </Employees>
+  <Trainees>
+    <Trainee>
+      <Id>0</Id>
+      <State>Aktiv</State>
+      <Salutation>Herr</Salutation>
+      <Title></Title>
+      <Firstname>Mario</Firstname>
+      <Lastname>Richter</Lastname>
+      <Sex>männlich</Sex>
+      <Function>Lernender Elektroniker</Function>
+      <DateOfBirth>15.01.2005</DateOfBirth>
+      <Department>Produktion</Department>
+      <InsuranceNumber>123.1234.1234.21</InsuranceNumber>
+      <Citizenship>Schweiz</Citizenship>
+      <EntryDate>02.08.2020</EntryDate>
+      <SeparationDate></SeparationDate>
+      <LevelOfEmployment>100</LevelOfEmployment>
+      <Level>0</Level>
+      <Address>
+        <Street>Gäbeliweg</Street>
+        <Number>6</Number>
+        <City>Montlingen</City>
+        <Zip>9462</Zip>
+        <Country>Schweiz</Country>
+      </Address>
+      <ContactData>
+        <Phone Type="Business">+41-23-123-1243</Phone>
+        <Phone Type="Mobile">+41-32-123-1243</Phone>
+        <Phone Type="Private">+41-34-123-1243</Phone>
+        <EMail>mario.richter@produktion.ch</EMail>
+      </ContactData>
+    </Trainee>
+  </Trainees>
+</Persons>
