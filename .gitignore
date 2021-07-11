@@ -2,9 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/ContactManager/obj/Debug/net5.0-windows/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
-/ContactManager/obj/Release/net5.0-windows/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs
-/ContactManager/obj/Release/net5.0-windows/ContactManager.AssemblyInfo.cs
-/ContactManager/obj/Release/net5.0-windows/ContactManager.AssemblyInfoInputs.cache
-/ContactManager/obj/Release/net5.0-windows/ContactManager.assets.cache
-/ContactManager/obj/Release/net5.0-windows/ContactManager.GeneratedMSBuildEditorConfig.editorconfig
+/ContactManager/bin/
+/ContactManager/obj/
