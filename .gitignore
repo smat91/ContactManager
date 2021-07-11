@@ -2,6 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/ContactManager/bin/
-/ContactManager/obj/
-/.vs/
+.vs
+bin
+obj
