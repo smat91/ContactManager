@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\4_Temp\\ContactManager\\ContactManager\\ContactManager.csproj": {}
+    "D:\\Google Drive\\Schule\\Programming_Foundation_II\\Semesterprojekt\\ContactManager\\ContactManager\\ContactManager.csproj": {}
   },
   "projects": {
-    "C:\\Work\\4_Temp\\ContactManager\\ContactManager\\ContactManager.csproj": {
+    "D:\\Google Drive\\Schule\\Programming_Foundation_II\\Semesterprojekt\\ContactManager\\ContactManager\\ContactManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\4_Temp\\ContactManager\\ContactManager\\ContactManager.csproj",
+        "projectUniqueName": "D:\\Google Drive\\Schule\\Programming_Foundation_II\\Semesterprojekt\\ContactManager\\ContactManager\\ContactManager.csproj",
         "projectName": "ContactManager",
-        "projectPath": "C:\\Work\\4_Temp\\ContactManager\\ContactManager\\ContactManager.csproj",
-        "packagesPath": "C:\\Users\\matthias.stieger.COMPUTECHNIC\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\4_Temp\\ContactManager\\ContactManager\\obj\\",
+        "projectPath": "D:\\Google Drive\\Schule\\Programming_Foundation_II\\Semesterprojekt\\ContactManager\\ContactManager\\ContactManager.csproj",
+        "packagesPath": "C:\\Users\\matth\\.nuget\\packages\\",
+        "outputPath": "D:\\Google Drive\\Schule\\Programming_Foundation_II\\Semesterprojekt\\ContactManager\\ContactManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\matthias.stieger.COMPUTECHNIC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

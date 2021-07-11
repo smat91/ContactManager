@@ -6,8 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\matthias.stieger.COMPUTECHNIC\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\matthias.stieger.COMPUTECHNIC\\.nuget\\packages",
+      "C:\\Users\\matth\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\matth\\.nuget\\packages",
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "configProperties": {
