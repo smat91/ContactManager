@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using System.Xml.Serialization;
+using System.Xml.Linq;
 
 namespace ContactManager
 {
     public class Employee : Person
     {
-        [XmlElement("EmployeeNumber", DataType = "int")]
         public int EmployeeNumber { get; set; }
-        [XmlElement("Birthday", DataType = "date")]
         public DateTime Birthday { get; set; }
 
 
