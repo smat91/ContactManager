@@ -63,7 +63,6 @@ namespace ContactManager
             this.CmdReadCustomers.TabIndex = 2;
             this.CmdReadCustomers.Text = "read customers";
             this.CmdReadCustomers.UseVisualStyleBackColor = true;
-            this.CmdReadCustomers.Click += new System.EventHandler(this.CmdReadCustomers_Click);
             // 
             // CmdReadEmployees
             // 
@@ -73,7 +72,6 @@ namespace ContactManager
             this.CmdReadEmployees.TabIndex = 3;
             this.CmdReadEmployees.Text = "read emploees";
             this.CmdReadEmployees.UseVisualStyleBackColor = true;
-            this.CmdReadEmployees.Click += new System.EventHandler(this.CmdReadEmployees_Click);
             // 
             // CmdReadTrainees
             // 
@@ -83,7 +81,6 @@ namespace ContactManager
             this.CmdReadTrainees.TabIndex = 4;
             this.CmdReadTrainees.Text = "read trainees";
             this.CmdReadTrainees.UseVisualStyleBackColor = true;
-            this.CmdReadTrainees.Click += new System.EventHandler(this.CmdReadTrainees_Click);
             // 
             // Form1
             // 

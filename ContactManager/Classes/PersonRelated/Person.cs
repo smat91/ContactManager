@@ -10,12 +10,51 @@ namespace ContactManager
 {
     public class Person
     {
-        public string firstname_ {
-            get { return (string)person_.Descendants("Firstname").FirstOrDefault();} 
-            
-            set { }}
+        public string firstname_ 
+        {
+            get 
+            {
+                return (string)
+                  (from element in person_.Descendants("Firstname")
+                   select element).First();
+            }
 
-        public string lastname_ { get; set; }
+            set 
+            {
+                if (value != null)
+                {
+                    (from element in person_.Descendants("Firstname")
+                     select element).First().SetValue(value);
+                }
+                else
+                { 
+                    throw new ArgumentException("value cannot be null!");
+                }
+            }
+        }
+
+        public string lastname_
+        {
+            get
+            {
+                return (string)
+                  (from element in person_.Descendants("Lastname")
+                   select element).First();
+            }
+
+            set
+            {
+                if (value != null)
+                {
+                    (from element in person_.Descendants("Lastname")
+                     select element).First().SetValue(value);
+                }
+                else
+                {
+                    throw new ArgumentException("value cannot be null!");
+                }
+            }
+        }
 
         private IEnumerable<XElement> person_;
 
