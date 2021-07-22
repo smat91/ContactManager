@@ -56,7 +56,7 @@ namespace ContactManager
             }
         }
 
-        private IEnumerable<XElement> person_;
+        public IEnumerable<XElement> person_;
 
         public Person(ref IEnumerable<XElement> person)
         {
