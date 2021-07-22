@@ -10,7 +10,7 @@ namespace ContactManager.Classes.PersonRelated
 {
     public class Employee : Person
     {
-        public string departement_
+        public string department_
         {
             get
             {
@@ -56,7 +56,7 @@ namespace ContactManager.Classes.PersonRelated
 
         public override string ToString()
         {
-            return base.ToString() + ", " + Department + ", " + birthday_.ToShortDateString();
+            return base.ToString() + ", " + department_ + ", " + birthday_.ToShortDateString();
         }
     }
 }
