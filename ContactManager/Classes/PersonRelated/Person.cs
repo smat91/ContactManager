@@ -10,29 +10,30 @@ namespace ContactManager
 {
     public class Person
     {
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
+        public string firstname_ {
+            get { return (string)person_.Descendants("Firstname").FirstOrDefault();} 
+            
+            set { }}
 
-        public Person(string flirstname, string lastname)
-        {
-            Firstname = flirstname;
-            Lastname = lastname;
-        }
+        public string lastname_ { get; set; }
 
-        public Person()
+        private IEnumerable<XElement> person_;
+
+        public Person(ref IEnumerable<XElement> person)
         {
+            person_ = person;
         }
 
         public override bool Equals(object obj)
         {
             return obj is Person person &&
-                   Firstname == person.Firstname &&
-                   Lastname == person.Lastname;
+                   firstname_ == person.firstname_ &&
+                   lastname_ == person.lastname_;
         }
 
         public override string ToString()
         {
-            return Firstname + ", " + Lastname;
+            return firstname_ + ", " + lastname_;
         }
 
     }

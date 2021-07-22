@@ -35,8 +35,8 @@ namespace ContactManager
         private void CmdReadCustomers_Click(object sender, EventArgs e)
         {
             TxtOutput.Clear();
-            IEnumerable<XElement> customers = xdocument.Elements();
-            foreach (XElement customer in customers.Descendants ("Customer"))
+            IEnumerable<XElement> persons = xdocument.Elements();
+            foreach (XElement customer in persons.Descendants ("Customer"))
             {
                 TxtOutput.Text = customer + "\r\n";
             }
@@ -44,19 +44,24 @@ namespace ContactManager
 
         private void CmdReadEmployees_Click(object sender, EventArgs e)
         {
-            TxtOutput.Clear();
-            IEnumerable<XElement> employees = xdocument.Elements();
-            foreach (XElement employee in employees.Descendants("Employee"))
-            {
-                TxtOutput.Text = employee + "\r\n";
-            }
+            //TxtOutput.Clear();
+            //IEnumerable<XElement> persons = xdocument.Elements();
+            
+            //XElement employees in persons.Descendants("Employees"));
+
+            //from address in xelement.Elements("Employee")
+            //where (string)address.Element("Address").Element("City") == "Alta"
+            //select address;
+
+            //Employee e1 = new Person(ref persons);
+
         }
 
         private void CmdReadTrainees_Click(object sender, EventArgs e)
         {
             TxtOutput.Clear();
-            IEnumerable<XElement> trainees = xdocument.Elements();
-            foreach (XElement trainee in trainees.Descendants("Trainee"))
+            IEnumerable<XElement> persons = xdocument.Elements();
+            foreach (XElement trainee in persons.Descendants("Trainee"))
             {
                 TxtOutput.Text = trainee + "\r\n";
             }
