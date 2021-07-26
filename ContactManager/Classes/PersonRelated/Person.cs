@@ -21,16 +21,11 @@ namespace ContactManager
 
             set
             {
-                if (value != null) //Int immer true, was brauchen wir hier?
-                {
+                
                     (from element in person_.Descendants("Id")
                      select element).First().SetValue(value);
-                }
-                else
-                {
-                    throw new ArgumentException("value cannot be null!");
-                }
             }
+               
         }
 
         public string state_
@@ -79,6 +74,29 @@ namespace ContactManager
             }
 
         
+        }
+
+        public string title_
+        {
+            get
+            {
+                return (string)
+                  (from element in person_.Descendants("Titel")
+                   select element).First();
+            }
+
+            set
+            {
+                if (value != null)
+                {
+                    (from element in person_.Descendants("Titel")
+                     select element).First().SetValue(value);
+                }
+                else
+                {
+                    throw new ArgumentException("value cannot be null!");
+                }
+            }
         }
         public string firstname_ 
         {
@@ -206,15 +224,8 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
-                {
                     (from element in person_.Descendants("Number")
                      select element).First().SetValue(value);
-                }
-                else
-                {
-                    throw new ArgumentException("value cannot be null!");
-                }
             }
         }
 
@@ -252,15 +263,9 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
-                {
-                    (from element in person_.Descendants("Zip")
-                     select element).First().SetValue(value);
-                }
-                else
-                {
-                    throw new ArgumentException("value cannot be null!");
-                }
+
+                (from element in person_.Descendants("Zip")
+                 select element).First().SetValue(value);
             }
         }
 
@@ -311,6 +316,29 @@ namespace ContactManager
             }
         }
 
+        public string eMail_
+        {
+            get
+            {
+                return (string)
+                  (from element in person_.Descendants("EMail")
+                   select element).First();
+            }
+
+            set
+            {
+                if (value != null)
+                {
+                    (from element in person_.Descendants("EMail")
+                     select element).First().SetValue(value);
+                }
+                else
+                {
+                    throw new ArgumentException("value cannot be null!");
+                }
+            }
+        }
+
         public IEnumerable<XElement> person_;
 
         public Person(ref IEnumerable<XElement> person)
@@ -321,13 +349,29 @@ namespace ContactManager
         public override bool Equals(object obj)
         {
             return obj is Person person &&
+                   id_ == person.id_ &&
+                   state_ == person.state_ &&
+                   salutation_ == person.salutation_ &&
+                   title_ == person.title_ &&
                    firstname_ == person.firstname_ &&
-                   lastname_ == person.lastname_;
+                   lastname_ == person.lastname_ &&
+                   sex_ == person.sex_ &&
+                   function_ == person.function_ &&
+                   street_ == person.street_ &&
+                   number_ == person.number_ &&
+                   city_ == person.city_ &&
+                   zip_ == person.zip_ &&
+                   phoneBusiness_ == person.phoneBusiness_ &&
+                   phoneMob_ == person.phoneMob_ &&
+                   eMail_ == person.eMail_;
+
+
         }
 
         public override string ToString()
         {
-            return firstname_ + ", " + lastname_;
+            return id_ + ", " + state_ + ", " + salutation_ + ", " + title_ + ", " + firstname_ + ", " + lastname_ + ", " + sex_ + ", " +
+                function_ + ", " + street_ + " " + number_ + ", " + zip_ + ", " + city_ + ", " + phoneBusiness_ + ", " + phoneMob_ + ", " + eMail_;
         }
 
     }
