@@ -10,10 +10,14 @@ namespace ContactManager
 {
     public class Person
     {
+        // Variable für "ID" erstellt. Wird von XML bezogen | weitere Variablen folgen
         public int id_
         {
+            // Get- und Set-Methode vorbereitet. Bezogen auf XML
             get
             {
+                // return gibt einen Int zurück / Descendants liefert eine Sammlung der Nachfahrenelemente für
+                // dieses Dokument oder Element in der Reihenfolge der Dokumente.
                 return (int)
                     (from element in person_.Descendants("Id")
                      select element).First();
@@ -39,6 +43,7 @@ namespace ContactManager
 
             set
             {
+                // Mit If-Schleife wird überprüft, ob ein Wert angegeben worden ist, wenn nicht, dann wird ein ArgumentException ausgeworfen
                 if (value != null)
                 {
                     (from element in person_.Descendants("State")
@@ -339,6 +344,7 @@ namespace ContactManager
             }
         }
 
+        // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
         public IEnumerable<XElement> person_;
 
         public Person(ref IEnumerable<XElement> person)
@@ -346,6 +352,7 @@ namespace ContactManager
             person_ = person;
         }
 
+        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
         public override bool Equals(object obj)
         {
             return obj is Person person &&
@@ -362,12 +369,13 @@ namespace ContactManager
                    city_ == person.city_ &&
                    zip_ == person.zip_ &&
                    phoneBusiness_ == person.phoneBusiness_ &&
-                   phoneMob_ == person.phoneMob_ &&
+                   phoneMob_ == person.phoneMob_&&
                    eMail_ == person.eMail_;
 
 
         }
 
+        // Alle Inhalte (bspw. int) wird als String zurückgegeben.
         public override string ToString()
         {
             return id_ + ", " + state_ + ", " + salutation_ + ", " + title_ + ", " + firstname_ + ", " + lastname_ + ", " + sex_ + ", " +
