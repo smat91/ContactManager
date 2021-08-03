@@ -27,7 +27,7 @@
       </ContactData>
       <Logs>
         <Log>
-          <Id>0</Id>
+          <TicketId>0</TicketId>
           <Date>11.07.2021</Date>
           <Time>15:30</Time>
           <Text>
@@ -42,7 +42,7 @@
           </Text>
         </Log>
         <Log>
-          <Id>1</Id>
+          <TicketId>1</TicketId>
           <Date>11.07.2021</Date>
           <Time>16:40</Time>
           <Text>
