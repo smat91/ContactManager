@@ -352,6 +352,36 @@ namespace ContactManager
             person_ = person;
         }
 
+
+        // Mit diesem Befehl wird ein XElement Template von Person erzeugt und ausgegenben
+        public XElement XelementTemplate()
+        {
+            return new XElement("Person",
+                            new XElement("Id", ""),
+                            new XElement("State", ""),
+                            new XElement("Salutation", ""),
+                            new XElement("Titel", ""),
+                            new XElement("FirstName", ""),
+                            new XElement("LastName", ""),
+                            new XElement("Sex", ""),
+                            new XElement("Function", ""),
+                            new XElement("Address",
+                                new XElement("Street", ""),
+                                new XElement("Number", ""),
+                                new XElement("Land", ""),
+                                new XElement("City", ""),
+                                new XElement("Zip", "")
+                                ),
+                            new XElement("ContactData",
+                                new XElement("Phone", "",
+                                    new XAttribute("Type", "Business")),
+                                new XElement("Phone", "",
+                                    new XAttribute("Type", "Mobile")),
+                                new XElement("EMail", "")
+                                )
+                       );
+        }
+
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
         public override bool Equals(object obj)
         {
@@ -371,15 +401,26 @@ namespace ContactManager
                    phoneBusiness_ == person.phoneBusiness_ &&
                    phoneMob_ == person.phoneMob_&&
                    eMail_ == person.eMail_;
-
-
         }
 
         // Alle Inhalte (bspw. int) wird als String zurückgegeben.
         public override string ToString()
         {
-            return id_ + ", " + state_ + ", " + salutation_ + ", " + title_ + ", " + firstname_ + ", " + lastname_ + ", " + sex_ + ", " +
-                function_ + ", " + street_ + " " + number_ + ", " + zip_ + ", " + city_ + ", " + phoneBusiness_ + ", " + phoneMob_ + ", " + eMail_;
+            return  id_ + ", " + 
+                    state_ + ", " + 
+                    salutation_ + ", " + 
+                    title_ + ", " + 
+                    firstname_ + ", " + 
+                    lastname_ + ", " + 
+                    sex_ + ", " +
+                    function_ + ", " + 
+                    street_ + " " + 
+                    number_ + ", " + 
+                    zip_ + ", " + 
+                    city_ + ", " + 
+                    phoneBusiness_ + ", " + 
+                    phoneMob_ + ", " + 
+                    eMail_;
         }
 
     }
