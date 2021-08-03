@@ -74,6 +74,32 @@ namespace ContactManager.Classes.PersonRelated
         {
         }
 
+        // Mit diesem Befehl wird ein XElement Template von Customer erzeugt und ausgegenben
+        public XElement XelementTemplate()
+        {
+            XElement customer = base.XelementTemplate();
+
+            // Person Element von Basis nach Customer umbenennen
+            customer.Element("Person").Name = "Customer";
+
+            // Neue kundenbezogene Allgemeinattribute hinzufügen
+            customer.Descendants("Function").FirstOrDefault()
+                .AddAfterSelf(new XElement("CompanyName", ""),
+                              new XElement("CustomerType", ""));
+
+            // Neue kundenbezogene Kontaktattribute hinzufügen
+            customer.Descendants("Phone")
+                .Where(element => (string)element.Attribute("Type") == "Mobile")
+                .FirstOrDefault()
+                .AddAfterSelf(new XElement("Fax", ""));
+
+            // Neue kundenbezogene Gesprächsattribute hinzufügen
+            // Gesprächsnotizen werden über eine eigene Klasse hinzugefügt
+            customer.Add(new XElement("Logs", ""));
+
+            return customer;
+        }
+
         public override string ToString()
         {
             return base.ToString() + ", " + companyName_ + ", " + customerType_;

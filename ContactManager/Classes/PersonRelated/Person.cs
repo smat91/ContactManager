@@ -352,7 +352,6 @@ namespace ContactManager
             person_ = person;
         }
 
-
         // Mit diesem Befehl wird ein XElement Template von Person erzeugt und ausgegenben
         public XElement XelementTemplate()
         {
