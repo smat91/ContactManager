@@ -30,8 +30,7 @@ namespace ContactManager.Classes.PersonRelated
                 {
                     throw new ArgumentException("value cannot be null!");
                 }
-            }
-        }
+            }        }
 
         public string customerType_
         {
@@ -69,9 +68,13 @@ namespace ContactManager.Classes.PersonRelated
             }
         }
 
-        public Customer(ref IEnumerable<XElement> person)
-            : base(ref person)
+             // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
+        public IEnumerable<XElement> customer_;
+
+        public Customer(ref IEnumerable<XElement> customer)
+            : base(ref customer)
         {
+            customer_ = customer;
         }
 
         // Mit diesem Befehl wird ein XElement Template von Customer erzeugt und ausgegenben
@@ -100,9 +103,30 @@ namespace ContactManager.Classes.PersonRelated
             return customer;
         }
 
+        public XElement AddLog(string text)
+        {
+            int count = customer_.Descendants("Logs").Count();     
+
+            customer_.Descendants("Logs")
+                .FirstOrDefault()
+                .Add(new XElement("Log", 
+                        new XElement("TicketId", ++count),
+                        new XElement("Date", DateTime.Now.Date), 
+                        new XElement("Time", DateTime.Now.TimeOfDay),
+                        new XElement("Text", text)
+                        )
+                );
+        }
+
         public override string ToString()
         {
-            return base.ToString() + ", " + companyName_ + ", " + customerType_;
+            return base.ToString() + ", " + companyName_ + ", " + customerType_; //fax, equals methode einfügen, user control infos sammeln
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj) &&
+                companyName_ == obj.companyName_        
         }
     }
 }
