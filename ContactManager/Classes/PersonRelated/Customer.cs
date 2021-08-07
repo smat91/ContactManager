@@ -118,15 +118,19 @@ namespace ContactManager.Classes.PersonRelated
                 );
         }
 
+        // Alle Inhalte (bspw. int) wird als String zurückgegeben.
         public override string ToString()
         {
-            return base.ToString() + ", " + companyName_ + ", " + customerType_; //fax, equals methode einfügen, user control infos sammeln
+            return base.ToString() + ", " + companyName_ + ", " + customerType_ + fax_ +", "; //fax, equals methode einfügen, user control infos sammeln
         }
 
+        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
         public override bool Equals(object obj)
         {
             return base.Equals(obj) &&
-                companyName_ == obj.companyName_        
+                companyName_ == obj.companyName_ &&
+                customerType_ == obj.customerType_ &&
+                fax_ == obj.fax_;
         }
     }
 }
