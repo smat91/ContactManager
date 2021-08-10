@@ -56,7 +56,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (string)
-                    (from element in person_.Descendants("InsuranceNumber"
+                    (from element in person_.Descendants("InsuranceNumber")
                      select element).First();
             }
 
