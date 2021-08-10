@@ -15,7 +15,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (int)
-                  (from element in person_.Descendants("NumberOfTraineeYears")
+                  (from element in trainee_.Descendants("NumberOfTraineeYears")
                    select element).First();
             }
 
@@ -23,7 +23,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value > 0)
                 {
-                    (from element in person_.Descendants("NumberOfTraineeYears")
+                    (from element in trainee_.Descendants("NumberOfTraineeYears")
                      select element).First().SetValue(value);
                 }
                 else
@@ -38,7 +38,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (int)
-                  (from element in person_.Descendants("CurrentTraineeYear")
+                  (from element in trainee_.Descendants("CurrentTraineeYear")
                    select element).First();
             }
 
@@ -46,7 +46,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value > 0 && value <= numberOfTraineeYears_)
                 {
-                    (from element in person_.Descendants("CurrentTraineeYear")
+                    (from element in trainee_.Descendants("CurrentTraineeYear")
                      select element).First().SetValue(value);
                 }
                 else
@@ -57,7 +57,7 @@ namespace ContactManager.Classes.PersonRelated
         }
 
         // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        public IEnumerable<XElement> trainee_;
+        private IEnumerable<XElement> trainee_;
 
         public Trainee(ref IEnumerable<XElement> trainee)
             : base(ref trainee)

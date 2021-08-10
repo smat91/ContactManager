@@ -15,7 +15,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (string)
-                  (from element in person_.Descendants("CompanyName")
+                  (from element in customer_.Descendants("CompanyName")
                    select element).First();
             }
 
@@ -23,7 +23,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("CompanyName")
+                    (from element in customer_.Descendants("CompanyName")
                      select element).First().SetValue(value);
                 }
                 else
@@ -37,7 +37,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return  (string)
-                  (from element in person_.Descendants("CustomerType")
+                  (from element in customer_.Descendants("CustomerType")
                    select element).First();
             }
 
@@ -52,7 +52,7 @@ namespace ContactManager.Classes.PersonRelated
 
                     if (customerType >= a && customerType <= e)
                     {
-                        (from element in person_.Descendants("CustomerType")
+                        (from element in customer_.Descendants("CustomerType")
                          select element).First().SetValue(value);
                     }
                     else 
@@ -68,8 +68,31 @@ namespace ContactManager.Classes.PersonRelated
             }
         }
 
-             // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        public IEnumerable<XElement> customer_;
+        public string fax_
+        {
+            get
+            {
+                return (string)
+                  (from element in customer_.Descendants("Fax")
+                   select element).First();
+            }
+
+            set
+            {
+                if (value != null)
+                {
+                    (from element in customer_.Descendants("Fax")
+                     select element).First().SetValue(value);
+                }
+                else
+                {
+                    throw new ArgumentException("value cannot be null!");
+                }
+            }
+        }
+
+        // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
+        private IEnumerable<XElement> customer_;
 
         public Customer(ref IEnumerable<XElement> customer)
             : base(ref customer)
@@ -78,7 +101,7 @@ namespace ContactManager.Classes.PersonRelated
         }
 
         // Mit diesem Befehl wird ein XElement Template von Customer erzeugt und ausgegenben
-        public XElement XelementTemplate()
+        public override XElement XelementTemplate()
         {
             XElement customer = base.XelementTemplate();
 
@@ -103,7 +126,7 @@ namespace ContactManager.Classes.PersonRelated
             return customer;
         }
 
-        public XElement AddLog(string text)
+        public void AddLog(string text)
         {
             int count = customer_.Descendants("Logs").Count();     
 
@@ -121,16 +144,20 @@ namespace ContactManager.Classes.PersonRelated
         // Alle Inhalte (bspw. int) wird als String zurückgegeben.
         public override string ToString()
         {
-            return base.ToString() + ", " + companyName_ + ", " + customerType_ + fax_ +", "; //fax, equals methode einfügen, user control infos sammeln
+            return base.ToString() + ", " + 
+                companyName_ + ", " + 
+                customerType_ + ", " + 
+                fax_;
         }
 
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
         public override bool Equals(object obj)
         {
-            return base.Equals(obj) &&
-                companyName_ == obj.companyName_ &&
-                customerType_ == obj.customerType_ &&
-                fax_ == obj.fax_;
+            return obj is Customer customer &&
+                base.Equals(customer) &&
+                companyName_ == customer.companyName_ &&
+                customerType_ == customer.customerType_ &&
+                fax_ == customer.fax_;
         }
     }
 }

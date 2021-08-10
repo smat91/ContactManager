@@ -17,13 +17,13 @@ namespace ContactManager.Classes.PersonRelated
                 // return gibt einen Int zurück / Descendants liefert eine Sammlung der Nachfahrenelemente für
                 // dieses Dokument oder Element in der Reihenfolge der Dokumente.
                 return (DateTime)
-                  (from element in person_.Descendants("DateOfBirth")
+                  (from element in employee_.Descendants("DateOfBirth")
                    select element).First();
             }
 
             set
             {
-                (from element in person_.Descendants("DateOfBirth")
+                (from element in employee_.Descendants("DateOfBirth")
                 select element).First().SetValue(value);
             }
         }
@@ -33,7 +33,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Department")
+                  (from element in employee_.Descendants("Department")
                    select element).First();
             }
 
@@ -41,7 +41,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Department")
+                    (from element in employee_.Descendants("Department")
                      select element).First().SetValue(value);
                 }
                 else
@@ -56,7 +56,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (string)
-                    (from element in person_.Descendants("InsuranceNumber")
+                    (from element in employee_.Descendants("InsuranceNumber")
                      select element).First();
             }
 
@@ -64,7 +64,7 @@ namespace ContactManager.Classes.PersonRelated
             { 
                 if (value != null)
                 {
-                    (from element in person_.Descendants("InsuranceNumber")
+                    (from element in employee_.Descendants("InsuranceNumber")
                      select element).First().SetValue(value);
                 }
                 else
@@ -79,7 +79,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (string)
-                    (from element in person_.Descendants("Citizenship")
+                    (from element in employee_.Descendants("Citizenship")
                      select element).First();
             }
 
@@ -87,7 +87,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Citizenship")
+                    (from element in employee_.Descendants("Citizenship")
                      select element).First().SetValue(value);
                 }
                 else
@@ -102,13 +102,13 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (DateTime)
-                  (from element in person_.Descendants("EntryDate")
+                  (from element in employee_.Descendants("EntryDate")
                    select element).First();
             }
 
             set
             {
-                (from element in person_.Descendants("EntryDate")
+                (from element in employee_.Descendants("EntryDate")
                 select element).First().SetValue(value);
             }
         }
@@ -118,7 +118,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (DateTime)
-                  (from element in person_.Descendants("SeperationDate")
+                  (from element in employee_.Descendants("SeperationDate")
                    select element).First();
             }
 
@@ -126,7 +126,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value > entryDate_)
                 {
-                    (from element in person_.Descendants("SeperationDate")
+                    (from element in employee_.Descendants("SeperationDate")
                      select element).First().SetValue(value);
                 }
                 else 
@@ -141,7 +141,7 @@ namespace ContactManager.Classes.PersonRelated
              get
             {
                 return (int)
-                    (from element in person_.Descendants("LevelOfEmployment")
+                    (from element in employee_.Descendants("LevelOfEmployment")
                      select element).First();
             }
 
@@ -149,7 +149,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value > 0)
                 {
-                    (from element in person_.Descendants("LevelOfEmployment")
+                    (from element in employee_.Descendants("LevelOfEmployment")
                      select element).First().SetValue(value);
                 }
                 else
@@ -164,7 +164,7 @@ namespace ContactManager.Classes.PersonRelated
              get
             {
                 return (int)
-                    (from element in person_.Descendants("Level")
+                    (from element in employee_.Descendants("Level")
                      select element).First();
             }
 
@@ -172,7 +172,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value >= 0 && value <= 5)
                 {
-                    (from element in person_.Descendants("Level")
+                    (from element in employee_.Descendants("Level")
                      select element).First().SetValue(value);
                 }
                 else
@@ -187,7 +187,7 @@ namespace ContactManager.Classes.PersonRelated
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone<Privat>")
+                  (from element in employee_.Descendants("Phone<Privat>")
                    select element).First();
             }
 
@@ -195,7 +195,7 @@ namespace ContactManager.Classes.PersonRelated
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Phone<Privat>")
+                    (from element in employee_.Descendants("Phone<Privat>")
                      select element).First().SetValue(value);
                 }
                 else
@@ -206,7 +206,7 @@ namespace ContactManager.Classes.PersonRelated
         }
 
         // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        public IEnumerable<XElement> employee_;
+        private IEnumerable<XElement> employee_;
 
         public Employee(ref IEnumerable<XElement> employee)
             : base(ref employee)
