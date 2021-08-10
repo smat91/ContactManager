@@ -214,7 +214,7 @@ namespace ContactManager.Classes.PersonRelated
             employee_ = employee;
         }
 
-        // Mit diesem Befehl wird ein XElement Template von Person erzeugt und ausgegenben
+        // Mit dieser Methode wird ein XElement Template von Employee erzeugt und ausgegenben
         public override XElement XelementTemplate()
         {
             XElement employee = base.XelementTemplate();
@@ -272,9 +272,6 @@ namespace ContactManager.Classes.PersonRelated
                 level_ + ", " +
                 phonePrivat_;
         }
-
-        
-
 
     }
 }
