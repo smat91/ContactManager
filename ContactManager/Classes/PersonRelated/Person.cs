@@ -280,7 +280,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone<business>")
+                  (from element in person_.Descendants("Phone<Business>")
                    select element).First();
             }
 
@@ -288,7 +288,7 @@ namespace ContactManager
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Phone<business>")
+                    (from element in person_.Descendants("Phone<Business>")
                      select element).First().SetValue(value);
                 }
                 else
@@ -303,7 +303,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone<mobile>")
+                  (from element in person_.Descendants("Phone<Mobile>")
                    select element).First();
             }
 
@@ -311,7 +311,7 @@ namespace ContactManager
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Phone<mobile>")
+                    (from element in person_.Descendants("Phone<Mobile>")
                      select element).First().SetValue(value);
                 }
                 else
@@ -354,7 +354,7 @@ namespace ContactManager
 
 
         // Mit diesem Befehl wird ein XElement Template von Person erzeugt und ausgegenben
-        public XElement XelementTemplate()
+        public virtual XElement XelementTemplate()
         {
             return new XElement("Person",
                             new XElement("Id", ""),
