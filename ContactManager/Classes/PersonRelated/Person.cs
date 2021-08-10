@@ -345,9 +345,9 @@ namespace ContactManager
         }
 
         // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        private IEnumerable<XElement> person_;
+        private XElement person_;
 
-        public Person(ref IEnumerable<XElement> person)
+        public Person(ref XElement person)
         {
             person_ = person;
         }

@@ -17,6 +17,8 @@ namespace ContactManager
     {
         public XDocument xdocument = XDocument.Load("..\\..\\..\\XmlData\\Persons.xml");
 
+        private XmlTemplate xmlTemplate = new XmlTemplate();
+
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +31,35 @@ namespace ContactManager
             foreach (var person in persons)
             {
                 TxtOutput.Text = person + "\r\n";
+            }
+        }
+
+        private void CmdReadCustomers_Click(object sender, EventArgs e)
+        {
+            TxtOutput.Clear();
+            IEnumerable<XElement> customer = xmlTemplate.XelementTemplateCustomer().Elements();
+            foreach (var person in customer)
+            {
+                TxtOutput.Text += person + "\r\n";
+            }
+        }
+
+        private void CmdReadEmployees_Click(object sender, EventArgs e)
+        {
+            TxtOutput.Clear();
+
+            XElement customerTemplate = xmlTemplate.XelementTemplateCustomer();
+            Customer c1 = new Customer(ref customerTemplate);
+
+            c1.id_ = 1;
+
+            c1.AddLog("dsfgkjdsfjöglkjfsdägökljfddsögkdfmvsödslkgmbvfdäblkvm");
+
+            TxtOutput.Text += c1.id_;
+
+            foreach (var person in customerTemplate.Descendants())
+            {
+                TxtOutput.Text += person + "\r\n";
             }
         }
     }

@@ -61,8 +61,9 @@ namespace ContactManager
             this.CmdReadCustomers.Name = "CmdReadCustomers";
             this.CmdReadCustomers.Size = new System.Drawing.Size(75, 46);
             this.CmdReadCustomers.TabIndex = 2;
-            this.CmdReadCustomers.Text = "read customers";
+            this.CmdReadCustomers.Text = "create xml customer";
             this.CmdReadCustomers.UseVisualStyleBackColor = true;
+            this.CmdReadCustomers.Click += new System.EventHandler(this.CmdReadCustomers_Click);
             // 
             // CmdReadEmployees
             // 
@@ -70,8 +71,9 @@ namespace ContactManager
             this.CmdReadEmployees.Name = "CmdReadEmployees";
             this.CmdReadEmployees.Size = new System.Drawing.Size(75, 45);
             this.CmdReadEmployees.TabIndex = 3;
-            this.CmdReadEmployees.Text = "read emploees";
+            this.CmdReadEmployees.Text = "create customer object";
             this.CmdReadEmployees.UseVisualStyleBackColor = true;
+            this.CmdReadEmployees.Click += new System.EventHandler(this.CmdReadEmployees_Click);
             // 
             // CmdReadTrainees
             // 
