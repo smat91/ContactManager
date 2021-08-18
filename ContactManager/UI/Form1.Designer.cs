@@ -33,20 +33,19 @@ namespace ContactManager
             this.CmdReadCustomers = new System.Windows.Forms.Button();
             this.CmdReadEmployees = new System.Windows.Forms.Button();
             this.CmdReadTrainees = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.CmdHome = new System.Windows.Forms.Button();
+            this.CmdKunde = new System.Windows.Forms.Button();
+            this.CmdMitarbeiter = new System.Windows.Forms.Button();
+            this.CmdLernende = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
             this.TxtOutput = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // CmdReadAll
@@ -86,24 +85,6 @@ namespace ContactManager
             this.CmdReadTrainees.Text = "read trainees";
             this.CmdReadTrainees.UseVisualStyleBackColor = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(164, 595);
-            this.panel1.TabIndex = 5;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -116,72 +97,6 @@ namespace ContactManager
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(908, 77);
             this.panel2.TabIndex = 6;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 78);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 113);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 35);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 148);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 35);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 183);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 35);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 218);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(164, 35);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 253);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(164, 35);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
@@ -205,40 +120,98 @@ namespace ContactManager
             this.button8.Text = "button8";
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // CmdHome
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 358);
-            this.button9.Margin = new System.Windows.Forms.Padding(0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(164, 35);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = false;
+            this.CmdHome.BackColor = System.Drawing.Color.White;
+            this.CmdHome.Location = new System.Drawing.Point(0, 0);
+            this.CmdHome.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdHome.Name = "CmdHome";
+            this.CmdHome.Size = new System.Drawing.Size(164, 77);
+            this.CmdHome.TabIndex = 0;
+            this.CmdHome.Text = "Home";
+            this.CmdHome.UseVisualStyleBackColor = false;
+            this.CmdHome.Click += new System.EventHandler(this.CmdHome_Click);
+            // 
+            // CmdKunde
+            // 
+            this.CmdKunde.BackColor = System.Drawing.Color.White;
+            this.CmdKunde.Location = new System.Drawing.Point(0, 113);
+            this.CmdKunde.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdKunde.Name = "CmdKunde";
+            this.CmdKunde.Size = new System.Drawing.Size(164, 35);
+            this.CmdKunde.TabIndex = 1;
+            this.CmdKunde.Text = "Kunde";
+            this.CmdKunde.UseVisualStyleBackColor = false;
+            // 
+            // CmdMitarbeiter
+            // 
+            this.CmdMitarbeiter.BackColor = System.Drawing.Color.White;
+            this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 148);
+            this.CmdMitarbeiter.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdMitarbeiter.Name = "CmdMitarbeiter";
+            this.CmdMitarbeiter.Size = new System.Drawing.Size(164, 35);
+            this.CmdMitarbeiter.TabIndex = 2;
+            this.CmdMitarbeiter.Text = "Mitarbeiter";
+            this.CmdMitarbeiter.UseVisualStyleBackColor = false;
+            // 
+            // CmdLernende
+            // 
+            this.CmdLernende.BackColor = System.Drawing.Color.White;
+            this.CmdLernende.Location = new System.Drawing.Point(0, 183);
+            this.CmdLernende.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdLernende.Name = "CmdLernende";
+            this.CmdLernende.Size = new System.Drawing.Size(164, 35);
+            this.CmdLernende.TabIndex = 3;
+            this.CmdLernende.Text = "Lernende";
+            this.CmdLernende.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.CmdLernende);
+            this.panel1.Controls.Add(this.CmdMitarbeiter);
+            this.panel1.Controls.Add(this.CmdKunde);
+            this.panel1.Controls.Add(this.CmdHome);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(164, 595);
+            this.panel1.TabIndex = 5;
+            // 
+            // PanelContainer
+            // 
+            this.PanelContainer.Controls.Add(this.TxtOutput);
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(164, 77);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(908, 518);
+            this.PanelContainer.TabIndex = 8;
             // 
             // TxtOutput
             // 
-            this.TxtOutput.Location = new System.Drawing.Point(190, 120);
+            this.TxtOutput.Location = new System.Drawing.Point(19, 47);
             this.TxtOutput.Multiline = true;
             this.TxtOutput.Name = "TxtOutput";
             this.TxtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtOutput.Size = new System.Drawing.Size(870, 425);
-            this.TxtOutput.TabIndex = 7;
+            this.TxtOutput.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 595);
-            this.Controls.Add(this.TxtOutput);
+            this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
+            this.PanelContainer.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -247,17 +220,15 @@ namespace ContactManager
         private System.Windows.Forms.Button CmdReadCustomers;
         private System.Windows.Forms.Button CmdReadEmployees;
         private System.Windows.Forms.Button CmdReadTrainees;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button CmdHome;
+        private System.Windows.Forms.Button CmdKunde;
+        private System.Windows.Forms.Button CmdMitarbeiter;
+        private System.Windows.Forms.Button CmdLernende;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PanelContainer;
         private System.Windows.Forms.TextBox TxtOutput;
     }
 }

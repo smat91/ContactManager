@@ -1,7 +1,7 @@
 ﻿
 namespace ContactManager.UI
 {
-    partial class UCHome
+    partial class UCCustomer
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -29,31 +29,44 @@ namespace ContactManager.UI
         /// </summary>
         private void InitializeComponent()
         {
+            this.UCCustomer = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UCCustomer.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // UCCustomer
+            // 
+            this.UCCustomer.Controls.Add(this.textBox1);
+            this.UCCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UCCustomer.Location = new System.Drawing.Point(0, 0);
+            this.UCCustomer.Name = "UCCustomer";
+            this.UCCustomer.Size = new System.Drawing.Size(1088, 634);
+            this.UCCustomer.TabIndex = 0;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(711, 293);
+            this.textBox1.Location = new System.Drawing.Point(531, 289);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Home";
+            this.textBox1.Text = "Customer";
             // 
-            // UCHome
+            // UCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Name = "UCHome";
+            this.Controls.Add(this.UCCustomer);
+            this.Name = "UCustomer";
             this.Size = new System.Drawing.Size(1088, 634);
+            this.UCCustomer.ResumeLayout(false);
+            this.UCCustomer.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel UCCustomer;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
