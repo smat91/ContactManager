@@ -115,6 +115,20 @@ namespace ContactManager
                 );
         }
 
+        // Mit dieser Methode wird dem XML eine neue Person Customer hinzugefügt
+        public virtual void AddToXml(ref XDocument personsXml)
+        {
+            if (base.IdIsUnique(ref personsXml))
+            {
+                base.SetNewId(ref personsXml);
+                personsXml.Descendants("Customers").FirstOrDefault().AddFirst(customer_);
+            }
+            else
+            {
+                throw new ArgumentException("Customer with this id is allready existing in XML");
+            }
+        }
+
         // Alle Inhalte (bspw. int) wird als String zurückgegeben.
         public override string ToString()
         {

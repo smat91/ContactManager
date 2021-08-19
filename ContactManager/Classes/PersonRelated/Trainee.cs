@@ -65,6 +65,20 @@ namespace ContactManager
             trainee_ = trainee;
         }
 
+        // Mit dieser Methode wird dem XML eine neue Person Trainee hinzugefügt
+        public virtual void AddToXml(ref XDocument personsXml)
+        {
+            if (base.IdIsUnique(ref personsXml))
+            {
+                base.SetNewId(ref personsXml);
+                personsXml.Element("Trainees").AddFirst(trainee_);
+            }
+            else
+            {
+                throw new ArgumentException("Trainee with this id is allready existing in XML");
+            }
+        }
+
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
         public override bool Equals(object obj)
         {
