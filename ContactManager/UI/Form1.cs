@@ -15,13 +15,19 @@ namespace ContactManager
 {
     public partial class Form1 : Form
     {
-        public XDocument xdocument = XDocument.Load("..\\..\\..\\XmlData\\Persons.xml");
+        public const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
+        public XDocument xdocument = XDocument.Load(filePath);
 
         private XmlTemplate xmlTemplate = new XmlTemplate();
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void SaveToXml()
+        {
+            xdocument.Save(filePath);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,16 +57,26 @@ namespace ContactManager
             XElement customerTemplate = xmlTemplate.XelementTemplateCustomer();
             Customer c1 = new Customer(ref customerTemplate);
 
-            c1.id_ = 1;
+            c1.AddToXml(ref xdocument);
 
-            c1.AddLog("dsfgkjdsfjöglkjfsdägökljfddsögkdfmvsödslkgmbvfdäblkvm");
 
-            TxtOutput.Text += c1.id_;
+            SaveToXml();
 
             foreach (var person in customerTemplate.Descendants())
             {
                 TxtOutput.Text += person + "\r\n";
             }
+        }
+
+        private void CmdReadTrainees_Click(object sender, EventArgs e)
+        {
+            IEnumerable<XElement> idList =
+                from ids in xdocument.Descendants("Id")
+                orderby int.Parse(ids.Value)
+                select ids;
+
+            TxtOutput.Text += 1 + (int)idList.Last();
+
         }
     }
 }

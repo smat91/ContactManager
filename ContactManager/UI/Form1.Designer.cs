@@ -33,7 +33,7 @@ namespace ContactManager
             this.CmdReadAll = new System.Windows.Forms.Button();
             this.CmdReadCustomers = new System.Windows.Forms.Button();
             this.CmdReadEmployees = new System.Windows.Forms.Button();
-            this.CmdReadTrainees = new System.Windows.Forms.Button();
+            this.CmdReadIds = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtOutput
@@ -75,21 +75,22 @@ namespace ContactManager
             this.CmdReadEmployees.UseVisualStyleBackColor = true;
             this.CmdReadEmployees.Click += new System.EventHandler(this.CmdReadEmployees_Click);
             // 
-            // CmdReadTrainees
+            // CmdReadIds
             // 
-            this.CmdReadTrainees.Location = new System.Drawing.Point(260, 13);
-            this.CmdReadTrainees.Name = "CmdReadTrainees";
-            this.CmdReadTrainees.Size = new System.Drawing.Size(75, 45);
-            this.CmdReadTrainees.TabIndex = 4;
-            this.CmdReadTrainees.Text = "read trainees";
-            this.CmdReadTrainees.UseVisualStyleBackColor = true;
+            this.CmdReadIds.Location = new System.Drawing.Point(260, 13);
+            this.CmdReadIds.Name = "CmdReadIds";
+            this.CmdReadIds.Size = new System.Drawing.Size(75, 45);
+            this.CmdReadIds.TabIndex = 4;
+            this.CmdReadIds.Text = "read IDs";
+            this.CmdReadIds.UseVisualStyleBackColor = true;
+            this.CmdReadIds.Click += new System.EventHandler(this.CmdReadTrainees_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(546, 450);
-            this.Controls.Add(this.CmdReadTrainees);
+            this.Controls.Add(this.CmdReadIds);
             this.Controls.Add(this.CmdReadEmployees);
             this.Controls.Add(this.CmdReadCustomers);
             this.Controls.Add(this.CmdReadAll);
@@ -107,7 +108,7 @@ namespace ContactManager
         private System.Windows.Forms.Button CmdReadAll;
         private System.Windows.Forms.Button CmdReadCustomers;
         private System.Windows.Forms.Button CmdReadEmployees;
-        private System.Windows.Forms.Button CmdReadTrainees;
+        private System.Windows.Forms.Button CmdReadIds;
     }
 }
 
