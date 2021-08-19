@@ -23,11 +23,10 @@ namespace ContactManager
                      select element).First();
             }
 
-            set
+            private set
             {
-                
-                    (from element in person_.Descendants("Id")
-                     select element).First().SetValue(value);
+                (from element in person_.Descendants("Id")
+                    select element).First().SetValue(value);
             }
                
         }
@@ -352,33 +351,26 @@ namespace ContactManager
             person_ = person;
         }
 
-        // Mit diesem Befehl wird ein XElement Template von Person erzeugt und ausgegenben
-        public virtual XElement XelementTemplate()
+        // Mit dieser Methode wird geprüt ob die eigene Id einzigartig ist
+        public virtual bool IdIsUnique (ref XDocument personsXml)
         {
-            return new XElement("Person",
-                            new XElement("Id", ""),
-                            new XElement("State", ""),
-                            new XElement("Salutation", ""),
-                            new XElement("Titel", ""),
-                            new XElement("FirstName", ""),
-                            new XElement("LastName", ""),
-                            new XElement("Sex", ""),
-                            new XElement("Function", ""),
-                            new XElement("Address",
-                                new XElement("Street", ""),
-                                new XElement("Number", ""),
-                                new XElement("Land", ""),
-                                new XElement("City", ""),
-                                new XElement("Zip", "")
-                                ),
-                            new XElement("ContactData",
-                                new XElement("Phone", "",
-                                    new XAttribute("Type", "Business")),
-                                new XElement("Phone", "",
-                                    new XAttribute("Type", "Mobile")),
-                                new XElement("EMail", "")
-                                )
-                       );
+            IEnumerable<XElement> idList =
+                from id in personsXml.Descendants("Id")
+                where id == person_.Element("Id")
+                select id;
+
+            return (idList.Count() == 0) ? true : false;
+        }
+
+        // Mit dieser Methode wird eine neue id generiert
+        public virtual void SetNewId(ref XDocument personsXml)
+        {
+            IEnumerable<XElement> idList =
+                from ids in personsXml.Descendants("Id")
+                orderby int.Parse(ids.Value)
+                select ids;
+
+            id_ = 1 + (int)idList.Last();
         }
 
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
