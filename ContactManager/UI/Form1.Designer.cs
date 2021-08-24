@@ -29,11 +29,14 @@ namespace ContactManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.CmdNew = new System.Windows.Forms.Button();
             this.CmdEdit = new System.Windows.Forms.Button();
             this.CmdDelete = new System.Windows.Forms.Button();
             this.CmdReset = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CmbFilter = new System.Windows.Forms.ComboBox();
+            this.CmdSearch = new System.Windows.Forms.Button();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.CmdNew = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
@@ -42,21 +45,10 @@ namespace ContactManager
             this.CmdLernende = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
-            this.TxtOutput = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.PanelContainer.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // CmdNew
-            // 
-            this.CmdNew.Location = new System.Drawing.Point(19, 12);
-            this.CmdNew.Name = "CmdNew";
-            this.CmdNew.Size = new System.Drawing.Size(75, 45);
-            this.CmdNew.TabIndex = 1;
-            this.CmdNew.Text = "Neu";
-            this.CmdNew.UseVisualStyleBackColor = true;
-            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // CmdEdit
             // 
@@ -78,16 +70,20 @@ namespace ContactManager
             // 
             // CmdReset
             // 
-            this.CmdReset.Location = new System.Drawing.Point(262, 12);
+            this.CmdReset.Location = new System.Drawing.Point(788, 16);
             this.CmdReset.Name = "CmdReset";
             this.CmdReset.Size = new System.Drawing.Size(108, 45);
             this.CmdReset.TabIndex = 4;
-            this.CmdReset.Text = "Filter zurücksetzen";
+            this.CmdReset.Text = "Suche zurücksetzen";
             this.CmdReset.UseVisualStyleBackColor = true;
+            this.CmdReset.Click += new System.EventHandler(this.CmdReset_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.CmbFilter);
+            this.panel2.Controls.Add(this.CmdSearch);
+            this.panel2.Controls.Add(this.TxtSearch);
             this.panel2.Controls.Add(this.CmdNew);
             this.panel2.Controls.Add(this.CmdEdit);
             this.panel2.Controls.Add(this.CmdReset);
@@ -97,6 +93,40 @@ namespace ContactManager
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(908, 77);
             this.panel2.TabIndex = 6;
+            // 
+            // CmbFilter
+            // 
+            this.CmbFilter.FormattingEnabled = true;
+            this.CmbFilter.Location = new System.Drawing.Point(537, 31);
+            this.CmbFilter.Name = "CmbFilter";
+            this.CmbFilter.Size = new System.Drawing.Size(145, 23);
+            this.CmbFilter.TabIndex = 8;
+            // 
+            // CmdSearch
+            // 
+            this.CmdSearch.Location = new System.Drawing.Point(688, 16);
+            this.CmdSearch.Name = "CmdSearch";
+            this.CmdSearch.Size = new System.Drawing.Size(94, 45);
+            this.CmdSearch.TabIndex = 7;
+            this.CmdSearch.Text = "Suchen";
+            this.CmdSearch.UseVisualStyleBackColor = true;
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Location = new System.Drawing.Point(292, 23);
+            this.TxtSearch.Multiline = true;
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(229, 31);
+            this.TxtSearch.TabIndex = 6;
+            // 
+            // CmdNew
+            // 
+            this.CmdNew.Location = new System.Drawing.Point(19, 11);
+            this.CmdNew.Name = "CmdNew";
+            this.CmdNew.Size = new System.Drawing.Size(75, 45);
+            this.CmdNew.TabIndex = 5;
+            this.CmdNew.Text = "Neu";
+            this.CmdNew.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -183,21 +213,11 @@ namespace ContactManager
             // 
             // PanelContainer
             // 
-            this.PanelContainer.Controls.Add(this.TxtOutput);
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContainer.Location = new System.Drawing.Point(164, 77);
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(908, 518);
             this.PanelContainer.TabIndex = 8;
-            // 
-            // TxtOutput
-            // 
-            this.TxtOutput.Location = new System.Drawing.Point(19, 47);
-            this.TxtOutput.Multiline = true;
-            this.TxtOutput.Name = "TxtOutput";
-            this.TxtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtOutput.Size = new System.Drawing.Size(870, 425);
-            this.TxtOutput.TabIndex = 2;
             // 
             // Form1
             // 
@@ -211,15 +231,13 @@ namespace ContactManager
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.PanelContainer.ResumeLayout(false);
-            this.PanelContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button CmdNew;
         private System.Windows.Forms.Button CmdEdit;
         private System.Windows.Forms.Button CmdDelete;
         private System.Windows.Forms.Button CmdReset;
@@ -232,7 +250,11 @@ namespace ContactManager
         private System.Windows.Forms.Button CmdLernende;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PanelContainer;
-        private System.Windows.Forms.TextBox TxtOutput;
+        private System.Windows.Forms.Button CmdNew;
+        private System.Windows.Forms.ComboBox CmbFilter;
+        private System.Windows.Forms.Button CmdSearch;
+        private System.Windows.Forms.TextBox TxtSearch;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

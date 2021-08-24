@@ -30,7 +30,8 @@ namespace ContactManager.UI
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -41,22 +42,22 @@ namespace ContactManager.UI
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Customer";
             // 
-            // textBox2
+            // dataGridView1
             // 
-            this.textBox2.Location = new System.Drawing.Point(609, 233);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 43);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "Hier wird der Inhalt Customers angezeigt";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(908, 518);
+            this.dataGridView1.TabIndex = 1;
             // 
             // UCCustomer
             // 
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "UCCustomer";
             this.Size = new System.Drawing.Size(1088, 634);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -64,6 +65,6 @@ namespace ContactManager.UI
 
        
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

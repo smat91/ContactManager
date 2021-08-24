@@ -17,6 +17,7 @@ namespace ContactManager
     public partial class Form1 : Form
     {
         static Form1 _obj;
+        public int sideBarStatus = 0;
 
         public static Form1 Instance
         {
@@ -58,6 +59,8 @@ namespace ContactManager
         {
             PanelContainer.Controls["UCHome"].BringToFront();
             CmdHome.Visible = false;
+            sideBarStatus = 0;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,6 +83,7 @@ namespace ContactManager
             }
             Form1.Instance.PnlContainer.Controls["UCCustomer"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
+            sideBarStatus = 1;
 
         }
 
@@ -93,6 +97,7 @@ namespace ContactManager
             }
             Form1.Instance.PnlContainer.Controls["UCMember"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
+            sideBarStatus = 2;
         }
 
         private void CmdLernende_Click(object sender, EventArgs e)
@@ -105,6 +110,13 @@ namespace ContactManager
             }
             Form1.Instance.PnlContainer.Controls["UCTrainee"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
+            sideBarStatus = 3;
+        }
+
+        private void CmdReset_Click(object sender, EventArgs e)
+        {
+            TxtSearch.Clear();
+            //Combobox leeren!
         }
     }
 }
