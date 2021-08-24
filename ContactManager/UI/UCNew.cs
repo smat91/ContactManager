@@ -27,7 +27,7 @@ namespace ContactManager.UI
             XElement customerTemplate = xmlTemplate.XelementTemplateCustomer();
             Customer c1 = new Customer(ref customerTemplate);
 
-            c1.firstname_ = 1;
+            c1.firstname_ = "Test";
 
             TxtOutput.Text += c1.id_;
 
