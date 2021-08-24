@@ -50,12 +50,7 @@ namespace ContactManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TxtOutput.Clear();
-            IEnumerable<XElement> persons = xdocument.Elements();
-            foreach (var person in persons)
-            {
-                TxtOutput.Text = person + "\r\n";
-            }
+
         }
 
         private void CmdHome_Click(object sender, EventArgs e)
@@ -84,6 +79,11 @@ namespace ContactManager
             }
             Form1.Instance.PnlContainer.Controls["UCCustomer"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
+
+        }
+
+        private void CmdNew_Click(object sender, EventArgs e)
+        {
 
         }
     }

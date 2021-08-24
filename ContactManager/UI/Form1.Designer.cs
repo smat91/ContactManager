@@ -56,7 +56,7 @@ namespace ContactManager
             this.CmdNew.TabIndex = 1;
             this.CmdNew.Text = "Neu";
             this.CmdNew.UseVisualStyleBackColor = true;
-            this.CmdNew.Click += new System.EventHandler(this.button1_Click);
+            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // CmdEdit
             // 
