@@ -51,12 +51,7 @@ namespace ContactManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TxtOutput.Clear();
-            IEnumerable<XElement> persons = xdocument.Elements();
-            foreach (var person in persons)
-            {
-                TxtOutput.Text = person + "\r\n";
-            }
+
         }
 
         private void CmdHome_Click(object sender, EventArgs e)

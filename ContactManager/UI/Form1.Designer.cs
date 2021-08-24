@@ -29,10 +29,10 @@ namespace ContactManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.CmdReadAll = new System.Windows.Forms.Button();
-            this.CmdReadCustomers = new System.Windows.Forms.Button();
-            this.CmdReadEmployees = new System.Windows.Forms.Button();
-            this.CmdReadTrainees = new System.Windows.Forms.Button();
+            this.CmdNew = new System.Windows.Forms.Button();
+            this.CmdEdit = new System.Windows.Forms.Button();
+            this.CmdDelete = new System.Windows.Forms.Button();
+            this.CmdReset = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -48,50 +48,50 @@ namespace ContactManager
             this.PanelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // CmdReadAll
+            // CmdNew
             // 
-            this.CmdReadAll.Location = new System.Drawing.Point(183, 12);
-            this.CmdReadAll.Name = "CmdReadAll";
-            this.CmdReadAll.Size = new System.Drawing.Size(75, 45);
-            this.CmdReadAll.TabIndex = 1;
-            this.CmdReadAll.Text = "read all";
-            this.CmdReadAll.UseVisualStyleBackColor = true;
-            this.CmdReadAll.Click += new System.EventHandler(this.button1_Click);
+            this.CmdNew.Location = new System.Drawing.Point(19, 12);
+            this.CmdNew.Name = "CmdNew";
+            this.CmdNew.Size = new System.Drawing.Size(75, 45);
+            this.CmdNew.TabIndex = 1;
+            this.CmdNew.Text = "Neu";
+            this.CmdNew.UseVisualStyleBackColor = true;
+            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
-            // CmdReadCustomers
+            // CmdEdit
             // 
-            this.CmdReadCustomers.Location = new System.Drawing.Point(264, 11);
-            this.CmdReadCustomers.Name = "CmdReadCustomers";
-            this.CmdReadCustomers.Size = new System.Drawing.Size(75, 46);
-            this.CmdReadCustomers.TabIndex = 2;
-            this.CmdReadCustomers.Text = "read customers";
-            this.CmdReadCustomers.UseVisualStyleBackColor = true;
+            this.CmdEdit.Location = new System.Drawing.Point(100, 11);
+            this.CmdEdit.Name = "CmdEdit";
+            this.CmdEdit.Size = new System.Drawing.Size(75, 46);
+            this.CmdEdit.TabIndex = 2;
+            this.CmdEdit.Text = "Bearbeiten";
+            this.CmdEdit.UseVisualStyleBackColor = true;
             // 
-            // CmdReadEmployees
+            // CmdDelete
             // 
-            this.CmdReadEmployees.Location = new System.Drawing.Point(345, 11);
-            this.CmdReadEmployees.Name = "CmdReadEmployees";
-            this.CmdReadEmployees.Size = new System.Drawing.Size(75, 45);
-            this.CmdReadEmployees.TabIndex = 3;
-            this.CmdReadEmployees.Text = "read emploees";
-            this.CmdReadEmployees.UseVisualStyleBackColor = true;
+            this.CmdDelete.Location = new System.Drawing.Point(181, 11);
+            this.CmdDelete.Name = "CmdDelete";
+            this.CmdDelete.Size = new System.Drawing.Size(75, 45);
+            this.CmdDelete.TabIndex = 3;
+            this.CmdDelete.Text = "Löschen";
+            this.CmdDelete.UseVisualStyleBackColor = true;
             // 
-            // CmdReadTrainees
+            // CmdReset
             // 
-            this.CmdReadTrainees.Location = new System.Drawing.Point(426, 12);
-            this.CmdReadTrainees.Name = "CmdReadTrainees";
-            this.CmdReadTrainees.Size = new System.Drawing.Size(75, 45);
-            this.CmdReadTrainees.TabIndex = 4;
-            this.CmdReadTrainees.Text = "read trainees";
-            this.CmdReadTrainees.UseVisualStyleBackColor = true;
+            this.CmdReset.Location = new System.Drawing.Point(262, 12);
+            this.CmdReset.Name = "CmdReset";
+            this.CmdReset.Size = new System.Drawing.Size(108, 45);
+            this.CmdReset.TabIndex = 4;
+            this.CmdReset.Text = "Filter zurücksetzen";
+            this.CmdReset.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.CmdReadAll);
-            this.panel2.Controls.Add(this.CmdReadCustomers);
-            this.panel2.Controls.Add(this.CmdReadTrainees);
-            this.panel2.Controls.Add(this.CmdReadEmployees);
+            this.panel2.Controls.Add(this.CmdNew);
+            this.panel2.Controls.Add(this.CmdEdit);
+            this.panel2.Controls.Add(this.CmdReset);
+            this.panel2.Controls.Add(this.CmdDelete);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(164, 0);
             this.panel2.Name = "panel2";
@@ -219,10 +219,10 @@ namespace ContactManager
         }
 
         #endregion
-        private System.Windows.Forms.Button CmdReadAll;
-        private System.Windows.Forms.Button CmdReadCustomers;
-        private System.Windows.Forms.Button CmdReadEmployees;
-        private System.Windows.Forms.Button CmdReadTrainees;
+        private System.Windows.Forms.Button CmdNew;
+        private System.Windows.Forms.Button CmdEdit;
+        private System.Windows.Forms.Button CmdDelete;
+        private System.Windows.Forms.Button CmdReset;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
