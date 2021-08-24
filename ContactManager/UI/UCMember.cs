@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ContactManager.UI
 {
-    public partial class UCCustomer : UserControl
+    public partial class UCMember : UserControl
     {
-        public UCCustomer()
+        public UCMember()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

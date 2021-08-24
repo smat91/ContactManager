@@ -11,11 +11,13 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
+
 namespace ContactManager
 {
     public partial class Form1 : Form
     {
         static Form1 _obj;
+        public int sideBarStatus = 0;
 
         public static Form1 Instance
         {
@@ -50,18 +52,15 @@ namespace ContactManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TxtOutput.Clear();
-            IEnumerable<XElement> persons = xdocument.Elements();
-            foreach (var person in persons)
-            {
-                TxtOutput.Text = person + "\r\n";
-            }
+
         }
 
         private void CmdHome_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls["UCHome"].BringToFront();
             CmdHome.Visible = false;
+            sideBarStatus = 0;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,7 +68,7 @@ namespace ContactManager
             CmdHome.Visible = false;
             _obj = this;
 
-            UCHome uc = new UCHome();
+            UI.UCHome uc = new UI.UCHome();
             uc.Dock = DockStyle.Fill;
             PanelContainer.Controls.Add(uc);
         }
@@ -78,13 +77,46 @@ namespace ContactManager
         {
             if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCCustomer"))
             {
-                UCCustomer un = new UCCustomer();
+                UI.UCCustomer un = new UI.UCCustomer();
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainer.Controls.Add(un);
             }
             Form1.Instance.PnlContainer.Controls["UCCustomer"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
+            sideBarStatus = 1;
 
+        }
+
+        private void CmdMitarbeiter_Click(object sender, EventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCMember"))
+            {
+                UI.UCMember un = new UI.UCMember();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCMember"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
+            sideBarStatus = 2;
+        }
+
+        private void CmdLernende_Click(object sender, EventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCTrainee"))
+            {
+                UI.UCTrainee un = new UI.UCTrainee();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCTrainee"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
+            sideBarStatus = 3;
+        }
+
+        private void CmdReset_Click(object sender, EventArgs e)
+        {
+            TxtSearch.Clear();
+            //Combobox leeren!
         }
     }
 }
