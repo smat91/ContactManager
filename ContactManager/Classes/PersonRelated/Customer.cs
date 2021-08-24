@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace ContactManager.Classes.PersonRelated
+namespace ContactManager
 {
     class Customer : Person
     {
@@ -92,43 +92,17 @@ namespace ContactManager.Classes.PersonRelated
         }
 
         // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        private IEnumerable<XElement> customer_;
+        private XElement customer_;
 
-        public Customer(ref IEnumerable<XElement> customer)
+        public Customer(ref XElement customer)
             : base(ref customer)
         {
             customer_ = customer;
         }
 
-        // Mit diesem Befehl wird ein XElement Template von Customer erzeugt und ausgegenben
-        public override XElement XelementTemplate()
-        {
-            XElement customer = base.XelementTemplate();
-
-            // Person Element von Basis nach Customer umbenennen
-            customer.Element("Person").Name = "Customer";
-
-            // Neue kundenbezogene Allgemeinattribute hinzufügen
-            customer.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("CompanyName", ""),
-                              new XElement("CustomerType", ""));
-
-            // Neue kundenbezogene Kontaktattribute hinzufügen
-            customer.Descendants("Phone")
-                .Where(element => (string)element.Attribute("Type") == "Mobile")
-                .FirstOrDefault()
-                .AddAfterSelf(new XElement("Fax", ""));
-
-            // Neue kundenbezogene Gesprächsattribute hinzufügen
-            // Gesprächsnotizen werden über eine eigene Klasse hinzugefügt
-            customer.Add(new XElement("Logs", ""));
-
-            return customer;
-        }
-
         public void AddLog(string text)
         {
-            int count = customer_.Descendants("Logs").Count();     
+            int count = customer_.Descendants("Log").Count();     
 
             customer_.Descendants("Logs")
                 .FirstOrDefault()
@@ -139,6 +113,20 @@ namespace ContactManager.Classes.PersonRelated
                         new XElement("Text", text)
                         )
                 );
+        }
+
+        // Mit dieser Methode wird dem XML eine neue Person Customer hinzugefügt
+        public virtual void AddToXml(ref XDocument personsXml)
+        {
+            if (base.IdIsUnique(ref personsXml))
+            {
+                base.SetNewId(ref personsXml);
+                personsXml.Descendants("Customers").FirstOrDefault().AddFirst(customer_);
+            }
+            else
+            {
+                throw new ArgumentException("Customer with this id is allready existing in XML");
+            }
         }
 
         // Alle Inhalte (bspw. int) wird als String zurückgegeben.

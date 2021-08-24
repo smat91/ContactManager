@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace ContactManager.Classes.PersonRelated
+namespace ContactManager
 {
     public class Employee : Person
     {
@@ -206,41 +206,26 @@ namespace ContactManager.Classes.PersonRelated
         }
 
         // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        private IEnumerable<XElement> employee_;
+        private XElement employee_;
 
-        public Employee(ref IEnumerable<XElement> employee)
+        public Employee(ref XElement employee)
             : base(ref employee)
         {
             employee_ = employee;
         }
 
-        // Mit dieser Methode wird ein XElement Template von Employee erzeugt und ausgegenben
-        public override XElement XelementTemplate()
+        // Mit dieser Methode wird dem XML eine neue Person Employee hinzugefügt
+        public virtual void AddToXml(ref XDocument personsXml)
         {
-            XElement employee = base.XelementTemplate();
-
-            // Person Element von Basis nach Customer umbenennen
-            employee.Element("Person").Name = "Employee";
-
-            // Neue mitarbeiterbezogene Allgemeinattribute hinzufügen
-            employee.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("DateOfBirth", ""),
-                              new XElement("Department", ""),
-                              new XElement("InsuranceNumber", ""),
-                              new XElement("Citizenship", ""),
-                              new XElement("EntryDate", ""),
-                              new XElement("SeparationDate", ""),
-                              new XElement("LevelOfEmployment", ""),
-                              new XElement("Level", ""));
-
-            // Neue mitarbeiterbezogene Kontaktattribute hinzufügen
-            employee.Descendants("Phone")
-                .Where(element => (string)element.Attribute("Type") == "Mobile")
-                .FirstOrDefault()
-                .AddAfterSelf(new XElement("Phone", "",
-                                    new XAttribute("Type", "Privat")));
-
-            return employee;
+            if (base.IdIsUnique(ref personsXml))
+            {
+                base.SetNewId(ref personsXml);
+                personsXml.Element("Employees").AddFirst(employee_);
+            }
+            else
+            {
+                throw new ArgumentException("Employee with this id is allready existing in XML");
+            }
         }
 
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"

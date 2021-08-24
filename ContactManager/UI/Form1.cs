@@ -15,33 +15,19 @@ namespace ContactManager
 {
     public partial class Form1 : Form
     {
-        static Form1 _obj;
+        public const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
+        public XDocument xdocument = XDocument.Load(filePath);
 
-        public static Form1 Instance
-        {
-            get
-            {
-                if (_obj == null)
-                {
-                    _obj = new Form1();
-                }
-                return _obj;
-            }
-        }
-
-        public Panel PnlContainer
-        {
-            get { return PanelContainer; }
-            set { PanelContainer = value; }
-        }
-
-        public Button Homebutton 
-        
-        public XDocument xdocument = XDocument.Load("..\\..\\..\\XmlData\\Persons.xml");
+        private XmlTemplate xmlTemplate = new XmlTemplate();
 
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void SaveToXml()
+        {
+            xdocument.Save(filePath);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -54,18 +40,43 @@ namespace ContactManager
             }
         }
 
-        private void CmdHome_Click(object sender, EventArgs e)
+        private void CmdReadCustomers_Click(object sender, EventArgs e)
         {
-            /*if (CmdHome.Enabled = true) 
+            TxtOutput.Clear();
+            IEnumerable<XElement> customer = xmlTemplate.XelementTemplateCustomer().Elements();
+            foreach (var person in customer)
             {
-                CmdHome.BackColor = Color.Red;  //Beispiel 
-                CmdHome.ForeColor = Color.White;
-            }*/
+                TxtOutput.Text += person + "\r\n";
+            }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void CmdReadEmployees_Click(object sender, EventArgs e)
         {
-            
+            TxtOutput.Clear();
+
+            XElement customerTemplate = xmlTemplate.XelementTemplateCustomer();
+            Customer c1 = new Customer(ref customerTemplate);
+
+            c1.AddToXml(ref xdocument);
+
+
+            SaveToXml();
+
+            foreach (var person in customerTemplate.Descendants())
+            {
+                TxtOutput.Text += person + "\r\n";
+            }
+        }
+
+        private void CmdReadTrainees_Click(object sender, EventArgs e)
+        {
+            IEnumerable<XElement> idList =
+                from ids in xdocument.Descendants("Id")
+                orderby int.Parse(ids.Value)
+                select ids;
+
+            TxtOutput.Text += 1 + (int)idList.Last();
+
         }
     }
 }
