@@ -273,7 +273,6 @@ namespace ContactManager
             }
         }
 
-
         public string phoneBusiness_
         {
             get
@@ -343,7 +342,7 @@ namespace ContactManager
             }
         }
 
-        // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
+        // XElement mit den personenbezogenen Daten
         private XElement person_;
 
         public Person(ref XElement person)
