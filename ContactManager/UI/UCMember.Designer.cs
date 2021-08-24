@@ -1,7 +1,7 @@
 ﻿
 namespace ContactManager.UI
 {
-    partial class UCCustomer
+    partial class UCMember
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -30,30 +30,23 @@ namespace ContactManager.UI
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(531, 289);
+            this.textBox1.Location = new System.Drawing.Point(586, 323);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.Size = new System.Drawing.Size(255, 37);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Customer";
+            this.textBox1.Text = "Hier werden die Mitarbeiter angezeigt";
             // 
-            // textBox2
+            // UCMember
             // 
-            this.textBox2.Location = new System.Drawing.Point(609, 233);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 43);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "Hier wird der Inhalt Customers angezeigt";
-            // 
-            // UCCustomer
-            // 
-            this.Controls.Add(this.textBox2);
-            this.Name = "UCCustomer";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textBox1);
+            this.Name = "UCMember";
             this.Size = new System.Drawing.Size(1088, 634);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -62,8 +55,6 @@ namespace ContactManager.UI
 
         #endregion
 
-       
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -154,6 +154,7 @@ namespace ContactManager
             this.CmdMitarbeiter.TabIndex = 2;
             this.CmdMitarbeiter.Text = "Mitarbeiter";
             this.CmdMitarbeiter.UseVisualStyleBackColor = false;
+            this.CmdMitarbeiter.Click += new System.EventHandler(this.CmdMitarbeiter_Click);
             // 
             // CmdLernende
             // 
@@ -165,6 +166,7 @@ namespace ContactManager
             this.CmdLernende.TabIndex = 3;
             this.CmdLernende.Text = "Lernende";
             this.CmdLernende.UseVisualStyleBackColor = false;
+            this.CmdLernende.Click += new System.EventHandler(this.CmdLernende_Click);
             // 
             // panel1
             // 

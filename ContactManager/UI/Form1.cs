@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
+
 namespace ContactManager
 {
     public partial class Form1 : Form
@@ -69,7 +70,7 @@ namespace ContactManager
             CmdHome.Visible = false;
             _obj = this;
 
-            UCHome uc = new UCHome();
+            UI.UCHome uc = new UI.UCHome();
             uc.Dock = DockStyle.Fill;
             PanelContainer.Controls.Add(uc);
         }
@@ -78,13 +79,37 @@ namespace ContactManager
         {
             if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCCustomer"))
             {
-                UCCustomer un = new UCCustomer();
+                UI.UCCustomer un = new UI.UCCustomer();
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainer.Controls.Add(un);
             }
             Form1.Instance.PnlContainer.Controls["UCCustomer"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
 
+        }
+
+        private void CmdMitarbeiter_Click(object sender, EventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCMember"))
+            {
+                UI.UCMember un = new UI.UCMember();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCMember"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
+        }
+
+        private void CmdLernende_Click(object sender, EventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCTrainee"))
+            {
+                UI.UCTrainee un = new UI.UCTrainee();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCTrainee"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
         }
     }
 }
