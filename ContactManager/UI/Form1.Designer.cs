@@ -58,6 +58,7 @@ namespace ContactManager
             this.CmdEdit.TabIndex = 2;
             this.CmdEdit.Text = "Bearbeiten";
             this.CmdEdit.UseVisualStyleBackColor = true;
+            this.CmdEdit.Click += new System.EventHandler(this.CmdEdit_Click);
             // 
             // CmdDelete
             // 
@@ -113,10 +114,10 @@ namespace ContactManager
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(292, 23);
+            this.TxtSearch.Location = new System.Drawing.Point(292, 31);
             this.TxtSearch.Multiline = true;
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(229, 31);
+            this.TxtSearch.Size = new System.Drawing.Size(229, 23);
             this.TxtSearch.TabIndex = 6;
             // 
             // CmdNew

@@ -132,5 +132,17 @@ namespace ContactManager
             Form1.Instance.CmdHome.Visible = true;
             
         }
+
+        private void CmdEdit_Click(object sender, EventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEdit"))
+            {
+                UI.UCEdit un = new UI.UCEdit();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCEdit"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
+        }
     }
 }
