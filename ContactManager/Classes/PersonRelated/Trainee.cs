@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace ContactManager.Classes.PersonRelated
+namespace ContactManager
 {
     class Trainee : Employee
     {
@@ -57,28 +57,26 @@ namespace ContactManager.Classes.PersonRelated
         }
 
         // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        private IEnumerable<XElement> trainee_;
+        private XElement trainee_;
 
-        public Trainee(ref IEnumerable<XElement> trainee)
+        public Trainee(ref XElement trainee)
             : base(ref trainee)
         {
             trainee_ = trainee;
         }
 
-        // Mit dieser Methode wird ein XElement Template von Employee erzeugt und ausgegenben
-        public override XElement XelementTemplate()
+        // Mit dieser Methode wird dem XML eine neue Person Trainee hinzugefügt
+        public virtual void AddToXml(ref XDocument personsXml)
         {
-            XElement trainee = base.XelementTemplate();
-
-            // Person Element von Basis nach Customer umbenennen
-            trainee.Element("Person").Name = "Trainee";
-
-            // Neue mitarbeiterbezogene Allgemeinattribute hinzufügen
-            trainee.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("NumberOfTraineeYears", ""),
-                              new XElement("CurrentTraineeYear", ""));
-
-            return trainee;
+            if (base.IdIsUnique(ref personsXml))
+            {
+                base.SetNewId(ref personsXml);
+                personsXml.Element("Trainees").AddFirst(trainee_);
+            }
+            else
+            {
+                throw new ArgumentException("Trainee with this id is allready existing in XML");
+            }
         }
 
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
