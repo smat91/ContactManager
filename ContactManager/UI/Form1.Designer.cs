@@ -127,6 +127,7 @@ namespace ContactManager
             this.CmdNew.TabIndex = 5;
             this.CmdNew.Text = "Neu";
             this.CmdNew.UseVisualStyleBackColor = true;
+            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // button7
             // 

@@ -118,5 +118,19 @@ namespace ContactManager
             TxtSearch.Clear();
             //Combobox leeren!
         }
+
+        private void CmdNew_Click(object sender, EventArgs e)
+        {
+
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNew"))
+            {
+                UI.UCNew un = new UI.UCNew();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCNew"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
+            
+        }
     }
 }
