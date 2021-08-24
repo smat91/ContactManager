@@ -29,19 +29,9 @@ namespace ContactManager.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.UCCustomer = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.UCCustomer.SuspendLayout();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // UCCustomer
-            // 
-            this.UCCustomer.Controls.Add(this.textBox1);
-            this.UCCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UCCustomer.Location = new System.Drawing.Point(0, 0);
-            this.UCCustomer.Name = "UCCustomer";
-            this.UCCustomer.Size = new System.Drawing.Size(1088, 634);
-            this.UCCustomer.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -51,16 +41,22 @@ namespace ContactManager.UI
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Customer";
             // 
-            // UCustomer
+            // textBox2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.UCCustomer);
-            this.Name = "UCustomer";
+            this.textBox2.Location = new System.Drawing.Point(609, 233);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(184, 43);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "Hier wird der Inhalt Customers angezeigt";
+            // 
+            // UCCustomer
+            // 
+            this.Controls.Add(this.textBox2);
+            this.Name = "UCCustomer";
             this.Size = new System.Drawing.Size(1088, 634);
-            this.UCCustomer.ResumeLayout(false);
-            this.UCCustomer.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,5 +64,6 @@ namespace ContactManager.UI
 
         private System.Windows.Forms.Panel UCCustomer;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

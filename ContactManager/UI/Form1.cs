@@ -35,7 +35,11 @@ namespace ContactManager
             set { PanelContainer = value; }
         }
 
-        public Button Homebutton 
+        public Button Homebutton
+        {
+            get { return CmdHome; }
+            set { CmdHome = value; }
+        }
         
         public XDocument xdocument = XDocument.Load("..\\..\\..\\XmlData\\Persons.xml");
 
@@ -56,16 +60,31 @@ namespace ContactManager
 
         private void CmdHome_Click(object sender, EventArgs e)
         {
-            /*if (CmdHome.Enabled = true) 
-            {
-                CmdHome.BackColor = Color.Red;  //Beispiel 
-                CmdHome.ForeColor = Color.White;
-            }*/
+            PanelContainer.Controls["UCHome"].BringToFront();
+            CmdHome.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            CmdHome.Visible = false;
+            _obj = this;
+
+            UCHome uc = new UCHome();
+            uc.Dock = DockStyle.Fill;
+            PanelContainer.Controls.Add(uc);
+        }
+
+        private void CmdKunde_Click(object sender, EventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCCustomer"))
+            {
+                UCCustomer un = new UCCustomer();
+                un.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(un);
+            }
+            Form1.Instance.PnlContainer.Controls["UCCustomer"].BringToFront();
+            Form1.Instance.CmdHome.Visible = true;
+
         }
     }
 }

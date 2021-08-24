@@ -142,6 +142,7 @@ namespace ContactManager
             this.CmdKunde.TabIndex = 1;
             this.CmdKunde.Text = "Kunde";
             this.CmdKunde.UseVisualStyleBackColor = false;
+            this.CmdKunde.Click += new System.EventHandler(this.CmdKunde_Click);
             // 
             // CmdMitarbeiter
             // 
