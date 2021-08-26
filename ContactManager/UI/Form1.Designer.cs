@@ -29,21 +29,15 @@ namespace ContactManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtOutput = new System.Windows.Forms.TextBox();
             this.CmdReadAll = new System.Windows.Forms.Button();
             this.CmdReadCustomers = new System.Windows.Forms.Button();
             this.CmdReadEmployees = new System.Windows.Forms.Button();
             this.CmdReadIds = new System.Windows.Forms.Button();
+            this.TxtOutput = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TxtOutput
-            // 
-            this.TxtOutput.Location = new System.Drawing.Point(14, 92);
-            this.TxtOutput.Multiline = true;
-            this.TxtOutput.Name = "TxtOutput";
-            this.TxtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtOutput.Size = new System.Drawing.Size(522, 351);
-            this.TxtOutput.TabIndex = 0;
             // 
             // CmdReadAll
             // 
@@ -85,11 +79,45 @@ namespace ContactManager
             this.CmdReadIds.UseVisualStyleBackColor = true;
             this.CmdReadIds.Click += new System.EventHandler(this.CmdReadTrainees_Click);
             // 
+            // TxtOutput
+            // 
+            this.TxtOutput.Location = new System.Drawing.Point(14, 92);
+            this.TxtOutput.Multiline = true;
+            this.TxtOutput.Name = "TxtOutput";
+            this.TxtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtOutput.Size = new System.Drawing.Size(522, 351);
+            this.TxtOutput.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(565, 92);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(523, 346);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(342, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 45);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.CmdReadIds);
             this.Controls.Add(this.CmdReadEmployees);
             this.Controls.Add(this.CmdReadCustomers);
@@ -97,18 +125,20 @@ namespace ContactManager
             this.Controls.Add(this.TxtOutput);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TxtOutput;
         private System.Windows.Forms.Button CmdReadAll;
         private System.Windows.Forms.Button CmdReadCustomers;
         private System.Windows.Forms.Button CmdReadEmployees;
         private System.Windows.Forms.Button CmdReadIds;
+        private System.Windows.Forms.TextBox TxtOutput;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

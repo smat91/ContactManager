@@ -18,7 +18,10 @@ namespace ContactManager
         public const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
         public XDocument xdocument = XDocument.Load(filePath);
 
+        DataTable dt = new DataTable();
+
         private XmlTemplate xmlTemplate = new XmlTemplate();
+        private XmlDataHandling xmlDataHandling = new XmlDataHandling();
 
         public Form1()
         {
@@ -70,13 +73,19 @@ namespace ContactManager
 
         private void CmdReadTrainees_Click(object sender, EventArgs e)
         {
-            IEnumerable<XElement> idList =
-                from ids in xdocument.Descendants("Id")
-                orderby int.Parse(ids.Value)
-                select ids;
+            dataGridView1.DataSource = xmlDataHandling.XElementToDataTable(xdocument, XmlDataHandling.personType.customer);
+        }
 
-            TxtOutput.Text += 1 + (int)idList.Last();
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            TxtOutput.Clear();
 
+            string selectedId = dataGridView1.SelectedCells[0].Value.ToString();
+
+            foreach (var person in xmlDataHandling.DataTableToXElement(xdocument, XmlDataHandling.personType.customer, selectedId).Descendants())
+            {
+                TxtOutput.Text += person + "\r\n";
+            }
         }
     }
 }
