@@ -71,7 +71,7 @@ namespace ContactManager
             return dt;
         }
 
-        public XElement DataTableToXElement(XDocument xdocument, personType type, string id)
+        public ref XElement DataTableToXElement(XDocument xdocument, personType type, string id)
         {
             XElement[] columns = xdocument.
                 Descendants(personTypeDict[type]).
@@ -80,7 +80,7 @@ namespace ContactManager
                 Ancestors(personTypeDict[type]).
                 ToArray();
 
-            return columns[0];
+            return ref columns[0];
         }
 
     }

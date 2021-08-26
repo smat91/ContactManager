@@ -82,6 +82,12 @@ namespace ContactManager
 
             string selectedId = dataGridView1.SelectedCells[0].Value.ToString();
 
+            Customer c2 = new Customer(ref xmlDataHandling.DataTableToXElement(xdocument, XmlDataHandling.personType.customer, selectedId));
+
+
+            c2.firstname_ = "dada";
+            c2.lastname_ = "gugus";
+
             foreach (var person in xmlDataHandling.DataTableToXElement(xdocument, XmlDataHandling.personType.customer, selectedId).Descendants())
             {
                 TxtOutput.Text += person + "\r\n";
