@@ -14,6 +14,7 @@ using System.Xml.Linq;
 
 namespace ContactManager
 {
+
     public partial class Form1 : Form
     {
         static Form1 _obj;
@@ -85,6 +86,8 @@ namespace ContactManager
             Form1.Instance.CmdHome.Visible = true;
             sideBarStatus = 1;
 
+            this.panel2.BackColor = ColorTranslator.FromHtml("#FDC006");
+
         }
 
         private void CmdMitarbeiter_Click(object sender, EventArgs e)
@@ -98,6 +101,8 @@ namespace ContactManager
             Form1.Instance.PnlContainer.Controls["UCMember"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
             sideBarStatus = 2;
+
+            this.panel2.BackColor = ColorTranslator.FromHtml("#019587");
         }
 
         private void CmdLernende_Click(object sender, EventArgs e)
@@ -111,6 +116,8 @@ namespace ContactManager
             Form1.Instance.PnlContainer.Controls["UCTrainee"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
             sideBarStatus = 3;
+
+            this.panel2.BackColor = ColorTranslator.FromHtml("#02A8F4");
         }
 
         private void CmdReset_Click(object sender, EventArgs e)
@@ -144,5 +151,35 @@ namespace ContactManager
             Form1.Instance.PnlContainer.Controls["UCEdit"].BringToFront();
             Form1.Instance.CmdHome.Visible = true;
         }
+              
+        // Design: Farben ändern sich beim Hovern
+        private void CmdKunde_MouseEnter(object sender, EventArgs e)
+        {
+           this.CmdKunde.BackColor = ColorTranslator.FromHtml("#FDC006");
+        }
+        private void CmdKunde_MouseLeave(object sender, EventArgs e)
+        {
+            this.CmdKunde.BackColor = ColorTranslator.FromHtml("#33334C");
+        }
+
+        private void CmdMitarbeiter_MouseEnter(object sender, EventArgs e)
+        {
+            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#019587");
+        }
+        private void CmdMitarbeiter_MouseLeave(object sender, EventArgs e)
+        {
+            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#33334C");
+        }
+
+        private void CmdLernende_MouseEnter(object sender, EventArgs e)
+        {
+            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#02A8F4");
+        }
+        private void CmdLernende_MouseLeave(object sender, EventArgs e)
+        {
+            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
+        }
+
+        
     }
 }

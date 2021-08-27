@@ -29,6 +29,7 @@ namespace ContactManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.CmdEdit = new System.Windows.Forms.Button();
             this.CmdDelete = new System.Windows.Forms.Button();
             this.CmdReset = new System.Windows.Forms.Button();
@@ -52,9 +53,15 @@ namespace ContactManager
             // 
             // CmdEdit
             // 
-            this.CmdEdit.Location = new System.Drawing.Point(100, 11);
+            this.CmdEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CmdEdit.BackgroundImage")));
+            this.CmdEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CmdEdit.FlatAppearance.BorderSize = 0;
+            this.CmdEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdEdit.Location = new System.Drawing.Point(75, 0);
             this.CmdEdit.Name = "CmdEdit";
-            this.CmdEdit.Size = new System.Drawing.Size(75, 46);
+            this.CmdEdit.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CmdEdit.Size = new System.Drawing.Size(75, 77);
             this.CmdEdit.TabIndex = 2;
             this.CmdEdit.Text = "Bearbeiten";
             this.CmdEdit.UseVisualStyleBackColor = true;
@@ -62,18 +69,29 @@ namespace ContactManager
             // 
             // CmdDelete
             // 
-            this.CmdDelete.Location = new System.Drawing.Point(181, 11);
+            this.CmdDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CmdDelete.BackgroundImage")));
+            this.CmdDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CmdDelete.FlatAppearance.BorderSize = 0;
+            this.CmdDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdDelete.Location = new System.Drawing.Point(150, 0);
             this.CmdDelete.Name = "CmdDelete";
-            this.CmdDelete.Size = new System.Drawing.Size(75, 45);
+            this.CmdDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CmdDelete.Size = new System.Drawing.Size(75, 77);
             this.CmdDelete.TabIndex = 3;
             this.CmdDelete.Text = "Löschen";
             this.CmdDelete.UseVisualStyleBackColor = true;
             // 
             // CmdReset
             // 
-            this.CmdReset.Location = new System.Drawing.Point(788, 16);
+            this.CmdReset.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CmdReset.FlatAppearance.BorderSize = 0;
+            this.CmdReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdReset.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CmdReset.Location = new System.Drawing.Point(800, 0);
             this.CmdReset.Name = "CmdReset";
-            this.CmdReset.Size = new System.Drawing.Size(108, 45);
+            this.CmdReset.Size = new System.Drawing.Size(108, 77);
             this.CmdReset.TabIndex = 4;
             this.CmdReset.Text = "Suche zurücksetzen";
             this.CmdReset.UseVisualStyleBackColor = true;
@@ -81,7 +99,7 @@ namespace ContactManager
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.Controls.Add(this.CmbFilter);
             this.panel2.Controls.Add(this.CmdSearch);
             this.panel2.Controls.Add(this.TxtSearch);
@@ -105,16 +123,22 @@ namespace ContactManager
             // 
             // CmdSearch
             // 
-            this.CmdSearch.Location = new System.Drawing.Point(688, 16);
+            this.CmdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CmdSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CmdSearch.FlatAppearance.BorderSize = 0;
+            this.CmdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdSearch.Image = ((System.Drawing.Image)(resources.GetObject("CmdSearch.Image")));
+            this.CmdSearch.Location = new System.Drawing.Point(706, 0);
             this.CmdSearch.Name = "CmdSearch";
-            this.CmdSearch.Size = new System.Drawing.Size(94, 45);
+            this.CmdSearch.Size = new System.Drawing.Size(94, 77);
             this.CmdSearch.TabIndex = 7;
             this.CmdSearch.Text = "Suchen";
             this.CmdSearch.UseVisualStyleBackColor = true;
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(292, 31);
+            this.TxtSearch.Location = new System.Drawing.Point(257, 31);
             this.TxtSearch.Multiline = true;
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(229, 23);
@@ -122,9 +146,15 @@ namespace ContactManager
             // 
             // CmdNew
             // 
-            this.CmdNew.Location = new System.Drawing.Point(19, 11);
+            this.CmdNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.CmdNew.FlatAppearance.BorderSize = 0;
+            this.CmdNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdNew.Image = ((System.Drawing.Image)(resources.GetObject("CmdNew.Image")));
+            this.CmdNew.Location = new System.Drawing.Point(0, 0);
             this.CmdNew.Name = "CmdNew";
-            this.CmdNew.Size = new System.Drawing.Size(75, 45);
+            this.CmdNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CmdNew.Size = new System.Drawing.Size(75, 77);
             this.CmdNew.TabIndex = 5;
             this.CmdNew.Text = "Neu";
             this.CmdNew.UseVisualStyleBackColor = true;
@@ -154,7 +184,9 @@ namespace ContactManager
             // 
             // CmdHome
             // 
-            this.CmdHome.BackColor = System.Drawing.Color.White;
+            this.CmdHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.CmdHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CmdHome.Location = new System.Drawing.Point(0, 0);
             this.CmdHome.Margin = new System.Windows.Forms.Padding(0);
             this.CmdHome.Name = "CmdHome";
@@ -166,48 +198,85 @@ namespace ContactManager
             // 
             // CmdKunde
             // 
-            this.CmdKunde.BackColor = System.Drawing.Color.White;
-            this.CmdKunde.Location = new System.Drawing.Point(0, 113);
+            this.CmdKunde.BackColor = System.Drawing.Color.Transparent;
+            this.CmdKunde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdKunde.FlatAppearance.BorderSize = 0;
+            this.CmdKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdKunde.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CmdKunde.Image = ((System.Drawing.Image)(resources.GetObject("CmdKunde.Image")));
+            this.CmdKunde.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdKunde.Location = new System.Drawing.Point(0, 77);
             this.CmdKunde.Margin = new System.Windows.Forms.Padding(0);
             this.CmdKunde.Name = "CmdKunde";
-            this.CmdKunde.Size = new System.Drawing.Size(164, 35);
+            this.CmdKunde.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CmdKunde.Size = new System.Drawing.Size(164, 50);
             this.CmdKunde.TabIndex = 1;
-            this.CmdKunde.Text = "Kunde";
+            this.CmdKunde.Text = "  Kunde";
+            this.CmdKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdKunde.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CmdKunde.UseVisualStyleBackColor = false;
             this.CmdKunde.Click += new System.EventHandler(this.CmdKunde_Click);
+            this.CmdKunde.MouseEnter += new System.EventHandler(this.CmdKunde_MouseEnter);
+            this.CmdKunde.MouseLeave += new System.EventHandler(this.CmdKunde_MouseLeave);
             // 
             // CmdMitarbeiter
             // 
-            this.CmdMitarbeiter.BackColor = System.Drawing.Color.White;
-            this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 148);
+            this.CmdMitarbeiter.BackColor = System.Drawing.Color.Transparent;
+            this.CmdMitarbeiter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdMitarbeiter.FlatAppearance.BorderSize = 0;
+            this.CmdMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdMitarbeiter.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CmdMitarbeiter.Image = ((System.Drawing.Image)(resources.GetObject("CmdMitarbeiter.Image")));
+            this.CmdMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 127);
             this.CmdMitarbeiter.Margin = new System.Windows.Forms.Padding(0);
             this.CmdMitarbeiter.Name = "CmdMitarbeiter";
-            this.CmdMitarbeiter.Size = new System.Drawing.Size(164, 35);
+            this.CmdMitarbeiter.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CmdMitarbeiter.Size = new System.Drawing.Size(164, 50);
             this.CmdMitarbeiter.TabIndex = 2;
-            this.CmdMitarbeiter.Text = "Mitarbeiter";
+            this.CmdMitarbeiter.Text = "  Mitarbeitende";
+            this.CmdMitarbeiter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdMitarbeiter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CmdMitarbeiter.UseVisualStyleBackColor = false;
             this.CmdMitarbeiter.Click += new System.EventHandler(this.CmdMitarbeiter_Click);
+            this.CmdMitarbeiter.MouseEnter += new System.EventHandler(this.CmdMitarbeiter_MouseEnter);
+            this.CmdMitarbeiter.MouseLeave += new System.EventHandler(this.CmdMitarbeiter_MouseLeave);
             // 
             // CmdLernende
             // 
-            this.CmdLernende.BackColor = System.Drawing.Color.White;
-            this.CmdLernende.Location = new System.Drawing.Point(0, 183);
+            this.CmdLernende.BackColor = System.Drawing.Color.Transparent;
+            this.CmdLernende.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdLernende.FlatAppearance.BorderSize = 0;
+            this.CmdLernende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdLernende.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdLernende.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CmdLernende.Image = ((System.Drawing.Image)(resources.GetObject("CmdLernende.Image")));
+            this.CmdLernende.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdLernende.Location = new System.Drawing.Point(0, 177);
             this.CmdLernende.Margin = new System.Windows.Forms.Padding(0);
             this.CmdLernende.Name = "CmdLernende";
-            this.CmdLernende.Size = new System.Drawing.Size(164, 35);
+            this.CmdLernende.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CmdLernende.Size = new System.Drawing.Size(164, 50);
             this.CmdLernende.TabIndex = 3;
-            this.CmdLernende.Text = "Lernende";
+            this.CmdLernende.Text = "  Lernende";
+            this.CmdLernende.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdLernende.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CmdLernende.UseVisualStyleBackColor = false;
             this.CmdLernende.Click += new System.EventHandler(this.CmdLernende_Click);
+            this.CmdLernende.MouseEnter += new System.EventHandler(this.CmdLernende_MouseEnter);
+            this.CmdLernende.MouseLeave += new System.EventHandler(this.CmdLernende_MouseLeave);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel1.Controls.Add(this.CmdLernende);
             this.panel1.Controls.Add(this.CmdMitarbeiter);
             this.panel1.Controls.Add(this.CmdKunde);
             this.panel1.Controls.Add(this.CmdHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.ForeColor = System.Drawing.Color.Gainsboro;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 595);
@@ -229,6 +298,7 @@ namespace ContactManager
             this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
