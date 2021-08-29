@@ -20,8 +20,8 @@ namespace ContactManager
 
         DataTable dt = new DataTable();
 
-        private XmlTemplate xmlTemplate = new XmlTemplate();
-        private XmlDataHandling xmlDataHandling = new XmlDataHandling();
+        private XmlTemplate xmlTemplate = new XmlTemplate();                // Objekt um die XML-Templates zu erstellen
+        private XmlDataHandling xmlDataHandling = new XmlDataHandling();    // Objekt um XML-Daten zu handeln
 
         public Form1()
         {
@@ -36,7 +36,11 @@ namespace ContactManager
         private void button1_Click(object sender, EventArgs e)
         {
             TxtOutput.Clear();
-            IEnumerable<XElement> persons = xdocument.Elements();
+
+            // Lädt alle Elemente aus xdocument
+            IEnumerable<XElement> persons = xdocument.Elements();   
+
+            // Gibt alle Elemente in persons aus
             foreach (var person in persons)
             {
                 TxtOutput.Text = person + "\r\n";
@@ -46,8 +50,12 @@ namespace ContactManager
         private void CmdReadCustomers_Click(object sender, EventArgs e)
         {
             TxtOutput.Clear();
-            IEnumerable<XElement> customer = xmlTemplate.XelementTemplateCustomer().Elements();
-            foreach (var person in customer)
+
+            // Erzeugt ein neues XElement vom Typ Customer
+            XElement customer = xmlTemplate.XelementTemplateCustomer();
+
+            // Gibt alle Elemente in customer aus
+            foreach (var person in customer.Elements())
             {
                 TxtOutput.Text += person + "\r\n";
             }
@@ -57,14 +65,20 @@ namespace ContactManager
         {
             TxtOutput.Clear();
 
+            // Erzeugt ein neues XElement vom Typ Customer
             XElement customerTemplate = xmlTemplate.XelementTemplateCustomer();
+
+            // Erzeugt ein neues objekt vom Typ Customer das vorhin erstelle Template
+            // muss als Referenz mitgegeben werden
             Customer c1 = new Customer(ref customerTemplate);
 
-            c1.AddToXml(ref xdocument);
+            // Fügt das customer Objekt c1 dem XDocument hinzu
+            c1.AddToXDocument(ref xdocument);
 
-
+            // Speichert das XDocument als XML ab
             SaveToXml();
 
+            // Gibt alle Elemente in customerTemplate aus
             foreach (var person in customerTemplate.Descendants())
             {
                 TxtOutput.Text += person + "\r\n";
@@ -73,6 +87,10 @@ namespace ContactManager
 
         private void CmdReadTrainees_Click(object sender, EventArgs e)
         {
+            // Fügt dem DataGridView eine Datenquelle hinzu
+            // Der Methode wird das XDoument und der Personentyp übergeben
+            // anschliessend werden die Daten aus dem XDocument so aufbereitet,
+            // dass die dem DataGridView als DataSource übergeben werden können.
             dataGridView1.DataSource = xmlDataHandling.XElementToDataTable(xdocument, XmlDataHandling.personType.customer);
         }
 
@@ -80,15 +98,20 @@ namespace ContactManager
         {
             TxtOutput.Clear();
 
+            // ID aus selektierter Zeile aus dem Data Grid View auslesen
+            // Die ID steht in der ersten zelle deshalb --> SelectedCells[0]
             string selectedId = dataGridView1.SelectedCells[0].Value.ToString();
 
-            Customer c2 = new Customer(ref xmlDataHandling.DataTableToXElement(xdocument, XmlDataHandling.personType.customer, selectedId));
+            // Erzeugt ein neues objekt vom Typ Customer hanhand der ID kann das 
+            // bestehende XElement aus dem XDocument ausgelesen werden
+            Customer c2 = new Customer(ref xmlDataHandling.IdToXElement(xdocument, XmlDataHandling.personType.customer, selectedId));
 
 
             c2.firstname_ = "dada";
             c2.lastname_ = "gugus";
 
-            foreach (var person in xmlDataHandling.DataTableToXElement(xdocument, XmlDataHandling.personType.customer, selectedId).Descendants())
+            // Gibt alle Elemente im Ausgelesenen XElement aus
+            foreach (var person in xmlDataHandling.IdToXElement(xdocument, XmlDataHandling.personType.customer, selectedId).Descendants())
             {
                 TxtOutput.Text += person + "\r\n";
             }

@@ -116,7 +116,7 @@ namespace ContactManager
         }
 
         // Mit dieser Methode wird dem XML eine neue Person Customer hinzugefügt
-        public virtual void AddToXml(ref XDocument personsXml)
+        public virtual void AddToXDocument(ref XDocument personsXml)
         {
             if (base.IdIsUnique(ref personsXml))
             {
