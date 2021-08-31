@@ -11,43 +11,77 @@ namespace ContactManager
 {
     class XmlDataHandling
     {
-        // Enumeration für die verschiedenen Personentypen
-        public enum personType
-        {
-            customer,
-            employee,
-            trainee
-        }
-
         // Dictioary für die verschiedenen Personentypen
         private Dictionary<personType, string> personTypeDict = new Dictionary<personType, string>();
 
-        public XmlDataHandling()
+        // Suchterm prüfen
+        private bool CheckTerm(XElement referenzElement, personType type, XElement target, string attribute, string term) 
         {
-            // Hinzufügen der verschiedenen Personentyem zum Dictionary
-            personTypeDict.Add(personType.customer, "Customer");
-            personTypeDict.Add(personType.employee, "Employee");
-            personTypeDict.Add(personType.trainee, "Trainee");
+            if (!target.HasElements && target.Parent.Name.LocalName.ToString() != "Log")
+            {
+                if (attribute == null)
+                {
+                    // Falls kein Attribut angewählt wurde alle Einträge Prüfen
+                    return target.Value.ToString().Contains(term, StringComparison.OrdinalIgnoreCase);
+                }
+                else
+                {
+                    // Falls ein Wert übereinstimmt
+                    if (target.Value.ToString().Contains(term, StringComparison.OrdinalIgnoreCase))
+                    {
+                        if (target.HasAttributes && referenzElement.HasAttributes)
+                        {
+                            // Falls das zu Prüfende XElement, dass dem Attribut entspricht selbst ein Attriut hat
+                            // Prüfen ob der Wert des Attribute Type übereinstimmt da der Name bei diesem Element 
+                            // nicht eindeutig ist (XElemente Phone)
+                            return target.Attribute("Type").Value == referenzElement.Attribute("Type").Value;
+                        }
+                        else if (!target.HasAttributes && !referenzElement.HasAttributes)
+                        {
+                            // Falls das zu Prüfende XElment, dass dem Attribut entspricht selbst kein Attriut hat
+                            // Prüfen ob der Wert des Namen übereinstimmt da der Name bei diesem Element 
+                            // eindeutig ist
+                            return target.Name.LocalName == attribute;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        // Falls kein Wert übereinstimmt 
+                        return false;
+                    }
+                }
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
-        public DataTable XElementToDataTable(XDocument xdocument, personType type)
+        // Methode um alle Spalten zu ermitteln, die der gewünschte Datensatz hat
+        public XElement[] GetColumns(ref XDocument xdocument, personType type)
         {
-            // neue DataTable erzeugen wird als Datenquelle für DataGridViews beötigt
-            DataTable dt = new DataTable();
 
             // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
             // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
-            XElement[] columns = xdocument.
+            return xdocument.
                 Descendants(personTypeDict[type]).FirstOrDefault().
                 Descendants().
                 Where(x => !x.HasElements && x.Parent.Name.LocalName.ToString() != "Log").
                 ToArray();
+        }
 
+        // Methode um alle Spaltennamen zu ermitteln, die der gewünschte Datensatz hat
+        public List<string> GetColumnNames(ref XDocument xdocument, personType type)
+        {
             // Liste für die Spaltennamen
             List<string> columnNames = new List<string>();
 
-
-            foreach (XElement elemnt in columns)
+            foreach (XElement elemnt in GetColumns(ref xdocument, type))
             {
                 // Falls es sich um ein Element mit Attributen handelt,
                 // wird der Spaltenname aus Element-Namen und Attribut-Wert
@@ -66,6 +100,37 @@ namespace ContactManager
                 }
             }
 
+            return columnNames;
+        }
+
+        // Enumeration für die verschiedenen Personentypen
+        public enum personType
+        {
+            customer,
+            employee,
+            trainee
+        }
+
+        public XmlDataHandling()
+        {
+            // Hinzufügen der verschiedenen Personentyem zum Dictionary
+            personTypeDict.Add(personType.customer, "Customer");
+            personTypeDict.Add(personType.employee, "Employee");
+            personTypeDict.Add(personType.trainee, "Trainee");
+        }
+
+        public DataTable XElementToDataTable(ref XDocument xdocument, personType type)
+        {
+            // neue DataTable erzeugen wird als Datenquelle für DataGridViews beötigt
+            DataTable dt = new DataTable();
+
+            // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
+            // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
+            XElement[] columns = GetColumns(ref xdocument, type);
+
+            // Liste für die Spaltennamen
+            var columnNames = GetColumnNames(ref xdocument, type);
+
             // Die Spaltennamen der DataTable hinzufügen
             foreach (string columnName in columnNames)
             {
@@ -81,15 +146,26 @@ namespace ContactManager
                 // Die einzelnen Felder der Reihe mit den werden aus dem XML-Tree abfüllen
                 foreach (string columnName in columnNames)
                 {
-                    newRow[columnName] = (string)record.DescendantsAndSelf().
-                        Elements(columns[columnNames.IndexOf(columnName)].Name).FirstOrDefault();
+                    IEnumerable<XElement> elements = record.DescendantsAndSelf().
+                        Elements(columns[columnNames.IndexOf(columnName)].Name);
+
+                    if (elements.Count() > 1)
+                    {
+                        newRow[columnName] = (string)elements
+                            .Where(x => x.Attribute("Type").Value == columns[columnNames.IndexOf(columnName)].Attribute("Type").Value)
+                            .FirstOrDefault();
+                    }
+                    else 
+                    { 
+                        newRow[columnName] = (string)elements.FirstOrDefault();
+                    }
                 }
             }
 
             return dt;
         }
 
-        public ref XElement IdToXElement(XDocument xdocument, personType type, string id)
+        public ref XElement IdToXElement(ref XDocument xdocument, personType type, string id)
         {
             // Liest alle XElemente aus die dem gewünschten Typ ensprechen,
             // selbst vom Typ Id sind und deren Wert der gewünschten Id entspricht.
@@ -106,5 +182,80 @@ namespace ContactManager
             return ref columns[0];
         }
 
+        public void DeleteElementById(ref XDocument xdocument, personType type, string id) 
+        {
+            IdToXElement(ref xdocument, type, id).DescendantsAndSelf().Remove();
+        }
+
+        public DataTable SearchInXDocument(ref XDocument xdocument, personType type, string searchTerm, string attribute = null)
+        {
+            // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
+            // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
+            XElement[] columns = GetColumns(ref xdocument, type);
+
+            // Liste für die Spaltennamen
+            var columnNames = GetColumnNames(ref xdocument, type);
+
+            // String in Array wandeln
+            String[] searchTerms = searchTerm.Split(' ');
+
+            // Prüfen, ob String zusammenhängend ist, wenn nach Attributen gesucht wird
+            if (attribute != null && searchTerms.Count() > 1) { 
+                throw new ArgumentException("string must be contiguous if attribute search is used");
+            }
+
+            // Array für Suchergebnisse erzeugen und initial mit den zu
+            // durchsuchenden elementen füllen
+            List<XElement> searchResults = xdocument.
+                Descendants(personTypeDict[type]).
+                ToList();
+
+            // XDokument nach Strings durchsuchen
+            foreach (string term in searchTerms)
+            {
+                searchResults = searchResults.
+                    Descendants().
+                    Where(x => CheckTerm((attribute != null) ? columns[columnNames.IndexOf(attribute)] : null, type, x, attribute, term)).
+                    Ancestors(personTypeDict[type]).
+                    Distinct().
+                    ToList(); 
+            }
+
+            // neue DataTable erzeugen wird als Datenquelle für DataGridViews beötigt
+            DataTable dt = new DataTable();
+
+            // Die Spaltennamen der DataTable hinzufügen
+            foreach (string columnName in columnNames)
+            {
+                dt.Columns.Add(columnName, typeof(string));
+            }
+
+            // Die Zeilen der DataTable hinzufügen
+            foreach (XElement result in searchResults)
+            {
+                // Eine neue Zeile hinzufügen
+                DataRow newRow = dt.Rows.Add();
+
+                // Die einzelnen Felder der Reihe mit den werden aus dem XML-Tree abfüllen
+                foreach (string columnName in columnNames)
+                {
+                    IEnumerable<XElement> elements = result.DescendantsAndSelf().
+                        Elements(columns[columnNames.IndexOf(columnName)].Name);
+
+                    if (elements.Count() > 1)
+                    {
+                        newRow[columnName] = (string)elements
+                            .Where(x => x.Attribute("Type").Value == columns[columnNames.IndexOf(columnName)].Attribute("Type").Value)
+                            .FirstOrDefault();
+                    }
+                    else
+                    {
+                        newRow[columnName] = (string)elements.FirstOrDefault();
+                    }
+                }
+            }
+
+            return dt;
+        }
     }
 }
