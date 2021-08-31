@@ -62,6 +62,8 @@ namespace ContactManager
             CmdHome.Visible = true;
             sideBarStatus = 0;
 
+            this.panel2.BackColor = ColorTranslator.FromHtml("#9B59B6");
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -181,7 +183,14 @@ namespace ContactManager
         {
             this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
         }
+        private void CmdHome_MouseEnter(object sender, EventArgs e)
+        {
+            this.CmdHome.BackColor = ColorTranslator.FromHtml("#9B59B6");
+        }
+        private void CmdHome_MouseLeave(object sender, EventArgs e)
+        {
+            this.CmdHome.BackColor = ColorTranslator.FromHtml("#33334C");
+        }
 
-        
     }
 }

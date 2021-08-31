@@ -46,9 +46,11 @@ namespace ContactManager
             this.CmdLernende = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
+            this.ucDashboard1 = new ContactManager.UI.UCDashboard();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // CmdEdit
@@ -195,6 +197,8 @@ namespace ContactManager
             this.CmdHome.Text = "Dashboard";
             this.CmdHome.UseVisualStyleBackColor = false;
             this.CmdHome.Click += new System.EventHandler(this.CmdHome_Click);
+            this.CmdHome.MouseEnter += new System.EventHandler(this.CmdHome_MouseEnter);
+            this.CmdHome.MouseLeave += new System.EventHandler(this.CmdHome_MouseLeave);
             // 
             // CmdKunde
             // 
@@ -284,11 +288,19 @@ namespace ContactManager
             // 
             // PanelContainer
             // 
+            this.PanelContainer.Controls.Add(this.ucDashboard1);
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContainer.Location = new System.Drawing.Point(164, 77);
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(908, 518);
             this.PanelContainer.TabIndex = 8;
+            // 
+            // ucDashboard1
+            // 
+            this.ucDashboard1.Location = new System.Drawing.Point(-3, 0);
+            this.ucDashboard1.Name = "ucDashboard1";
+            this.ucDashboard1.Size = new System.Drawing.Size(908, 518);
+            this.ucDashboard1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -305,6 +317,7 @@ namespace ContactManager
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -327,6 +340,7 @@ namespace ContactManager
         private System.Windows.Forms.Button CmdSearch;
         private System.Windows.Forms.TextBox TxtSearch;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private UI.UCDashboard ucDashboard1;
     }
 }
 
