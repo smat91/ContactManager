@@ -1,7 +1,7 @@
 ﻿
 namespace ContactManager.UI
 {
-    partial class UCMember
+    partial class UCEmployee
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -29,32 +29,38 @@ namespace ContactManager.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DgvEmployee = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEmployee)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // DgvEmployee
             // 
-            this.textBox1.Location = new System.Drawing.Point(586, 323);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 37);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Hier werden die Mitarbeiter angezeigt";
+            this.DgvEmployee.AllowUserToAddRows = false;
+            this.DgvEmployee.AllowUserToDeleteRows = false;
+            this.DgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvEmployee.Location = new System.Drawing.Point(0, 0);
+            this.DgvEmployee.MultiSelect = false;
+            this.DgvEmployee.Name = "DgvEmployee";
+            this.DgvEmployee.RowTemplate.Height = 25;
+            this.DgvEmployee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvEmployee.Size = new System.Drawing.Size(908, 518);
+            this.DgvEmployee.TabIndex = 2;
             // 
-            // UCMember
+            // UCEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Name = "UCMember";
+            this.Controls.Add(this.DgvEmployee);
+            this.Name = "UCEmployee";
             this.Size = new System.Drawing.Size(1088, 634);
+            this.Load += new System.EventHandler(this.UCEmployee_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvEmployee)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView DgvEmployee;
     }
 }

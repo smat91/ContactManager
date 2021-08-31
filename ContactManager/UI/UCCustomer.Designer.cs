@@ -30,8 +30,8 @@ namespace ContactManager.UI
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DgvCustomer = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -42,21 +42,27 @@ namespace ContactManager.UI
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Customer";
             // 
-            // dataGridView1
+            // DgvCustomer
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(908, 518);
-            this.dataGridView1.TabIndex = 1;
+            this.DgvCustomer.AllowUserToAddRows = false;
+            this.DgvCustomer.AllowUserToDeleteRows = false;
+            this.DgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCustomer.Location = new System.Drawing.Point(0, 0);
+            this.DgvCustomer.MultiSelect = false;
+            this.DgvCustomer.Name = "DgvCustomer";
+            this.DgvCustomer.RowTemplate.Height = 25;
+            this.DgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvCustomer.Size = new System.Drawing.Size(908, 518);
+            this.DgvCustomer.TabIndex = 1;
+            this.DgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCustomer_CellContentClick);
             // 
             // UCCustomer
             // 
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgvCustomer);
             this.Name = "UCCustomer";
             this.Size = new System.Drawing.Size(1088, 634);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.UCCustomer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -65,6 +71,6 @@ namespace ContactManager.UI
 
        
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvCustomer;
     }
 }

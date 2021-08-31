@@ -11,19 +11,20 @@ using System.Xml.Linq;
 
 namespace ContactManager.UI
 {
-    public partial class UCTrainee : UserControl
+    public partial class UCEmployee : UserControl
     {
+
         private XDocument xdocument_;
         private XmlDataHandling xmlDataHandling = new XmlDataHandling();
-        public UCTrainee(ref XDocument xdocument)
+        public UCEmployee(ref XDocument xdocument)
         {
             InitializeComponent();
             xdocument_ = xdocument;
         }
 
-        private void UCTrainee_Load(object sender, EventArgs e)
+        private void UCEmployee_Load(object sender, EventArgs e)
         {
-            DgvTrainee.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+            DgvEmployee.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.employee);
         }
     }
 }

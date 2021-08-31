@@ -7,19 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ContactManager.UI
 {
     public partial class UCCustomer : UserControl
     {
-        public UCCustomer()
+        private XDocument xdocument_;
+        private XmlDataHandling xmlDataHandling = new XmlDataHandling();
+
+        public UCCustomer(ref XDocument xdocument)
         {
             InitializeComponent();
+            xdocument_ = xdocument;
         }
+        
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void UCCustomer_Load(object sender, EventArgs e)
+        {
+            //DataSet.ReadXml(Persons.xml);
+            //DgvCustomer.DataSource = DataSet.Tables["customer"];
+           DgvCustomer.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
         }
     }
 }
