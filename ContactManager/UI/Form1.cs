@@ -59,14 +59,14 @@ namespace ContactManager
         private void CmdHome_Click(object sender, EventArgs e)
         {
             PanelContainer.Controls["UCHome"].BringToFront();
-            CmdHome.Visible = false;
+            CmdHome.Visible = true;
             sideBarStatus = 0;
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CmdHome.Visible = false;
+            CmdHome.Visible = true;
             _obj = this;
 
             UI.UCHome uc = new UI.UCHome();

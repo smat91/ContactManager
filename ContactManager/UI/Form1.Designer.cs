@@ -192,7 +192,7 @@ namespace ContactManager
             this.CmdHome.Name = "CmdHome";
             this.CmdHome.Size = new System.Drawing.Size(164, 77);
             this.CmdHome.TabIndex = 0;
-            this.CmdHome.Text = "Home";
+            this.CmdHome.Text = "Dashboard";
             this.CmdHome.UseVisualStyleBackColor = false;
             this.CmdHome.Click += new System.EventHandler(this.CmdHome_Click);
             // 
