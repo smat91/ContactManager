@@ -36,6 +36,11 @@ namespace ContactManager
             this.TxtOutput = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxAttribut = new System.Windows.Forms.ComboBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +86,7 @@ namespace ContactManager
             // 
             // TxtOutput
             // 
-            this.TxtOutput.Location = new System.Drawing.Point(14, 92);
+            this.TxtOutput.Location = new System.Drawing.Point(14, 136);
             this.TxtOutput.Multiline = true;
             this.TxtOutput.Name = "TxtOutput";
             this.TxtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -93,12 +98,12 @@ namespace ContactManager
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(565, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(565, 136);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(523, 346);
+            this.dataGridView1.Size = new System.Drawing.Size(523, 351);
             this.dataGridView1.TabIndex = 5;
             // 
             // button1
@@ -107,15 +112,65 @@ namespace ContactManager
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 45);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
+            this.button1.Text = "get selected";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // comboBoxAttribut
+            // 
+            this.comboBoxAttribut.FormattingEnabled = true;
+            this.comboBoxAttribut.Location = new System.Drawing.Point(545, 41);
+            this.comboBoxAttribut.Name = "comboBoxAttribut";
+            this.comboBoxAttribut.Size = new System.Drawing.Size(464, 23);
+            this.comboBoxAttribut.TabIndex = 7;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(545, 12);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(464, 23);
+            this.txtSearch.TabIndex = 8;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(1016, 12);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 52);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(426, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 45);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "delete Selected";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(14, 65);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 45);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "show logs";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 450);
+            this.ClientSize = new System.Drawing.Size(1100, 499);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.comboBoxAttribut);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.CmdReadIds);
@@ -139,6 +194,11 @@ namespace ContactManager
         private System.Windows.Forms.TextBox TxtOutput;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxAttribut;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
 
