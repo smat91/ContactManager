@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Persons>
   <Customers>
     <Customer>
-      <Id>0</Id>
+      <Id>1</Id>
       <State>Aktiv</State>
       <Salutation>Herr</Salutation>
-      <Title></Title>
+      <Title>Dr</Title>
       <Firstname>Max</Firstname>
       <Lastname>Muster</Lastname>
       <Sex>männlich</Sex>
@@ -58,10 +58,37 @@
         </Log>
       </Logs>
     </Customer>
+    <Customer>
+      <Id>90</Id>
+      <State>Aktiv</State>
+      <Salutation>Frau</Salutation>
+      <Title></Title>
+      <Firstname>Maria</Firstname>
+      <Lastname>Heeb</Lastname>
+      <Sex>weiblich</Sex>
+      <Function>Einkaufsleiterin</Function>
+      <CompanyName>Test GmbH</CompanyName>
+      <CustomerType>b</CustomerType>
+      <Address>
+        <Street>Unterdorfstrasse</Street>
+        <Number>6</Number>
+        <City>Luzern</City>
+        <Zip>6000</Zip>
+        <Country>Schweiz</Country>
+      </Address>
+      <ContactData>
+        <Phone Type="Business">+41-12-123-1235</Phone>
+        <Phone Type="Mobile">+41-12-123-2346</Phone>
+        <Fax>+41-12-123-3457</Fax>
+        <EMail>maria.heeb@admin.ch</EMail>
+      </ContactData>
+      <Logs>
+      </Logs>
+    </Customer>
   </Customers>
   <Employees>
     <Employee>
-      <Id>0</Id>
+      <Id>3</Id>
       <State>Aktiv</State>
       <Salutation>Frau</Salutation>
       <Title></Title>
@@ -94,7 +121,7 @@
   </Employees>
   <Trainees>
     <Trainee>
-      <Id>0</Id>
+      <Id>4</Id>
       <State>Aktiv</State>
       <Salutation>Herr</Salutation>
       <Title></Title>
