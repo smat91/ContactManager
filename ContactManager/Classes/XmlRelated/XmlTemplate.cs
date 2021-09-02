@@ -25,7 +25,7 @@ namespace ContactManager
                             new XElement("Address",
                                 new XElement("Street", ""),
                                 new XElement("Number", ""),
-                                new XElement("Land", ""),
+                                new XElement("Country", ""),
                                 new XElement("City", ""),
                                 new XElement("Zip", "")
                                 ),

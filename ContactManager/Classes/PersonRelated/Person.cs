@@ -20,13 +20,13 @@ namespace ContactManager
                 // dieses Dokument oder Element in der Reihenfolge der Dokumente.
                 return (int)
                     (from element in person_.Descendants("Id")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             private set
             {
                 (from element in person_.Descendants("Id")
-                    select element).First().SetValue(value);
+                    select element).FirstOrDefault().SetValue(value);
             }
                
         }
@@ -37,7 +37,7 @@ namespace ContactManager
             {
                 return (string)
                     (from element in person_.Descendants("State")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             set
@@ -46,7 +46,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("State")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -61,7 +61,7 @@ namespace ContactManager
             {
                 return (string)
                     (from element in person_.Descendants("Salutation")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             set
@@ -69,7 +69,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Salutation")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("Titel")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -94,7 +94,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Titel")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -108,7 +108,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("Firstname")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set 
@@ -116,7 +116,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Firstname")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 { 
@@ -131,7 +131,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("Lastname")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -139,7 +139,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Lastname")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -154,7 +154,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("Sex")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -162,7 +162,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Sex")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -177,7 +177,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("Function")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -185,7 +185,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Function")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -200,7 +200,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("Street")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -208,7 +208,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("Street")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -217,19 +217,26 @@ namespace ContactManager
             }
         }
 
-        public int number_
+        public string number_
         {
             get
             {
-                return (int)
+                return (string)
                   (from element in person_.Descendants("Number")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
             {
+                if (value != null)
+                {
                     (from element in person_.Descendants("Number")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
+                }
+                else
+                {
+                    throw new ArgumentException("value cannot be null!");
+                }
             }
         }
 
@@ -239,7 +246,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("City")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -247,7 +254,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("City")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -262,14 +269,37 @@ namespace ContactManager
             {
                 return (int)
                   (from element in person_.Descendants("Zip")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
             {
 
                 (from element in person_.Descendants("Zip")
-                 select element).First().SetValue(value);
+                 select element).FirstOrDefault().SetValue(value);
+            }
+        }
+
+        public string country_
+        {
+            get
+            {
+                return (string)
+                  (from element in person_.Descendants("Country")
+                   select element).FirstOrDefault();
+            }
+
+            set
+            {
+                if (value != null)
+                {
+                    (from element in person_.Descendants("Country")
+                     select element).FirstOrDefault().SetValue(value);
+                }
+                else
+                {
+                    throw new ArgumentException("value cannot be null!");
+                }
             }
         }
 
@@ -278,16 +308,18 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone<Business>")
-                   select element).First();
+                  (from element in person_.Descendants("Phone").
+                   Where(x => x.Attribute("Type").Value == "Business")
+                   select element).FirstOrDefault();
             }
 
             set
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Phone<Business>")
-                     select element).First().SetValue(value);
+                    (from element in person_.Descendants("Phone").
+                   Where(x => x.Attribute("Type").Value == "Business")
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -301,16 +333,18 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone<Mobile>")
-                   select element).First();
+                  (from element in person_.Descendants("Phone").
+                   Where(x => x.Attribute("Type").Value == "Mobile")
+                   select element).FirstOrDefault();
             }
 
             set
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Phone<Mobile>")
-                     select element).First().SetValue(value);
+                    (from element in person_.Descendants("Phone").
+                   Where(x => x.Attribute("Type").Value == "Mobile")
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -325,7 +359,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in person_.Descendants("EMail")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -333,7 +367,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in person_.Descendants("EMail")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -388,6 +422,7 @@ namespace ContactManager
                    number_ == person.number_ &&
                    city_ == person.city_ &&
                    zip_ == person.zip_ &&
+                   country_ == person.country_ &&
                    phoneBusiness_ == person.phoneBusiness_ &&
                    phoneMob_ == person.phoneMob_&&
                    eMail_ == person.eMail_;
@@ -407,7 +442,8 @@ namespace ContactManager
                     street_ + " " + 
                     number_ + ", " + 
                     zip_ + ", " + 
-                    city_ + ", " + 
+                    city_ + ", " +
+                    country_ + ", " +
                     phoneBusiness_ + ", " + 
                     phoneMob_ + ", " + 
                     eMail_;

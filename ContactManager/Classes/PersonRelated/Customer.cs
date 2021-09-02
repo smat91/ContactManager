@@ -16,7 +16,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in customer_.Descendants("CompanyName")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -24,7 +24,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in customer_.Descendants("CompanyName")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -38,7 +38,7 @@ namespace ContactManager
             {
                 return  (string)
                   (from element in customer_.Descendants("CustomerType")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -53,7 +53,7 @@ namespace ContactManager
                     if (customerType >= a && customerType <= e)
                     {
                         (from element in customer_.Descendants("CustomerType")
-                         select element).First().SetValue(value);
+                         select element).FirstOrDefault().SetValue(value);
                     }
                     else 
                     { 
@@ -74,7 +74,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in customer_.Descendants("Fax")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -82,7 +82,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in customer_.Descendants("Fax")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {

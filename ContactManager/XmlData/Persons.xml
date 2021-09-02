@@ -68,7 +68,7 @@
       <Sex>weiblich</Sex>
       <Function>Einkaufsleiterin</Function>
       <CompanyName>Test GmbH</CompanyName>
-      <CustomerType>b</CustomerType>
+      <CustomerType>B</CustomerType>
       <Address>
         <Street>Unterdorfstrasse</Street>
         <Number>6</Number>

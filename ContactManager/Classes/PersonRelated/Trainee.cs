@@ -16,7 +16,7 @@ namespace ContactManager
             {
                 return (int)
                   (from element in trainee_.Descendants("NumberOfTraineeYears")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -24,7 +24,7 @@ namespace ContactManager
                 if (value > 0)
                 {
                     (from element in trainee_.Descendants("NumberOfTraineeYears")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -39,7 +39,7 @@ namespace ContactManager
             {
                 return (int)
                   (from element in trainee_.Descendants("CurrentTraineeYear")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -47,7 +47,7 @@ namespace ContactManager
                 if (value > 0 && value <= numberOfTraineeYears_)
                 {
                     (from element in trainee_.Descendants("CurrentTraineeYear")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {

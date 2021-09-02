@@ -18,13 +18,13 @@ namespace ContactManager
                 // dieses Dokument oder Element in der Reihenfolge der Dokumente.
                 return (DateTime)
                   (from element in employee_.Descendants("DateOfBirth")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
             {
                 (from element in employee_.Descendants("DateOfBirth")
-                select element).First().SetValue(value);
+                select element).FirstOrDefault().SetValue(value);
             }
         }
 
@@ -34,7 +34,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in employee_.Descendants("Department")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -42,7 +42,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in employee_.Descendants("Department")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -57,7 +57,7 @@ namespace ContactManager
             {
                 return (string)
                     (from element in employee_.Descendants("InsuranceNumber")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             set
@@ -65,7 +65,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in employee_.Descendants("InsuranceNumber")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -80,7 +80,7 @@ namespace ContactManager
             {
                 return (string)
                     (from element in employee_.Descendants("Citizenship")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             set
@@ -88,7 +88,7 @@ namespace ContactManager
                 if (value != null)
                 {
                     (from element in employee_.Descendants("Citizenship")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -103,13 +103,13 @@ namespace ContactManager
             {
                 return (DateTime)
                   (from element in employee_.Descendants("EntryDate")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
             {
                 (from element in employee_.Descendants("EntryDate")
-                select element).First().SetValue(value);
+                select element).FirstOrDefault().SetValue(value);
             }
         }
 
@@ -119,7 +119,7 @@ namespace ContactManager
             {
                 return (DateTime)
                   (from element in employee_.Descendants("SeperationDate")
-                   select element).First();
+                   select element).FirstOrDefault();
             }
 
             set
@@ -127,7 +127,7 @@ namespace ContactManager
                 if (value > entryDate_)
                 {
                     (from element in employee_.Descendants("SeperationDate")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else 
                 {
@@ -142,7 +142,7 @@ namespace ContactManager
             {
                 return (int)
                     (from element in employee_.Descendants("LevelOfEmployment")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             set
@@ -150,7 +150,7 @@ namespace ContactManager
                 if (value > 0)
                 {
                     (from element in employee_.Descendants("LevelOfEmployment")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -165,7 +165,7 @@ namespace ContactManager
             {
                 return (int)
                     (from element in employee_.Descendants("Level")
-                     select element).First();
+                     select element).FirstOrDefault();
             }
 
             set
@@ -173,7 +173,7 @@ namespace ContactManager
                 if (value >= 0 && value <= 5)
                 {
                     (from element in employee_.Descendants("Level")
-                     select element).First().SetValue(value);
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
@@ -187,16 +187,18 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in employee_.Descendants("Phone<Privat>")
-                   select element).First();
+                  (from element in employee_.Descendants("Phone").
+                   Where(x => x.Attribute("Type").Value == "Privat")
+                   select element).FirstOrDefault();
             }
 
             set
             {
                 if (value != null)
                 {
-                    (from element in employee_.Descendants("Phone<Privat>")
-                     select element).First().SetValue(value);
+                    (from element in employee_.Descendants("Phone").
+                     Where(x => x.Attribute("Type").Value == "Privat")
+                     select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
