@@ -85,7 +85,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Titel")
+                  (from element in person_.Descendants("Title")
                    select element).FirstOrDefault();
             }
 
@@ -93,7 +93,7 @@ namespace ContactManager
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Titel")
+                    (from element in person_.Descendants("Title")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else

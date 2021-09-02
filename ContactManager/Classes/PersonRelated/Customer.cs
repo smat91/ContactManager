@@ -43,7 +43,7 @@ namespace ContactManager
 
             set
             {
-                if (value.Length != 1)
+                if (value.Length == 1)
                 {
                     const int a = 'A';
                     const int e = 'E';
