@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace ContactManager
 {
-    class Trainee : Employee
+    public class Trainee : Employee
     {
         public int numberOfTraineeYears_
         {

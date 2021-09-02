@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace ContactManager
 {
-    class Customer : Person
+    public class Customer : Person
     {
         public string companyName_
         {
