@@ -43,8 +43,13 @@ namespace ContactManager
             get { return CmdHome; }
             set { CmdHome = value; }
         }
-        
-        public XDocument xdocument = XDocument.Load("..\\..\\..\\XmlData\\Persons.xml");
+
+        public const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
+        public XDocument xdocument = XDocument.Load(filePath);
+
+        private XmlTemplate xmlTemplate = new XmlTemplate();                // Objekt um die XML-Templates zu erstellen
+        private XmlDataHandling xmlDataHandling = new XmlDataHandling();    // Objekt um XML-Daten zu handeln
+
 
         public Form1()
         {
@@ -146,14 +151,47 @@ namespace ContactManager
 
         private void CmdEdit_Click(object sender, EventArgs e)
         {
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEdit"))
-            {
-                UI.UCEdit un = new UI.UCEdit();
-                un.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(un);
+            switch (sideBarStatus) {
+                // case customer
+                case 1:
+                    // ID aus selektierter Zeile aus dem Data Grid View auslesen
+                    // Die ID steht in der ersten zelle deshalb --> SelectedCells[0]
+                    string selectedId = (Form1.Instance.PnlContainer.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).SelectedCells[0].Value.ToString();
+
+                    // Erzeugt ein neues objekt vom Typ Customer hanhand der ID kann das 
+                    // bestehende XElement aus dem XDocument ausgelesen werden
+                    Customer c = new Customer(ref xmlDataHandling.IdToXElement(ref xdocument, XmlDataHandling.personType.customer, selectedId));
+
+                    // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditCustomer"))
+                    {
+                        UI.UCEditCustomer un = new UI.UCEditCustomer();
+                        un.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(un);
+                    }
+
+                    // Der Form das zu bearbeitende customer Objekt übergebeb
+                    (Form1.Instance.PnlContainer.Controls["UCEditCustomer"] as UI.UCEditCustomer).SetCustomer(ref c);
+
+                    // Die Form in den Vordergrund bringen und anzeigen
+                    Form1.Instance.PnlContainer.Controls["UCEditCustomer"].BringToFront();
+                    Form1.Instance.CmdHome.Visible = true;
+                    break;
+
+                // case employee
+                case 2:
+
+                    break;
+
+                // case trainee
+                case 3:
+
+                    break;
+
+                // default 
+                default: 
+                    break;
             }
-            Form1.Instance.PnlContainer.Controls["UCEdit"].BringToFront();
-            Form1.Instance.CmdHome.Visible = true;
         }
               
         // Design: Farben ändern sich beim Hovern
