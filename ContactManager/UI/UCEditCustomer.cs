@@ -48,14 +48,98 @@ namespace ContactManager.UI
                 TxtFax.Text = customer_.fax_;
                 TxtEmail.Text = customer_.eMail_;
             }
-            else {
+            else 
+            {
                 return;
             }
         }
 
-        private void CmbState_SelectedIndexChanged(object sender, EventArgs e)
+        // Werte aus Comboboxen in customer Objekt aktualisieren
+        private void ComboBoxIndexChanged(object sender, EventArgs e)
         {
-            customer_.state_ = CmbState.SelectedItem.ToString();
+            if (sender == CmbState) 
+            {
+                customer_.state_ = CmbState.SelectedItem.ToString();
+            } 
+            else if (sender == CmbSalutation) 
+            {
+                customer_.salutation_ = CmbSalutation.SelectedItem.ToString();
+            }
+            else if (sender == CmbCustomerType)
+            {
+                customer_.customerType_ = CmbCustomerType.SelectedItem.ToString();
+            }
+        }
+
+        // Werte aus NummericUpDown in customer Objekt aktualisieren
+        private void NummericUpDownChanged(object sender, EventArgs e)
+        {
+            if (sender == NumZip)
+            {
+                customer_.zip_ = (int)NumZip.Value;
+            }
+
+        }
+
+        // Werte aus Textfeldern in customer Objekt aktualisieren
+        private void TextBoxChanged(object sender, EventArgs e)
+        {
+            if (sender == TxtTitle)
+            {
+                customer_.title_ = TxtTitle.Text;
+            }
+            else if (sender == TxtFirstname)
+            {
+                customer_.firstname_ = TxtFirstname.Text;
+            }
+            else if (sender == TxtLastname)
+            {
+                customer_.lastname_ = TxtLastname.Text;
+            }
+            else if (sender == TxtSex)
+            {
+                customer_.sex_ = TxtSex.Text;
+            }
+            else if (sender == TxtFunction)
+            {
+                customer_.function_ = TxtFunction.Text;
+            }
+            else if (sender == TxtCompanyName)
+            {
+                customer_.companyName_ = TxtCompanyName.Text;
+            }
+            else if (sender == TxtStreet)
+            {
+                customer_.street_ = TxtStreet.Text;
+            }
+            else if (sender == TxtNumber)
+            {
+                customer_.number_ = TxtNumber.Text;
+            }
+            else if (sender == TxtCity)
+            {
+                customer_.city_ = TxtCity.Text;
+            }
+            else if (sender == TxtCountry)
+            {
+                customer_.country_ = TxtCountry.Text;
+            }
+            else if (sender == TxtPhoneBussines)
+            {
+                customer_.phoneBusiness_ = TxtPhoneBussines.Text;
+            }
+            else if (sender == TxtPhoneMobile)
+            {
+                customer_.phoneMob_ = TxtPhoneMobile.Text;
+            }
+            else if (sender == TxtFax)
+            {
+                customer_.fax_ = TxtFax.Text;
+            }
+            else if (sender == TxtEmail)
+            {
+                customer_.eMail_ = TxtEmail.Text;
+            }
         }
     }
 }
