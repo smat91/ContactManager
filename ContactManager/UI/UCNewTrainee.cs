@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ContactManager.UI
 {
-    public partial class UCNew : UserControl
+    public partial class UCNewTrainee : UserControl
     {
-        public UCNew()
+        public UCNewTrainee()
         {
             InitializeComponent();
         }

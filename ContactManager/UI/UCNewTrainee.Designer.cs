@@ -1,7 +1,7 @@
 ﻿
 namespace ContactManager.UI
 {
-    partial class UCNew
+    partial class UCNewTrainee
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -31,12 +31,12 @@ namespace ContactManager.UI
         {
             this.SuspendLayout();
             // 
-            // UCNew
+            // UCNewTrainee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UCNew";
-            this.Size = new System.Drawing.Size(870, 425);
+            this.Name = "UCNewTrainee";
+            this.Size = new System.Drawing.Size(908, 518);
             this.ResumeLayout(false);
 
         }

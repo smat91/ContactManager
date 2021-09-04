@@ -150,6 +150,30 @@ namespace ContactManager
                     Form1.Instance.PnlContainer.Controls["UCNewCustomer"].BringToFront();
                     Form1.Instance.CmdHome.Visible = true;
                     break;
+
+                // case employee
+                case 2:
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNewEmployee"))
+                    {
+                        UI.UCNewEmployee un = new UI.UCNewEmployee();
+                        un.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(un);
+                    }
+                    Form1.Instance.PnlContainer.Controls["UCNewEmployee"].BringToFront();
+                    Form1.Instance.CmdHome.Visible = true;
+                    break;
+
+                // case trainee
+                case 3:
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNewTrainee"))
+                    {
+                        UI.UCNewTrainee un = new UI.UCNewTrainee();
+                        un.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(un);
+                    }
+                    Form1.Instance.PnlContainer.Controls["UCNewTrainee"].BringToFront();
+                    Form1.Instance.CmdHome.Visible = true;
+                    break;
             }    
         }
 
