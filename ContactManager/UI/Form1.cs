@@ -137,16 +137,20 @@ namespace ContactManager
 
         private void CmdNew_Click(object sender, EventArgs e)
         {
-
-            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNew"))
+            switch (sideBarStatus)
             {
-                UI.UCNew un = new UI.UCNew();
-                un.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Add(un);
-            }
-            Form1.Instance.PnlContainer.Controls["UCNew"].BringToFront();
-            Form1.Instance.CmdHome.Visible = true;
-            
+                // case customer
+                case 1:
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNewCustomer"))
+                    {
+                        UI.UCNewCustomer un = new UI.UCNewCustomer();
+                        un.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(un);
+                    }
+                    Form1.Instance.PnlContainer.Controls["UCNewCustomer"].BringToFront();
+                    Form1.Instance.CmdHome.Visible = true;
+                    break;
+            }    
         }
 
         private void CmdEdit_Click(object sender, EventArgs e)
