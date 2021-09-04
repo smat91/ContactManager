@@ -406,6 +406,12 @@ namespace ContactManager
             id_ = 1 + (int)idList.Last();
         }
 
+        // Prüfen ob mindestens Name und Vorname eingegeben wurden
+        public bool CheckMinimalInforamtion() 
+        {
+            return firstname_.Length >= 2 && lastname_.Length >= 2; 
+        }
+
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
         public override bool Equals(object obj)
         {
