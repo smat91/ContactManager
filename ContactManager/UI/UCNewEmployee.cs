@@ -12,9 +12,6 @@ namespace ContactManager.UI
 {
     public partial class UCNewEmployee : UserControl
     {
-        public UCNewEmployee()
-        {
-            InitializeComponent();
-        }
+
     }
 }
