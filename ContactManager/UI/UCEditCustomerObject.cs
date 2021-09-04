@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace ContactManager.UI
 {
-    public partial class UCEditCustomer : UserControl
+    public partial class UCEditCustomerObject : UserControl
     {
         private Customer customer_ = null;
-        public UCEditCustomer()
+        public UCEditCustomerObject()
         {
             InitializeComponent();
         }

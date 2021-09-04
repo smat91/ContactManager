@@ -1,7 +1,7 @@
 ﻿
 namespace ContactManager.UI
 {
-    partial class UCNewTrainee
+    partial class UCEditTraineeObject
     {
         /// <summary> 
         /// Erforderliche Designervariable.

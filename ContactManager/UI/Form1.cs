@@ -141,38 +141,87 @@ namespace ContactManager
             {
                 // case customer
                 case 1:
-                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNewCustomer"))
+                    // Erzeugt ein neues XElement vom Typ Customer
+                    XElement customerTemplate = xmlTemplate.XelementTemplateCustomer();
+
+                    // Erzeugt ein neues objekt vom Typ Customer des vorhin erstellen Templates
+                    Customer customer = new Customer(ref customerTemplate);
+
+                    // Fügt das Customer Objekt customer dem XDocument hinzu
+                    customer.AddToXDocument(ref xdocument);
+
+                    // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditCustomerObject"))
                     {
-                        UI.UCNewCustomer un = new UI.UCNewCustomer();
+                        UI.UCEditCustomerObject un = new UI.UCEditCustomerObject();
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainer.Controls.Add(un);
                     }
-                    Form1.Instance.PnlContainer.Controls["UCNewCustomer"].BringToFront();
+
+                    // Der Form das zu bearbeitende customer Objekt übergebeb
+                    (Form1.Instance.PnlContainer.Controls["UCEditCustomerObject"] as UI.UCEditCustomerObject).SetCustomer(ref customer);
+
+                    // Die Form in den Vordergrund bringen und anzeigen
+                    Form1.Instance.PnlContainer.Controls["UCEditCustomerObject"].BringToFront();
                     Form1.Instance.CmdHome.Visible = true;
                     break;
 
                 // case employee
                 case 2:
-                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNewEmployee"))
+                    // Erzeugt ein neues XElement vom Typ Employee
+                    XElement employeeTemplate = xmlTemplate.XelementTemplateEmployee();
+
+                    // Erzeugt ein neues objekt vom Typ Employee des vorhin erstellen Templates
+                    Employee employee = new Employee(ref employeeTemplate);
+
+                    // Fügt das Employee Objekt employee dem XDocument hinzu
+                    employee.AddToXDocument(ref xdocument);
+
+                    // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditEmployeeObject"))
                     {
-                        UI.UCNewEmployee un = new UI.UCNewEmployee();
+                        UI.UCEditEmployeeObject un = new UI.UCEditEmployeeObject();
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainer.Controls.Add(un);
                     }
-                    Form1.Instance.PnlContainer.Controls["UCNewEmployee"].BringToFront();
+
+                    // Der Form das zu bearbeitende customer Objekt übergebeb
+                    (Form1.Instance.PnlContainer.Controls["UCEditEmployeeObject"] as UI.UCEditEmployeeObject).SetEmployee(ref employee);
+
+                    // Die Form in den Vordergrund bringen und anzeigen
+                    Form1.Instance.PnlContainer.Controls["UCEditEmployeeObject"].BringToFront();
                     Form1.Instance.CmdHome.Visible = true;
                     break;
 
                 // case trainee
                 case 3:
-                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCNewTrainee"))
+                    // Erzeugt ein neues XElement vom Typ Trainee
+                    XElement traineeTemplate = xmlTemplate.XelementTemplateTrainee();
+
+                    // Erzeugt ein neues objekt vom Typ Trainee des vorhin erstellen Templates
+                    Trainee trainee = new Trainee(ref traineeTemplate);
+
+                    // Fügt das Trainee Objekt c dem XDocument hinzu
+                    trainee.AddToXDocument(ref xdocument);
+
+                    // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditTraineeObject"))
                     {
-                        UI.UCNewTrainee un = new UI.UCNewTrainee();
+                        UI.UCEditTraineeObject un = new UI.UCEditTraineeObject();
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainer.Controls.Add(un);
                     }
-                    Form1.Instance.PnlContainer.Controls["UCNewTrainee"].BringToFront();
+
+                    // Der Form das zu bearbeitende customer Objekt übergebeb
+                    (Form1.Instance.PnlContainer.Controls["UCEditTraineeObject"] as UI.UCEditTraineeObject).SetTrainee(ref trainee);
+
+                    // Die Form in den Vordergrund bringen und anzeigen
+                    Form1.Instance.PnlContainer.Controls["UCEditTraineeObject"].BringToFront();
                     Form1.Instance.CmdHome.Visible = true;
+                    break;
+
+                // default 
+                default:
                     break;
             }    
         }
@@ -184,36 +233,84 @@ namespace ContactManager
                 case 1:
                     // ID aus selektierter Zeile aus dem Data Grid View auslesen
                     // Die ID steht in der ersten zelle deshalb --> SelectedCells[0]
-                    string selectedId = (Form1.Instance.PnlContainer.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).SelectedCells[0].Value.ToString();
+                    string selectedIdCustomer = (Form1.Instance.PnlContainer.Controls["UCEditCustomerObject"].
+                        Controls["DgvCustomer"] as DataGridView).SelectedCells[0].Value.ToString();
 
                     // Erzeugt ein neues objekt vom Typ Customer hanhand der ID kann das 
                     // bestehende XElement aus dem XDocument ausgelesen werden
-                    Customer c = new Customer(ref xmlDataHandling.IdToXElement(ref xdocument, XmlDataHandling.personType.customer, selectedId));
+                    Customer customer = new Customer(ref xmlDataHandling.IdToXElement(
+                        ref xdocument, XmlDataHandling.personType.customer, selectedIdCustomer));
 
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
-                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditCustomer"))
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditCustomerObject"))
                     {
-                        UI.UCEditCustomer un = new UI.UCEditCustomer();
+                        UI.UCEditCustomerObject un = new UI.UCEditCustomerObject();
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainer.Controls.Add(un);
                     }
 
                     // Der Form das zu bearbeitende customer Objekt übergebeb
-                    (Form1.Instance.PnlContainer.Controls["UCEditCustomer"] as UI.UCEditCustomer).SetCustomer(ref c);
+                    (Form1.Instance.PnlContainer.Controls["UCEditCustomerObject"] as UI.UCEditCustomerObject).SetCustomer(ref customer);
 
                     // Die Form in den Vordergrund bringen und anzeigen
-                    Form1.Instance.PnlContainer.Controls["UCEditCustomer"].BringToFront();
+                    Form1.Instance.PnlContainer.Controls["UCEditCustomerObject"].BringToFront();
                     Form1.Instance.CmdHome.Visible = true;
                     break;
 
                 // case employee
                 case 2:
+                    // ID aus selektierter Zeile aus dem Data Grid View auslesen
+                    // Die ID steht in der ersten zelle deshalb --> SelectedCells[0]
+                    string selectedIdEmployee = (Form1.Instance.PnlContainer.Controls["UCEditEmployeeObject"].
+                        Controls["DgvEmployee"] as DataGridView).SelectedCells[0].Value.ToString();
 
+                    // Erzeugt ein neues objekt vom Typ Employee hanhand der ID kann das 
+                    // bestehende XElement aus dem XDocument ausgelesen werden
+                    Employee Employee = new Employee(ref xmlDataHandling.IdToXElement(
+                        ref xdocument, XmlDataHandling.personType.employee, selectedIdEmployee));
+
+                    // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditEmployeeObject"))
+                    {
+                        UI.UCEditEmployeeObject un = new UI.UCEditEmployeeObject();
+                        un.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(un);
+                    }
+
+                    // Der Form das zu bearbeitende Employee Objekt übergebeb
+                    (Form1.Instance.PnlContainer.Controls["UCEditEmployeeObject"] as UI.UCEditEmployeeObject).SetEmployee(ref Employee);
+
+                    // Die Form in den Vordergrund bringen und anzeigen
+                    Form1.Instance.PnlContainer.Controls["UCEditEmployeeObject"].BringToFront();
+                    Form1.Instance.CmdHome.Visible = true;
                     break;
 
                 // case trainee
                 case 3:
+                    // ID aus selektierter Zeile aus dem Data Grid View auslesen
+                    // Die ID steht in der ersten zelle deshalb --> SelectedCells[0]
+                    string selectedIdTrainee = (Form1.Instance.PnlContainer.Controls["UCEditTraineeObject"].
+                        Controls["DgvTrainee"] as DataGridView).SelectedCells[0].Value.ToString();
 
+                    // Erzeugt ein neues objekt vom Typ Trainee hanhand der ID kann das 
+                    // bestehende XElement aus dem XDocument ausgelesen werden
+                    Trainee Trainee = new Trainee(ref xmlDataHandling.IdToXElement(
+                        ref xdocument, XmlDataHandling.personType.trainee, selectedIdTrainee));
+
+                    // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("UCEditTraineeObject"))
+                    {
+                        UI.UCEditTraineeObject un = new UI.UCEditTraineeObject();
+                        un.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(un);
+                    }
+
+                    // Der Form das zu bearbeitende Trainee Objekt übergebeb
+                    (Form1.Instance.PnlContainer.Controls["UCEditTraineeObject"] as UI.UCEditTraineeObject).SetTrainee(ref Trainee);
+
+                    // Die Form in den Vordergrund bringen und anzeigen
+                    Form1.Instance.PnlContainer.Controls["UCEditTraineeObject"].BringToFront();
+                    Form1.Instance.CmdHome.Visible = true;
                     break;
 
                 // default 

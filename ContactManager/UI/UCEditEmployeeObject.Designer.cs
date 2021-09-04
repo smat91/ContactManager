@@ -1,7 +1,7 @@
 ﻿
 namespace ContactManager.UI
 {
-    partial class UCNewEmployee
+    partial class UCEditEmployeeObject
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -596,12 +596,12 @@ namespace ContactManager.UI
             this.textBox5.Size = new System.Drawing.Size(200, 23);
             this.textBox5.TabIndex = 47;
             // 
-            // UCNewEmployee
+            // UCEditEmployeeObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UCNewEmployee";
+            this.Name = "UCEditEmployeeObject";
             this.Size = new System.Drawing.Size(908, 518);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
