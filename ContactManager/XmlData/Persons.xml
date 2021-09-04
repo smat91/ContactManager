@@ -82,8 +82,7 @@
         <Fax>+41-12-123-3457</Fax>
         <EMail>maria.heeb@admin.ch</EMail>
       </ContactData>
-      <Logs>
-      </Logs>
+      <Logs></Logs>
     </Customer>
   </Customers>
   <Employees>

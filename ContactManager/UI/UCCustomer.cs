@@ -22,12 +22,6 @@ namespace ContactManager.UI
             xdocument_ = xdocument;
         }
         
-
-        private void DgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void UCCustomer_Load(object sender, EventArgs e)
         {
             //DataSet.ReadXml(Persons.xml);

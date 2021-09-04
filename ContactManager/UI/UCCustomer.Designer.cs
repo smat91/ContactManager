@@ -54,7 +54,6 @@ namespace ContactManager.UI
             this.DgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvCustomer.Size = new System.Drawing.Size(908, 518);
             this.DgvCustomer.TabIndex = 1;
-            this.DgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCustomer_CellContentClick);
             // 
             // UCCustomer
             // 

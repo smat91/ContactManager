@@ -30,14 +30,6 @@ namespace ContactManager
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.CmdEdit = new System.Windows.Forms.Button();
-            this.CmdDelete = new System.Windows.Forms.Button();
-            this.CmdReset = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.CmbFilter = new System.Windows.Forms.ComboBox();
-            this.CmdSearch = new System.Windows.Forms.Button();
-            this.TxtSearch = new System.Windows.Forms.TextBox();
-            this.CmdNew = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
@@ -45,122 +37,11 @@ namespace ContactManager
             this.CmdMitarbeiter = new System.Windows.Forms.Button();
             this.CmdLernende = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PanelContainer = new System.Windows.Forms.Panel();
-            this.ucDashboard1 = new ContactManager.UI.UCDashboard();
+            this.PanelContainerMain = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.panel2.SuspendLayout();
+            this.PanelContainerTop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.PanelContainer.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // CmdEdit
-            // 
-            this.CmdEdit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CmdEdit.BackgroundImage")));
-            this.CmdEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CmdEdit.FlatAppearance.BorderSize = 0;
-            this.CmdEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdEdit.Location = new System.Drawing.Point(75, 0);
-            this.CmdEdit.Name = "CmdEdit";
-            this.CmdEdit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CmdEdit.Size = new System.Drawing.Size(75, 77);
-            this.CmdEdit.TabIndex = 2;
-            this.CmdEdit.Text = "Bearbeiten";
-            this.CmdEdit.UseVisualStyleBackColor = true;
-            this.CmdEdit.Click += new System.EventHandler(this.CmdEdit_Click);
-            // 
-            // CmdDelete
-            // 
-            this.CmdDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CmdDelete.BackgroundImage")));
-            this.CmdDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CmdDelete.FlatAppearance.BorderSize = 0;
-            this.CmdDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdDelete.Location = new System.Drawing.Point(150, 0);
-            this.CmdDelete.Name = "CmdDelete";
-            this.CmdDelete.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CmdDelete.Size = new System.Drawing.Size(75, 77);
-            this.CmdDelete.TabIndex = 3;
-            this.CmdDelete.Text = "Löschen";
-            this.CmdDelete.UseVisualStyleBackColor = true;
-            // 
-            // CmdReset
-            // 
-            this.CmdReset.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CmdReset.FlatAppearance.BorderSize = 0;
-            this.CmdReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdReset.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CmdReset.Location = new System.Drawing.Point(800, 0);
-            this.CmdReset.Name = "CmdReset";
-            this.CmdReset.Size = new System.Drawing.Size(108, 77);
-            this.CmdReset.TabIndex = 4;
-            this.CmdReset.Text = "Suche zurücksetzen";
-            this.CmdReset.UseVisualStyleBackColor = true;
-            this.CmdReset.Click += new System.EventHandler(this.CmdReset_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.CmbFilter);
-            this.panel2.Controls.Add(this.CmdSearch);
-            this.panel2.Controls.Add(this.TxtSearch);
-            this.panel2.Controls.Add(this.CmdNew);
-            this.panel2.Controls.Add(this.CmdEdit);
-            this.panel2.Controls.Add(this.CmdReset);
-            this.panel2.Controls.Add(this.CmdDelete);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(164, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(908, 77);
-            this.panel2.TabIndex = 6;
-            // 
-            // CmbFilter
-            // 
-            this.CmbFilter.FormattingEnabled = true;
-            this.CmbFilter.Location = new System.Drawing.Point(537, 31);
-            this.CmbFilter.Name = "CmbFilter";
-            this.CmbFilter.Size = new System.Drawing.Size(145, 23);
-            this.CmbFilter.TabIndex = 8;
-            // 
-            // CmdSearch
-            // 
-            this.CmdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CmdSearch.Dock = System.Windows.Forms.DockStyle.Right;
-            this.CmdSearch.FlatAppearance.BorderSize = 0;
-            this.CmdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdSearch.Image = ((System.Drawing.Image)(resources.GetObject("CmdSearch.Image")));
-            this.CmdSearch.Location = new System.Drawing.Point(706, 0);
-            this.CmdSearch.Name = "CmdSearch";
-            this.CmdSearch.Size = new System.Drawing.Size(94, 77);
-            this.CmdSearch.TabIndex = 7;
-            this.CmdSearch.Text = "Suchen";
-            this.CmdSearch.UseVisualStyleBackColor = true;
-            // 
-            // TxtSearch
-            // 
-            this.TxtSearch.Location = new System.Drawing.Point(257, 31);
-            this.TxtSearch.Multiline = true;
-            this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(229, 23);
-            this.TxtSearch.TabIndex = 6;
-            // 
-            // CmdNew
-            // 
-            this.CmdNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.CmdNew.FlatAppearance.BorderSize = 0;
-            this.CmdNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdNew.Image = ((System.Drawing.Image)(resources.GetObject("CmdNew.Image")));
-            this.CmdNew.Location = new System.Drawing.Point(0, 0);
-            this.CmdNew.Name = "CmdNew";
-            this.CmdNew.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CmdNew.Size = new System.Drawing.Size(75, 77);
-            this.CmdNew.TabIndex = 5;
-            this.CmdNew.Text = "Neu";
-            this.CmdNew.UseVisualStyleBackColor = true;
-            this.CmdNew.Click += new System.EventHandler(this.CmdNew_Click);
             // 
             // button7
             // 
@@ -286,47 +167,42 @@ namespace ContactManager
             this.panel1.Size = new System.Drawing.Size(164, 595);
             this.panel1.TabIndex = 5;
             // 
-            // PanelContainer
+            // PanelContainerMain
             // 
-            this.PanelContainer.Controls.Add(this.ucDashboard1);
-            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContainer.Location = new System.Drawing.Point(164, 77);
-            this.PanelContainer.Name = "PanelContainer";
-            this.PanelContainer.Size = new System.Drawing.Size(908, 518);
-            this.PanelContainer.TabIndex = 8;
+            this.PanelContainerMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PanelContainerMain.Location = new System.Drawing.Point(164, 77);
+            this.PanelContainerMain.Name = "PanelContainerMain";
+            this.PanelContainerMain.Size = new System.Drawing.Size(908, 518);
+            this.PanelContainerMain.TabIndex = 8;
             // 
-            // ucDashboard1
+            // PanelContainerTop
             // 
-            this.ucDashboard1.Location = new System.Drawing.Point(-3, 0);
-            this.ucDashboard1.Name = "ucDashboard1";
-            this.ucDashboard1.Size = new System.Drawing.Size(908, 518);
-            this.ucDashboard1.TabIndex = 0;
+            this.PanelContainerTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PanelContainerTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.PanelContainerTop.Location = new System.Drawing.Point(164, 0);
+            this.PanelContainerTop.Name = "PanelContainerTop";
+            this.PanelContainerTop.Size = new System.Drawing.Size(908, 77);
+            this.PanelContainerTop.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1072, 595);
-            this.Controls.Add(this.PanelContainer);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.PanelContainerTop);
+            this.Controls.Add(this.PanelContainerMain);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.PanelContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button CmdEdit;
-        private System.Windows.Forms.Button CmdDelete;
-        private System.Windows.Forms.Button CmdReset;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button CmdHome;
@@ -334,13 +210,9 @@ namespace ContactManager
         private System.Windows.Forms.Button CmdMitarbeiter;
         private System.Windows.Forms.Button CmdLernende;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel PanelContainer;
-        private System.Windows.Forms.Button CmdNew;
-        private System.Windows.Forms.ComboBox CmbFilter;
-        private System.Windows.Forms.Button CmdSearch;
-        private System.Windows.Forms.TextBox TxtSearch;
+        private System.Windows.Forms.Panel PanelContainerMain;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private UI.UCDashboard ucDashboard1;
+        private System.Windows.Forms.Panel PanelContainerTop;
     }
 }
 

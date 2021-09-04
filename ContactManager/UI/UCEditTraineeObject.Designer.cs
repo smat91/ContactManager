@@ -596,12 +596,12 @@ namespace ContactManager.UI
             this.textBox5.Size = new System.Drawing.Size(200, 23);
             this.textBox5.TabIndex = 47;
             // 
-            // UCNewTrainee
+            // UCEditTraineeObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "UCNewTrainee";
+            this.Name = "UCEditTraineeObject";
             this.Size = new System.Drawing.Size(908, 518);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
