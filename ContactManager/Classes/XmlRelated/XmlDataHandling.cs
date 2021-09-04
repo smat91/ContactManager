@@ -4,6 +4,7 @@ using System.Linq;
 using System.Data;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -200,8 +201,17 @@ namespace ContactManager
             String[] searchTerms = searchTerm.Split(' ');
 
             // Prüfen, ob String zusammenhängend ist, wenn nach Attributen gesucht wird
-            if (attribute != null && searchTerms.Count() > 1) { 
-                throw new ArgumentException("string must be contiguous if attribute search is used");
+            if (attribute != null && searchTerms.Count() > 1) {
+                string message = "String must be contiguous if attribute search is used!";
+                string caption = "Error Detected in Input";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                var result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    // Setzt die Suche auf Volltext
+                    attribute = null;
+                }
             }
 
             // Array für Suchergebnisse erzeugen und initial mit den zu
