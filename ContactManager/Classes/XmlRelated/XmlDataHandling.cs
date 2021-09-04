@@ -267,5 +267,10 @@ namespace ContactManager
 
             return dt;
         }
+
+        public int GetNumberOfDataSets(ref XDocument xdocument, personType type)
+        {
+            return xdocument.Descendants(personTypeDict[type]).Count();
+        }
     }
 }

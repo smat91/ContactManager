@@ -10,10 +10,14 @@ namespace ContactManager.UI
         private Object person_;
         private XmlDataHandling xmlDataHandling = new XmlDataHandling();
 
-        public UCTopBarEdit(ref XDocument xdocument, Object person)
+        public UCTopBarEdit(ref XDocument xdocument)
         {
             InitializeComponent();
             xdocument_ = xdocument;
+        }
+
+        public void SetPersonObject(Object person)
+        {
             person_ = person;
         }
 
@@ -37,40 +41,39 @@ namespace ContactManager.UI
 
         private void CmdCancle_Click(object sender, EventArgs e)
         {
-            Form1.Instance.LoadFromXml();
             ReloadDataAndView();
         }
 
         private void ReloadDataAndView() 
         {
+            Form1.Instance.LoadFromXml();
+
             switch (Form1.Instance.sideBarStatus)
             {
                 // case customer
                 case 1:
                     Form1.Instance.PnlContainerMain.Controls["UCCustomer"].BringToFront();
                     Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
-                    break;
-
                     (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).DataSource =
-                        xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+                     xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
 
+                    break;
+                    
                 // case employee
                 case 2:
                     Form1.Instance.PnlContainerMain.Controls["UCEmployee"].BringToFront();
                     Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
-                    break;
-
                     (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).DataSource =
                         xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.employee);
+                    break;
 
                 // case trainee
                 case 3:
                     Form1.Instance.PnlContainerMain.Controls["UCTrainee"].BringToFront();
                     Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
-                    break;
-
                     (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).DataSource =
                         xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+                    break;
 
                 // default 
                 default:

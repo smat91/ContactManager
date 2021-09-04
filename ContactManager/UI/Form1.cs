@@ -50,12 +50,13 @@ namespace ContactManager
             set { CmdHome = value; }
         }
 
-        public const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
-        public XDocument xdocument;
+        private const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
+        private XDocument xdocument = XDocument.Load(filePath);
 
         public void LoadFromXml()
         {
-            xdocument = XDocument.Load(filePath);
+            XDocument xdocumentTemp = XDocument.Load(filePath);
+            xdocument.ReplaceNodes(xdocumentTemp.Elements());
         }
 
         public void SaveToXml()
@@ -77,7 +78,7 @@ namespace ContactManager
 
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCDashboard"))
             {
-                UI.UCDashboard un = new UI.UCDashboard();
+                UI.UCDashboard un = new UI.UCDashboard(ref xdocument);
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainerMain.Controls.Add(un);
             }
@@ -96,7 +97,7 @@ namespace ContactManager
 
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCDashboard"))
             {
-                UI.UCDashboard un = new UI.UCDashboard();
+                UI.UCDashboard un = new UI.UCDashboard(ref xdocument);
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainerMain.Controls.Add(un);
             }

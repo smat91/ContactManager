@@ -24,9 +24,7 @@ namespace ContactManager.UI
         
         private void UCCustomer_Load(object sender, EventArgs e)
         {
-            //DataSet.ReadXml(Persons.xml);
-            //DgvCustomer.DataSource = DataSet.Tables["customer"];
-           DgvCustomer.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+            DgvCustomer.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
         }
     }
 }
