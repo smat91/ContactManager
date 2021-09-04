@@ -7,18 +7,32 @@ namespace ContactManager.UI
     public partial class UCTopBarEdit : UserControl
     {
         private XDocument xdocument_;
+        private Object person_;
         private XmlDataHandling xmlDataHandling = new XmlDataHandling();
 
-        public UCTopBarEdit(ref XDocument xdocument)
+        public UCTopBarEdit(ref XDocument xdocument, Object person)
         {
             InitializeComponent();
             xdocument_ = xdocument;
+            person_ = person;
         }
 
         private void CmdSave_Click(object sender, EventArgs e)
         {
-            Form1.Instance.SaveToXml();
-            ReloadDataAndView();
+            //Prüfen, ob Vor-und Nachname der Person eingegeben wurde
+            if ((person_ as Person).CheckMinimalInforamtion())
+            {
+                Form1.Instance.SaveToXml();
+                ReloadDataAndView();
+            }
+            else
+            {
+                string message = "At least firstname and lastname must be set";
+                string caption = "Error Detected in Input";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                MessageBox.Show(message, caption, buttons);
+            }
         }
 
         private void CmdCancle_Click(object sender, EventArgs e)

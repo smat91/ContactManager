@@ -49,7 +49,7 @@ namespace ContactManager.UI
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                     if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarEdit"))
                     {
-                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_);
+                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_, customer);
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainerTop.Controls.Add(un);
                     }
@@ -84,7 +84,7 @@ namespace ContactManager.UI
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                     if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarEdit"))
                     {
-                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_);
+                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_, employee);
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainerTop.Controls.Add(un);
                     }
@@ -119,7 +119,7 @@ namespace ContactManager.UI
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                     if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarEdit"))
                     {
-                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_);
+                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_, trainee);
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainerTop.Controls.Add(un);
                     }
@@ -165,7 +165,7 @@ namespace ContactManager.UI
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                     if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarEdit"))
                     {
-                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_);
+                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_, customer);
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainerTop.Controls.Add(un);
                     }
@@ -201,7 +201,7 @@ namespace ContactManager.UI
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                     if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarEdit"))
                     {
-                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_);
+                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_, Employee);
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainerTop.Controls.Add(un);
                     }
@@ -223,7 +223,7 @@ namespace ContactManager.UI
 
                     // Erzeugt ein neues objekt vom Typ Trainee hanhand der ID kann das 
                     // bestehende XElement aus dem xdocument_ ausgelesen werden
-                    Trainee Trainee = new Trainee(ref xmlDataHandling.IdToXElement(
+                    Trainee trainee = new Trainee(ref xmlDataHandling.IdToXElement(
                         ref xdocument_, XmlDataHandling.personType.trainee, selectedIdTrainee));
 
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
@@ -237,13 +237,13 @@ namespace ContactManager.UI
                     // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                     if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarEdit"))
                     {
-                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_);
+                        UI.UCTopBarEdit un = new UI.UCTopBarEdit(ref xdocument_, trainee);
                         un.Dock = DockStyle.Fill;
                         Form1.Instance.PnlContainerTop.Controls.Add(un);
                     }
 
                     // Der Form das zu bearbeitende Trainee Objekt übergebeb
-                    (Form1.Instance.PnlContainerMain.Controls["UCEditTraineeObject"] as UI.UCEditTraineeObject).SetTrainee(ref Trainee);
+                    (Form1.Instance.PnlContainerMain.Controls["UCEditTraineeObject"] as UI.UCEditTraineeObject).SetTrainee(ref trainee);
 
                     // Die Form in den Vordergrund bringen und anzeigen
                     Form1.Instance.PnlContainerMain.Controls["UCEditTraineeObject"].BringToFront();

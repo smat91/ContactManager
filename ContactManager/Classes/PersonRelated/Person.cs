@@ -108,7 +108,7 @@ namespace ContactManager
             get 
             {
                 return (string)
-                  (from element in person_.Descendants("Firstname")
+                  (from element in person_.Descendants("FirstName")
                    select element).FirstOrDefault();
             }
 
@@ -116,7 +116,7 @@ namespace ContactManager
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Firstname")
+                    (from element in person_.Descendants("FirstName")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -131,7 +131,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Lastname")
+                  (from element in person_.Descendants("LastName")
                    select element).FirstOrDefault();
             }
 
@@ -139,7 +139,7 @@ namespace ContactManager
             {
                 if (value != null)
                 {
-                    (from element in person_.Descendants("Lastname")
+                    (from element in person_.Descendants("LastName")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else

@@ -17,7 +17,7 @@ namespace ContactManager
                             new XElement("Id", ""),
                             new XElement("State", ""),
                             new XElement("Salutation", ""),
-                            new XElement("Titel", ""),
+                            new XElement("Title", ""),
                             new XElement("FirstName", ""),
                             new XElement("LastName", ""),
                             new XElement("Sex", ""),
