@@ -30,6 +30,8 @@ namespace ContactManager.UI
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.LblEntryDate = new System.Windows.Forms.Label();
             this.CmbSalutation = new System.Windows.Forms.ComboBox();
             this.LblSalutation = new System.Windows.Forms.Label();
             this.LblState = new System.Windows.Forms.Label();
@@ -40,7 +42,6 @@ namespace ContactManager.UI
             this.LblDepartment = new System.Windows.Forms.Label();
             this.LblLastname = new System.Windows.Forms.Label();
             this.LblFirstname = new System.Windows.Forms.Label();
-            this.LblNumber = new System.Windows.Forms.Label();
             this.CmbCustomerType = new System.Windows.Forms.ComboBox();
             this.TxtTitle = new System.Windows.Forms.TextBox();
             this.TxtFirstname = new System.Windows.Forms.TextBox();
@@ -48,36 +49,35 @@ namespace ContactManager.UI
             this.TxtSex = new System.Windows.Forms.TextBox();
             this.TxtFunction = new System.Windows.Forms.TextBox();
             this.TxtCompanyName = new System.Windows.Forms.TextBox();
-            this.TxtNumber = new System.Windows.Forms.TextBox();
-            this.TxtStreet = new System.Windows.Forms.TextBox();
-            this.LblEmail = new System.Windows.Forms.Label();
-            this.LblPhonePrivate = new System.Windows.Forms.Label();
-            this.LblPhoneMobile = new System.Windows.Forms.Label();
-            this.LblPhoneBussines = new System.Windows.Forms.Label();
-            this.LblCountry = new System.Windows.Forms.Label();
-            this.LblZip = new System.Windows.Forms.Label();
-            this.TxtEmail = new System.Windows.Forms.TextBox();
-            this.TxtFax = new System.Windows.Forms.TextBox();
-            this.TxtPhoneMobile = new System.Windows.Forms.TextBox();
-            this.TxtPhoneBussines = new System.Windows.Forms.TextBox();
-            this.TxtCountry = new System.Windows.Forms.TextBox();
-            this.LbLCity = new System.Windows.Forms.Label();
-            this.TxtCity = new System.Windows.Forms.TextBox();
-            this.NumZip = new System.Windows.Forms.NumericUpDown();
             this.CmbState = new System.Windows.Forms.ComboBox();
-            this.lblStreet = new System.Windows.Forms.Label();
             this.LblInsuranceNumber = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LblCitizenship = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LblEmail = new System.Windows.Forms.Label();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.LblPhonePrivate = new System.Windows.Forms.Label();
+            this.TxtFax = new System.Windows.Forms.TextBox();
+            this.LblPhoneMobile = new System.Windows.Forms.Label();
+            this.TxtPhoneMobile = new System.Windows.Forms.TextBox();
+            this.LblPhoneBussines = new System.Windows.Forms.Label();
+            this.TxtPhoneBussines = new System.Windows.Forms.TextBox();
+            this.LblCountry = new System.Windows.Forms.Label();
+            this.TxtCountry = new System.Windows.Forms.TextBox();
+            this.LblZip = new System.Windows.Forms.Label();
+            this.NumZip = new System.Windows.Forms.NumericUpDown();
+            this.LbLCity = new System.Windows.Forms.Label();
+            this.TxtCity = new System.Windows.Forms.TextBox();
+            this.LblNumber = new System.Windows.Forms.Label();
+            this.TxtNumber = new System.Windows.Forms.TextBox();
+            this.lblStreet = new System.Windows.Forms.Label();
+            this.TxtStreet = new System.Windows.Forms.TextBox();
             this.LblLevel = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.LblLevelOfEmployment = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.LblEntryDate = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +157,23 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 325);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(147, 300);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(200, 23);
+            this.textBox6.TabIndex = 49;
+            // 
+            // LblEntryDate
+            // 
+            this.LblEntryDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblEntryDate.AutoSize = true;
+            this.LblEntryDate.Location = new System.Drawing.Point(3, 303);
+            this.LblEntryDate.Name = "LblEntryDate";
+            this.LblEntryDate.Size = new System.Drawing.Size(85, 15);
+            this.LblEntryDate.TabIndex = 48;
+            this.LblEntryDate.Text = "Eintrittsdatum:";
             // 
             // CmbSalutation
             // 
@@ -264,16 +281,6 @@ namespace ContactManager.UI
             this.LblFirstname.TabIndex = 5;
             this.LblFirstname.Text = "Vorname:";
             // 
-            // LblNumber
-            // 
-            this.LblNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblNumber.AutoSize = true;
-            this.LblNumber.Location = new System.Drawing.Point(444, 114);
-            this.LblNumber.Name = "LblNumber";
-            this.LblNumber.Size = new System.Drawing.Size(58, 15);
-            this.LblNumber.TabIndex = 12;
-            this.LblNumber.Text = "Nummer:";
-            // 
             // CmbCustomerType
             // 
             this.CmbCustomerType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -331,145 +338,6 @@ namespace ContactManager.UI
             this.TxtCompanyName.Size = new System.Drawing.Size(200, 23);
             this.TxtCompanyName.TabIndex = 25;
             // 
-            // TxtNumber
-            // 
-            this.TxtNumber.Location = new System.Drawing.Point(571, 111);
-            this.TxtNumber.Name = "TxtNumber";
-            this.TxtNumber.Size = new System.Drawing.Size(200, 23);
-            this.TxtNumber.TabIndex = 32;
-            // 
-            // TxtStreet
-            // 
-            this.TxtStreet.Location = new System.Drawing.Point(571, 84);
-            this.TxtStreet.Name = "TxtStreet";
-            this.TxtStreet.Size = new System.Drawing.Size(200, 23);
-            this.TxtStreet.TabIndex = 33;
-            // 
-            // LblEmail
-            // 
-            this.LblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(444, 303);
-            this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(39, 15);
-            this.LblEmail.TabIndex = 6;
-            this.LblEmail.Text = "Email:";
-            // 
-            // LblPhonePrivate
-            // 
-            this.LblPhonePrivate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblPhonePrivate.AutoSize = true;
-            this.LblPhonePrivate.Location = new System.Drawing.Point(444, 276);
-            this.LblPhonePrivate.Name = "LblPhonePrivate";
-            this.LblPhonePrivate.Size = new System.Drawing.Size(60, 15);
-            this.LblPhonePrivate.TabIndex = 17;
-            this.LblPhonePrivate.Text = "Tel. privat:";
-            // 
-            // LblPhoneMobile
-            // 
-            this.LblPhoneMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblPhoneMobile.AutoSize = true;
-            this.LblPhoneMobile.Location = new System.Drawing.Point(444, 249);
-            this.LblPhoneMobile.Name = "LblPhoneMobile";
-            this.LblPhoneMobile.Size = new System.Drawing.Size(61, 15);
-            this.LblPhoneMobile.TabIndex = 16;
-            this.LblPhoneMobile.Text = "Tel. mobil:";
-            // 
-            // LblPhoneBussines
-            // 
-            this.LblPhoneBussines.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblPhoneBussines.AutoSize = true;
-            this.LblPhoneBussines.Location = new System.Drawing.Point(444, 222);
-            this.LblPhoneBussines.Name = "LblPhoneBussines";
-            this.LblPhoneBussines.Size = new System.Drawing.Size(94, 15);
-            this.LblPhoneBussines.TabIndex = 15;
-            this.LblPhoneBussines.Text = "Tel. geschäftlich:";
-            // 
-            // LblCountry
-            // 
-            this.LblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblCountry.AutoSize = true;
-            this.LblCountry.Location = new System.Drawing.Point(444, 195);
-            this.LblCountry.Name = "LblCountry";
-            this.LblCountry.Size = new System.Drawing.Size(36, 15);
-            this.LblCountry.TabIndex = 14;
-            this.LblCountry.Text = "Land:";
-            // 
-            // LblZip
-            // 
-            this.LblZip.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblZip.AutoSize = true;
-            this.LblZip.Location = new System.Drawing.Point(444, 168);
-            this.LblZip.Name = "LblZip";
-            this.LblZip.Size = new System.Drawing.Size(30, 15);
-            this.LblZip.TabIndex = 13;
-            this.LblZip.Text = "PLZ:";
-            // 
-            // TxtEmail
-            // 
-            this.TxtEmail.Location = new System.Drawing.Point(571, 300);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(200, 23);
-            this.TxtEmail.TabIndex = 26;
-            // 
-            // TxtFax
-            // 
-            this.TxtFax.Location = new System.Drawing.Point(571, 273);
-            this.TxtFax.Name = "TxtFax";
-            this.TxtFax.Size = new System.Drawing.Size(200, 23);
-            this.TxtFax.TabIndex = 27;
-            // 
-            // TxtPhoneMobile
-            // 
-            this.TxtPhoneMobile.Location = new System.Drawing.Point(571, 246);
-            this.TxtPhoneMobile.Name = "TxtPhoneMobile";
-            this.TxtPhoneMobile.Size = new System.Drawing.Size(200, 23);
-            this.TxtPhoneMobile.TabIndex = 28;
-            // 
-            // TxtPhoneBussines
-            // 
-            this.TxtPhoneBussines.Location = new System.Drawing.Point(571, 219);
-            this.TxtPhoneBussines.Name = "TxtPhoneBussines";
-            this.TxtPhoneBussines.Size = new System.Drawing.Size(200, 23);
-            this.TxtPhoneBussines.TabIndex = 29;
-            // 
-            // TxtCountry
-            // 
-            this.TxtCountry.Location = new System.Drawing.Point(571, 192);
-            this.TxtCountry.Name = "TxtCountry";
-            this.TxtCountry.Size = new System.Drawing.Size(200, 23);
-            this.TxtCountry.TabIndex = 30;
-            // 
-            // LbLCity
-            // 
-            this.LbLCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LbLCity.AutoSize = true;
-            this.LbLCity.Location = new System.Drawing.Point(444, 141);
-            this.LbLCity.Name = "LbLCity";
-            this.LbLCity.Size = new System.Drawing.Size(27, 15);
-            this.LbLCity.TabIndex = 34;
-            this.LbLCity.Text = "Ort:";
-            // 
-            // TxtCity
-            // 
-            this.TxtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtCity.Location = new System.Drawing.Point(571, 138);
-            this.TxtCity.Name = "TxtCity";
-            this.TxtCity.Size = new System.Drawing.Size(200, 23);
-            this.TxtCity.TabIndex = 35;
-            // 
-            // NumZip
-            // 
-            this.NumZip.Location = new System.Drawing.Point(571, 165);
-            this.NumZip.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.NumZip.Name = "NumZip";
-            this.NumZip.Size = new System.Drawing.Size(200, 23);
-            this.NumZip.TabIndex = 36;
-            // 
             // CmbState
             // 
             this.CmbState.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -481,16 +349,6 @@ namespace ContactManager.UI
             this.CmbState.Name = "CmbState";
             this.CmbState.Size = new System.Drawing.Size(200, 23);
             this.CmbState.TabIndex = 37;
-            // 
-            // lblStreet
-            // 
-            this.lblStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblStreet.AutoSize = true;
-            this.lblStreet.Location = new System.Drawing.Point(444, 87);
-            this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(46, 15);
-            this.lblStreet.TabIndex = 11;
-            this.lblStreet.Text = "Strasse:";
             // 
             // LblInsuranceNumber
             // 
@@ -527,6 +385,165 @@ namespace ContactManager.UI
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 23);
             this.textBox2.TabIndex = 41;
+            // 
+            // LblEmail
+            // 
+            this.LblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblEmail.AutoSize = true;
+            this.LblEmail.Location = new System.Drawing.Point(444, 303);
+            this.LblEmail.Name = "LblEmail";
+            this.LblEmail.Size = new System.Drawing.Size(39, 15);
+            this.LblEmail.TabIndex = 6;
+            this.LblEmail.Text = "Email:";
+            // 
+            // TxtEmail
+            // 
+            this.TxtEmail.Location = new System.Drawing.Point(571, 300);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(200, 23);
+            this.TxtEmail.TabIndex = 26;
+            // 
+            // LblPhonePrivate
+            // 
+            this.LblPhonePrivate.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblPhonePrivate.AutoSize = true;
+            this.LblPhonePrivate.Location = new System.Drawing.Point(444, 276);
+            this.LblPhonePrivate.Name = "LblPhonePrivate";
+            this.LblPhonePrivate.Size = new System.Drawing.Size(60, 15);
+            this.LblPhonePrivate.TabIndex = 17;
+            this.LblPhonePrivate.Text = "Tel. privat:";
+            // 
+            // TxtFax
+            // 
+            this.TxtFax.Location = new System.Drawing.Point(571, 273);
+            this.TxtFax.Name = "TxtFax";
+            this.TxtFax.Size = new System.Drawing.Size(200, 23);
+            this.TxtFax.TabIndex = 27;
+            // 
+            // LblPhoneMobile
+            // 
+            this.LblPhoneMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblPhoneMobile.AutoSize = true;
+            this.LblPhoneMobile.Location = new System.Drawing.Point(444, 249);
+            this.LblPhoneMobile.Name = "LblPhoneMobile";
+            this.LblPhoneMobile.Size = new System.Drawing.Size(61, 15);
+            this.LblPhoneMobile.TabIndex = 16;
+            this.LblPhoneMobile.Text = "Tel. mobil:";
+            // 
+            // TxtPhoneMobile
+            // 
+            this.TxtPhoneMobile.Location = new System.Drawing.Point(571, 246);
+            this.TxtPhoneMobile.Name = "TxtPhoneMobile";
+            this.TxtPhoneMobile.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhoneMobile.TabIndex = 28;
+            // 
+            // LblPhoneBussines
+            // 
+            this.LblPhoneBussines.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblPhoneBussines.AutoSize = true;
+            this.LblPhoneBussines.Location = new System.Drawing.Point(444, 222);
+            this.LblPhoneBussines.Name = "LblPhoneBussines";
+            this.LblPhoneBussines.Size = new System.Drawing.Size(94, 15);
+            this.LblPhoneBussines.TabIndex = 15;
+            this.LblPhoneBussines.Text = "Tel. geschäftlich:";
+            // 
+            // TxtPhoneBussines
+            // 
+            this.TxtPhoneBussines.Location = new System.Drawing.Point(571, 219);
+            this.TxtPhoneBussines.Name = "TxtPhoneBussines";
+            this.TxtPhoneBussines.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhoneBussines.TabIndex = 29;
+            // 
+            // LblCountry
+            // 
+            this.LblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblCountry.AutoSize = true;
+            this.LblCountry.Location = new System.Drawing.Point(444, 195);
+            this.LblCountry.Name = "LblCountry";
+            this.LblCountry.Size = new System.Drawing.Size(36, 15);
+            this.LblCountry.TabIndex = 14;
+            this.LblCountry.Text = "Land:";
+            // 
+            // TxtCountry
+            // 
+            this.TxtCountry.Location = new System.Drawing.Point(571, 192);
+            this.TxtCountry.Name = "TxtCountry";
+            this.TxtCountry.Size = new System.Drawing.Size(200, 23);
+            this.TxtCountry.TabIndex = 30;
+            // 
+            // LblZip
+            // 
+            this.LblZip.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblZip.AutoSize = true;
+            this.LblZip.Location = new System.Drawing.Point(444, 168);
+            this.LblZip.Name = "LblZip";
+            this.LblZip.Size = new System.Drawing.Size(30, 15);
+            this.LblZip.TabIndex = 13;
+            this.LblZip.Text = "PLZ:";
+            // 
+            // NumZip
+            // 
+            this.NumZip.Location = new System.Drawing.Point(571, 165);
+            this.NumZip.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.NumZip.Name = "NumZip";
+            this.NumZip.Size = new System.Drawing.Size(200, 23);
+            this.NumZip.TabIndex = 36;
+            // 
+            // LbLCity
+            // 
+            this.LbLCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LbLCity.AutoSize = true;
+            this.LbLCity.Location = new System.Drawing.Point(444, 141);
+            this.LbLCity.Name = "LbLCity";
+            this.LbLCity.Size = new System.Drawing.Size(27, 15);
+            this.LbLCity.TabIndex = 34;
+            this.LbLCity.Text = "Ort:";
+            // 
+            // TxtCity
+            // 
+            this.TxtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.TxtCity.Location = new System.Drawing.Point(571, 138);
+            this.TxtCity.Name = "TxtCity";
+            this.TxtCity.Size = new System.Drawing.Size(200, 23);
+            this.TxtCity.TabIndex = 35;
+            // 
+            // LblNumber
+            // 
+            this.LblNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblNumber.AutoSize = true;
+            this.LblNumber.Location = new System.Drawing.Point(444, 114);
+            this.LblNumber.Name = "LblNumber";
+            this.LblNumber.Size = new System.Drawing.Size(58, 15);
+            this.LblNumber.TabIndex = 12;
+            this.LblNumber.Text = "Nummer:";
+            // 
+            // TxtNumber
+            // 
+            this.TxtNumber.Location = new System.Drawing.Point(571, 111);
+            this.TxtNumber.Name = "TxtNumber";
+            this.TxtNumber.Size = new System.Drawing.Size(200, 23);
+            this.TxtNumber.TabIndex = 32;
+            // 
+            // lblStreet
+            // 
+            this.lblStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblStreet.AutoSize = true;
+            this.lblStreet.Location = new System.Drawing.Point(444, 87);
+            this.lblStreet.Name = "lblStreet";
+            this.lblStreet.Size = new System.Drawing.Size(46, 15);
+            this.lblStreet.TabIndex = 11;
+            this.lblStreet.Text = "Strasse:";
+            // 
+            // TxtStreet
+            // 
+            this.TxtStreet.Location = new System.Drawing.Point(571, 84);
+            this.TxtStreet.Name = "TxtStreet";
+            this.TxtStreet.Size = new System.Drawing.Size(200, 23);
+            this.TxtStreet.TabIndex = 33;
             // 
             // LblLevel
             // 
@@ -578,23 +595,6 @@ namespace ContactManager.UI
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 23);
             this.textBox5.TabIndex = 47;
-            // 
-            // LblEntryDate
-            // 
-            this.LblEntryDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblEntryDate.AutoSize = true;
-            this.LblEntryDate.Location = new System.Drawing.Point(3, 303);
-            this.LblEntryDate.Name = "LblEntryDate";
-            this.LblEntryDate.Size = new System.Drawing.Size(85, 15);
-            this.LblEntryDate.TabIndex = 48;
-            this.LblEntryDate.Text = "Eintrittsdatum:";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(147, 300);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 23);
-            this.textBox6.TabIndex = 49;
             // 
             // UCNewEmployee
             // 
