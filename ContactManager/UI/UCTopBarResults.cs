@@ -300,6 +300,8 @@ namespace ContactManager.UI
 
         private void CmbFilter_Click(object sender, EventArgs e)
         {
+            CmbFilter.Items.Clear();
+
             switch (Form1.Instance.sideBarStatus)
             {
                 // case customer

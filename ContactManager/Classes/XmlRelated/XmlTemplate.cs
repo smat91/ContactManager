@@ -27,7 +27,7 @@ namespace ContactManager
                                 new XElement("Number", ""),
                                 new XElement("Country", ""),
                                 new XElement("City", ""),
-                                new XElement("Zip", "")
+                                new XElement("Zip", "0")
                                 ),
                             new XElement("ContactData",
                                 new XElement("Phone", "",
@@ -81,8 +81,8 @@ namespace ContactManager
                               new XElement("Citizenship", ""),
                               new XElement("EntryDate", ""),
                               new XElement("SeparationDate", ""),
-                              new XElement("LevelOfEmployment", ""),
-                              new XElement("Level", ""));
+                              new XElement("LevelOfEmployment", "0"),
+                              new XElement("Level", "0"));
 
             // Neue mitarbeiterbezogene Kontaktattribute hinzufügen
             employee.Descendants("Phone")
@@ -104,8 +104,8 @@ namespace ContactManager
 
             // Neue mitarbeiterbezogene Allgemeinattribute hinzufügen
             trainee.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("NumberOfTraineeYears", ""),
-                              new XElement("CurrentTraineeYear", ""));
+                .AddAfterSelf(new XElement("NumberOfTraineeYears", "0"),
+                              new XElement("CurrentTraineeYear", "0"));
 
             return trainee;
         }
