@@ -2,6 +2,32 @@
 <Persons>
   <Customers>
     <Customer>
+      <Id>4</Id>
+      <State>Aktiv</State>
+      <Salutation>Frau</Salutation>
+      <Title>Dr.</Title>
+      <FirstName>Marion</FirstName>
+      <LastName>Maier</LastName>
+      <Sex>weiblich</Sex>
+      <Function>Verkaufleiteung</Function>
+      <CompanyName>Muster GmbH</CompanyName>
+      <CustomerType>E</CustomerType>
+      <Address>
+        <Street>Neuwiesstrasse</Street>
+        <Number>6</Number>
+        <Country>Schweiz</Country>
+        <City>Goldach</City>
+        <Zip>9403</Zip>
+      </Address>
+      <ContactData>
+        <Phone Type="Business">0718582610</Phone>
+        <Phone Type="Mobile">0791238987</Phone>
+        <Fax>0718582611</Fax>
+        <EMail>marion@muster.ch</EMail>
+      </ContactData>
+      <Logs />
+    </Customer>
+    <Customer>
       <Id>1</Id>
       <State>Aktiv</State>
       <Salutation>Herr</Salutation>
