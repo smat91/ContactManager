@@ -103,7 +103,6 @@ namespace ContactManager.UI
             this.CmdEdit.Text = "Bearbeiten";
             this.CmdEdit.UseVisualStyleBackColor = true;
             this.CmdEdit.Click += new System.EventHandler(this.CmdEdit_Click);
-            this.CmdEdit.MouseEnter += new System.EventHandler(this.CheckRowSelcected);
             // 
             // CmdReset
             // 
@@ -135,7 +134,6 @@ namespace ContactManager.UI
             this.CmdDelete.Text = "Löschen";
             this.CmdDelete.UseVisualStyleBackColor = true;
             this.CmdDelete.Click += new System.EventHandler(this.CmdDelete_Click);
-            this.CmdDelete.MouseEnter += new System.EventHandler(this.CheckRowSelcected);
             // 
             // UCTopBarResults
             // 

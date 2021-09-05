@@ -6,8 +6,8 @@
       <State>Aktiv</State>
       <Salutation>Herr</Salutation>
       <Title>Dr</Title>
-      <Firstname>Max</Firstname>
-      <Lastname>Muster</Lastname>
+      <FirstName>Max</FirstName>
+      <LastName>Muster</LastName>
       <Sex>männlich</Sex>
       <Function>Einkaufsleiter</Function>
       <CompanyName>Test AG</CompanyName>
@@ -25,74 +25,17 @@
         <Fax>+41-12-123-3456</Fax>
         <EMail>max.muster@admin.ch</EMail>
       </ContactData>
-      <Logs>
-        <Log>
-          <TicketId>0</TicketId>
-          <Date>11.07.2021</Date>
-          <Time>15:30</Time>
-          <Text>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo 
-            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet.
-          </Text>
-        </Log>
-        <Log>
-          <TicketId>1</TicketId>
-          <Date>11.07.2021</Date>
-          <Time>16:40</Time>
-          <Text>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet.
-          </Text>
-        </Log>
-      </Logs>
-    </Customer>
-    <Customer>
-      <Id>2</Id>
-      <State>Aktiv</State>
-      <Salutation>Frau</Salutation>
-      <Title></Title>
-      <Firstname>Maria</Firstname>
-      <Lastname>Heeb</Lastname>
-      <Sex>weiblich</Sex>
-      <Function>Einkaufsleiterin</Function>
-      <CompanyName>Test GmbH</CompanyName>
-      <CustomerType>B</CustomerType>
-      <Address>
-        <Street>Unterdorfstrasse</Street>
-        <Number>6</Number>
-        <City>Luzern</City>
-        <Zip>6000</Zip>
-        <Country>Schweiz</Country>
-      </Address>
-      <ContactData>
-        <Phone Type="Business">+41-12-123-1235</Phone>
-        <Phone Type="Mobile">+41-12-123-2346</Phone>
-        <Fax>+41-12-123-3457</Fax>
-        <EMail>maria.heeb@admin.ch</EMail>
-      </ContactData>
       <Logs></Logs>
     </Customer>
   </Customers>
   <Employees>
     <Employee>
-      <Id>3</Id>
+      <Id>2</Id>
       <State>Aktiv</State>
       <Salutation>Frau</Salutation>
       <Title></Title>
-      <Firstname>Anna</Firstname>
-      <Lastname>Bolika</Lastname>
+      <FirstName>Anna</FirstName>
+      <LastName>Bolika</LastName>
       <Sex>weiblich</Sex>
       <Function>Verkaufsleiterin</Function>
       <DateOfBirth>15.01.1980</DateOfBirth>
@@ -120,12 +63,12 @@
   </Employees>
   <Trainees>
     <Trainee>
-      <Id>4</Id>
+      <Id>3</Id>
       <State>Aktiv</State>
       <Salutation>Herr</Salutation>
       <Title></Title>
-      <Firstname>Mario</Firstname>
-      <Lastname>Richter</Lastname>
+      <FirstName>Mario</FirstName>
+      <LastName>Richter</LastName>
       <Sex>männlich</Sex>
       <Function>Lernender Elektroniker</Function>
       <DateOfBirth>15.01.2005</DateOfBirth>

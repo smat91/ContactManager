@@ -108,9 +108,9 @@ namespace ContactManager
             customer_.Descendants("Logs")
                 .FirstOrDefault()
                 .Add(new XElement("Log", 
-                        new XElement("TicketId", ++count),
-                        new XElement("Date", DateTime.Now.Date), 
-                        new XElement("Time", DateTime.Now.TimeOfDay),
+                        new XElement("LogId", ++count),
+                        new XElement("Date", DateTime.Now.Date.ToShortDateString()), 
+                        new XElement("Time", String.Format("{0:hh}:{0:mm}", DateTime.Now.TimeOfDay)),
                         new XElement("Text", text)
                         )
                 );

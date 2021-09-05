@@ -66,8 +66,18 @@ namespace ContactManager.UI
             this.TxtCity = new System.Windows.Forms.TextBox();
             this.NumZip = new System.Windows.Forms.NumericUpDown();
             this.CmbState = new System.Windows.Forms.ComboBox();
+            this.GrpLogs = new System.Windows.Forms.GroupBox();
+            this.CmdSave = new System.Windows.Forms.Button();
+            this.CmdCancle = new System.Windows.Forms.Button();
+            this.CmdCloseLog = new System.Windows.Forms.Button();
+            this.TxtLog = new System.Windows.Forms.TextBox();
+            this.CmdNewLog = new System.Windows.Forms.Button();
+            this.CmdShowLog = new System.Windows.Forms.Button();
+            this.DgvLogs = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).BeginInit();
+            this.GrpLogs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLogs)).BeginInit();
             this.SuspendLayout();
             // 
             // LblState
@@ -483,16 +493,117 @@ namespace ContactManager.UI
             this.CmbState.TabIndex = 37;
             this.CmbState.SelectedIndexChanged += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
+            // GrpLogs
+            // 
+            this.GrpLogs.Controls.Add(this.CmdSave);
+            this.GrpLogs.Controls.Add(this.CmdCancle);
+            this.GrpLogs.Controls.Add(this.CmdCloseLog);
+            this.GrpLogs.Controls.Add(this.TxtLog);
+            this.GrpLogs.Controls.Add(this.CmdNewLog);
+            this.GrpLogs.Controls.Add(this.CmdShowLog);
+            this.GrpLogs.Controls.Add(this.DgvLogs);
+            this.GrpLogs.Location = new System.Drawing.Point(14, 271);
+            this.GrpLogs.Name = "GrpLogs";
+            this.GrpLogs.Size = new System.Drawing.Size(866, 226);
+            this.GrpLogs.TabIndex = 5;
+            this.GrpLogs.TabStop = false;
+            this.GrpLogs.Text = "Gesprächsnotizen";
+            // 
+            // CmdSave
+            // 
+            this.CmdSave.Location = new System.Drawing.Point(771, 23);
+            this.CmdSave.Name = "CmdSave";
+            this.CmdSave.Size = new System.Drawing.Size(89, 53);
+            this.CmdSave.TabIndex = 6;
+            this.CmdSave.Text = "Speichern";
+            this.CmdSave.UseVisualStyleBackColor = true;
+            this.CmdSave.Visible = false;
+            this.CmdSave.Click += new System.EventHandler(this.CmdSave_Click);
+            // 
+            // CmdCancle
+            // 
+            this.CmdCancle.Location = new System.Drawing.Point(771, 82);
+            this.CmdCancle.Name = "CmdCancle";
+            this.CmdCancle.Size = new System.Drawing.Size(89, 54);
+            this.CmdCancle.TabIndex = 5;
+            this.CmdCancle.Text = "Abbrechen";
+            this.CmdCancle.UseVisualStyleBackColor = true;
+            this.CmdCancle.Visible = false;
+            this.CmdCancle.Click += new System.EventHandler(this.CmdCancle_Click);
+            // 
+            // CmdCloseLog
+            // 
+            this.CmdCloseLog.Location = new System.Drawing.Point(771, 23);
+            this.CmdCloseLog.Name = "CmdCloseLog";
+            this.CmdCloseLog.Size = new System.Drawing.Size(89, 53);
+            this.CmdCloseLog.TabIndex = 4;
+            this.CmdCloseLog.Text = "Log Schliessen";
+            this.CmdCloseLog.UseVisualStyleBackColor = true;
+            this.CmdCloseLog.Visible = false;
+            this.CmdCloseLog.Click += new System.EventHandler(this.CmdCloseLog_Click);
+            // 
+            // TxtLog
+            // 
+            this.TxtLog.Location = new System.Drawing.Point(7, 22);
+            this.TxtLog.Multiline = true;
+            this.TxtLog.Name = "TxtLog";
+            this.TxtLog.ReadOnly = true;
+            this.TxtLog.Size = new System.Drawing.Size(757, 197);
+            this.TxtLog.TabIndex = 3;
+            this.TxtLog.Visible = false;
+            // 
+            // CmdNewLog
+            // 
+            this.CmdNewLog.Location = new System.Drawing.Point(770, 22);
+            this.CmdNewLog.Name = "CmdNewLog";
+            this.CmdNewLog.Size = new System.Drawing.Size(90, 54);
+            this.CmdNewLog.TabIndex = 2;
+            this.CmdNewLog.Text = "Neue Notiz erstellen";
+            this.CmdNewLog.UseVisualStyleBackColor = true;
+            this.CmdNewLog.Click += new System.EventHandler(this.CmdNewLog_Click);
+            // 
+            // CmdShowLog
+            // 
+            this.CmdShowLog.Location = new System.Drawing.Point(770, 82);
+            this.CmdShowLog.Name = "CmdShowLog";
+            this.CmdShowLog.Size = new System.Drawing.Size(90, 54);
+            this.CmdShowLog.TabIndex = 1;
+            this.CmdShowLog.Text = "Notiz anzeigen";
+            this.CmdShowLog.UseVisualStyleBackColor = true;
+            this.CmdShowLog.Click += new System.EventHandler(this.CmdShowLog_Click);
+            // 
+            // DgvLogs
+            // 
+            this.DgvLogs.AllowUserToAddRows = false;
+            this.DgvLogs.AllowUserToDeleteRows = false;
+            this.DgvLogs.AllowUserToResizeColumns = false;
+            this.DgvLogs.AllowUserToResizeRows = false;
+            this.DgvLogs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DgvLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvLogs.Location = new System.Drawing.Point(6, 22);
+            this.DgvLogs.MultiSelect = false;
+            this.DgvLogs.Name = "DgvLogs";
+            this.DgvLogs.RowTemplate.Height = 25;
+            this.DgvLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvLogs.Size = new System.Drawing.Size(758, 198);
+            this.DgvLogs.TabIndex = 0;
+            this.DgvLogs.SelectionChanged += new System.EventHandler(this.DgvLogs_SelectionChanged);
+            // 
             // UCEditCustomerObject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.GrpLogs);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UCEditCustomerObject";
             this.Size = new System.Drawing.Size(908, 518);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).EndInit();
+            this.GrpLogs.ResumeLayout(false);
+            this.GrpLogs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLogs)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,5 +647,14 @@ namespace ContactManager.UI
         private System.Windows.Forms.TextBox TxtCity;
         private System.Windows.Forms.NumericUpDown NumZip;
         private System.Windows.Forms.ComboBox CmbState;
+        private System.Windows.Forms.GroupBox GrpLogs;
+        private System.Windows.Forms.Button CmdNewLog;
+        private System.Windows.Forms.Button CmdShowLog;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvLogs;
+        private System.Windows.Forms.TextBox TxtLog;
+        private System.Windows.Forms.Button CmdCloseLog;
+        private System.Windows.Forms.Button CmdCancle;
+        private System.Windows.Forms.Button CmdSave;
     }
 }
