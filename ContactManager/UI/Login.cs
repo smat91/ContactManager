@@ -85,5 +85,10 @@ namespace ContactManager
 
             return comparer.Compare(hashOfInput, hash) == 0;
         }
+
+        private void LblExitLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
