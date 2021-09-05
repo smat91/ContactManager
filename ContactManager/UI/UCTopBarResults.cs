@@ -427,6 +427,7 @@ namespace ContactManager.UI
                     default:
                         break;
                 }
+                Form1.Instance.SaveToXml();
             }
             else
             {
@@ -436,8 +437,6 @@ namespace ContactManager.UI
 
                 MessageBox.Show(message, caption, buttons);
             }
-
-            Form1.Instance.SaveToXml();
         }
     }
 }
