@@ -52,6 +52,7 @@ namespace ContactManager
 
         private const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
         private XDocument xdocument = XDocument.Load(filePath);
+        private XDocument xdocumentOriginal = XDocument.Load(filePath);
 
         public void LoadFromXml()
         {
@@ -62,6 +63,8 @@ namespace ContactManager
         public void SaveToXml()
         {
             xdocument.Save(filePath);
+            XDocument xdocumentTemp = XDocument.Load(filePath);
+            xdocumentOriginal.ReplaceNodes(xdocumentTemp.Elements());
         }
 
         public Form1()
@@ -125,7 +128,7 @@ namespace ContactManager
 
             if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarResults"))
             {
-                UI.UCTopBarResults un = new UI.UCTopBarResults(ref xdocument);
+                UI.UCTopBarResults un = new UI.UCTopBarResults(ref xdocument, ref xdocumentOriginal);
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainerTop.Controls.Add(un);
             }
@@ -152,7 +155,7 @@ namespace ContactManager
 
             if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarResults"))
             {
-                UI.UCTopBarResults un = new UI.UCTopBarResults(ref xdocument);
+                UI.UCTopBarResults un = new UI.UCTopBarResults(ref xdocument, ref xdocumentOriginal);
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainerTop.Controls.Add(un);
             }
@@ -179,7 +182,7 @@ namespace ContactManager
 
             if (!Form1.Instance.PnlContainerTop.Controls.ContainsKey("UCTopBarResults"))
             {
-                UI.UCTopBarResults un = new UI.UCTopBarResults(ref xdocument);
+                UI.UCTopBarResults un = new UI.UCTopBarResults(ref xdocument, ref xdocumentOriginal);
                 un.Dock = DockStyle.Fill;
                 Form1.Instance.PnlContainerTop.Controls.Add(un);
             }

@@ -7,13 +7,15 @@ namespace ContactManager.UI
     public partial class UCTopBarResults : UserControl
     {
         private XDocument xdocument_;
+        private XDocument xdocumentOriginal_;
         private XmlTemplate xmlTemplate = new XmlTemplate();                // Objekt um die XML-Templates zu erstellen
         private XmlDataHandling xmlDataHandling = new XmlDataHandling();    // Objekt um XML-Daten zu handeln
 
-        public UCTopBarResults(ref XDocument xdocument)
+        public UCTopBarResults(ref XDocument xdocument, ref XDocument xdocumentOriginal)
         {
             InitializeComponent();
             xdocument_ = xdocument;
+            xdocumentOriginal_ = xdocumentOriginal;
         }
 
 
@@ -158,6 +160,8 @@ namespace ContactManager.UI
                         // bestehende XElement aus dem xdocument_ ausgelesen werden
                         Customer customer = new Customer(ref xmlDataHandling.IdToXElement(
                             ref xdocument_, XmlDataHandling.personType.customer, selectedIdCustomer));
+                        Customer customerOriginal = new Customer(ref xmlDataHandling.IdToXElement(
+                            ref xdocumentOriginal_, XmlDataHandling.personType.customer, selectedIdCustomer));
 
                         // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                         if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCEditCustomerObject"))
@@ -177,7 +181,7 @@ namespace ContactManager.UI
 
                         // Der Form das zu bearbeitende customer Objekt übergebeb
                         (Form1.Instance.PnlContainerMain.Controls["UCEditCustomerObject"] as UI.UCEditCustomerObject).SetCustomer(ref customer);
-                        (Form1.Instance.PnlContainerTop.Controls["UCTopBarEdit"] as UI.UCTopBarEdit).SetPersonObject(customer);
+                        (Form1.Instance.PnlContainerTop.Controls["UCTopBarEdit"] as UI.UCTopBarEdit).SetPersonObject(customer, customerOriginal);
 
                         // Die Form in den Vordergrund bringen und anzeigen
                         Form1.Instance.PnlContainerMain.Controls["UCEditCustomerObject"].BringToFront();

@@ -153,5 +153,26 @@ namespace ContactManager
                 customerType_ == customer.customerType_ &&
                 fax_ == customer.fax_;
         }
+
+        // Hier werden Veränderungen am Objekt ausgegeben
+        public override List<string> Diff(object obj)
+        {
+            List<String> diff = base.Diff(obj);
+
+            if (companyName_ != (obj as Customer).companyName_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Firmenname; Wert alt: {(obj as Customer).companyName_}; Wert neu: {companyName_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (customerType_ != (obj as Customer).customerType_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Kundentyp; Wert alt: {(obj as Customer).customerType_}; Wert neu: {customerType_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (fax_ != (obj as Customer).fax_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Fax; Wert alt: {(obj as Customer).fax_}; Wert neu: {fax_}; Zeitpunkt; {DateTime.Now}");
+            }
+
+            return diff;
+        }
     }
 }

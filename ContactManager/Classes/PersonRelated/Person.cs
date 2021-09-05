@@ -435,6 +435,79 @@ namespace ContactManager
                    eMail_ == person.eMail_;
         }
 
+        // Hier werden Veränderungen am Objekt ausgegeben
+        public virtual List<string> Diff(object obj)
+        {
+            List<string> diff = new List<string>();
+
+            if (id_ != (obj as Person).id_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Id; Wert alt: {(obj as Person).id_}; Wert neu: {id_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (state_ != (obj as Person).state_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Status; Wert alt: {(obj as Person).state_}; Wert neu: {state_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (salutation_ != (obj as Person).salutation_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Anrede; Wert alt: {(obj as Person).salutation_}; Wert neu: {salutation_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (title_ != (obj as Person).title_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Titel; Wert alt: {(obj as Person).title_}; Wert neu: {title_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (firstname_ != (obj as Person).firstname_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Vorname; Wert alt: {(obj as Person).firstname_}; Wert neu: {firstname_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (lastname_ != (obj as Person).lastname_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Nachname; Wert alt: {(obj as Person).lastname_}; Wert neu: {lastname_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (sex_ != (obj as Person).sex_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Geschlecht; Wert alt: {(obj as Person).sex_}; Wert neu: {sex_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (function_ != (obj as Person).function_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Funktion; Wert alt: {(obj as Person).function_}; Wert neu: {function_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (street_ != (obj as Person).street_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Strasse; Wert alt: {(obj as Person).street_}; Wert neu: {street_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (number_ != (obj as Person).number_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Hausnummer; Wert alt: {(obj as Person).number_}; Wert neu: {number_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (city_ != (obj as Person).city_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Ort; Wert alt: {(obj as Person).city_}; Wert neu: {city_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (zip_ != (obj as Person).zip_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: PLZ; Wert alt: {(obj as Person).zip_}; Wert neu: {zip_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (country_ != (obj as Person).country_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Land; Wert alt: {(obj as Person).country_}; Wert neu: {country_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (phoneBusiness_ != (obj as Person).phoneBusiness_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Telefon geschäftlich; Wert alt: {(obj as Person).phoneBusiness_}; Wert neu: {phoneBusiness_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (phoneMob_ != (obj as Person).phoneMob_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: Telefon mobil; Wert alt: {(obj as Person).phoneMob_}; Wert neu: {phoneMob_}; Zeitpunkt; {DateTime.Now}");
+            }
+            if (eMail_ != (obj as Person).eMail_)
+            {
+                diff.Add($"Personen Id: {id_}; Attribut: E-Mail; Wert alt: {(obj as Person).eMail_}; Wert neu: {eMail_}; Zeitpunkt; {DateTime.Now}");
+            }
+
+            return diff;
+        }
+
         // Alle Inhalte (bspw. int) wird als String zurückgegeben.
         public override string ToString()
         {

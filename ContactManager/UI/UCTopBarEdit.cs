@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -8,6 +9,7 @@ namespace ContactManager.UI
     {
         private XDocument xdocument_;
         private Object person_;
+        private Object personOriginal_;
         private XmlDataHandling xmlDataHandling = new XmlDataHandling();
 
         public UCTopBarEdit(ref XDocument xdocument)
@@ -16,13 +18,27 @@ namespace ContactManager.UI
             xdocument_ = xdocument;
         }
 
-        public void SetPersonObject(Object person)
+        public void SetPersonObject(Object personEdit)
         {
-            person_ = person;
+            person_ = personEdit;
+            personOriginal_ = personEdit;
+        }
+
+        public void SetPersonObject(Object personEdit, Object personOrigianl)
+        {
+            person_ = personEdit;
+            personOriginal_ = personOrigianl;
         }
 
         private void CmdSave_Click(object sender, EventArgs e)
         {
+            List<String> testlist;
+            
+            if (!person_.Equals(personOriginal_)) 
+            {
+                testlist = (person_ as Customer).Diff(personOriginal_);
+            }
+
             //Prüfen, ob Vor-und Nachname der Person eingegeben wurde
             if ((person_ as Person).CheckMinimalInforamtion())
             {
