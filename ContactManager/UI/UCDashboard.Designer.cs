@@ -70,7 +70,6 @@ namespace ContactManager.UI
             this.Controls.Add(this.LblNumberOfCustomers);
             this.Name = "UCDashboard";
             this.Size = new System.Drawing.Size(908, 518);
-            this.Load += new System.EventHandler(this.UCDashboard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,7 +23,7 @@ namespace ContactManager.UI
             xdocument_ = xdocument;
         }
 
-        private void UCDashboard_Load(object sender, EventArgs e)
+        public void LoadDashboard()
         {
             LblNumberOfCustomers.Text = $"Anzahl Kunden im System: {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.customer)}";
 

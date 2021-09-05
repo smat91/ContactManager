@@ -84,6 +84,7 @@ namespace ContactManager
             }
 
             Form1.Instance.PnlContainerMain.Controls["UCDashboard"].BringToFront();
+            (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
             Form1.Instance.PnlContainerTop.Hide();
             sideBarStatus = 0;
 
@@ -103,6 +104,7 @@ namespace ContactManager
             }
 
             Form1.Instance.PnlContainerMain.Controls["UCDashboard"].BringToFront();
+            (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
             Form1.Instance.PnlContainerTop.Hide();
             sideBarStatus = 0;
 
