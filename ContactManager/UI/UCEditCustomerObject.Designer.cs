@@ -544,7 +544,7 @@ namespace ContactManager.UI
             // 
             // TxtLog
             // 
-            this.TxtLog.Location = new System.Drawing.Point(7, 22);
+            this.TxtLog.Location = new System.Drawing.Point(7, 23);
             this.TxtLog.Multiline = true;
             this.TxtLog.Name = "TxtLog";
             this.TxtLog.ReadOnly = true;
@@ -584,6 +584,7 @@ namespace ContactManager.UI
             this.DgvLogs.Location = new System.Drawing.Point(6, 22);
             this.DgvLogs.MultiSelect = false;
             this.DgvLogs.Name = "DgvLogs";
+            this.DgvLogs.ReadOnly = true;
             this.DgvLogs.RowTemplate.Height = 25;
             this.DgvLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLogs.Size = new System.Drawing.Size(758, 198);

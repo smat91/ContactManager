@@ -72,7 +72,7 @@ namespace ContactManager
             return xdocument.
                 Descendants(personTypeDict[type]).FirstOrDefault().
                 Descendants().
-                Where(x => !x.HasElements && x.Parent.Name.LocalName.ToString() != "Log").
+                Where(x => !x.HasElements && x.Parent.Name.LocalName.ToString() != "Log" && x.Name.LocalName.ToString() != "MutationLog").
                 ToArray();
         }
 
@@ -268,9 +268,23 @@ namespace ContactManager
             return dt;
         }
 
+        // Gibt die Anzahl Datensätze eines gewissen Personentyps zurück
         public int GetNumberOfDataSets(ref XDocument xdocument, personType type)
         {
             return xdocument.Descendants(personTypeDict[type]).Count();
+        }
+
+        // Gibt alle Mutationslogs zürock
+        public List<string> GetMutationLogs(ref XDocument xdocument)
+        {
+            List<string> mutationLogs = new List<string>();
+
+            foreach(XElement mutationLog in xdocument.Descendants("MutationLogs").Descendants())
+            {
+                mutationLogs.Add(mutationLog.Value);
+            }
+
+            return mutationLogs;
         }
     }
 }

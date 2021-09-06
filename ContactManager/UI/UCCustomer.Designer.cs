@@ -50,6 +50,7 @@ namespace ContactManager.UI
             this.DgvCustomer.Location = new System.Drawing.Point(0, 0);
             this.DgvCustomer.MultiSelect = false;
             this.DgvCustomer.Name = "DgvCustomer";
+            this.DgvCustomer.ReadOnly = true;
             this.DgvCustomer.RowTemplate.Height = 25;
             this.DgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvCustomer.Size = new System.Drawing.Size(908, 518);

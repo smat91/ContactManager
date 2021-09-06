@@ -32,16 +32,29 @@ namespace ContactManager.UI
 
         private void CmdSave_Click(object sender, EventArgs e)
         {
-            List<String> testlist;
-            
-            if (!person_.Equals(personOriginal_)) 
-            {
-                testlist = (person_ as Customer).Diff(personOriginal_);
-            }
-
             //Prüfen, ob Vor-und Nachname der Person eingegeben wurde
             if ((person_ as Person).CheckMinimalInforamtion())
             {
+                // Prüfen ob Änderungen geloggt werden müssen
+                if (!person_.Equals(personOriginal_))
+                {
+                    if (person_ is Customer)
+                    {
+                        (person_ as Customer).AddLog(
+                            (person_ as Customer).Diff(personOriginal_), (person_ as Customer).customer_);
+                    }
+                    else if (person_ is Employee)
+                    {
+                        (person_ as Employee).AddLog(
+                            (person_ as Employee).Diff(personOriginal_), (person_ as Employee).employee_);
+                    }
+                    else if (person_ is Trainee)
+                    {
+                        (person_ as Trainee).AddLog(
+                            (person_ as Trainee).Diff(personOriginal_), (person_ as Trainee).trainee_);
+                    }
+                }
+
                 Form1.Instance.SaveToXml();
                 ReloadDataAndView();
             }

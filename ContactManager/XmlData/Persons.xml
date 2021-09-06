@@ -2,46 +2,20 @@
 <Persons>
   <Customers>
     <Customer>
-      <Id>4</Id>
-      <State>Aktiv</State>
-      <Salutation>Frau</Salutation>
-      <Title>Dr.</Title>
-      <FirstName>Ruth</FirstName>
-      <LastName>Gächter</LastName>
-      <Sex>weiblich</Sex>
-      <Function>Verkaufleiteung</Function>
-      <CompanyName>Muster GmbH</CompanyName>
-      <CustomerType>E</CustomerType>
-      <Address>
-        <Street>Neuwiesstrasse</Street>
-        <Number>6</Number>
-        <Country>Schweiz</Country>
-        <City>Goldach</City>
-        <Zip>9403</Zip>
-      </Address>
-      <ContactData>
-        <Phone Type="Business">0718582610</Phone>
-        <Phone Type="Mobile">0791238987</Phone>
-        <Fax>0718582611</Fax>
-        <EMail>marion@muster.ch</EMail>
-      </ContactData>
-      <Logs />
-    </Customer>
-    <Customer>
       <Id>1</Id>
       <State>Aktiv</State>
       <Salutation>Herr</Salutation>
       <Title>Dr</Title>
       <FirstName>Max</FirstName>
-      <LastName>Muster</LastName>
+      <LastName>Halter</LastName>
       <Sex>männlich</Sex>
       <Function>Einkaufsleiter</Function>
       <CompanyName>Test AG</CompanyName>
       <CustomerType>A</CustomerType>
       <Address>
         <Street>Oberdorfstrasse</Street>
-        <Number>5</Number>
-        <City>Zürich</City>
+        <Number>6</Number>
+        <City>Luzern</City>
         <Zip>8000</Zip>
         <Country>Schweiz</Country>
       </Address>
@@ -52,6 +26,13 @@
         <EMail>max.muster@admin.ch</EMail>
       </ContactData>
       <Logs></Logs>
+      <MutationLogs>
+        <MutationLog>Personen Id: 1; Attribut: Vorname; Wert alt: Max; Wert neu: Markus; Zeitpunkt; 06.09.2021 19:29:31</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Vorname; Wert alt: Markus; Wert neu: Max; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Nachname; Wert alt: Muster; Wert neu: Halter; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Hausnummer; Wert alt: 5; Wert neu: 6; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Ort; Wert alt: Zürich; Wert neu: Luzern; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
+      </MutationLogs>
     </Customer>
   </Customers>
   <Employees>
@@ -86,6 +67,7 @@
         <EMail>anna.bolika@verkauf.ch</EMail>
       </ContactData>
     </Employee>
+    <MutationLogs></MutationLogs>
   </Employees>
   <Trainees>
     <Trainee>
@@ -120,4 +102,5 @@
       </ContactData>
     </Trainee>
   </Trainees>
+  <MutationLogs></MutationLogs>
 </Persons>

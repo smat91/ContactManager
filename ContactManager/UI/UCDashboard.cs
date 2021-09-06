@@ -30,6 +30,12 @@ namespace ContactManager.UI
             LblNumberOfEmployees.Text = $"Anzahl Angestellte im System: {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.employee)}";
 
             LblNumberOfTrainees.Text = $"Anzahl Lehrnende im System: {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.trainee)}";
+
+            DvgMutationLogs.Rows.Clear();
+            foreach (string mutationLog in xmlDataHandling.GetMutationLogs(ref xdocument_))
+            {
+                DvgMutationLogs.Rows.Add(mutationLog);
+            }
         }
     }
 }

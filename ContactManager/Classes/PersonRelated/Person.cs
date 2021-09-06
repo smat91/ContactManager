@@ -529,5 +529,16 @@ namespace ContactManager
                     eMail_;
         }
 
+        // Mit dieser Methode werden die Einträge für den Mutations-Log erstellt
+        public void AddLog(List<string> diff, Object person )
+        {
+            foreach (string mutationLog in diff) 
+            {
+                (person as XElement).Descendants("MutationLogs")
+                    .FirstOrDefault()
+                    .Add(new XElement("MutationLog", mutationLog));
+            }
+
+        }
     }
 }

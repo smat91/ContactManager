@@ -57,8 +57,8 @@ namespace ContactManager
             }
         }
 
-        // Mit diesem Befehl wird eine Sammlung von Elementen in der Dokumentenreihenfolge zurückgegeben
-        private XElement trainee_;
+        // lokales XElement trainee_ anlegen
+        public XElement trainee_ { get; private set; }
 
         public Trainee(ref XElement trainee)
             : base(ref trainee)

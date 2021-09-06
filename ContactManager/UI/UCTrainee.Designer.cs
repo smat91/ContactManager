@@ -41,6 +41,7 @@ namespace ContactManager.UI
             this.DgvTrainee.Location = new System.Drawing.Point(0, 0);
             this.DgvTrainee.MultiSelect = false;
             this.DgvTrainee.Name = "DgvTrainee";
+            this.DgvTrainee.ReadOnly = true;
             this.DgvTrainee.RowTemplate.Height = 25;
             this.DgvTrainee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvTrainee.Size = new System.Drawing.Size(908, 518);

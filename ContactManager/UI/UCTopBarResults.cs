@@ -199,6 +199,8 @@ namespace ContactManager.UI
                         // bestehende XElement aus dem xdocument_ ausgelesen werden
                         Employee employee = new Employee(ref xmlDataHandling.IdToXElement(
                             ref xdocument_, XmlDataHandling.personType.employee, selectedIdEmployee));
+                        Employee employeeOriginal = new Employee(ref xmlDataHandling.IdToXElement(
+                            ref xdocumentOriginal_, XmlDataHandling.personType.employee, selectedIdEmployee));
 
                         // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                         if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCEditEmployeeObject"))
@@ -236,6 +238,8 @@ namespace ContactManager.UI
                         // bestehende XElement aus dem xdocument_ ausgelesen werden
                         Trainee trainee = new Trainee(ref xmlDataHandling.IdToXElement(
                             ref xdocument_, XmlDataHandling.personType.trainee, selectedIdTrainee));
+                        Trainee traineeOriginal = new Trainee(ref xmlDataHandling.IdToXElement(
+                            ref xdocumentOriginal_, XmlDataHandling.personType.trainee, selectedIdTrainee));
 
                         // Prüfen ob Form erzeugt werden muss und gegebenenfalls erzeugen
                         if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCEditTraineeObject"))
