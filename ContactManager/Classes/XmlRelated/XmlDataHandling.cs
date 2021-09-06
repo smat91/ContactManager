@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Data;
 using System.Text;
@@ -18,17 +19,21 @@ namespace ContactManager
         // Suchterm prüfen
         private bool CheckTerm(XElement referenzElement, personType type, XElement target, string attribute, string term) 
         {
+
+            // Variable für Landesinfo anlegen 
+            CultureInfo culture = new CultureInfo("de-CH", true);
+
             if (!target.HasElements && target.Parent.Name.LocalName.ToString() != "Log")
             {
                 if (attribute == null)
                 {
                     // Falls kein Attribut angewählt wurde alle Einträge Prüfen
-                    return target.Value.ToString().Contains(term, StringComparison.OrdinalIgnoreCase);
+                    return culture.CompareInfo.IndexOf(target.Value.ToString(), term, CompareOptions.IgnoreCase) >= 0;
                 }
                 else
                 {
                     // Falls ein Wert übereinstimmt
-                    if (target.Value.ToString().Contains(term, StringComparison.OrdinalIgnoreCase))
+                    if (culture.CompareInfo.IndexOf(target.Value.ToString(), term, CompareOptions.IgnoreCase) >= 0)
                     {
                         if (target.HasAttributes && referenzElement.HasAttributes)
                         {
