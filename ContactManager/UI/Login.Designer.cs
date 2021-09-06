@@ -30,7 +30,6 @@ namespace ContactManager
         private void InitializeComponent()
         {
             System.Windows.Forms.Button CmdLogin;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LblUser = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.TxtUser = new System.Windows.Forms.TextBox();
@@ -47,11 +46,11 @@ namespace ContactManager
             CmdLogin.BackColor = System.Drawing.Color.SteelBlue;
             CmdLogin.FlatAppearance.BorderSize = 0;
             CmdLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            CmdLogin.Font = new System.Drawing.Font("Segoe UI Historic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            CmdLogin.Font = new System.Drawing.Font("Segoe UI Historic", 11.25F);
             CmdLogin.ForeColor = System.Drawing.Color.White;
-            CmdLogin.Location = new System.Drawing.Point(46, 239);
+            CmdLogin.Location = new System.Drawing.Point(39, 207);
             CmdLogin.Name = "CmdLogin";
-            CmdLogin.Size = new System.Drawing.Size(178, 37);
+            CmdLogin.Size = new System.Drawing.Size(153, 32);
             CmdLogin.TabIndex = 4;
             CmdLogin.Text = "Login";
             CmdLogin.UseVisualStyleBackColor = false;
@@ -61,9 +60,9 @@ namespace ContactManager
             // 
             this.LblUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblUser.AutoSize = true;
-            this.LblUser.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblUser.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
             this.LblUser.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblUser.Location = new System.Drawing.Point(46, 139);
+            this.LblUser.Location = new System.Drawing.Point(39, 120);
             this.LblUser.Name = "LblUser";
             this.LblUser.Size = new System.Drawing.Size(86, 15);
             this.LblUser.TabIndex = 0;
@@ -73,9 +72,9 @@ namespace ContactManager
             // 
             this.LblPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPassword.AutoSize = true;
-            this.LblPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
             this.LblPassword.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblPassword.Location = new System.Drawing.Point(46, 192);
+            this.LblPassword.Location = new System.Drawing.Point(39, 166);
             this.LblPassword.Name = "LblPassword";
             this.LblPassword.Size = new System.Drawing.Size(57, 15);
             this.LblPassword.TabIndex = 1;
@@ -84,20 +83,20 @@ namespace ContactManager
             // TxtUser
             // 
             this.TxtUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtUser.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtUser.Location = new System.Drawing.Point(46, 157);
+            this.TxtUser.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
+            this.TxtUser.Location = new System.Drawing.Point(39, 136);
             this.TxtUser.Name = "TxtUser";
-            this.TxtUser.Size = new System.Drawing.Size(178, 23);
+            this.TxtUser.Size = new System.Drawing.Size(153, 23);
             this.TxtUser.TabIndex = 2;
             // 
             // TxtPassword
             // 
             this.TxtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtPassword.Location = new System.Drawing.Point(46, 210);
+            this.TxtPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
+            this.TxtPassword.Location = new System.Drawing.Point(39, 182);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
-            this.TxtPassword.Size = new System.Drawing.Size(178, 23);
+            this.TxtPassword.Size = new System.Drawing.Size(153, 23);
             this.TxtPassword.TabIndex = 3;
             this.TxtPassword.UseSystemPasswordChar = true;
             // 
@@ -105,9 +104,9 @@ namespace ContactManager
             // 
             this.LblLoginText.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLoginText.AutoSize = true;
-            this.LblLoginText.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblLoginText.Font = new System.Drawing.Font("Segoe UI Historic", 12F);
             this.LblLoginText.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblLoginText.Location = new System.Drawing.Point(64, 100);
+            this.LblLoginText.Location = new System.Drawing.Point(55, 87);
             this.LblLoginText.Name = "LblLoginText";
             this.LblLoginText.Size = new System.Drawing.Size(139, 21);
             this.LblLoginText.TabIndex = 5;
@@ -118,9 +117,9 @@ namespace ContactManager
             this.LblExitLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblExitLogin.AutoSize = true;
             this.LblExitLogin.BackColor = System.Drawing.Color.Transparent;
-            this.LblExitLogin.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.LblExitLogin.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Underline);
             this.LblExitLogin.ForeColor = System.Drawing.Color.White;
-            this.LblExitLogin.Location = new System.Drawing.Point(121, 337);
+            this.LblExitLogin.Location = new System.Drawing.Point(104, 292);
             this.LblExitLogin.Name = "LblExitLogin";
             this.LblExitLogin.Size = new System.Drawing.Size(25, 15);
             this.LblExitLogin.TabIndex = 6;
@@ -129,19 +128,19 @@ namespace ContactManager
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(103, 22);
+            this.pictureBox1.Image = global::ContactManager.Properties.Resources.sign_in_3301__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(88, 19);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 65);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(264, 361);
+            this.ClientSize = new System.Drawing.Size(226, 313);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblExitLogin);
             this.Controls.Add(this.LblLoginText);
@@ -165,7 +164,6 @@ namespace ContactManager
         private System.Windows.Forms.Label LblPassword;
         private System.Windows.Forms.TextBox TxtUser;
         private System.Windows.Forms.TextBox TxtPassword;
-        private System.Windows.Forms.Button CmdLogin;
         private System.Windows.Forms.Label LblLoginText;
         private System.Windows.Forms.Label LblExitLogin;
         private System.Windows.Forms.PictureBox pictureBox1;

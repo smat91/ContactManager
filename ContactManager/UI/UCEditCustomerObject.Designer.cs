@@ -84,9 +84,9 @@ namespace ContactManager.UI
             // 
             this.LblState.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblState.AutoSize = true;
-            this.LblState.Location = new System.Drawing.Point(3, 6);
+            this.LblState.Location = new System.Drawing.Point(3, 5);
             this.LblState.Name = "LblState";
-            this.LblState.Size = new System.Drawing.Size(42, 15);
+            this.LblState.Size = new System.Drawing.Size(40, 13);
             this.LblState.TabIndex = 0;
             this.LblState.Text = "Status:";
             // 
@@ -95,9 +95,9 @@ namespace ContactManager.UI
             this.LblSalutation.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblSalutation.AutoSize = true;
             this.LblSalutation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblSalutation.Location = new System.Drawing.Point(3, 33);
+            this.LblSalutation.Location = new System.Drawing.Point(3, 28);
             this.LblSalutation.Name = "LblSalutation";
-            this.LblSalutation.Size = new System.Drawing.Size(48, 15);
+            this.LblSalutation.Size = new System.Drawing.Size(44, 13);
             this.LblSalutation.TabIndex = 2;
             this.LblSalutation.Text = "Anrede:";
             this.LblSalutation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,9 +110,9 @@ namespace ContactManager.UI
             this.CmbSalutation.Items.AddRange(new object[] {
             "Frau",
             "Herr"});
-            this.CmbSalutation.Location = new System.Drawing.Point(132, 30);
+            this.CmbSalutation.Location = new System.Drawing.Point(114, 26);
             this.CmbSalutation.Name = "CmbSalutation";
-            this.CmbSalutation.Size = new System.Drawing.Size(200, 23);
+            this.CmbSalutation.Size = new System.Drawing.Size(172, 21);
             this.CmbSalutation.Sorted = true;
             this.CmbSalutation.TabIndex = 3;
             this.CmbSalutation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxIndexChanged);
@@ -163,28 +163,28 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.TxtCity, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.NumZip, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.CmbState, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 16);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 14);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 248);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(742, 215);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // LblTitle
             // 
             this.LblTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblTitle.AutoSize = true;
-            this.LblTitle.Location = new System.Drawing.Point(3, 60);
+            this.LblTitle.Location = new System.Drawing.Point(3, 51);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(32, 15);
+            this.LblTitle.Size = new System.Drawing.Size(30, 13);
             this.LblTitle.TabIndex = 4;
             this.LblTitle.Text = "Titel:";
             // 
@@ -192,9 +192,9 @@ namespace ContactManager.UI
             // 
             this.LblSex.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblSex.AutoSize = true;
-            this.LblSex.Location = new System.Drawing.Point(3, 141);
+            this.LblSex.Location = new System.Drawing.Point(3, 120);
             this.LblSex.Name = "LblSex";
-            this.LblSex.Size = new System.Drawing.Size(68, 15);
+            this.LblSex.Size = new System.Drawing.Size(64, 13);
             this.LblSex.TabIndex = 7;
             this.LblSex.Text = "Geschlecht:";
             // 
@@ -202,9 +202,9 @@ namespace ContactManager.UI
             // 
             this.LblFunction.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblFunction.AutoSize = true;
-            this.LblFunction.Location = new System.Drawing.Point(3, 168);
+            this.LblFunction.Location = new System.Drawing.Point(3, 143);
             this.LblFunction.Name = "LblFunction";
-            this.LblFunction.Size = new System.Drawing.Size(57, 15);
+            this.LblFunction.Size = new System.Drawing.Size(51, 13);
             this.LblFunction.TabIndex = 8;
             this.LblFunction.Text = "Funktion:";
             // 
@@ -212,9 +212,9 @@ namespace ContactManager.UI
             // 
             this.LblCompanyName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCompanyName.AutoSize = true;
-            this.LblCompanyName.Location = new System.Drawing.Point(3, 195);
+            this.LblCompanyName.Location = new System.Drawing.Point(3, 166);
             this.LblCompanyName.Name = "LblCompanyName";
-            this.LblCompanyName.Size = new System.Drawing.Size(77, 15);
+            this.LblCompanyName.Size = new System.Drawing.Size(67, 13);
             this.LblCompanyName.TabIndex = 9;
             this.LblCompanyName.Text = "Firmenname:";
             // 
@@ -222,9 +222,9 @@ namespace ContactManager.UI
             // 
             this.LblCustomerType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCustomerType.AutoSize = true;
-            this.LblCustomerType.Location = new System.Drawing.Point(3, 224);
+            this.LblCustomerType.Location = new System.Drawing.Point(3, 193);
             this.LblCustomerType.Name = "LblCustomerType";
-            this.LblCustomerType.Size = new System.Drawing.Size(68, 15);
+            this.LblCustomerType.Size = new System.Drawing.Size(61, 13);
             this.LblCustomerType.TabIndex = 10;
             this.LblCustomerType.Text = "Kundentyp:";
             // 
@@ -232,9 +232,9 @@ namespace ContactManager.UI
             // 
             this.LblLastname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLastname.AutoSize = true;
-            this.LblLastname.Location = new System.Drawing.Point(3, 114);
+            this.LblLastname.Location = new System.Drawing.Point(3, 97);
             this.LblLastname.Name = "LblLastname";
-            this.LblLastname.Size = new System.Drawing.Size(68, 15);
+            this.LblLastname.Size = new System.Drawing.Size(62, 13);
             this.LblLastname.TabIndex = 18;
             this.LblLastname.Text = "Nachname:";
             // 
@@ -242,9 +242,9 @@ namespace ContactManager.UI
             // 
             this.LblFirstname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblFirstname.AutoSize = true;
-            this.LblFirstname.Location = new System.Drawing.Point(3, 87);
+            this.LblFirstname.Location = new System.Drawing.Point(3, 74);
             this.LblFirstname.Name = "LblFirstname";
-            this.LblFirstname.Size = new System.Drawing.Size(57, 15);
+            this.LblFirstname.Size = new System.Drawing.Size(52, 13);
             this.LblFirstname.TabIndex = 5;
             this.LblFirstname.Text = "Vorname:";
             // 
@@ -252,9 +252,9 @@ namespace ContactManager.UI
             // 
             this.lblStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblStreet.AutoSize = true;
-            this.lblStreet.Location = new System.Drawing.Point(435, 6);
+            this.lblStreet.Location = new System.Drawing.Point(373, 5);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(46, 15);
+            this.lblStreet.Size = new System.Drawing.Size(45, 13);
             this.lblStreet.TabIndex = 11;
             this.lblStreet.Text = "Strasse:";
             // 
@@ -262,9 +262,9 @@ namespace ContactManager.UI
             // 
             this.LblNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblNumber.AutoSize = true;
-            this.LblNumber.Location = new System.Drawing.Point(435, 33);
+            this.LblNumber.Location = new System.Drawing.Point(373, 28);
             this.LblNumber.Name = "LblNumber";
-            this.LblNumber.Size = new System.Drawing.Size(58, 15);
+            this.LblNumber.Size = new System.Drawing.Size(49, 13);
             this.LblNumber.TabIndex = 12;
             this.LblNumber.Text = "Nummer:";
             // 
@@ -278,73 +278,73 @@ namespace ContactManager.UI
             "C",
             "D",
             "E"});
-            this.CmbCustomerType.Location = new System.Drawing.Point(132, 219);
+            this.CmbCustomerType.Location = new System.Drawing.Point(114, 187);
             this.CmbCustomerType.Name = "CmbCustomerType";
-            this.CmbCustomerType.Size = new System.Drawing.Size(200, 23);
+            this.CmbCustomerType.Size = new System.Drawing.Size(172, 21);
             this.CmbCustomerType.TabIndex = 19;
             this.CmbCustomerType.SelectedIndexChanged += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
             // TxtTitle
             // 
-            this.TxtTitle.Location = new System.Drawing.Point(132, 57);
+            this.TxtTitle.Location = new System.Drawing.Point(114, 49);
             this.TxtTitle.Name = "TxtTitle";
-            this.TxtTitle.Size = new System.Drawing.Size(200, 23);
+            this.TxtTitle.Size = new System.Drawing.Size(172, 20);
             this.TxtTitle.TabIndex = 20;
             this.TxtTitle.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtFirstname
             // 
-            this.TxtFirstname.Location = new System.Drawing.Point(132, 84);
+            this.TxtFirstname.Location = new System.Drawing.Point(114, 72);
             this.TxtFirstname.Name = "TxtFirstname";
-            this.TxtFirstname.Size = new System.Drawing.Size(200, 23);
+            this.TxtFirstname.Size = new System.Drawing.Size(172, 20);
             this.TxtFirstname.TabIndex = 21;
             this.TxtFirstname.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtLastname
             // 
-            this.TxtLastname.Location = new System.Drawing.Point(132, 111);
+            this.TxtLastname.Location = new System.Drawing.Point(114, 95);
             this.TxtLastname.Name = "TxtLastname";
-            this.TxtLastname.Size = new System.Drawing.Size(200, 23);
+            this.TxtLastname.Size = new System.Drawing.Size(172, 20);
             this.TxtLastname.TabIndex = 22;
             this.TxtLastname.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtSex
             // 
-            this.TxtSex.Location = new System.Drawing.Point(132, 138);
+            this.TxtSex.Location = new System.Drawing.Point(114, 118);
             this.TxtSex.Name = "TxtSex";
-            this.TxtSex.Size = new System.Drawing.Size(200, 23);
+            this.TxtSex.Size = new System.Drawing.Size(172, 20);
             this.TxtSex.TabIndex = 23;
             this.TxtSex.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtFunction
             // 
-            this.TxtFunction.Location = new System.Drawing.Point(132, 165);
+            this.TxtFunction.Location = new System.Drawing.Point(114, 141);
             this.TxtFunction.Name = "TxtFunction";
-            this.TxtFunction.Size = new System.Drawing.Size(200, 23);
+            this.TxtFunction.Size = new System.Drawing.Size(172, 20);
             this.TxtFunction.TabIndex = 24;
             this.TxtFunction.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtCompanyName
             // 
-            this.TxtCompanyName.Location = new System.Drawing.Point(132, 192);
+            this.TxtCompanyName.Location = new System.Drawing.Point(114, 164);
             this.TxtCompanyName.Name = "TxtCompanyName";
-            this.TxtCompanyName.Size = new System.Drawing.Size(200, 23);
+            this.TxtCompanyName.Size = new System.Drawing.Size(172, 20);
             this.TxtCompanyName.TabIndex = 25;
             this.TxtCompanyName.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtNumber
             // 
-            this.TxtNumber.Location = new System.Drawing.Point(564, 30);
+            this.TxtNumber.Location = new System.Drawing.Point(484, 26);
             this.TxtNumber.Name = "TxtNumber";
-            this.TxtNumber.Size = new System.Drawing.Size(200, 23);
+            this.TxtNumber.Size = new System.Drawing.Size(172, 20);
             this.TxtNumber.TabIndex = 32;
             this.TxtNumber.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtStreet
             // 
-            this.TxtStreet.Location = new System.Drawing.Point(564, 3);
+            this.TxtStreet.Location = new System.Drawing.Point(484, 3);
             this.TxtStreet.Name = "TxtStreet";
-            this.TxtStreet.Size = new System.Drawing.Size(200, 23);
+            this.TxtStreet.Size = new System.Drawing.Size(172, 20);
             this.TxtStreet.TabIndex = 33;
             this.TxtStreet.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
@@ -352,9 +352,9 @@ namespace ContactManager.UI
             // 
             this.LblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(435, 224);
+            this.LblEmail.Location = new System.Drawing.Point(373, 193);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(39, 15);
+            this.LblEmail.Size = new System.Drawing.Size(35, 13);
             this.LblEmail.TabIndex = 6;
             this.LblEmail.Text = "Email:";
             // 
@@ -362,9 +362,9 @@ namespace ContactManager.UI
             // 
             this.LblFax.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblFax.AutoSize = true;
-            this.LblFax.Location = new System.Drawing.Point(435, 195);
+            this.LblFax.Location = new System.Drawing.Point(373, 166);
             this.LblFax.Name = "LblFax";
-            this.LblFax.Size = new System.Drawing.Size(28, 15);
+            this.LblFax.Size = new System.Drawing.Size(27, 13);
             this.LblFax.TabIndex = 17;
             this.LblFax.Text = "Fax:";
             // 
@@ -372,9 +372,9 @@ namespace ContactManager.UI
             // 
             this.LblPhoneMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhoneMobile.AutoSize = true;
-            this.LblPhoneMobile.Location = new System.Drawing.Point(435, 168);
+            this.LblPhoneMobile.Location = new System.Drawing.Point(373, 143);
             this.LblPhoneMobile.Name = "LblPhoneMobile";
-            this.LblPhoneMobile.Size = new System.Drawing.Size(61, 15);
+            this.LblPhoneMobile.Size = new System.Drawing.Size(55, 13);
             this.LblPhoneMobile.TabIndex = 16;
             this.LblPhoneMobile.Text = "Tel. mobil:";
             // 
@@ -382,9 +382,9 @@ namespace ContactManager.UI
             // 
             this.LblPhoneBussines.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhoneBussines.AutoSize = true;
-            this.LblPhoneBussines.Location = new System.Drawing.Point(435, 141);
+            this.LblPhoneBussines.Location = new System.Drawing.Point(373, 120);
             this.LblPhoneBussines.Name = "LblPhoneBussines";
-            this.LblPhoneBussines.Size = new System.Drawing.Size(94, 15);
+            this.LblPhoneBussines.Size = new System.Drawing.Size(88, 13);
             this.LblPhoneBussines.TabIndex = 15;
             this.LblPhoneBussines.Text = "Tel. geschäftlich:";
             // 
@@ -392,9 +392,9 @@ namespace ContactManager.UI
             // 
             this.LblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCountry.AutoSize = true;
-            this.LblCountry.Location = new System.Drawing.Point(435, 114);
+            this.LblCountry.Location = new System.Drawing.Point(373, 97);
             this.LblCountry.Name = "LblCountry";
-            this.LblCountry.Size = new System.Drawing.Size(36, 15);
+            this.LblCountry.Size = new System.Drawing.Size(34, 13);
             this.LblCountry.TabIndex = 14;
             this.LblCountry.Text = "Land:";
             // 
@@ -402,49 +402,49 @@ namespace ContactManager.UI
             // 
             this.LblZip.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblZip.AutoSize = true;
-            this.LblZip.Location = new System.Drawing.Point(435, 87);
+            this.LblZip.Location = new System.Drawing.Point(373, 74);
             this.LblZip.Name = "LblZip";
-            this.LblZip.Size = new System.Drawing.Size(30, 15);
+            this.LblZip.Size = new System.Drawing.Size(30, 13);
             this.LblZip.TabIndex = 13;
             this.LblZip.Text = "PLZ:";
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(564, 219);
+            this.TxtEmail.Location = new System.Drawing.Point(484, 187);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(200, 23);
+            this.TxtEmail.Size = new System.Drawing.Size(172, 20);
             this.TxtEmail.TabIndex = 26;
             this.TxtEmail.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtFax
             // 
-            this.TxtFax.Location = new System.Drawing.Point(564, 192);
+            this.TxtFax.Location = new System.Drawing.Point(484, 164);
             this.TxtFax.Name = "TxtFax";
-            this.TxtFax.Size = new System.Drawing.Size(200, 23);
+            this.TxtFax.Size = new System.Drawing.Size(172, 20);
             this.TxtFax.TabIndex = 27;
             this.TxtFax.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtPhoneMobile
             // 
-            this.TxtPhoneMobile.Location = new System.Drawing.Point(564, 165);
+            this.TxtPhoneMobile.Location = new System.Drawing.Point(484, 141);
             this.TxtPhoneMobile.Name = "TxtPhoneMobile";
-            this.TxtPhoneMobile.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhoneMobile.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneMobile.TabIndex = 28;
             this.TxtPhoneMobile.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtPhoneBussines
             // 
-            this.TxtPhoneBussines.Location = new System.Drawing.Point(564, 138);
+            this.TxtPhoneBussines.Location = new System.Drawing.Point(484, 118);
             this.TxtPhoneBussines.Name = "TxtPhoneBussines";
-            this.TxtPhoneBussines.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhoneBussines.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneBussines.TabIndex = 29;
             this.TxtPhoneBussines.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtCountry
             // 
-            this.TxtCountry.Location = new System.Drawing.Point(564, 111);
+            this.TxtCountry.Location = new System.Drawing.Point(484, 95);
             this.TxtCountry.Name = "TxtCountry";
-            this.TxtCountry.Size = new System.Drawing.Size(200, 23);
+            this.TxtCountry.Size = new System.Drawing.Size(172, 20);
             this.TxtCountry.TabIndex = 30;
             this.TxtCountry.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
@@ -452,31 +452,31 @@ namespace ContactManager.UI
             // 
             this.LbLCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LbLCity.AutoSize = true;
-            this.LbLCity.Location = new System.Drawing.Point(435, 60);
+            this.LbLCity.Location = new System.Drawing.Point(373, 51);
             this.LbLCity.Name = "LbLCity";
-            this.LbLCity.Size = new System.Drawing.Size(27, 15);
+            this.LbLCity.Size = new System.Drawing.Size(24, 13);
             this.LbLCity.TabIndex = 34;
             this.LbLCity.Text = "Ort:";
             // 
             // TxtCity
             // 
             this.TxtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtCity.Location = new System.Drawing.Point(564, 57);
+            this.TxtCity.Location = new System.Drawing.Point(484, 49);
             this.TxtCity.Name = "TxtCity";
-            this.TxtCity.Size = new System.Drawing.Size(200, 23);
+            this.TxtCity.Size = new System.Drawing.Size(172, 20);
             this.TxtCity.TabIndex = 35;
             this.TxtCity.TextChanged += new System.EventHandler(this.TextBoxChanged);
             // 
             // NumZip
             // 
-            this.NumZip.Location = new System.Drawing.Point(564, 84);
+            this.NumZip.Location = new System.Drawing.Point(484, 72);
             this.NumZip.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.NumZip.Name = "NumZip";
-            this.NumZip.Size = new System.Drawing.Size(200, 23);
+            this.NumZip.Size = new System.Drawing.Size(171, 20);
             this.NumZip.TabIndex = 36;
             this.NumZip.ValueChanged += new System.EventHandler(this.NummericUpDownChanged);
             // 
@@ -487,9 +487,9 @@ namespace ContactManager.UI
             this.CmbState.Items.AddRange(new object[] {
             "Aktiv",
             "Inaktiv"});
-            this.CmbState.Location = new System.Drawing.Point(132, 3);
+            this.CmbState.Location = new System.Drawing.Point(114, 3);
             this.CmbState.Name = "CmbState";
-            this.CmbState.Size = new System.Drawing.Size(200, 23);
+            this.CmbState.Size = new System.Drawing.Size(172, 21);
             this.CmbState.TabIndex = 37;
             this.CmbState.SelectedIndexChanged += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
@@ -502,18 +502,18 @@ namespace ContactManager.UI
             this.GrpLogs.Controls.Add(this.CmdNewLog);
             this.GrpLogs.Controls.Add(this.CmdShowLog);
             this.GrpLogs.Controls.Add(this.DgvLogs);
-            this.GrpLogs.Location = new System.Drawing.Point(14, 271);
+            this.GrpLogs.Location = new System.Drawing.Point(12, 235);
             this.GrpLogs.Name = "GrpLogs";
-            this.GrpLogs.Size = new System.Drawing.Size(866, 226);
+            this.GrpLogs.Size = new System.Drawing.Size(742, 196);
             this.GrpLogs.TabIndex = 5;
             this.GrpLogs.TabStop = false;
             this.GrpLogs.Text = "Gesprächsnotizen";
             // 
             // CmdSave
             // 
-            this.CmdSave.Location = new System.Drawing.Point(771, 23);
+            this.CmdSave.Location = new System.Drawing.Point(661, 20);
             this.CmdSave.Name = "CmdSave";
-            this.CmdSave.Size = new System.Drawing.Size(89, 53);
+            this.CmdSave.Size = new System.Drawing.Size(76, 46);
             this.CmdSave.TabIndex = 6;
             this.CmdSave.Text = "Speichern";
             this.CmdSave.UseVisualStyleBackColor = true;
@@ -522,9 +522,9 @@ namespace ContactManager.UI
             // 
             // CmdCancle
             // 
-            this.CmdCancle.Location = new System.Drawing.Point(771, 82);
+            this.CmdCancle.Location = new System.Drawing.Point(661, 71);
             this.CmdCancle.Name = "CmdCancle";
-            this.CmdCancle.Size = new System.Drawing.Size(89, 54);
+            this.CmdCancle.Size = new System.Drawing.Size(76, 47);
             this.CmdCancle.TabIndex = 5;
             this.CmdCancle.Text = "Abbrechen";
             this.CmdCancle.UseVisualStyleBackColor = true;
@@ -533,9 +533,9 @@ namespace ContactManager.UI
             // 
             // CmdCloseLog
             // 
-            this.CmdCloseLog.Location = new System.Drawing.Point(771, 23);
+            this.CmdCloseLog.Location = new System.Drawing.Point(661, 20);
             this.CmdCloseLog.Name = "CmdCloseLog";
-            this.CmdCloseLog.Size = new System.Drawing.Size(89, 53);
+            this.CmdCloseLog.Size = new System.Drawing.Size(76, 46);
             this.CmdCloseLog.TabIndex = 4;
             this.CmdCloseLog.Text = "Log Schliessen";
             this.CmdCloseLog.UseVisualStyleBackColor = true;
@@ -544,19 +544,19 @@ namespace ContactManager.UI
             // 
             // TxtLog
             // 
-            this.TxtLog.Location = new System.Drawing.Point(7, 23);
+            this.TxtLog.Location = new System.Drawing.Point(6, 20);
             this.TxtLog.Multiline = true;
             this.TxtLog.Name = "TxtLog";
             this.TxtLog.ReadOnly = true;
-            this.TxtLog.Size = new System.Drawing.Size(757, 197);
+            this.TxtLog.Size = new System.Drawing.Size(649, 171);
             this.TxtLog.TabIndex = 3;
             this.TxtLog.Visible = false;
             // 
             // CmdNewLog
             // 
-            this.CmdNewLog.Location = new System.Drawing.Point(770, 22);
+            this.CmdNewLog.Location = new System.Drawing.Point(660, 19);
             this.CmdNewLog.Name = "CmdNewLog";
-            this.CmdNewLog.Size = new System.Drawing.Size(90, 54);
+            this.CmdNewLog.Size = new System.Drawing.Size(77, 47);
             this.CmdNewLog.TabIndex = 2;
             this.CmdNewLog.Text = "Neue Notiz erstellen";
             this.CmdNewLog.UseVisualStyleBackColor = true;
@@ -564,9 +564,9 @@ namespace ContactManager.UI
             // 
             // CmdShowLog
             // 
-            this.CmdShowLog.Location = new System.Drawing.Point(770, 82);
+            this.CmdShowLog.Location = new System.Drawing.Point(660, 71);
             this.CmdShowLog.Name = "CmdShowLog";
-            this.CmdShowLog.Size = new System.Drawing.Size(90, 54);
+            this.CmdShowLog.Size = new System.Drawing.Size(77, 47);
             this.CmdShowLog.TabIndex = 1;
             this.CmdShowLog.Text = "Notiz anzeigen";
             this.CmdShowLog.UseVisualStyleBackColor = true;
@@ -581,24 +581,24 @@ namespace ContactManager.UI
             this.DgvLogs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DgvLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLogs.Location = new System.Drawing.Point(6, 22);
+            this.DgvLogs.Location = new System.Drawing.Point(5, 19);
             this.DgvLogs.MultiSelect = false;
             this.DgvLogs.Name = "DgvLogs";
             this.DgvLogs.ReadOnly = true;
             this.DgvLogs.RowTemplate.Height = 25;
             this.DgvLogs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvLogs.Size = new System.Drawing.Size(758, 198);
+            this.DgvLogs.Size = new System.Drawing.Size(650, 172);
             this.DgvLogs.TabIndex = 0;
             this.DgvLogs.SelectionChanged += new System.EventHandler(this.DgvLogs_SelectionChanged);
             // 
             // UCEditCustomerObject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.GrpLogs);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UCEditCustomerObject";
-            this.Size = new System.Drawing.Size(908, 518);
+            this.Size = new System.Drawing.Size(778, 449);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).EndInit();

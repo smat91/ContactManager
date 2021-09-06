@@ -140,38 +140,38 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.TxtLevelOfEmployment, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.TxtSeparationDate, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 14);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 325);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(742, 282);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // TxtEntryDate
             // 
-            this.TxtEntryDate.Location = new System.Drawing.Point(147, 300);
+            this.TxtEntryDate.Location = new System.Drawing.Point(126, 256);
             this.TxtEntryDate.Name = "TxtEntryDate";
-            this.TxtEntryDate.Size = new System.Drawing.Size(200, 23);
+            this.TxtEntryDate.Size = new System.Drawing.Size(172, 20);
             this.TxtEntryDate.TabIndex = 49;
             // 
             // LblEntryDate
             // 
             this.LblEntryDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblEntryDate.AutoSize = true;
-            this.LblEntryDate.Location = new System.Drawing.Point(3, 303);
+            this.LblEntryDate.Location = new System.Drawing.Point(3, 261);
             this.LblEntryDate.Name = "LblEntryDate";
-            this.LblEntryDate.Size = new System.Drawing.Size(85, 15);
+            this.LblEntryDate.Size = new System.Drawing.Size(73, 13);
             this.LblEntryDate.TabIndex = 48;
             this.LblEntryDate.Text = "Eintrittsdatum:";
             // 
@@ -183,9 +183,9 @@ namespace ContactManager.UI
             this.CmbSalutation.Items.AddRange(new object[] {
             "Frau",
             "Herr"});
-            this.CmbSalutation.Location = new System.Drawing.Point(147, 30);
+            this.CmbSalutation.Location = new System.Drawing.Point(126, 26);
             this.CmbSalutation.Name = "CmbSalutation";
-            this.CmbSalutation.Size = new System.Drawing.Size(200, 23);
+            this.CmbSalutation.Size = new System.Drawing.Size(172, 21);
             this.CmbSalutation.Sorted = true;
             this.CmbSalutation.TabIndex = 3;
             // 
@@ -194,9 +194,9 @@ namespace ContactManager.UI
             this.LblSalutation.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblSalutation.AutoSize = true;
             this.LblSalutation.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LblSalutation.Location = new System.Drawing.Point(3, 33);
+            this.LblSalutation.Location = new System.Drawing.Point(3, 28);
             this.LblSalutation.Name = "LblSalutation";
-            this.LblSalutation.Size = new System.Drawing.Size(48, 15);
+            this.LblSalutation.Size = new System.Drawing.Size(44, 13);
             this.LblSalutation.TabIndex = 2;
             this.LblSalutation.Text = "Anrede:";
             this.LblSalutation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,9 +205,9 @@ namespace ContactManager.UI
             // 
             this.LblState.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblState.AutoSize = true;
-            this.LblState.Location = new System.Drawing.Point(3, 6);
+            this.LblState.Location = new System.Drawing.Point(3, 5);
             this.LblState.Name = "LblState";
-            this.LblState.Size = new System.Drawing.Size(42, 15);
+            this.LblState.Size = new System.Drawing.Size(40, 13);
             this.LblState.TabIndex = 0;
             this.LblState.Text = "Status:";
             // 
@@ -215,9 +215,9 @@ namespace ContactManager.UI
             // 
             this.LblTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblTitle.AutoSize = true;
-            this.LblTitle.Location = new System.Drawing.Point(3, 60);
+            this.LblTitle.Location = new System.Drawing.Point(3, 51);
             this.LblTitle.Name = "LblTitle";
-            this.LblTitle.Size = new System.Drawing.Size(32, 15);
+            this.LblTitle.Size = new System.Drawing.Size(30, 13);
             this.LblTitle.TabIndex = 4;
             this.LblTitle.Text = "Titel:";
             // 
@@ -225,9 +225,9 @@ namespace ContactManager.UI
             // 
             this.LblSex.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblSex.AutoSize = true;
-            this.LblSex.Location = new System.Drawing.Point(3, 141);
+            this.LblSex.Location = new System.Drawing.Point(3, 120);
             this.LblSex.Name = "LblSex";
-            this.LblSex.Size = new System.Drawing.Size(68, 15);
+            this.LblSex.Size = new System.Drawing.Size(64, 13);
             this.LblSex.TabIndex = 7;
             this.LblSex.Text = "Geschlecht:";
             // 
@@ -235,9 +235,9 @@ namespace ContactManager.UI
             // 
             this.LblFunction.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblFunction.AutoSize = true;
-            this.LblFunction.Location = new System.Drawing.Point(3, 168);
+            this.LblFunction.Location = new System.Drawing.Point(3, 143);
             this.LblFunction.Name = "LblFunction";
-            this.LblFunction.Size = new System.Drawing.Size(57, 15);
+            this.LblFunction.Size = new System.Drawing.Size(51, 13);
             this.LblFunction.TabIndex = 8;
             this.LblFunction.Text = "Funktion:";
             // 
@@ -245,9 +245,9 @@ namespace ContactManager.UI
             // 
             this.LblDateOfBirth.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblDateOfBirth.AutoSize = true;
-            this.LblDateOfBirth.Location = new System.Drawing.Point(3, 195);
+            this.LblDateOfBirth.Location = new System.Drawing.Point(3, 166);
             this.LblDateOfBirth.Name = "LblDateOfBirth";
-            this.LblDateOfBirth.Size = new System.Drawing.Size(86, 15);
+            this.LblDateOfBirth.Size = new System.Drawing.Size(76, 13);
             this.LblDateOfBirth.TabIndex = 9;
             this.LblDateOfBirth.Text = "Geburtsdatum:";
             // 
@@ -255,9 +255,9 @@ namespace ContactManager.UI
             // 
             this.LblDepartment.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblDepartment.AutoSize = true;
-            this.LblDepartment.Location = new System.Drawing.Point(3, 222);
+            this.LblDepartment.Location = new System.Drawing.Point(3, 189);
             this.LblDepartment.Name = "LblDepartment";
-            this.LblDepartment.Size = new System.Drawing.Size(62, 15);
+            this.LblDepartment.Size = new System.Drawing.Size(54, 13);
             this.LblDepartment.TabIndex = 10;
             this.LblDepartment.Text = "Abteilung:";
             // 
@@ -265,9 +265,9 @@ namespace ContactManager.UI
             // 
             this.LblLastname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLastname.AutoSize = true;
-            this.LblLastname.Location = new System.Drawing.Point(3, 114);
+            this.LblLastname.Location = new System.Drawing.Point(3, 97);
             this.LblLastname.Name = "LblLastname";
-            this.LblLastname.Size = new System.Drawing.Size(68, 15);
+            this.LblLastname.Size = new System.Drawing.Size(62, 13);
             this.LblLastname.TabIndex = 18;
             this.LblLastname.Text = "Nachname:";
             // 
@@ -275,9 +275,9 @@ namespace ContactManager.UI
             // 
             this.LblFirstname.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblFirstname.AutoSize = true;
-            this.LblFirstname.Location = new System.Drawing.Point(3, 87);
+            this.LblFirstname.Location = new System.Drawing.Point(3, 74);
             this.LblFirstname.Name = "LblFirstname";
-            this.LblFirstname.Size = new System.Drawing.Size(57, 15);
+            this.LblFirstname.Size = new System.Drawing.Size(52, 13);
             this.LblFirstname.TabIndex = 5;
             this.LblFirstname.Text = "Vorname:";
             // 
@@ -291,51 +291,51 @@ namespace ContactManager.UI
             "C",
             "D",
             "E"});
-            this.CmbDepartment.Location = new System.Drawing.Point(147, 219);
+            this.CmbDepartment.Location = new System.Drawing.Point(126, 187);
             this.CmbDepartment.Name = "CmbDepartment";
-            this.CmbDepartment.Size = new System.Drawing.Size(200, 23);
+            this.CmbDepartment.Size = new System.Drawing.Size(172, 21);
             this.CmbDepartment.TabIndex = 19;
             // 
             // TxtTitle
             // 
-            this.TxtTitle.Location = new System.Drawing.Point(147, 57);
+            this.TxtTitle.Location = new System.Drawing.Point(126, 49);
             this.TxtTitle.Name = "TxtTitle";
-            this.TxtTitle.Size = new System.Drawing.Size(200, 23);
+            this.TxtTitle.Size = new System.Drawing.Size(172, 20);
             this.TxtTitle.TabIndex = 20;
             // 
             // TxtFirstname
             // 
-            this.TxtFirstname.Location = new System.Drawing.Point(147, 84);
+            this.TxtFirstname.Location = new System.Drawing.Point(126, 72);
             this.TxtFirstname.Name = "TxtFirstname";
-            this.TxtFirstname.Size = new System.Drawing.Size(200, 23);
+            this.TxtFirstname.Size = new System.Drawing.Size(172, 20);
             this.TxtFirstname.TabIndex = 21;
             // 
             // TxtLastname
             // 
-            this.TxtLastname.Location = new System.Drawing.Point(147, 111);
+            this.TxtLastname.Location = new System.Drawing.Point(126, 95);
             this.TxtLastname.Name = "TxtLastname";
-            this.TxtLastname.Size = new System.Drawing.Size(200, 23);
+            this.TxtLastname.Size = new System.Drawing.Size(172, 20);
             this.TxtLastname.TabIndex = 22;
             // 
             // TxtSex
             // 
-            this.TxtSex.Location = new System.Drawing.Point(147, 138);
+            this.TxtSex.Location = new System.Drawing.Point(126, 118);
             this.TxtSex.Name = "TxtSex";
-            this.TxtSex.Size = new System.Drawing.Size(200, 23);
+            this.TxtSex.Size = new System.Drawing.Size(172, 20);
             this.TxtSex.TabIndex = 23;
             // 
             // TxtFunction
             // 
-            this.TxtFunction.Location = new System.Drawing.Point(147, 165);
+            this.TxtFunction.Location = new System.Drawing.Point(126, 141);
             this.TxtFunction.Name = "TxtFunction";
-            this.TxtFunction.Size = new System.Drawing.Size(200, 23);
+            this.TxtFunction.Size = new System.Drawing.Size(172, 20);
             this.TxtFunction.TabIndex = 24;
             // 
             // TxtDateOfBirth
             // 
-            this.TxtDateOfBirth.Location = new System.Drawing.Point(147, 192);
+            this.TxtDateOfBirth.Location = new System.Drawing.Point(126, 164);
             this.TxtDateOfBirth.Name = "TxtDateOfBirth";
-            this.TxtDateOfBirth.Size = new System.Drawing.Size(200, 23);
+            this.TxtDateOfBirth.Size = new System.Drawing.Size(172, 20);
             this.TxtDateOfBirth.TabIndex = 25;
             // 
             // CmbState
@@ -345,35 +345,35 @@ namespace ContactManager.UI
             this.CmbState.Items.AddRange(new object[] {
             "Aktiv",
             "Inaktiv"});
-            this.CmbState.Location = new System.Drawing.Point(147, 3);
+            this.CmbState.Location = new System.Drawing.Point(126, 3);
             this.CmbState.Name = "CmbState";
-            this.CmbState.Size = new System.Drawing.Size(200, 23);
+            this.CmbState.Size = new System.Drawing.Size(172, 21);
             this.CmbState.TabIndex = 37;
             // 
             // LblInsuranceNumber
             // 
             this.LblInsuranceNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblInsuranceNumber.AutoSize = true;
-            this.LblInsuranceNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblInsuranceNumber.Location = new System.Drawing.Point(3, 249);
+            this.LblInsuranceNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LblInsuranceNumber.Location = new System.Drawing.Point(3, 207);
             this.LblInsuranceNumber.Name = "LblInsuranceNumber";
-            this.LblInsuranceNumber.Size = new System.Drawing.Size(129, 15);
+            this.LblInsuranceNumber.Size = new System.Drawing.Size(116, 23);
             this.LblInsuranceNumber.TabIndex = 38;
             this.LblInsuranceNumber.Text = "Versicherungsnummer:";
             // 
             // TxtInsuranceNumber
             // 
-            this.TxtInsuranceNumber.Location = new System.Drawing.Point(147, 246);
+            this.TxtInsuranceNumber.Location = new System.Drawing.Point(126, 210);
             this.TxtInsuranceNumber.Name = "TxtInsuranceNumber";
-            this.TxtInsuranceNumber.Size = new System.Drawing.Size(200, 23);
+            this.TxtInsuranceNumber.Size = new System.Drawing.Size(172, 20);
             this.TxtInsuranceNumber.TabIndex = 39;
             // 
             // LblCitizenship
             // 
             this.LblCitizenship.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCitizenship.AutoSize = true;
-            this.LblCitizenship.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LblCitizenship.Location = new System.Drawing.Point(3, 276);
+            this.LblCitizenship.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.LblCitizenship.Location = new System.Drawing.Point(3, 234);
             this.LblCitizenship.Name = "LblCitizenship";
             this.LblCitizenship.Size = new System.Drawing.Size(72, 15);
             this.LblCitizenship.TabIndex = 40;
@@ -381,228 +381,228 @@ namespace ContactManager.UI
             // 
             // TxtCitizenship
             // 
-            this.TxtCitizenship.Location = new System.Drawing.Point(147, 273);
+            this.TxtCitizenship.Location = new System.Drawing.Point(126, 233);
             this.TxtCitizenship.Name = "TxtCitizenship";
-            this.TxtCitizenship.Size = new System.Drawing.Size(200, 23);
+            this.TxtCitizenship.Size = new System.Drawing.Size(172, 20);
             this.TxtCitizenship.TabIndex = 41;
             // 
             // LblEmail
             // 
             this.LblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(444, 303);
+            this.LblEmail.Location = new System.Drawing.Point(380, 261);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(39, 15);
+            this.LblEmail.Size = new System.Drawing.Size(35, 13);
             this.LblEmail.TabIndex = 6;
             this.LblEmail.Text = "Email:";
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(571, 300);
+            this.TxtEmail.Location = new System.Drawing.Point(489, 256);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(200, 23);
+            this.TxtEmail.Size = new System.Drawing.Size(172, 20);
             this.TxtEmail.TabIndex = 26;
             // 
             // LblPhonePrivate
             // 
             this.LblPhonePrivate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhonePrivate.AutoSize = true;
-            this.LblPhonePrivate.Location = new System.Drawing.Point(444, 276);
+            this.LblPhonePrivate.Location = new System.Drawing.Point(380, 235);
             this.LblPhonePrivate.Name = "LblPhonePrivate";
-            this.LblPhonePrivate.Size = new System.Drawing.Size(60, 15);
+            this.LblPhonePrivate.Size = new System.Drawing.Size(57, 13);
             this.LblPhonePrivate.TabIndex = 17;
             this.LblPhonePrivate.Text = "Tel. privat:";
             // 
             // TxtPhonePrivate
             // 
-            this.TxtPhonePrivate.Location = new System.Drawing.Point(571, 273);
+            this.TxtPhonePrivate.Location = new System.Drawing.Point(489, 233);
             this.TxtPhonePrivate.Name = "TxtPhonePrivate";
-            this.TxtPhonePrivate.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhonePrivate.Size = new System.Drawing.Size(172, 20);
             this.TxtPhonePrivate.TabIndex = 27;
             // 
             // LblPhoneMobile
             // 
             this.LblPhoneMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhoneMobile.AutoSize = true;
-            this.LblPhoneMobile.Location = new System.Drawing.Point(444, 249);
+            this.LblPhoneMobile.Location = new System.Drawing.Point(380, 212);
             this.LblPhoneMobile.Name = "LblPhoneMobile";
-            this.LblPhoneMobile.Size = new System.Drawing.Size(61, 15);
+            this.LblPhoneMobile.Size = new System.Drawing.Size(55, 13);
             this.LblPhoneMobile.TabIndex = 16;
             this.LblPhoneMobile.Text = "Tel. mobil:";
             // 
             // TxtPhoneMobile
             // 
-            this.TxtPhoneMobile.Location = new System.Drawing.Point(571, 246);
+            this.TxtPhoneMobile.Location = new System.Drawing.Point(489, 210);
             this.TxtPhoneMobile.Name = "TxtPhoneMobile";
-            this.TxtPhoneMobile.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhoneMobile.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneMobile.TabIndex = 28;
             // 
             // LblPhoneBussines
             // 
             this.LblPhoneBussines.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhoneBussines.AutoSize = true;
-            this.LblPhoneBussines.Location = new System.Drawing.Point(444, 222);
+            this.LblPhoneBussines.Location = new System.Drawing.Point(380, 189);
             this.LblPhoneBussines.Name = "LblPhoneBussines";
-            this.LblPhoneBussines.Size = new System.Drawing.Size(94, 15);
+            this.LblPhoneBussines.Size = new System.Drawing.Size(88, 13);
             this.LblPhoneBussines.TabIndex = 15;
             this.LblPhoneBussines.Text = "Tel. geschäftlich:";
             // 
             // TxtPhoneBussines
             // 
-            this.TxtPhoneBussines.Location = new System.Drawing.Point(571, 219);
+            this.TxtPhoneBussines.Location = new System.Drawing.Point(489, 187);
             this.TxtPhoneBussines.Name = "TxtPhoneBussines";
-            this.TxtPhoneBussines.Size = new System.Drawing.Size(200, 23);
+            this.TxtPhoneBussines.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneBussines.TabIndex = 29;
             // 
             // LblCountry
             // 
             this.LblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCountry.AutoSize = true;
-            this.LblCountry.Location = new System.Drawing.Point(444, 195);
+            this.LblCountry.Location = new System.Drawing.Point(380, 166);
             this.LblCountry.Name = "LblCountry";
-            this.LblCountry.Size = new System.Drawing.Size(36, 15);
+            this.LblCountry.Size = new System.Drawing.Size(34, 13);
             this.LblCountry.TabIndex = 14;
             this.LblCountry.Text = "Land:";
             // 
             // TxtCountry
             // 
-            this.TxtCountry.Location = new System.Drawing.Point(571, 192);
+            this.TxtCountry.Location = new System.Drawing.Point(489, 164);
             this.TxtCountry.Name = "TxtCountry";
-            this.TxtCountry.Size = new System.Drawing.Size(200, 23);
+            this.TxtCountry.Size = new System.Drawing.Size(172, 20);
             this.TxtCountry.TabIndex = 30;
             // 
             // LblZip
             // 
             this.LblZip.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblZip.AutoSize = true;
-            this.LblZip.Location = new System.Drawing.Point(444, 168);
+            this.LblZip.Location = new System.Drawing.Point(380, 143);
             this.LblZip.Name = "LblZip";
-            this.LblZip.Size = new System.Drawing.Size(30, 15);
+            this.LblZip.Size = new System.Drawing.Size(30, 13);
             this.LblZip.TabIndex = 13;
             this.LblZip.Text = "PLZ:";
             // 
             // NumZip
             // 
-            this.NumZip.Location = new System.Drawing.Point(571, 165);
+            this.NumZip.Location = new System.Drawing.Point(489, 141);
             this.NumZip.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.NumZip.Name = "NumZip";
-            this.NumZip.Size = new System.Drawing.Size(200, 23);
+            this.NumZip.Size = new System.Drawing.Size(171, 20);
             this.NumZip.TabIndex = 36;
             // 
             // LbLCity
             // 
             this.LbLCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LbLCity.AutoSize = true;
-            this.LbLCity.Location = new System.Drawing.Point(444, 141);
+            this.LbLCity.Location = new System.Drawing.Point(380, 120);
             this.LbLCity.Name = "LbLCity";
-            this.LbLCity.Size = new System.Drawing.Size(27, 15);
+            this.LbLCity.Size = new System.Drawing.Size(24, 13);
             this.LbLCity.TabIndex = 34;
             this.LbLCity.Text = "Ort:";
             // 
             // TxtCity
             // 
             this.TxtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtCity.Location = new System.Drawing.Point(571, 138);
+            this.TxtCity.Location = new System.Drawing.Point(489, 118);
             this.TxtCity.Name = "TxtCity";
-            this.TxtCity.Size = new System.Drawing.Size(200, 23);
+            this.TxtCity.Size = new System.Drawing.Size(172, 20);
             this.TxtCity.TabIndex = 35;
             // 
             // LblNumber
             // 
             this.LblNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblNumber.AutoSize = true;
-            this.LblNumber.Location = new System.Drawing.Point(444, 114);
+            this.LblNumber.Location = new System.Drawing.Point(380, 97);
             this.LblNumber.Name = "LblNumber";
-            this.LblNumber.Size = new System.Drawing.Size(58, 15);
+            this.LblNumber.Size = new System.Drawing.Size(49, 13);
             this.LblNumber.TabIndex = 12;
             this.LblNumber.Text = "Nummer:";
             // 
             // TxtNumber
             // 
-            this.TxtNumber.Location = new System.Drawing.Point(571, 111);
+            this.TxtNumber.Location = new System.Drawing.Point(489, 95);
             this.TxtNumber.Name = "TxtNumber";
-            this.TxtNumber.Size = new System.Drawing.Size(200, 23);
+            this.TxtNumber.Size = new System.Drawing.Size(172, 20);
             this.TxtNumber.TabIndex = 32;
             // 
             // lblStreet
             // 
             this.lblStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblStreet.AutoSize = true;
-            this.lblStreet.Location = new System.Drawing.Point(444, 87);
+            this.lblStreet.Location = new System.Drawing.Point(380, 74);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(46, 15);
+            this.lblStreet.Size = new System.Drawing.Size(45, 13);
             this.lblStreet.TabIndex = 11;
             this.lblStreet.Text = "Strasse:";
             // 
             // TxtStreet
             // 
-            this.TxtStreet.Location = new System.Drawing.Point(571, 84);
+            this.TxtStreet.Location = new System.Drawing.Point(489, 72);
             this.TxtStreet.Name = "TxtStreet";
-            this.TxtStreet.Size = new System.Drawing.Size(200, 23);
+            this.TxtStreet.Size = new System.Drawing.Size(172, 20);
             this.TxtStreet.TabIndex = 33;
             // 
             // LblLevel
             // 
             this.LblLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLevel.AutoSize = true;
-            this.LblLevel.Location = new System.Drawing.Point(444, 60);
+            this.LblLevel.Location = new System.Drawing.Point(380, 51);
             this.LblLevel.Name = "LblLevel";
-            this.LblLevel.Size = new System.Drawing.Size(66, 15);
+            this.LblLevel.Size = new System.Drawing.Size(61, 13);
             this.LblLevel.TabIndex = 42;
             this.LblLevel.Text = "Kaderstufe:";
             // 
             // TxtLevel
             // 
-            this.TxtLevel.Location = new System.Drawing.Point(571, 57);
+            this.TxtLevel.Location = new System.Drawing.Point(489, 49);
             this.TxtLevel.Name = "TxtLevel";
-            this.TxtLevel.Size = new System.Drawing.Size(200, 23);
+            this.TxtLevel.Size = new System.Drawing.Size(172, 20);
             this.TxtLevel.TabIndex = 43;
             // 
             // LblLevelOfEmployment
             // 
             this.LblLevelOfEmployment.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLevelOfEmployment.AutoSize = true;
-            this.LblLevelOfEmployment.Location = new System.Drawing.Point(444, 33);
+            this.LblLevelOfEmployment.Location = new System.Drawing.Point(380, 28);
             this.LblLevelOfEmployment.Name = "LblLevelOfEmployment";
-            this.LblLevelOfEmployment.Size = new System.Drawing.Size(53, 15);
+            this.LblLevelOfEmployment.Size = new System.Drawing.Size(48, 13);
             this.LblLevelOfEmployment.TabIndex = 44;
             this.LblLevelOfEmployment.Text = "Pensum:";
             // 
             // TxtLevelOfEmployment
             // 
-            this.TxtLevelOfEmployment.Location = new System.Drawing.Point(571, 30);
+            this.TxtLevelOfEmployment.Location = new System.Drawing.Point(489, 26);
             this.TxtLevelOfEmployment.Name = "TxtLevelOfEmployment";
-            this.TxtLevelOfEmployment.Size = new System.Drawing.Size(200, 23);
+            this.TxtLevelOfEmployment.Size = new System.Drawing.Size(172, 20);
             this.TxtLevelOfEmployment.TabIndex = 45;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(444, 6);
+            this.label1.Location = new System.Drawing.Point(380, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 15);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 46;
             this.label1.Text = "Kündigungsdatum:";
             // 
             // TxtSeparationDate
             // 
-            this.TxtSeparationDate.Location = new System.Drawing.Point(571, 3);
+            this.TxtSeparationDate.Location = new System.Drawing.Point(489, 3);
             this.TxtSeparationDate.Name = "TxtSeparationDate";
-            this.TxtSeparationDate.Size = new System.Drawing.Size(200, 23);
+            this.TxtSeparationDate.Size = new System.Drawing.Size(172, 20);
             this.TxtSeparationDate.TabIndex = 47;
             // 
             // UCEditTraineeObject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UCEditTraineeObject";
-            this.Size = new System.Drawing.Size(908, 518);
+            this.Size = new System.Drawing.Size(778, 449);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).EndInit();

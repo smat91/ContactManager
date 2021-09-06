@@ -1,4 +1,64 @@
-﻿<root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -60,37 +120,6 @@
   <metadata name="CmdLogin.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        QmCC
-</value>
-  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

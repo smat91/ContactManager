@@ -29,7 +29,6 @@ namespace ContactManager
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
@@ -69,7 +68,7 @@ namespace ContactManager
             // 
             this.CmdHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.CmdHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CmdHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdHome.Location = new System.Drawing.Point(0, 0);
             this.CmdHome.Margin = new System.Windows.Forms.Padding(0);
             this.CmdHome.Name = "CmdHome";
@@ -87,9 +86,9 @@ namespace ContactManager
             this.CmdKunde.Dock = System.Windows.Forms.DockStyle.Top;
             this.CmdKunde.FlatAppearance.BorderSize = 0;
             this.CmdKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdKunde.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdKunde.Image = ((System.Drawing.Image)(resources.GetObject("CmdKunde.Image")));
+            this.CmdKunde.Image = global::ContactManager.Properties.Resources.user_group_296__1_;
             this.CmdKunde.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdKunde.Location = new System.Drawing.Point(0, 77);
             this.CmdKunde.Margin = new System.Windows.Forms.Padding(0);
@@ -111,9 +110,9 @@ namespace ContactManager
             this.CmdMitarbeiter.Dock = System.Windows.Forms.DockStyle.Top;
             this.CmdMitarbeiter.FlatAppearance.BorderSize = 0;
             this.CmdMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdMitarbeiter.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdMitarbeiter.Image = ((System.Drawing.Image)(resources.GetObject("CmdMitarbeiter.Image")));
+            this.CmdMitarbeiter.Image = global::ContactManager.Properties.Resources.manager_9843;
             this.CmdMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 127);
             this.CmdMitarbeiter.Margin = new System.Windows.Forms.Padding(0);
@@ -135,9 +134,9 @@ namespace ContactManager
             this.CmdLernende.Dock = System.Windows.Forms.DockStyle.Top;
             this.CmdLernende.FlatAppearance.BorderSize = 0;
             this.CmdLernende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdLernende.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CmdLernende.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdLernende.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdLernende.Image = ((System.Drawing.Image)(resources.GetObject("CmdLernende.Image")));
+            this.CmdLernende.Image = global::ContactManager.Properties.Resources.foreman_9497__1_;
             this.CmdLernende.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdLernende.Location = new System.Drawing.Point(0, 177);
             this.CmdLernende.Margin = new System.Windows.Forms.Padding(0);
@@ -193,7 +192,7 @@ namespace ContactManager
             this.Controls.Add(this.PanelContainerTop);
             this.Controls.Add(this.PanelContainerMain);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
