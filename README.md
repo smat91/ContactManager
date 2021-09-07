@@ -12,3 +12,4 @@ Milad Fakiry
 Nico Varela Garcia
 
 
+### Was funktioniert:
