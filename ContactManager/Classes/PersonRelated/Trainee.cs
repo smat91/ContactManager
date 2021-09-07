@@ -72,7 +72,7 @@ namespace ContactManager
             if (base.IdIsUnique(ref personsXml))
             {
                 base.SetNewId(ref personsXml);
-                personsXml.Element("Trainees").AddFirst(trainee_);
+                personsXml.Descendants("Trainees").FirstOrDefault().AddFirst(trainee_);
             }
             else
             {

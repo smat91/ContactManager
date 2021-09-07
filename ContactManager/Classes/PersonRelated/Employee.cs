@@ -223,7 +223,7 @@ namespace ContactManager
             if (base.IdIsUnique(ref personsXml))
             {
                 base.SetNewId(ref personsXml);
-                personsXml.Element("Employees").AddFirst(employee_);
+                personsXml.Descendants("Employees").FirstOrDefault().AddFirst(employee_);
             }
             else
             {
