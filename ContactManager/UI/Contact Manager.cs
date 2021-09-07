@@ -93,6 +93,17 @@ namespace ContactManager
 
             this.PanelContainerTop.BackColor = ColorTranslator.FromHtml("#33334c");
             this.PanelContainerMain.BackColor = ColorTranslator.FromHtml("#9B59B6");
+
+            {
+                // Contact Manager From zentriet einrichten
+                int breite = Screen.PrimaryScreen.Bounds.Width;
+                int höhe = Screen.PrimaryScreen.Bounds.Height;
+
+                int x = breite - this.Width;
+                int y = höhe - this.Height;
+
+                this.Location = new Point(x / 2, y / 2);
+            }
         }
 
         private void CmdHome_Click(object sender, EventArgs e)
