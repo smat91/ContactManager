@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -121,6 +122,9 @@ namespace ContactManager
 
             set
             {
+                var cultureInfo = new CultureInfo("de-CH", true);
+
+
                 (from element in employee_.Descendants("Eintrittsdatum")
                 select element).FirstOrDefault().SetValue(value);
             }

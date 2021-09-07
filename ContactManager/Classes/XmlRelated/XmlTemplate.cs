@@ -35,7 +35,9 @@ namespace ContactManager
                                 new XElement("Telefon", "",
                                     new XAttribute("Type", "mobil")),
                                 new XElement("EMail", "")
-                                )
+
+                                ),
+                            new XElement("MutationLogs", "")
                        );
         }
 
