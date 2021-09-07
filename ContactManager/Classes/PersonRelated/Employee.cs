@@ -40,14 +40,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && !value.Any(char.IsDigit))
                 {
                     (from element in employee_.Descendants("Abteilung")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Eingabe darf nur Buchstaben beinhalten!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -63,14 +67,18 @@ namespace ContactManager
 
             set
             { 
-                if (value != null)
+                if (value != null && value.Length > 0)
                 {
                     (from element in employee_.Descendants("Versicherungsnummer")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Eingabe muss mindestens ein Zeichen Enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -86,14 +94,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in employee_.Descendants("Nationalität")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Eingabe darf nur Buchstaben beinhalten!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -132,7 +144,11 @@ namespace ContactManager
                 }
                 else 
                 {
-                    throw new ArgumentException("value cannot be smaller or equal to entry date!");
+                    string message = "Eingabe muss grösser als das Eintrittsdatum sein!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -155,7 +171,11 @@ namespace ContactManager
                 }
                 else
                 {
-                    throw new ArgumentException("value must be greater than 0");
+                    string message = "Eingabe muss grösser als 0 sein!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -178,7 +198,11 @@ namespace ContactManager
                 }
                 else
                 {
-                    throw new ArgumentException("value must be greater or equal to 0 and smaller or equal to 5");
+                    string message = "Eingabe muss grösser, gleich 0 und kleiner, gleich 5 sein!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -203,7 +227,11 @@ namespace ContactManager
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Eingabe darf nicht leer sein!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
