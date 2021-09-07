@@ -69,6 +69,8 @@
         <MutationLog>Personen Id: 1; Attribut: Geschlecht; Wert alt: ; Wert neu: männlich; Zeitpunkt; 07.09.2021 15:45:10</MutationLog>
         <MutationLog>Personen Id: 1; Attribut: Funktion; Wert alt: ; Wert neu: Einkaufsleiter; Zeitpunkt; 07.09.2021 15:45:10</MutationLog>
         <MutationLog>Personen Id: 1; Attribut: E-Mail; Wert alt: max.muster; Wert neu: max.muster@admin.ch; Zeitpunkt; 07.09.2021 15:45:10</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Firmenname; Wert alt: Test AG; Wert neu: Test; Zeitpunkt; 07.09.2021 17:44:07</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Firmenname; Wert alt: Test; Wert neu: Test AG; Zeitpunkt; 07.09.2021 17:44:12</MutationLog>
       </MutationLogs>
     </Customer>
   </Customers>
@@ -84,7 +86,7 @@
       <Funktion>Verkaufsleiterin</Funktion>
       <Geburtsdatum>15.01.1980</Geburtsdatum>
       <Abteilung>Verkauf</Abteilung>
-      <Versicherungsnummer>123.1234.1234.12</Versicherungsnummer>
+      <Versicherungsnummer>123.1234.1234.13</Versicherungsnummer>
       <Nationalität>Schweiz</Nationalität>
       <Eintrittsdatum>02.01.2015</Eintrittsdatum>
       <Austrittsdatum></Austrittsdatum>

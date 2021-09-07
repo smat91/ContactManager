@@ -29,6 +29,7 @@ namespace ContactManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
@@ -115,7 +116,6 @@ namespace ContactManager
             this.CmdLernende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmdLernende.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdLernende.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdLernende.Image = global::ContactManager.Properties.Resources.foreman_9497__1_;
             this.CmdLernende.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdLernende.Location = new System.Drawing.Point(0, 177);
             this.CmdLernende.Margin = new System.Windows.Forms.Padding(0);
@@ -139,7 +139,6 @@ namespace ContactManager
             this.CmdMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmdMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdMitarbeiter.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdMitarbeiter.Image = global::ContactManager.Properties.Resources.manager_9843;
             this.CmdMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 127);
             this.CmdMitarbeiter.Margin = new System.Windows.Forms.Padding(0);
@@ -163,7 +162,6 @@ namespace ContactManager
             this.CmdKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmdKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.CmdKunde.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdKunde.Image = global::ContactManager.Properties.Resources.user_group_296__1_;
             this.CmdKunde.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdKunde.Location = new System.Drawing.Point(0, 77);
             this.CmdKunde.Margin = new System.Windows.Forms.Padding(0);
@@ -206,6 +204,7 @@ namespace ContactManager
             this.Controls.Add(this.PanelContainerMain);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contact Manager";
