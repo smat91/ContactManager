@@ -30,6 +30,11 @@ namespace ContactManager.UI
             personOriginal_ = personOrigianl;
         }
 
+        private void CmdCancle_Click(object sender, EventArgs e)
+        {
+            ReloadDataAndView();
+        }
+
         private void CmdSave_Click(object sender, EventArgs e)
         {
             //Prüfen, ob Vor-und Nachname der Person eingegeben wurde
