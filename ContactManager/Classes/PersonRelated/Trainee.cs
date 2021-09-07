@@ -76,7 +76,7 @@ namespace ContactManager
             }
             else
             {
-                throw new ArgumentException("Trainee with this id is allready existing in XML");
+                throw new ArgumentException("Trainee with this id is already existing in XML");
             }
         }
 
