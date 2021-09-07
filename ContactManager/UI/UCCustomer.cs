@@ -24,7 +24,12 @@ namespace ContactManager.UI
         
         private void UCCustomer_Load(object sender, EventArgs e)
         {
-            DgvCustomer.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+            var dt = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+            if (dt.Columns.Count > 0)
+            {
+                dt.DefaultView.Sort = "Id ASC";
+                DgvCustomer.DataSource = dt;
+            }            
         }
     }
 }

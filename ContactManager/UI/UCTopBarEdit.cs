@@ -65,7 +65,7 @@ namespace ContactManager.UI
             }
             else
             {
-                string message = "At least firstname and lastname must be set";
+                string message = "Mindesten Vor- und Nachname müssen gesetzt sein!";
                 string caption = "Fehler in Eingabe erkannt";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 

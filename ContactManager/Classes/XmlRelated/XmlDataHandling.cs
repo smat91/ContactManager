@@ -69,25 +69,42 @@ namespace ContactManager
         }
 
         // Methode um alle Spalten zu ermitteln, die der gewünschte Datensatz hat
-        public XElement[] GetColumns(ref XDocument xdocument, personType type)
+        public XElement[] GetColumns(personType type)
         {
+            XmlTemplate xmlTemplate = new XmlTemplate();
+            XElement template = null;
+
+            if (type == personType.customer)
+            {
+                template = xmlTemplate.XelementTemplateCustomer();
+            }
+            else if (type == personType.employee)
+            {
+                template = xmlTemplate.XelementTemplateEmployee();
+            }
+            else if (type == personType.trainee)
+            {
+                template = xmlTemplate.XelementTemplateTrainee();
+            }
 
             // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
             // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
-            return xdocument.
-                Descendants(personTypeDict[type]).FirstOrDefault().
-                Descendants().
-                Where(x => !x.HasElements && x.Parent.Name.LocalName.ToString() != "Log" && x.Name.LocalName.ToString() != "MutationLog").
+            return template.Descendants().
+                Where(x => !x.HasElements &&
+                            x.Name.LocalName.ToString() != "Logs" &&
+                            x.Name.LocalName.ToString() != "MutationLogs" &&
+                            x.Parent.Name.LocalName.ToString() != "Log" &&
+                            x.Parent.Name.LocalName.ToString() != "MutationLog").
                 ToArray();
         }
 
         // Methode um alle Spaltennamen zu ermitteln, die der gewünschte Datensatz hat
-        public List<string> GetColumnNames(ref XDocument xdocument, personType type)
+        public List<string> GetColumnNames(personType type)
         {
             // Liste für die Spaltennamen
             List<string> columnNames = new List<string>();
 
-            foreach (XElement elemnt in GetColumns(ref xdocument, type))
+            foreach (XElement elemnt in GetColumns(type))
             {
                 // Falls es sich um ein Element mit Attributen handelt,
                 // wird der Spaltenname aus Element-Namen und Attribut-Wert
@@ -132,10 +149,10 @@ namespace ContactManager
 
             // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
             // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
-            XElement[] columns = GetColumns(ref xdocument, type);
+            XElement[] columns = GetColumns(type);
 
             // Liste für die Spaltennamen
-            var columnNames = GetColumnNames(ref xdocument, type);
+            var columnNames = GetColumnNames(type);
 
             // Die Spaltennamen der DataTable hinzufügen
             foreach (string columnName in columnNames)
@@ -153,7 +170,12 @@ namespace ContactManager
                 foreach (string columnName in columnNames)
                 {
                     IEnumerable<XElement> elements = record.DescendantsAndSelf().
-                        Elements(columns[columnNames.IndexOf(columnName)].Name);
+                        Elements(columns[columnNames.IndexOf(columnName)].Name).
+                        Where(x => !x.HasElements &&
+                            x.Name.LocalName.ToString() != "Logs" &&
+                            x.Name.LocalName.ToString() != "MutationLogs" &&
+                            x.Parent.Name.LocalName.ToString() != "Log" &&
+                            x.Parent.Name.LocalName.ToString() != "MutationLog");
 
                     if (elements.Count() > 1)
                     {
@@ -197,10 +219,10 @@ namespace ContactManager
         {
             // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
             // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
-            XElement[] columns = GetColumns(ref xdocument, type);
+            XElement[] columns = GetColumns(type);
 
             // Liste für die Spaltennamen
-            var columnNames = GetColumnNames(ref xdocument, type);
+            var columnNames = GetColumnNames(type);
 
             // String in Array wandeln
             String[] searchTerms = searchTerm.Split(' ');
@@ -255,7 +277,12 @@ namespace ContactManager
                 foreach (string columnName in columnNames)
                 {
                     IEnumerable<XElement> elements = result.DescendantsAndSelf().
-                        Elements(columns[columnNames.IndexOf(columnName)].Name);
+                        Elements(columns[columnNames.IndexOf(columnName)].Name).
+                        Where(x => !x.HasElements &&
+                            x.Name.LocalName.ToString() != "Logs" &&
+                            x.Name.LocalName.ToString() != "MutationLogs" &&
+                            x.Parent.Name.LocalName.ToString() != "Log" &&
+                            x.Parent.Name.LocalName.ToString() != "MutationLog");
 
                     if (elements.Count() > 1)
                     {
@@ -280,16 +307,37 @@ namespace ContactManager
         }
 
         // Gibt alle Mutationslogs zürock
-        public List<string> GetMutationLogs(ref XDocument xdocument)
+        public DataTable GetMutationLogs(ref XDocument xdocument)
         {
-            List<string> mutationLogs = new List<string>();
+            // neue DataTable erzeugen wird als Datenquelle für DataGridViews beötigt
+            DataTable dt = new DataTable();
 
-            foreach(XElement mutationLog in xdocument.Descendants("MutationLogs").Descendants())
+            // Array mit Ueberschriften erstellen
+            string[] columns = { "Id", "Attribut", "Origianlwert", "Aktualwert", "Zeitpunkt", };
+
+            // Die Spaltennamen der DataTable hinzufügen
+            foreach (string column in columns)
             {
-                mutationLogs.Add(mutationLog.Value);
+                dt.Columns.Add(column, typeof(string));
             }
 
-            return mutationLogs;
+            // Die Zeilen der DataTable hinzufügen
+            foreach (XElement record in xdocument.Descendants("MutationLogs").Descendants("MutationLog"))
+            {
+                // Eine neue Zeile hinzufügen
+                DataRow newRow = dt.Rows.Add();
+
+                // Die einzelnen Felder der Reihe mit den werden aus dem XML-Tree abfüllen
+                foreach (string column in columns)
+                {
+                    IEnumerable<XElement> elements = record.DescendantsAndSelf().
+                        Elements(column);
+
+                    newRow[column] = (string)elements.FirstOrDefault();
+                }
+            }
+
+            return dt;
         }
     }
 }

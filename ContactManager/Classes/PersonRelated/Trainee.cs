@@ -101,6 +101,23 @@ namespace ContactManager
                    currentTraineeYear_ == trainee.currentTraineeYear_;
         }
 
+        // Hier werden Veränderungen am Objekt ausgegeben
+        public override List<XElement> Diff(object obj)
+        {
+            List<XElement> diff = base.Diff(obj);
+
+            if (numberOfTraineeYears_ != (obj as Trainee).numberOfTraineeYears_)
+            {
+                diff.Add(DiffToXElement("Lehrjahre", (obj as Trainee).numberOfTraineeYears_.ToString(), numberOfTraineeYears_.ToString()));
+            }
+            if (currentTraineeYear_ != (obj as Trainee).currentTraineeYear_)
+            {
+                diff.Add(DiffToXElement("Lehrjahr", (obj as Trainee).currentTraineeYear_.ToString(), currentTraineeYear_.ToString()));
+            }
+
+            return diff;
+        }
+
         public override string ToString()
         {
             return base.ToString() + ", " + 

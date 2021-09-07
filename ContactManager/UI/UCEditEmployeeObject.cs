@@ -37,7 +37,7 @@ namespace ContactManager.UI
                 TxtSex.Text = employee_.sex_;
                 TxtFunction.Text = employee_.function_;
                 TxtDateOfBirth.Text = employee_.birthday_;
-                CmbDepartment.SelectedIndex = CmbDepartment.FindString(employee_.department_);
+                TxtDepartment.Text = employee_.department_;
                 TxtInsuranceNumber.Text = employee_.insuranceNumber_;
                 TxtCitizenship.Text = employee_.citizenship_;
                 TxtEntryDate.Text = employee_.entryDate_;
@@ -91,7 +91,6 @@ namespace ContactManager.UI
 
         }
 
-
         // Werte aus Textfeldern in employee Objekt aktualisieren
         private void TextBoxChanged(object sender, EventArgs e)
         {
@@ -118,6 +117,10 @@ namespace ContactManager.UI
             else if (sender == TxtDateOfBirth)
             {
                 employee_.birthday_ = TxtDateOfBirth.Text;
+            }
+            else if (sender == TxtDepartment)
+            {
+                employee_.department_ = TxtDepartment.Text;
             }
             else if (sender == TxtInsuranceNumber)
             {

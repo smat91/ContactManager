@@ -22,7 +22,8 @@ namespace ContactManager.UI
         private void CmdReset_Click(object sender, EventArgs e)
         {
             TxtSearch.Clear();
-            //Combobox leeren!
+            CmbFilter.ResetText();
+            CmdSearch_Click(sender, e);
         }
 
         private void CmdNew_Click(object sender, EventArgs e)
@@ -273,8 +274,8 @@ namespace ContactManager.UI
             }
             else
             {
-                string message = "Please Select an entry or create a new entry if no one is available.";
-                string caption = "Error detected in selection";
+                string message = "Bitte einen Eintrag selektieren!";
+                string caption = "Fehler in der Selektion erkannt";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                 MessageBox.Show(message, caption, buttons);
@@ -332,7 +333,7 @@ namespace ContactManager.UI
                 // case customer
                 case 1:
                     // Fügt der Combobox die verfügbaren Attribue hinzu
-                    foreach (string columnName in xmlDataHandling.GetColumnNames(ref xdocument_, XmlDataHandling.personType.customer))
+                    foreach (string columnName in xmlDataHandling.GetColumnNames(XmlDataHandling.personType.customer))
                     {
                         CmbFilter.Items.Add(columnName);
                     }
@@ -341,7 +342,7 @@ namespace ContactManager.UI
                 // case employee
                 case 2:
                     // Fügt der Combobox die verfügbaren Attribue hinzu
-                    foreach (string columnName in xmlDataHandling.GetColumnNames(ref xdocument_, XmlDataHandling.personType.employee))
+                    foreach (string columnName in xmlDataHandling.GetColumnNames(XmlDataHandling.personType.employee))
                     {
                         CmbFilter.Items.Add(columnName);
                     }
@@ -350,7 +351,7 @@ namespace ContactManager.UI
                 // case trainee
                 case 3:
                     // Fügt der Combobox die verfügbaren Attribue hinzu
-                    foreach (string columnName in xmlDataHandling.GetColumnNames(ref xdocument_, XmlDataHandling.personType.trainee))
+                    foreach (string columnName in xmlDataHandling.GetColumnNames(XmlDataHandling.personType.trainee))
                     {
                         CmbFilter.Items.Add(columnName);
                     }

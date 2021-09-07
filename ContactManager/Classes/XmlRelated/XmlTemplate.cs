@@ -15,8 +15,8 @@ namespace ContactManager
         {
             return new XElement("Person",
                             new XElement("Id", ""),
-                            new XElement("Status", ""),
-                            new XElement("Begrüssung", ""),
+                            new XElement("Status", "Aktiv"),
+                            new XElement("Begrüssung", "Frau"),
                             new XElement("Titel", ""),
                             new XElement("Vorname", ""),
                             new XElement("Nachname", ""),
@@ -27,14 +27,14 @@ namespace ContactManager
                                 new XElement("Nummer", ""),
                                 new XElement("Land", ""),
                                 new XElement("Ort", ""),
-                                new XElement("PLZ", "0")
+                                new XElement("PLZ", "1000")
                                 ),
                             new XElement("ContactData",
                                 new XElement("Telefon", "",
                                     new XAttribute("Type", "geschäftlich")),
                                 new XElement("Telefon", "",
                                     new XAttribute("Type", "mobil")),
-                                new XElement("EMail", "")
+                                new XElement("EMail", "bsp@bsp.ch")
 
                                 ),
                             new XElement("MutationLogs", "")
@@ -52,7 +52,7 @@ namespace ContactManager
             // Neue kundenbezogene Allgemeinattribute hinzufügen
             customer.Descendants("Funktion").FirstOrDefault()
                 .AddAfterSelf(new XElement("Firmenname", ""),
-                              new XElement("Kundentyp", ""));
+                              new XElement("Kundentyp", "A"));
 
             // Neue kundenbezogene Kontaktattribute hinzufügen
             customer.Descendants("Telefon")
@@ -106,8 +106,8 @@ namespace ContactManager
 
             // Neue mitarbeiterbezogene Allgemeinattribute hinzufügen
             trainee.Descendants("Kaderstufe").FirstOrDefault()
-                .AddAfterSelf(new XElement("Lehrjahre", "0"),
-                              new XElement("Lehrjahr", "0"));
+                .AddAfterSelf(new XElement("Lehrjahre", "1"),
+                              new XElement("Lehrjahr", "1"));
 
             return trainee;
         }

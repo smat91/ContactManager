@@ -30,7 +30,6 @@ namespace ContactManager.UI
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.TxtEntryDate = new System.Windows.Forms.TextBox();
             this.NumLevel = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.LblEntryDate = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@ namespace ContactManager.UI
             this.LblDateOfBirth = new System.Windows.Forms.Label();
             this.LblLastname = new System.Windows.Forms.Label();
             this.LblFirstname = new System.Windows.Forms.Label();
-            this.CmbDepartment = new System.Windows.Forms.ComboBox();
             this.TxtTitle = new System.Windows.Forms.TextBox();
             this.TxtFirstname = new System.Windows.Forms.TextBox();
             this.TxtLastname = new System.Windows.Forms.TextBox();
@@ -78,6 +76,8 @@ namespace ContactManager.UI
             this.TxtFunction = new System.Windows.Forms.TextBox();
             this.TxtDateOfBirth = new System.Windows.Forms.TextBox();
             this.TxtSeparationDate = new System.Windows.Forms.TextBox();
+            this.TxtDepartment = new System.Windows.Forms.TextBox();
+            this.TxtEntryDate = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).BeginInit();
@@ -94,7 +94,6 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.86223F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.51238F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.86223F));
-            this.tableLayoutPanel1.Controls.Add(this.TxtEntryDate, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.NumLevel, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.LblEntryDate, 0, 11);
@@ -107,7 +106,6 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.LblDateOfBirth, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.LblLastname, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.LblFirstname, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.CmbDepartment, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.TxtTitle, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.TxtFirstname, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.TxtLastname, 1, 4);
@@ -142,6 +140,8 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.TxtFunction, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.TxtDateOfBirth, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.TxtSeparationDate, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.TxtDepartment, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.TxtEntryDate, 1, 11);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
@@ -161,14 +161,6 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Size = new System.Drawing.Size(742, 282);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // TxtEntryDate
-            // 
-            this.TxtEntryDate.Location = new System.Drawing.Point(134, 256);
-            this.TxtEntryDate.Name = "TxtEntryDate";
-            this.TxtEntryDate.Size = new System.Drawing.Size(172, 20);
-            this.TxtEntryDate.TabIndex = 56;
-            this.TxtEntryDate.Leave += new System.EventHandler(this.TextBoxChanged);
-            // 
             // NumLevel
             // 
             this.NumLevel.Increment = new decimal(new int[] {
@@ -180,7 +172,7 @@ namespace ContactManager.UI
             this.NumLevel.Name = "NumLevel";
             this.NumLevel.Size = new System.Drawing.Size(172, 20);
             this.NumLevel.TabIndex = 55;
-            this.NumLevel.Leave += new System.EventHandler(this.NummericUpDownChanged);
+            this.NumLevel.ValueChanged += new System.EventHandler(this.NummericUpDownChanged);
             // 
             // label2
             // 
@@ -215,7 +207,7 @@ namespace ContactManager.UI
             this.CmbSalutation.Size = new System.Drawing.Size(172, 21);
             this.CmbSalutation.Sorted = true;
             this.CmbSalutation.TabIndex = 3;
-            this.CmbSalutation.Leave += new System.EventHandler(this.ComboBoxIndexChanged);
+            this.CmbSalutation.SelectedIndexChanged += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
             // LblSalutation
             // 
@@ -299,22 +291,6 @@ namespace ContactManager.UI
             this.LblFirstname.TabIndex = 5;
             this.LblFirstname.Text = "Vorname:";
             // 
-            // CmbDepartment
-            // 
-            this.CmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbDepartment.FormattingEnabled = true;
-            this.CmbDepartment.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E"});
-            this.CmbDepartment.Location = new System.Drawing.Point(134, 187);
-            this.CmbDepartment.Name = "CmbDepartment";
-            this.CmbDepartment.Size = new System.Drawing.Size(172, 21);
-            this.CmbDepartment.TabIndex = 19;
-            this.CmbDepartment.Leave += new System.EventHandler(this.ComboBoxIndexChanged);
-            // 
             // TxtTitle
             // 
             this.TxtTitle.Location = new System.Drawing.Point(134, 49);
@@ -358,7 +334,7 @@ namespace ContactManager.UI
             this.CmbState.Name = "CmbState";
             this.CmbState.Size = new System.Drawing.Size(172, 21);
             this.CmbState.TabIndex = 37;
-            this.CmbState.Leave += new System.EventHandler(this.ComboBoxIndexChanged);
+            this.CmbState.SelectedIndexChanged += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
             // TxtInsuranceNumber
             // 
@@ -488,7 +464,7 @@ namespace ContactManager.UI
             this.NumZip.Name = "NumZip";
             this.NumZip.Size = new System.Drawing.Size(172, 20);
             this.NumZip.TabIndex = 36;
-            this.NumZip.Leave += new System.EventHandler(this.NummericUpDownChanged);
+            this.NumZip.ValueChanged += new System.EventHandler(this.NummericUpDownChanged);
             // 
             // LbLCity
             // 
@@ -606,7 +582,7 @@ namespace ContactManager.UI
             this.NumLevelOfEmployment.Name = "NumLevelOfEmployment";
             this.NumLevelOfEmployment.Size = new System.Drawing.Size(172, 20);
             this.NumLevelOfEmployment.TabIndex = 54;
-            this.NumLevelOfEmployment.Leave += new System.EventHandler(this.NummericUpDownChanged);
+            this.NumLevelOfEmployment.ValueChanged += new System.EventHandler(this.NummericUpDownChanged);
             // 
             // TxtFunction
             // 
@@ -631,6 +607,22 @@ namespace ContactManager.UI
             this.TxtSeparationDate.Size = new System.Drawing.Size(172, 20);
             this.TxtSeparationDate.TabIndex = 58;
             this.TxtSeparationDate.Leave += new System.EventHandler(this.TextBoxChanged);
+            // 
+            // TxtDepartment
+            // 
+            this.TxtDepartment.Location = new System.Drawing.Point(134, 187);
+            this.TxtDepartment.Name = "TxtDepartment";
+            this.TxtDepartment.Size = new System.Drawing.Size(172, 20);
+            this.TxtDepartment.TabIndex = 59;
+            this.TxtDepartment.Leave += new System.EventHandler(this.TextBoxChanged);
+            // 
+            // TxtEntryDate
+            // 
+            this.TxtEntryDate.Location = new System.Drawing.Point(134, 256);
+            this.TxtEntryDate.Name = "TxtEntryDate";
+            this.TxtEntryDate.Size = new System.Drawing.Size(172, 20);
+            this.TxtEntryDate.TabIndex = 56;
+            this.TxtEntryDate.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // UCEditEmployeeObject
             // 
@@ -662,7 +654,6 @@ namespace ContactManager.UI
         private System.Windows.Forms.Label LblLastname;
         private System.Windows.Forms.Label LblFirstname;
         private System.Windows.Forms.Label LblNumber;
-        private System.Windows.Forms.ComboBox CmbDepartment;
         private System.Windows.Forms.TextBox TxtTitle;
         private System.Windows.Forms.TextBox TxtFirstname;
         private System.Windows.Forms.TextBox TxtLastname;
@@ -699,5 +690,6 @@ namespace ContactManager.UI
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.TextBox TxtDateOfBirth;
         private System.Windows.Forms.TextBox TxtSeparationDate;
+        private System.Windows.Forms.TextBox TxtDepartment;
     }
 }

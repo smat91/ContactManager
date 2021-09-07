@@ -279,6 +279,51 @@ namespace ContactManager
                    phonePrivat_ == employee.phonePrivat_;
         }
 
+        // Hier werden Veränderungen am Objekt ausgegeben
+        public override List<XElement> Diff(object obj)
+        {
+            List<XElement> diff = base.Diff(obj);
+
+            if (birthday_ != (obj as Employee).birthday_)
+            {
+                diff.Add(DiffToXElement("Geburtsdatum", (obj as Employee).birthday_.ToString(), birthday_.ToString()));
+            }
+            if (department_ != (obj as Employee).department_)
+            {
+                diff.Add(DiffToXElement("Abteilung", (obj as Employee).department_.ToString(), department_.ToString()));
+            }
+            if (insuranceNumber_ != (obj as Employee).insuranceNumber_)
+            {
+                diff.Add(DiffToXElement("Versicherungsnummer", (obj as Employee).insuranceNumber_.ToString(), insuranceNumber_.ToString()));
+            }
+            if (citizenship_ != (obj as Employee).citizenship_)
+            {
+                diff.Add(DiffToXElement("Nationalität", (obj as Employee).citizenship_.ToString(), citizenship_.ToString()));
+            }
+            if (entryDate_ != (obj as Employee).entryDate_)
+            {
+                diff.Add(DiffToXElement("Eintrittsdatum", (obj as Employee).entryDate_.ToString(), entryDate_.ToString()));
+            }
+            if (seperationDate_ != (obj as Employee).seperationDate_)
+            {
+                diff.Add(DiffToXElement("Kündigungsdatum", (obj as Employee).seperationDate_.ToString(), seperationDate_.ToString()));
+            }
+            if (levelOfEmployment_ != (obj as Employee).levelOfEmployment_)
+            {
+                diff.Add(DiffToXElement("Pensum", (obj as Employee).levelOfEmployment_.ToString(), levelOfEmployment_.ToString()));
+            }
+            if (level_ != (obj as Employee).level_)
+            {
+                diff.Add(DiffToXElement("Kaderstufe", (obj as Employee).level_.ToString(), level_.ToString()));
+            }
+            if (phonePrivat_ != (obj as Employee).phonePrivat_)
+            {
+                diff.Add(DiffToXElement("Tel. privat", (obj as Employee).phonePrivat_.ToString(), phonePrivat_.ToString()));
+            }
+
+            return diff;
+        }
+
         public override string ToString()
         {
             return base.ToString() + ", " + 

@@ -37,10 +37,11 @@ namespace ContactManager.UI
                 TxtSex.Text = trainee_.sex_;
                 TxtFunction.Text = trainee_.function_;
                 TxtDateOfBirth.Text = trainee_.birthday_;
-                CmbDepartment.SelectedIndex = CmbDepartment.FindString(trainee_.department_);
+                TxtDepartment.Text = trainee_.department_;
                 TxtInsuranceNumber.Text = trainee_.insuranceNumber_;
                 TxtCitizenship.Text = trainee_.citizenship_;
                 TxtEntryDate.Text = trainee_.entryDate_;
+                NumNumberOfTraineeYears.Value = trainee_.numberOfTraineeYears_;
                 TxtSeparationDate.Text = trainee_.seperationDate_;
                 NumLevelOfEmployment.Value = trainee_.levelOfEmployment_;
                 NumLevel.Value = trainee_.level_;
@@ -53,6 +54,7 @@ namespace ContactManager.UI
                 TxtPhoneMobile.Text = trainee_.phoneMob_;
                 TxtPhonePrivate.Text = trainee_.phonePrivat_;
                 TxtEmail.Text = trainee_.eMail_;
+                NumCurrentTraineeYear.Value = trainee_.currentTraineeYear_;
             }
             else
             {
@@ -88,7 +90,14 @@ namespace ContactManager.UI
             {
                 trainee_.level_ = (int)NumLevel.Value;
             }
-
+            else if (sender == NumNumberOfTraineeYears)
+            {
+                trainee_.numberOfTraineeYears_ = (int)NumNumberOfTraineeYears.Value;
+            }
+            else if (sender == NumCurrentTraineeYear)
+            {
+                trainee_.currentTraineeYear_ = (int)NumCurrentTraineeYear.Value;
+            }
         }
 
 
@@ -118,6 +127,10 @@ namespace ContactManager.UI
             else if (sender == TxtDateOfBirth)
             {
                 trainee_.birthday_ = TxtDateOfBirth.Text;
+            }
+            else if (sender == TxtDepartment)
+            {
+                trainee_.department_ = TxtDepartment.Text;
             }
             else if (sender == TxtInsuranceNumber)
             {

@@ -298,7 +298,6 @@ namespace ContactManager.UI
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.Size = new System.Drawing.Size(172, 20);
             this.TxtFirstname.TabIndex = 21;
-            this.TxtFirstname.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtFirstname.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtLastname
@@ -307,7 +306,6 @@ namespace ContactManager.UI
             this.TxtLastname.Name = "TxtLastname";
             this.TxtLastname.Size = new System.Drawing.Size(172, 20);
             this.TxtLastname.TabIndex = 22;
-            this.TxtLastname.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtLastname.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtSex
@@ -316,7 +314,6 @@ namespace ContactManager.UI
             this.TxtSex.Name = "TxtSex";
             this.TxtSex.Size = new System.Drawing.Size(172, 20);
             this.TxtSex.TabIndex = 23;
-            this.TxtSex.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtSex.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtFunction
@@ -325,7 +322,6 @@ namespace ContactManager.UI
             this.TxtFunction.Name = "TxtFunction";
             this.TxtFunction.Size = new System.Drawing.Size(172, 20);
             this.TxtFunction.TabIndex = 24;
-            this.TxtFunction.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtFunction.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtCompanyName
@@ -334,7 +330,6 @@ namespace ContactManager.UI
             this.TxtCompanyName.Name = "TxtCompanyName";
             this.TxtCompanyName.Size = new System.Drawing.Size(172, 20);
             this.TxtCompanyName.TabIndex = 25;
-            this.TxtCompanyName.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtCompanyName.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtNumber
@@ -343,7 +338,6 @@ namespace ContactManager.UI
             this.TxtNumber.Name = "TxtNumber";
             this.TxtNumber.Size = new System.Drawing.Size(172, 20);
             this.TxtNumber.TabIndex = 32;
-            this.TxtNumber.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtNumber.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtStreet
@@ -352,7 +346,6 @@ namespace ContactManager.UI
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(172, 20);
             this.TxtStreet.TabIndex = 33;
-            this.TxtStreet.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtStreet.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblEmail
@@ -421,7 +414,6 @@ namespace ContactManager.UI
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(172, 20);
             this.TxtEmail.TabIndex = 26;
-            this.TxtEmail.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtEmail.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtFax
@@ -430,7 +422,6 @@ namespace ContactManager.UI
             this.TxtFax.Name = "TxtFax";
             this.TxtFax.Size = new System.Drawing.Size(172, 20);
             this.TxtFax.TabIndex = 27;
-            this.TxtFax.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtFax.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtPhoneMobile
@@ -439,7 +430,6 @@ namespace ContactManager.UI
             this.TxtPhoneMobile.Name = "TxtPhoneMobile";
             this.TxtPhoneMobile.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneMobile.TabIndex = 28;
-            this.TxtPhoneMobile.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtPhoneMobile.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtPhoneBussines
@@ -448,7 +438,6 @@ namespace ContactManager.UI
             this.TxtPhoneBussines.Name = "TxtPhoneBussines";
             this.TxtPhoneBussines.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneBussines.TabIndex = 29;
-            this.TxtPhoneBussines.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtPhoneBussines.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtCountry
@@ -457,7 +446,6 @@ namespace ContactManager.UI
             this.TxtCountry.Name = "TxtCountry";
             this.TxtCountry.Size = new System.Drawing.Size(172, 20);
             this.TxtCountry.TabIndex = 30;
-            this.TxtCountry.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtCountry.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LbLCity
@@ -477,7 +465,6 @@ namespace ContactManager.UI
             this.TxtCity.Name = "TxtCity";
             this.TxtCity.Size = new System.Drawing.Size(172, 20);
             this.TxtCity.TabIndex = 35;
-            this.TxtCity.TextChanged += new System.EventHandler(this.TextBoxChanged);
             this.TxtCity.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // NumZip

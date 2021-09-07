@@ -448,7 +448,7 @@ namespace ContactManager
                 orderby int.Parse(ids.Value)
                 select ids;
 
-            id_ = 1 + (int)idList.Last();
+            id_ = (idList.Count() > 0) ? 1 + (int)idList.Last() : 1;
         }
 
         // Prüfen ob mindestens Name und Vorname eingegeben wurden
@@ -480,76 +480,99 @@ namespace ContactManager
         }
 
         // Hier werden Veränderungen am Objekt ausgegeben
-        public virtual List<string> Diff(object obj)
+        public virtual List<XElement> Diff(object obj)
         {
-            List<string> diff = new List<string>();
+            List<XElement> diff = new List<XElement>();
 
             if (id_ != (obj as Person).id_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Id; Wert alt: {(obj as Person).id_}; Wert neu: {id_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Id", (obj as Person).id_.ToString(), id_.ToString()));
             }
             if (state_ != (obj as Person).state_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Status; Wert alt: {(obj as Person).state_}; Wert neu: {state_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Status", (obj as Person).state_.ToString(), state_.ToString()));
             }
             if (salutation_ != (obj as Person).salutation_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Anrede; Wert alt: {(obj as Person).salutation_}; Wert neu: {salutation_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Anrede", (obj as Person).salutation_.ToString(), salutation_.ToString()));
+
             }
             if (title_ != (obj as Person).title_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Titel; Wert alt: {(obj as Person).title_}; Wert neu: {title_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Titel", (obj as Person).title_.ToString(), title_.ToString()));
+
             }
             if (firstname_ != (obj as Person).firstname_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Vorname; Wert alt: {(obj as Person).firstname_}; Wert neu: {firstname_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Vorname", (obj as Person).firstname_.ToString(), firstname_.ToString()));
+
             }
             if (lastname_ != (obj as Person).lastname_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Nachname; Wert alt: {(obj as Person).lastname_}; Wert neu: {lastname_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Nachname", (obj as Person).lastname_.ToString(), lastname_.ToString()));
+
             }
             if (sex_ != (obj as Person).sex_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Geschlecht; Wert alt: {(obj as Person).sex_}; Wert neu: {sex_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Geschlecht", (obj as Person).sex_.ToString(), sex_.ToString()));
+
             }
             if (function_ != (obj as Person).function_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Funktion; Wert alt: {(obj as Person).function_}; Wert neu: {function_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Funktion", (obj as Person).function_.ToString(), function_.ToString()));
+
             }
             if (street_ != (obj as Person).street_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Strasse; Wert alt: {(obj as Person).street_}; Wert neu: {street_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Strasse", (obj as Person).street_.ToString(), street_.ToString()));
+
             }
             if (number_ != (obj as Person).number_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Hausnummer; Wert alt: {(obj as Person).number_}; Wert neu: {number_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Nummer", (obj as Person).number_.ToString(), number_.ToString()));
+
             }
             if (city_ != (obj as Person).city_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Ort; Wert alt: {(obj as Person).city_}; Wert neu: {city_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Ort", (obj as Person).city_.ToString(), city_.ToString()));
+
             }
             if (zip_ != (obj as Person).zip_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: PLZ; Wert alt: {(obj as Person).zip_}; Wert neu: {zip_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("PLZ", (obj as Person).zip_.ToString(), zip_.ToString()));
+
             }
             if (country_ != (obj as Person).country_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Land; Wert alt: {(obj as Person).country_}; Wert neu: {country_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Land", (obj as Person).country_.ToString(), country_.ToString()));
+
             }
             if (phoneBusiness_ != (obj as Person).phoneBusiness_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Telefon geschäftlich; Wert alt: {(obj as Person).phoneBusiness_}; Wert neu: {phoneBusiness_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Tel. gschäftlich", (obj as Person).phoneBusiness_.ToString(), phoneBusiness_.ToString()));
+
             }
             if (phoneMob_ != (obj as Person).phoneMob_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: Telefon mobil; Wert alt: {(obj as Person).phoneMob_}; Wert neu: {phoneMob_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Tel. mobil", (obj as Person).phoneMob_.ToString(), phoneMob_.ToString()));
+
             }
             if (eMail_ != (obj as Person).eMail_)
             {
-                diff.Add($"Personen Id: {id_}; Attribut: E-Mail; Wert alt: {(obj as Person).eMail_}; Wert neu: {eMail_}; Zeitpunkt; {DateTime.Now}");
+                diff.Add(DiffToXElement("Email", (obj as Person).eMail_.ToString(), eMail_.ToString()));
             }
 
             return diff;
+        }
+
+        protected internal XElement DiffToXElement(string attribute, string valueOriginal, string valueEdited) {
+            return new XElement("MutationLog",
+                        new XElement("Id", id_.ToString()),
+                        new XElement("Attribut", attribute),
+                        new XElement("Origianlwert", valueOriginal),
+                        new XElement("Aktualwert", valueEdited),
+                        new XElement("Zeitpunkt", DateTime.Now.ToString())
+                       );
         }
 
         // Alle Inhalte (bspw. int) wird als String zurückgegeben.
@@ -574,13 +597,13 @@ namespace ContactManager
         }
 
         // Mit dieser Methode werden die Einträge für den Mutations-Log erstellt
-        public void AddLog(List<string> diff, Object person )
+        public void AddLog(List<XElement> diff, Object person )
         {
-            foreach (string mutationLog in diff) 
+            foreach (XElement mutationLog in diff) 
             {
                 (person as XElement).Descendants("MutationLogs")
                     .FirstOrDefault()
-                    .Add(new XElement("MutationLog", mutationLog));
+                    .Add(mutationLog);
             }
 
         }

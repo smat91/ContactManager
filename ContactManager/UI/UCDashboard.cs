@@ -31,16 +31,12 @@ namespace ContactManager.UI
 
             LblNumberOfTrainees.Text = $" {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.trainee)}";
 
-            DvgMutationLogs.Rows.Clear();
-            foreach (string mutationLog in xmlDataHandling.GetMutationLogs(ref xdocument_))
+            var dt = xmlDataHandling.GetMutationLogs(ref xdocument_);
+            if (dt.Columns.Count > 0)
             {
-                DvgMutationLogs.Rows.Add(mutationLog);
+                dt.DefaultView.Sort = "Zeitpunkt DESC";
+                DvgMutationLogs.DataSource = dt;
             }
-        }
-
-        private void LblNumberOfCustomers_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
