@@ -439,8 +439,8 @@ namespace ContactManager.UI
             }
             else
             {
-                string message = "Please Select an entry or create a new entry if no one is available.";
-                string caption = "Error detected in selection";
+                string message = "Bitte einen Eintrag selektieren!";
+                string caption = "Fehler in der Selektion erkannt";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                 MessageBox.Show(message, caption, buttons);

@@ -67,7 +67,6 @@ namespace ContactManager.UI
             // TxtSearch
             // 
             this.TxtSearch.Location = new System.Drawing.Point(220, 27);
-            this.TxtSearch.Multiline = true;
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(197, 20);
             this.TxtSearch.TabIndex = 13;

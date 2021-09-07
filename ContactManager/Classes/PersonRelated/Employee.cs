@@ -135,7 +135,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in employee_.Descendants("SeperationDate")
+                  (from element in employee_.Descendants("Austrittsdatum")
                    select element).FirstOrDefault();
             }
 
@@ -143,7 +143,7 @@ namespace ContactManager
             {
                 if (entryDate_ != null)
                 {
-                    (from element in employee_.Descendants("SeperationDate")
+                    (from element in employee_.Descendants("Austrittsdatum")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else 
