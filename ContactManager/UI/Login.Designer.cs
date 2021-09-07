@@ -48,7 +48,7 @@ namespace ContactManager
             CmdLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             CmdLogin.Font = new System.Drawing.Font("Segoe UI Historic", 11.25F);
             CmdLogin.ForeColor = System.Drawing.Color.White;
-            CmdLogin.Location = new System.Drawing.Point(39, 207);
+            CmdLogin.Location = new System.Drawing.Point(39, 208);
             CmdLogin.Name = "CmdLogin";
             CmdLogin.Size = new System.Drawing.Size(153, 32);
             CmdLogin.TabIndex = 4;
@@ -99,6 +99,7 @@ namespace ContactManager
             this.TxtPassword.Size = new System.Drawing.Size(153, 20);
             this.TxtPassword.TabIndex = 3;
             this.TxtPassword.UseSystemPasswordChar = true;
+            this.TxtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPassword_KeyPress);
             // 
             // LblLoginText
             // 
