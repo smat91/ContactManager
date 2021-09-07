@@ -67,7 +67,7 @@ namespace ContactManager
 
             set
             { 
-                if (value != null && value.Length > 0)
+                if (value != null && value.Length > 0 && !value.Any(char.IsLetter))
                 {
                     (from element in employee_.Descendants("Versicherungsnummer")
                      select element).FirstOrDefault().SetValue(value);
