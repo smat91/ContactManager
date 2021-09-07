@@ -170,8 +170,8 @@ namespace ContactManager.UI
 
                 // Die einzelnen Felder der Reihe mit den werden aus dem XML-Tree abfüllen
                 newRow[0] = (string)Log.Elements("LogId").FirstOrDefault();
-                newRow[1] = (string)Log.Elements("Date").FirstOrDefault();
-                newRow[2] = (string)Log.Elements("Time").FirstOrDefault();
+                newRow[1] = (string)Log.Elements("Datum").FirstOrDefault();
+                newRow[2] = (string)Log.Elements("Zeit").FirstOrDefault();
             }
 
             DgvLogs.DataSource = dt;

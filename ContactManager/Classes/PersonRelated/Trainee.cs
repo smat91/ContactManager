@@ -22,14 +22,18 @@ namespace ContactManager
 
             set
             {
-                if (value > 0)
+                if (value > 0 && value <= 4)
                 {
                     (from element in trainee_.Descendants("Lehrjahre")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value must be greater than 0");
+                    string message = "Eingabe muss grösser 0 und kleiner, gleich 4 sein!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -52,7 +56,11 @@ namespace ContactManager
                 }
                 else
                 {
-                    throw new ArgumentException("value must be greater than 0 and smaller or equal to numberOfTraineeYears_");
+                    string message = "Eingabe muss grösser 0 und kleiner, gleich Lehrjahre sein!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -76,7 +84,11 @@ namespace ContactManager
             }
             else
             {
-                throw new ArgumentException("Trainee with this id is already existing in XML");
+                string message = "Datensatz existiert bereits!";
+                string caption = "Fehler erkannt";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                MessageBox.Show(message, caption, buttons);
             }
         }
 

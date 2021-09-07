@@ -62,7 +62,7 @@ namespace ContactManager
                     }
                     else 
                     {
-                        string message = "Input must be a capital letter and between A and E!";
+                        string message = "Eingabe muss ein Grossbuchstabe von A bis E sein!";
                         string caption = "Fehler in Eingabe erkannt";
                         MessageBoxButtons buttons = MessageBoxButtons.OK;
 
@@ -71,7 +71,7 @@ namespace ContactManager
                 }
                 else 
                 {
-                    string message = "Input must be a capital letter and between A and E!";
+                    string message = "Eingabe muss ein Grossbuchstabe von A bis E sein!";
                     string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
@@ -92,14 +92,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && !value.Any(char.IsLetter))
                 {
                     (from element in customer_.Descendants("Fax")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Eingabe darf keine Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -121,8 +125,8 @@ namespace ContactManager
                 .FirstOrDefault()
                 .Add(new XElement("Log", 
                         new XElement("LogId", ++count),
-                        new XElement("Date", DateTime.Now.Date.ToShortDateString()), 
-                        new XElement("Time", String.Format("{0:hh}:{0:mm}", DateTime.Now.TimeOfDay)),
+                        new XElement("Datum", DateTime.Now.Date.ToShortDateString()), 
+                        new XElement("Zeit", String.Format("{0:hh}:{0:mm}", DateTime.Now.TimeOfDay)),
                         new XElement("Text", text)
                         )
                 );
@@ -143,7 +147,11 @@ namespace ContactManager
             }
             else
             {
-                throw new ArgumentException("Customer with this id is allready existing in XML");
+                string message = "Datensatz existiert bereits!";
+                string caption = "Fehler erkannt";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                MessageBox.Show(message, caption, buttons);
             }
         }
 
