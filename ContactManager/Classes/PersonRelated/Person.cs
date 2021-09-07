@@ -83,8 +83,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -109,8 +109,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -136,8 +136,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -163,8 +163,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -190,8 +190,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -217,8 +217,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -244,8 +244,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must contain at least one character!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe muss mindestens ein Zeichen Enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -271,8 +271,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -298,8 +298,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "PLZ must be greater or equal to 1000!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe muss grösser, gleich 1000 sein!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -327,8 +327,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must only contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf nur Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -356,8 +356,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input can't contain letters!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf keine Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -385,8 +385,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input can't contain letters";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe darf keine Buchstaben enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -412,8 +412,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must be an email address";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe muss eine Emailadresse sein!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);

@@ -29,8 +29,8 @@ namespace ContactManager
                 }
                 else
                 {
-                    string message = "Input must contain at least one character!";
-                    string caption = "Error Detected in Input";
+                    string message = "Eingabe muss mindestens ein Zeichen Enthalten!";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
@@ -63,7 +63,7 @@ namespace ContactManager
                     else 
                     {
                         string message = "Input must be a capital letter and between A and E!";
-                        string caption = "Error Detected in Input";
+                        string caption = "Fehler in Eingabe erkannt";
                         MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                         MessageBox.Show(message, caption, buttons);
@@ -72,7 +72,7 @@ namespace ContactManager
                 else 
                 {
                     string message = "Input must be a capital letter and between A and E!";
-                    string caption = "Error Detected in Input";
+                    string caption = "Fehler in Eingabe erkannt";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);

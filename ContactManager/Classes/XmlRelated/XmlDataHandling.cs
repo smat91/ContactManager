@@ -208,7 +208,7 @@ namespace ContactManager
             // Prüfen, ob String zusammenhängend ist, wenn nach Attributen gesucht wird
             if (attribute != null && searchTerms.Count() > 1) {
                 string message = "String must be contiguous if attribute search is used!";
-                string caption = "Error Detected in Input";
+                string caption = "Fehler in Eingabe erkannt";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                 var result = MessageBox.Show(message, caption, buttons);
