@@ -40,7 +40,7 @@ namespace ContactManager.UI
             this.CmdSave.FlatAppearance.BorderSize = 0;
             this.CmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.CmdSave.Image = ((System.Drawing.Image)(resources.GetObject("CmdSave.Image")));
+            this.CmdSave.Image = global::ContactManager.Properties.Resources.save_file_5320;
             this.CmdSave.Location = new System.Drawing.Point(0, 0);
             this.CmdSave.Name = "CmdSave";
             this.CmdSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -52,12 +52,11 @@ namespace ContactManager.UI
             // 
             // CmdCancle
             // 
-            this.CmdCancle.BackgroundImage = global::ContactManager.Properties.Resources.close_877;
+            this.CmdCancle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CmdCancle.BackgroundImage")));
             this.CmdCancle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CmdCancle.FlatAppearance.BorderSize = 0;
             this.CmdCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CmdCancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.CmdCancle.ImageKey = "(none)";
             this.CmdCancle.Location = new System.Drawing.Point(64, 0);
             this.CmdCancle.Name = "CmdCancle";
             this.CmdCancle.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -65,6 +64,7 @@ namespace ContactManager.UI
             this.CmdCancle.TabIndex = 13;
             this.CmdCancle.Text = "Abbrechen";
             this.CmdCancle.UseVisualStyleBackColor = true;
+            this.CmdCancle.Click += new System.EventHandler(this.CmdCancle_Click);
             // 
             // UCTopBarEdit
             // 
