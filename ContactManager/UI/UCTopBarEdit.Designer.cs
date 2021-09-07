@@ -39,12 +39,12 @@ namespace ContactManager.UI
             this.CmdSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CmdSave.FlatAppearance.BorderSize = 0;
             this.CmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdSave.Image = ((System.Drawing.Image)(resources.GetObject("CmdSave.Image")));
+            this.CmdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CmdSave.Image = global::ContactManager.Properties.Resources.save_file_5320;
             this.CmdSave.Location = new System.Drawing.Point(0, 0);
             this.CmdSave.Name = "CmdSave";
             this.CmdSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CmdSave.Size = new System.Drawing.Size(75, 77);
+            this.CmdSave.Size = new System.Drawing.Size(64, 67);
             this.CmdSave.TabIndex = 14;
             this.CmdSave.Text = "Speichern";
             this.CmdSave.UseVisualStyleBackColor = true;
@@ -56,11 +56,11 @@ namespace ContactManager.UI
             this.CmdCancle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CmdCancle.FlatAppearance.BorderSize = 0;
             this.CmdCancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdCancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CmdCancle.Location = new System.Drawing.Point(75, 0);
+            this.CmdCancle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CmdCancle.Location = new System.Drawing.Point(64, 0);
             this.CmdCancle.Name = "CmdCancle";
             this.CmdCancle.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CmdCancle.Size = new System.Drawing.Size(75, 77);
+            this.CmdCancle.Size = new System.Drawing.Size(64, 67);
             this.CmdCancle.TabIndex = 13;
             this.CmdCancle.Text = "Abbrechen";
             this.CmdCancle.UseVisualStyleBackColor = true;
@@ -68,12 +68,12 @@ namespace ContactManager.UI
             // 
             // UCTopBarEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.CmdSave);
             this.Controls.Add(this.CmdCancle);
             this.Name = "UCTopBarEdit";
-            this.Size = new System.Drawing.Size(908, 77);
+            this.Size = new System.Drawing.Size(778, 67);
             this.ResumeLayout(false);
 
         }
