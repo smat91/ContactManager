@@ -16,20 +16,24 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in customer_.Descendants("CompanyName")
+                  (from element in customer_.Descendants("Firmenname")
                    select element).FirstOrDefault();
             }
 
             set
             {
-                if (value != null)
+                if (value != null && value.Length > 0)
                 {
-                    (from element in customer_.Descendants("CompanyName")
+                    (from element in customer_.Descendants("Firmenname")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must contain at least one character!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }        }
 
@@ -38,7 +42,7 @@ namespace ContactManager
             get
             {
                 return  (string)
-                  (from element in customer_.Descendants("CustomerType")
+                  (from element in customer_.Descendants("Kundentyp")
                    select element).FirstOrDefault();
             }
 
@@ -53,17 +57,25 @@ namespace ContactManager
 
                     if (customerType >= a && customerType <= e)
                     {
-                        (from element in customer_.Descendants("CustomerType")
+                        (from element in customer_.Descendants("Kundentyp")
                          select element).FirstOrDefault().SetValue(value);
                     }
                     else 
-                    { 
-                        throw new ArgumentException("value must be a capital letter and between A and E!");
+                    {
+                        string message = "Input must be a capital letter and between A and E!";
+                        string caption = "Error Detected in Input";
+                        MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                        MessageBox.Show(message, caption, buttons);
                     }
                 }
                 else 
                 {
-                    throw new ArgumentException("value must contain one character!");
+                    string message = "Input must be a capital letter and between A and E!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
                 
             }

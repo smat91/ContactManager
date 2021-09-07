@@ -15,25 +15,25 @@ namespace ContactManager
         {
             return new XElement("Person",
                             new XElement("Id", ""),
-                            new XElement("State", ""),
-                            new XElement("Salutation", ""),
-                            new XElement("Title", ""),
-                            new XElement("FirstName", ""),
-                            new XElement("LastName", ""),
-                            new XElement("Sex", ""),
-                            new XElement("Function", ""),
+                            new XElement("Status", ""),
+                            new XElement("Begrüssung", ""),
+                            new XElement("Titel", ""),
+                            new XElement("Vorname", ""),
+                            new XElement("Nachname", ""),
+                            new XElement("Geschlecht", ""),
+                            new XElement("Funktion", ""),
                             new XElement("Address",
-                                new XElement("Street", ""),
-                                new XElement("Number", ""),
-                                new XElement("Country", ""),
-                                new XElement("City", ""),
-                                new XElement("Zip", "0")
+                                new XElement("Strasse", ""),
+                                new XElement("Nummer", ""),
+                                new XElement("Land", ""),
+                                new XElement("Ort", ""),
+                                new XElement("PLZ", "0")
                                 ),
                             new XElement("ContactData",
-                                new XElement("Phone", "",
-                                    new XAttribute("Type", "Business")),
-                                new XElement("Phone", "",
-                                    new XAttribute("Type", "Mobile")),
+                                new XElement("Telefon", "",
+                                    new XAttribute("Type", "geschäftlich")),
+                                new XElement("Telefon", "",
+                                    new XAttribute("Type", "mobil")),
                                 new XElement("EMail", "")
                                 )
                        );
@@ -48,13 +48,13 @@ namespace ContactManager
             customer.Name = "Customer";
 
             // Neue kundenbezogene Allgemeinattribute hinzufügen
-            customer.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("CompanyName", ""),
-                              new XElement("CustomerType", ""));
+            customer.Descendants("Funktion").FirstOrDefault()
+                .AddAfterSelf(new XElement("Firmenname", ""),
+                              new XElement("Kundentyp", ""));
 
             // Neue kundenbezogene Kontaktattribute hinzufügen
-            customer.Descendants("Phone")
-                .Where(element => (string)element.Attribute("Type") == "Mobile")
+            customer.Descendants("Telefon")
+                .Where(element => (string)element.Attribute("Type") == "mobil")
                 .FirstOrDefault()
                 .AddAfterSelf(new XElement("Fax", ""));
 
@@ -74,21 +74,21 @@ namespace ContactManager
             employee.Name = "Employee";
 
             // Neue mitarbeiterbezogene Allgemeinattribute hinzufügen
-            employee.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("DateOfBirth", ""),
-                              new XElement("Department", ""),
-                              new XElement("InsuranceNumber", ""),
-                              new XElement("Citizenship", ""),
-                              new XElement("EntryDate", ""),
-                              new XElement("SeparationDate", ""),
-                              new XElement("LevelOfEmployment", "0"),
-                              new XElement("Level", "0"));
+            employee.Descendants("Funktion").FirstOrDefault()
+                .AddAfterSelf(new XElement("Geburtsdatum", ""),
+                              new XElement("Abteilung", ""),
+                              new XElement("Versicherungsnummer", ""),
+                              new XElement("Nationalität", ""),
+                              new XElement("Eintrittsdatum", ""),
+                              new XElement("Austrittsdatum", ""),
+                              new XElement("Beschäftigungsgrad", "0"),
+                              new XElement("Kaderstufe", "0"));
 
             // Neue mitarbeiterbezogene Kontaktattribute hinzufügen
-            employee.Descendants("Phone")
-                .Where(element => (string)element.Attribute("Type") == "Mobile")
+            employee.Descendants("Telefon")
+                .Where(element => (string)element.Attribute("Type") == "mobil")
                 .FirstOrDefault()
-                .AddAfterSelf(new XElement("Phone", "",
+                .AddAfterSelf(new XElement("Telefon", "",
                                     new XAttribute("Type", "Privat")));
 
             return employee;
@@ -103,9 +103,9 @@ namespace ContactManager
             trainee.Name = "Trainee";
 
             // Neue mitarbeiterbezogene Allgemeinattribute hinzufügen
-            trainee.Descendants("Function").FirstOrDefault()
-                .AddAfterSelf(new XElement("NumberOfTraineeYears", "0"),
-                              new XElement("CurrentTraineeYear", "0"));
+            trainee.Descendants("Kaderstufe").FirstOrDefault()
+                .AddAfterSelf(new XElement("Lehrjahre", "0"),
+                              new XElement("Lehrjahr", "0"));
 
             return trainee;
         }

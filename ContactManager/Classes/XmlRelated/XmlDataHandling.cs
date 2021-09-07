@@ -39,7 +39,7 @@ namespace ContactManager
                         {
                             // Falls das zu Prüfende XElement, dass dem Attribut entspricht selbst ein Attriut hat
                             // Prüfen ob der Wert des Attribute Type übereinstimmt da der Name bei diesem Element 
-                            // nicht eindeutig ist (XElemente Phone)
+                            // nicht eindeutig ist (XElemente Telefon)
                             return target.Attribute("Type").Value == referenzElement.Attribute("Type").Value;
                         }
                         else if (!target.HasAttributes && !referenzElement.HasAttributes)

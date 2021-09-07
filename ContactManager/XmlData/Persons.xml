@@ -3,25 +3,25 @@
   <Customers>
     <Customer>
       <Id>1</Id>
-      <State>Aktiv</State>
-      <Salutation>Herr</Salutation>
-      <Title>Dr</Title>
-      <FirstName>Max</FirstName>
-      <LastName>Halter</LastName>
-      <Sex>männlich</Sex>
-      <Function>Einkaufsleiter</Function>
-      <CompanyName>Test AG</CompanyName>
-      <CustomerType>A</CustomerType>
+      <Status>Aktiv</Status>
+      <Begrüssung>Herr</Begrüssung>
+      <Titel>Dr</Titel>
+      <Vorname>Max</Vorname>
+      <Nachname>Halter</Nachname>
+      <Geschlecht>männlich</Geschlecht>
+      <Funktion>Einkaufsleiter</Funktion>
+      <Firmenname>Test AG</Firmenname>
+      <Kundentyp>A</Kundentyp>
       <Address>
-        <Street>Oberdorfstrasse</Street>
-        <Number>6</Number>
-        <City>Luzern</City>
-        <Zip>8000</Zip>
-        <Country>Schweiz</Country>
+        <Strasse>Oberdorfstrasse</Strasse>
+        <Nummer>6</Nummer>
+        <Ort>Luzern</Ort>
+        <PLZ>8000</PLZ>
+        <Land>Schweiz</Land>
       </Address>
       <ContactData>
-        <Phone Type="Business">+41-12-123-1234</Phone>
-        <Phone Type="Mobile">+41-12-123-2345</Phone>
+        <Telefon Type="geschäftlich">+41-12-123-1234</Telefon>
+        <Telefon Type="mobil">+41-12-123-2345</Telefon>
         <Fax>+41-12-123-3456</Fax>
         <EMail>max.muster@admin.ch</EMail>
       </ContactData>
@@ -46,32 +46,32 @@
   <Employees>
     <Employee>
       <Id>2</Id>
-      <State>Aktiv</State>
-      <Salutation>Frau</Salutation>
-      <Title></Title>
-      <FirstName>Anna</FirstName>
-      <LastName>Bolika</LastName>
-      <Sex>weiblich</Sex>
-      <Function>Verkaufsleiterin</Function>
-      <DateOfBirth>15.01.1980</DateOfBirth>
-      <Department>Verkauf</Department>
-      <InsuranceNumber>123.1234.1234.12</InsuranceNumber>
-      <Citizenship>Schweiz</Citizenship>
-      <EntryDate>02.01.2015</EntryDate>
-      <SeparationDate></SeparationDate>
-      <LevelOfEmployment>80</LevelOfEmployment>
-      <Level>2</Level>
+      <Status>Aktiv</Status>
+      <Begrüssung>Frau</Begrüssung>
+      <Titel></Titel>
+      <Vorname>Anna</Vorname>
+      <Nachname>Bolika</Nachname>
+      <Geschlecht>weiblich</Geschlecht>
+      <Funktion>Verkaufsleiterin</Funktion>
+      <Geburtsdatum>15.01.1980</Geburtsdatum>
+      <Abteilung>Verkauf</Abteilung>
+      <Versicherungsnummer>123.1234.1234.12</Versicherungsnummer>
+      <Nationalität>Schweiz</Nationalität>
+      <Eintrittsdatum>02.01.2015</Eintrittsdatum>
+      <Austrittsdatum></Austrittsdatum>
+      <Beschäftigungsgrad>80</Beschäftigungsgrad>
+      <Kaderstufe>2</Kaderstufe>
       <Address>
-        <Street>Nordstrasse</Street>
-        <Number>6</Number>
-        <City>Goldach</City>
-        <Zip>9403</Zip>
-        <Country>Schweiz</Country>
+        <Strasse>Nordstrasse</Strasse>
+        <Nummer>6</Nummer>
+        <Ort>Goldach</Ort>
+        <PLZ>9403</PLZ>
+        <Land>Schweiz</Land>
       </Address>
       <ContactData>
-        <Phone Type="Business">+41-23-123-1234</Phone>
-        <Phone Type="Mobile">+41-32-123-1234</Phone>
-        <Phone Type="Private">+41-34-123-1234</Phone>
+        <Telefon Type="geschäftlich">+41-23-123-1234</Telefon>
+        <Telefon Type="mobil">+41-32-123-1234</Telefon>
+        <Telefon Type="privat">+41-34-123-1234</Telefon>
         <EMail>anna.bolika@verkauf.ch</EMail>
       </ContactData>
     </Employee>
@@ -80,32 +80,34 @@
   <Trainees>
     <Trainee>
       <Id>3</Id>
-      <State>Aktiv</State>
-      <Salutation>Herr</Salutation>
-      <Title></Title>
-      <FirstName>Mario</FirstName>
-      <LastName>Richter</LastName>
-      <Sex>männlich</Sex>
-      <Function>Lernender Elektroniker</Function>
-      <DateOfBirth>15.01.2005</DateOfBirth>
-      <Department>Produktion</Department>
-      <InsuranceNumber>123.1234.1234.21</InsuranceNumber>
-      <Citizenship>Schweiz</Citizenship>
-      <EntryDate>02.08.2020</EntryDate>
-      <SeparationDate></SeparationDate>
-      <LevelOfEmployment>100</LevelOfEmployment>
-      <Level>0</Level>
+      <Status>Aktiv</Status>
+      <Begrüssung>Herr</Begrüssung>
+      <Titel></Titel>
+      <Vorname>Mario</Vorname>
+      <Nachname>Richter</Nachname>
+      <Geschlecht>männlich</Geschlecht>
+      <Funktion>Lernender Elektroniker</Funktion>
+      <Geburtsdatum>15.01.2005</Geburtsdatum>
+      <Abteilung>Produktion</Abteilung>
+      <Versicherungsnummer>123.1234.1234.21</Versicherungsnummer>
+      <Nationalität>Schweiz</Nationalität>
+      <Eintrittsdatum>02.08.2020</Eintrittsdatum>
+      <Austrittsdatum></Austrittsdatum>
+      <Beschäftigungsgrad>100</Beschäftigungsgrad>
+      <Kaderstufe>0</Kaderstufe>
+      <Lehrjahre></Lehrjahre>
+      <Lehrjahr></Lehrjahr>
       <Address>
-        <Street>Gäbeliweg</Street>
-        <Number>6</Number>
-        <City>Montlingen</City>
-        <Zip>9462</Zip>
-        <Country>Schweiz</Country>
+        <Strasse>Gäbeliweg</Strasse>
+        <Nummer>6</Nummer>
+        <Ort>Montlingen</Ort>
+        <PLZ>9462</PLZ>
+        <Land>Schweiz</Land>
       </Address>
       <ContactData>
-        <Phone Type="Business">+41-23-123-1243</Phone>
-        <Phone Type="Mobile">+41-32-123-1243</Phone>
-        <Phone Type="Private">+41-34-123-1243</Phone>
+        <Telefon Type="geschäftlich">+41-23-123-1243</Telefon>
+        <Telefon Type="mobil">+41-32-123-1243</Telefon>
+        <Telefon Type="privat">+41-34-123-1243</Telefon>
         <EMail>mario.richter@produktion.ch</EMail>
       </ContactData>
     </Trainee>

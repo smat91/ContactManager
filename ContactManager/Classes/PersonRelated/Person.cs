@@ -38,13 +38,13 @@ namespace ContactManager
             get
             {
                 return (string)
-                    (from element in person_.Descendants("State")
+                    (from element in person_.Descendants("Status")
                      select element).FirstOrDefault();
             }
 
             set
             {
-                (from element in person_.Descendants("State")
+                (from element in person_.Descendants("Status")
                     select element).FirstOrDefault().SetValue(value);
             }
         }
@@ -54,17 +54,15 @@ namespace ContactManager
             get
             {
                 return (string)
-                    (from element in person_.Descendants("Salutation")
+                    (from element in person_.Descendants("Begrüssung")
                      select element).FirstOrDefault();
             }
 
             set
             {
-                (from element in person_.Descendants("Salutation")
+                (from element in person_.Descendants("Begrüssung")
                     select element).FirstOrDefault().SetValue(value);
-            }
-
-        
+            }        
         }
 
         public string title_
@@ -72,7 +70,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Title")
+                  (from element in person_.Descendants("Titel")
                    select element).FirstOrDefault();
             }
 
@@ -80,7 +78,7 @@ namespace ContactManager
             {
                 if (value != null && !value.Any(char.IsDigit))
                 {
-                    (from element in person_.Descendants("Title")
+                    (from element in person_.Descendants("Titel")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -98,7 +96,7 @@ namespace ContactManager
             get 
             {
                 return (string)
-                  (from element in person_.Descendants("FirstName")
+                  (from element in person_.Descendants("Vorname")
                    select element).FirstOrDefault();
             }
 
@@ -106,7 +104,7 @@ namespace ContactManager
             {
                 if (value != null && value.All(char.IsLetter))
                 {
-                    (from element in person_.Descendants("FirstName")
+                    (from element in person_.Descendants("Vorname")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -125,7 +123,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("LastName")
+                  (from element in person_.Descendants("Nachname")
                    select element).FirstOrDefault();
             }
 
@@ -133,7 +131,7 @@ namespace ContactManager
             {
                 if (value != null && value.All(char.IsLetter))
                 {
-                    (from element in person_.Descendants("LastName")
+                    (from element in person_.Descendants("Nachname")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -152,7 +150,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Sex")
+                  (from element in person_.Descendants("Geschlecht")
                    select element).FirstOrDefault();
             }
 
@@ -160,7 +158,7 @@ namespace ContactManager
             {
                 if (value != null && value.All(char.IsLetter))
                 {
-                    (from element in person_.Descendants("Sex")
+                    (from element in person_.Descendants("Geschlecht")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -179,7 +177,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Function")
+                  (from element in person_.Descendants("Funktion")
                    select element).FirstOrDefault();
             }
 
@@ -187,7 +185,7 @@ namespace ContactManager
             {
                 if (value != null && !value.Any(char.IsDigit))
                 {
-                    (from element in person_.Descendants("Function")
+                    (from element in person_.Descendants("Funktion")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -206,7 +204,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Street")
+                  (from element in person_.Descendants("Strasse")
                    select element).FirstOrDefault();
             }
 
@@ -214,7 +212,7 @@ namespace ContactManager
             {
                 if (value != null && value.All(char.IsLetter))
                 {
-                    (from element in person_.Descendants("Street")
+                    (from element in person_.Descendants("Strasse")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -233,7 +231,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Number")
+                  (from element in person_.Descendants("Nummer")
                    select element).FirstOrDefault();
             }
 
@@ -241,7 +239,7 @@ namespace ContactManager
             {
                 if (value != null && value.Length > 0)
                 {
-                    (from element in person_.Descendants("Number")
+                    (from element in person_.Descendants("Nummer")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -260,7 +258,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("City")
+                  (from element in person_.Descendants("Ort")
                    select element).FirstOrDefault();
             }
 
@@ -268,7 +266,7 @@ namespace ContactManager
             {
                 if (value != null && value.All(char.IsLetter))
                 {
-                    (from element in person_.Descendants("City")
+                    (from element in person_.Descendants("Ort")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -287,7 +285,7 @@ namespace ContactManager
             get
             {
                 return (int)
-                  (from element in person_.Descendants("Zip")
+                  (from element in person_.Descendants("PLZ")
                    select element).FirstOrDefault();
             }
 
@@ -295,18 +293,18 @@ namespace ContactManager
             { 
                 if (value >= 1000)
                 {
-                    (from element in person_.Descendants("Zip")
+                    (from element in person_.Descendants("PLZ")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    string message = "Zip must be greater or equal to 1000!";
+                    string message = "PLZ must be greater or equal to 1000!";
                     string caption = "Error Detected in Input";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     MessageBox.Show(message, caption, buttons);
                 }
-                (from element in person_.Descendants("Zip")
+                (from element in person_.Descendants("PLZ")
                  select element).FirstOrDefault().SetValue(value);
             }
         }
@@ -316,7 +314,7 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Country")
+                  (from element in person_.Descendants("Land")
                    select element).FirstOrDefault();
             }
 
@@ -324,7 +322,7 @@ namespace ContactManager
             {
                 if (value != null && value.All(char.IsLetter))
                 {
-                    (from element in person_.Descendants("Country")
+                    (from element in person_.Descendants("Land")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -343,8 +341,8 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone").
-                   Where(x => x.Attribute("Type").Value == "Business")
+                  (from element in person_.Descendants("Telefon").
+                   Where(x => x.Attribute("Type").Value == "geschäftlich")
                    select element).FirstOrDefault();
             }
 
@@ -352,8 +350,8 @@ namespace ContactManager
             {
                 if (value != null && !value.Any(char.IsLetter))
                 {
-                    (from element in person_.Descendants("Phone").
-                    Where(x => x.Attribute("Type").Value == "Business")
+                    (from element in person_.Descendants("Telefon").
+                    Where(x => x.Attribute("Type").Value == "geschäftlich")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -372,8 +370,8 @@ namespace ContactManager
             get
             {
                 return (string)
-                  (from element in person_.Descendants("Phone").
-                   Where(x => x.Attribute("Type").Value == "Mobile")
+                  (from element in person_.Descendants("Telefon").
+                   Where(x => x.Attribute("Type").Value == "mobil")
                    select element).FirstOrDefault();
             }
 
@@ -381,8 +379,8 @@ namespace ContactManager
             {
                 if (value != null && !value.Any(char.IsLetter))
                 {
-                    (from element in person_.Descendants("Phone").
-                   Where(x => x.Attribute("Type").Value == "Mobile")
+                    (from element in person_.Descendants("Telefon").
+                   Where(x => x.Attribute("Type").Value == "mobil")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
@@ -414,7 +412,11 @@ namespace ContactManager
                 }
                 else
                 {
-                   // throw new ArgumentException("value cannot be null!");
+                    string message = "Input must be an email address";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
