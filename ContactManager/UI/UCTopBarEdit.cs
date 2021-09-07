@@ -68,11 +68,6 @@ namespace ContactManager.UI
             }
         }
 
-        private void CmdCancle_Click(object sender, EventArgs e)
-        {
-            ReloadDataAndView();
-        }
-
         private void ReloadDataAndView() 
         {
             Form1.Instance.LoadFromXml();

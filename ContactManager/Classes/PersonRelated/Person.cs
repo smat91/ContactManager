@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,16 +44,8 @@ namespace ContactManager
 
             set
             {
-                // Mit If-Schleife wird überprüft, ob ein Wert angegeben worden ist, wenn nicht, dann wird ein ArgumentException ausgeworfen
-                if (value != null)
-                {
-                    (from element in person_.Descendants("State")
-                     select element).FirstOrDefault().SetValue(value);
-                }
-                else
-                {
-                    throw new ArgumentException("value cannot be null!");
-                }
+                (from element in person_.Descendants("State")
+                    select element).FirstOrDefault().SetValue(value);
             }
         }
 
@@ -67,15 +60,8 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
-                {
-                    (from element in person_.Descendants("Salutation")
-                     select element).FirstOrDefault().SetValue(value);
-                }
-                else
-                {
-                    throw new ArgumentException("value cannot be null!");
-                }
+                (from element in person_.Descendants("Salutation")
+                    select element).FirstOrDefault().SetValue(value);
             }
 
         
@@ -92,14 +78,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && !value.Any(char.IsDigit))
                 {
                     (from element in person_.Descendants("Title")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -114,14 +104,18 @@ namespace ContactManager
 
             set 
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in person_.Descendants("FirstName")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
-                { 
-                    throw new ArgumentException("value cannot be null!");
+                {
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -137,14 +131,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in person_.Descendants("LastName")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -160,14 +158,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in person_.Descendants("Sex")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -183,14 +185,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && !value.Any(char.IsDigit))
                 {
                     (from element in person_.Descendants("Function")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -206,14 +212,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in person_.Descendants("Street")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -229,14 +239,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.Length > 0)
                 {
                     (from element in person_.Descendants("Number")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must contain at least one character!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -252,14 +266,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in person_.Descendants("City")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -274,8 +292,20 @@ namespace ContactManager
             }
 
             set
-            {
+            { 
+                if (value >= 1000)
+                {
+                    (from element in person_.Descendants("Zip")
+                     select element).FirstOrDefault().SetValue(value);
+                }
+                else
+                {
+                    string message = "Zip must be greater or equal to 1000!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
 
+                    MessageBox.Show(message, caption, buttons);
+                }
                 (from element in person_.Descendants("Zip")
                  select element).FirstOrDefault().SetValue(value);
             }
@@ -292,14 +322,18 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && value.All(char.IsLetter))
                 {
                     (from element in person_.Descendants("Country")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input must only contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -316,15 +350,19 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && !value.Any(char.IsLetter))
                 {
                     (from element in person_.Descendants("Phone").
-                   Where(x => x.Attribute("Type").Value == "Business")
+                    Where(x => x.Attribute("Type").Value == "Business")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input can't contain letters!";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -341,7 +379,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && !value.Any(char.IsLetter))
                 {
                     (from element in person_.Descendants("Phone").
                    Where(x => x.Attribute("Type").Value == "Mobile")
@@ -349,7 +387,11 @@ namespace ContactManager
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                    string message = "Input can't contain letters";
+                    string caption = "Error Detected in Input";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                    MessageBox.Show(message, caption, buttons);
                 }
             }
         }
@@ -365,14 +407,14 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && new EmailAddressAttribute().IsValid(value))
                 {
                     (from element in person_.Descendants("EMail")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
                 {
-                    throw new ArgumentException("value cannot be null!");
+                   // throw new ArgumentException("value cannot be null!");
                 }
             }
         }

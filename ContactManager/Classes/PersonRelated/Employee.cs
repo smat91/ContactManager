@@ -11,13 +11,13 @@ namespace ContactManager
 {
     public class Employee : Person
     {
-        public DateTime birthday_
+        public string birthday_
         {
             get
             {
                 // return gibt einen Int zurück / Descendants liefert eine Sammlung der Nachfahrenelemente für
                 // dieses Dokument oder Element in der Reihenfolge der Dokumente.
-                return (DateTime)
+                return (string)
                   (from element in employee_.Descendants("DateOfBirth")
                    select element).FirstOrDefault();
             }
@@ -98,11 +98,11 @@ namespace ContactManager
             }
         }
 
-        public DateTime entryDate_
+        public string entryDate_
         {
             get
             {
-                return (DateTime)
+                return (string)
                   (from element in employee_.Descendants("EntryDate")
                    select element).FirstOrDefault();
             }
@@ -114,18 +114,18 @@ namespace ContactManager
             }
         }
 
-        public DateTime seperationDate_
+        public string seperationDate_
         {
             get
             {
-                return (DateTime)
+                return (string)
                   (from element in employee_.Descendants("SeperationDate")
                    select element).FirstOrDefault();
             }
 
             set
             {
-                if (value > entryDate_)
+                if (entryDate_ != null)
                 {
                     (from element in employee_.Descendants("SeperationDate")
                      select element).FirstOrDefault().SetValue(value);
@@ -250,7 +250,7 @@ namespace ContactManager
         public override string ToString()
         {
             return base.ToString() + ", " + 
-                birthday_.ToShortDateString() + ", " +
+                birthday_ + ", " +
                 department_ + ", " + 
                 insuranceNumber_ + ", " +
                 citizenship_ + ", " + 
