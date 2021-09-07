@@ -31,6 +31,8 @@ namespace ContactManager.UI
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TxtEntryDate = new System.Windows.Forms.TextBox();
+            this.NumLevel = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.LblEntryDate = new System.Windows.Forms.Label();
             this.CmbSalutation = new System.Windows.Forms.ComboBox();
             this.LblSalutation = new System.Windows.Forms.Label();
@@ -39,7 +41,6 @@ namespace ContactManager.UI
             this.LblSex = new System.Windows.Forms.Label();
             this.LblFunction = new System.Windows.Forms.Label();
             this.LblDateOfBirth = new System.Windows.Forms.Label();
-            this.LblDepartment = new System.Windows.Forms.Label();
             this.LblLastname = new System.Windows.Forms.Label();
             this.LblFirstname = new System.Windows.Forms.Label();
             this.CmbDepartment = new System.Windows.Forms.ComboBox();
@@ -47,14 +48,10 @@ namespace ContactManager.UI
             this.TxtFirstname = new System.Windows.Forms.TextBox();
             this.TxtLastname = new System.Windows.Forms.TextBox();
             this.TxtSex = new System.Windows.Forms.TextBox();
-            this.TxtFunction = new System.Windows.Forms.TextBox();
-            this.TxtDateOfBirth = new System.Windows.Forms.TextBox();
             this.CmbState = new System.Windows.Forms.ComboBox();
-            this.LblInsuranceNumber = new System.Windows.Forms.Label();
             this.TxtInsuranceNumber = new System.Windows.Forms.TextBox();
             this.LblCitizenship = new System.Windows.Forms.Label();
             this.TxtCitizenship = new System.Windows.Forms.TextBox();
-            this.LblEmail = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.LblPhonePrivate = new System.Windows.Forms.Label();
             this.TxtPhonePrivate = new System.Windows.Forms.TextBox();
@@ -73,13 +70,18 @@ namespace ContactManager.UI
             this.lblStreet = new System.Windows.Forms.Label();
             this.TxtStreet = new System.Windows.Forms.TextBox();
             this.LblLevel = new System.Windows.Forms.Label();
-            this.TxtLevel = new System.Windows.Forms.TextBox();
             this.LblLevelOfEmployment = new System.Windows.Forms.Label();
-            this.TxtLevelOfEmployment = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.LblDepartment = new System.Windows.Forms.Label();
+            this.LblInsuranceNumber = new System.Windows.Forms.Label();
+            this.NumLevelOfEmployment = new System.Windows.Forms.NumericUpDown();
+            this.TxtFunction = new System.Windows.Forms.TextBox();
+            this.TxtDateOfBirth = new System.Windows.Forms.TextBox();
             this.TxtSeparationDate = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLevelOfEmployment)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -88,11 +90,13 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tableLayoutPanel1.CausesValidation = false;
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.31372F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.70588F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.31372F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.76316F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.86223F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.51238F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.86223F));
             this.tableLayoutPanel1.Controls.Add(this.TxtEntryDate, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.NumLevel, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.LblEntryDate, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.CmbSalutation, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.LblSalutation, 0, 1);
@@ -101,7 +105,6 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.LblSex, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.LblFunction, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.LblDateOfBirth, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LblDepartment, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.LblLastname, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.LblFirstname, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.CmbDepartment, 1, 8);
@@ -109,14 +112,10 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.TxtFirstname, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.TxtLastname, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.TxtSex, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.TxtFunction, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.TxtDateOfBirth, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.CmbState, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LblInsuranceNumber, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.TxtInsuranceNumber, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.LblCitizenship, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.TxtCitizenship, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.LblEmail, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.TxtEmail, 3, 11);
             this.tableLayoutPanel1.Controls.Add(this.LblPhonePrivate, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.TxtPhonePrivate, 3, 10);
@@ -135,10 +134,13 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.Controls.Add(this.lblStreet, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.TxtStreet, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.LblLevel, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.TxtLevel, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.LblLevelOfEmployment, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.TxtLevelOfEmployment, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.LblDepartment, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.LblInsuranceNumber, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.NumLevelOfEmployment, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TxtFunction, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.TxtDateOfBirth, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.TxtSeparationDate, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -155,15 +157,40 @@ namespace ContactManager.UI
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(742, 282);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // TxtEntryDate
             // 
-            this.TxtEntryDate.Location = new System.Drawing.Point(126, 256);
+            this.TxtEntryDate.Location = new System.Drawing.Point(134, 256);
             this.TxtEntryDate.Name = "TxtEntryDate";
             this.TxtEntryDate.Size = new System.Drawing.Size(172, 20);
-            this.TxtEntryDate.TabIndex = 49;
+            this.TxtEntryDate.TabIndex = 56;
+            this.TxtEntryDate.Leave += new System.EventHandler(this.TextBoxChanged);
+            // 
+            // NumLevel
+            // 
+            this.NumLevel.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.NumLevel.Location = new System.Drawing.Point(492, 49);
+            this.NumLevel.Name = "NumLevel";
+            this.NumLevel.Size = new System.Drawing.Size(172, 20);
+            this.NumLevel.TabIndex = 55;
+            this.NumLevel.Leave += new System.EventHandler(this.NummericUpDownChanged);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(385, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Email:";
             // 
             // LblEntryDate
             // 
@@ -183,11 +210,12 @@ namespace ContactManager.UI
             this.CmbSalutation.Items.AddRange(new object[] {
             "Frau",
             "Herr"});
-            this.CmbSalutation.Location = new System.Drawing.Point(126, 26);
+            this.CmbSalutation.Location = new System.Drawing.Point(134, 26);
             this.CmbSalutation.Name = "CmbSalutation";
             this.CmbSalutation.Size = new System.Drawing.Size(172, 21);
             this.CmbSalutation.Sorted = true;
             this.CmbSalutation.TabIndex = 3;
+            this.CmbSalutation.Leave += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
             // LblSalutation
             // 
@@ -251,16 +279,6 @@ namespace ContactManager.UI
             this.LblDateOfBirth.TabIndex = 9;
             this.LblDateOfBirth.Text = "Geburtsdatum:";
             // 
-            // LblDepartment
-            // 
-            this.LblDepartment.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblDepartment.AutoSize = true;
-            this.LblDepartment.Location = new System.Drawing.Point(3, 189);
-            this.LblDepartment.Name = "LblDepartment";
-            this.LblDepartment.Size = new System.Drawing.Size(54, 13);
-            this.LblDepartment.TabIndex = 10;
-            this.LblDepartment.Text = "Abteilung:";
-            // 
             // LblLastname
             // 
             this.LblLastname.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -291,52 +309,43 @@ namespace ContactManager.UI
             "C",
             "D",
             "E"});
-            this.CmbDepartment.Location = new System.Drawing.Point(126, 187);
+            this.CmbDepartment.Location = new System.Drawing.Point(134, 187);
             this.CmbDepartment.Name = "CmbDepartment";
             this.CmbDepartment.Size = new System.Drawing.Size(172, 21);
             this.CmbDepartment.TabIndex = 19;
+            this.CmbDepartment.Leave += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
             // TxtTitle
             // 
-            this.TxtTitle.Location = new System.Drawing.Point(126, 49);
+            this.TxtTitle.Location = new System.Drawing.Point(134, 49);
             this.TxtTitle.Name = "TxtTitle";
             this.TxtTitle.Size = new System.Drawing.Size(172, 20);
             this.TxtTitle.TabIndex = 20;
+            this.TxtTitle.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtFirstname
             // 
-            this.TxtFirstname.Location = new System.Drawing.Point(126, 72);
+            this.TxtFirstname.Location = new System.Drawing.Point(134, 72);
             this.TxtFirstname.Name = "TxtFirstname";
             this.TxtFirstname.Size = new System.Drawing.Size(172, 20);
             this.TxtFirstname.TabIndex = 21;
+            this.TxtFirstname.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtLastname
             // 
-            this.TxtLastname.Location = new System.Drawing.Point(126, 95);
+            this.TxtLastname.Location = new System.Drawing.Point(134, 95);
             this.TxtLastname.Name = "TxtLastname";
             this.TxtLastname.Size = new System.Drawing.Size(172, 20);
             this.TxtLastname.TabIndex = 22;
+            this.TxtLastname.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtSex
             // 
-            this.TxtSex.Location = new System.Drawing.Point(126, 118);
+            this.TxtSex.Location = new System.Drawing.Point(134, 118);
             this.TxtSex.Name = "TxtSex";
             this.TxtSex.Size = new System.Drawing.Size(172, 20);
             this.TxtSex.TabIndex = 23;
-            // 
-            // TxtFunction
-            // 
-            this.TxtFunction.Location = new System.Drawing.Point(126, 141);
-            this.TxtFunction.Name = "TxtFunction";
-            this.TxtFunction.Size = new System.Drawing.Size(172, 20);
-            this.TxtFunction.TabIndex = 24;
-            // 
-            // TxtDateOfBirth
-            // 
-            this.TxtDateOfBirth.Location = new System.Drawing.Point(126, 164);
-            this.TxtDateOfBirth.Name = "TxtDateOfBirth";
-            this.TxtDateOfBirth.Size = new System.Drawing.Size(172, 20);
-            this.TxtDateOfBirth.TabIndex = 25;
+            this.TxtSex.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // CmbState
             // 
@@ -345,28 +354,19 @@ namespace ContactManager.UI
             this.CmbState.Items.AddRange(new object[] {
             "Aktiv",
             "Inaktiv"});
-            this.CmbState.Location = new System.Drawing.Point(126, 3);
+            this.CmbState.Location = new System.Drawing.Point(134, 3);
             this.CmbState.Name = "CmbState";
             this.CmbState.Size = new System.Drawing.Size(172, 21);
             this.CmbState.TabIndex = 37;
-            // 
-            // LblInsuranceNumber
-            // 
-            this.LblInsuranceNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblInsuranceNumber.AutoSize = true;
-            this.LblInsuranceNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.LblInsuranceNumber.Location = new System.Drawing.Point(3, 207);
-            this.LblInsuranceNumber.Name = "LblInsuranceNumber";
-            this.LblInsuranceNumber.Size = new System.Drawing.Size(116, 23);
-            this.LblInsuranceNumber.TabIndex = 38;
-            this.LblInsuranceNumber.Text = "Versicherungsnummer:";
+            this.CmbState.Leave += new System.EventHandler(this.ComboBoxIndexChanged);
             // 
             // TxtInsuranceNumber
             // 
-            this.TxtInsuranceNumber.Location = new System.Drawing.Point(126, 210);
+            this.TxtInsuranceNumber.Location = new System.Drawing.Point(134, 210);
             this.TxtInsuranceNumber.Name = "TxtInsuranceNumber";
             this.TxtInsuranceNumber.Size = new System.Drawing.Size(172, 20);
             this.TxtInsuranceNumber.TabIndex = 39;
+            this.TxtInsuranceNumber.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblCitizenship
             // 
@@ -381,33 +381,25 @@ namespace ContactManager.UI
             // 
             // TxtCitizenship
             // 
-            this.TxtCitizenship.Location = new System.Drawing.Point(126, 233);
+            this.TxtCitizenship.Location = new System.Drawing.Point(134, 233);
             this.TxtCitizenship.Name = "TxtCitizenship";
             this.TxtCitizenship.Size = new System.Drawing.Size(172, 20);
             this.TxtCitizenship.TabIndex = 41;
-            // 
-            // LblEmail
-            // 
-            this.LblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(380, 261);
-            this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(35, 13);
-            this.LblEmail.TabIndex = 6;
-            this.LblEmail.Text = "Email:";
+            this.TxtCitizenship.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(489, 256);
+            this.TxtEmail.Location = new System.Drawing.Point(492, 256);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(172, 20);
             this.TxtEmail.TabIndex = 26;
+            this.TxtEmail.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblPhonePrivate
             // 
             this.LblPhonePrivate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhonePrivate.AutoSize = true;
-            this.LblPhonePrivate.Location = new System.Drawing.Point(380, 235);
+            this.LblPhonePrivate.Location = new System.Drawing.Point(385, 235);
             this.LblPhonePrivate.Name = "LblPhonePrivate";
             this.LblPhonePrivate.Size = new System.Drawing.Size(57, 13);
             this.LblPhonePrivate.TabIndex = 17;
@@ -415,16 +407,17 @@ namespace ContactManager.UI
             // 
             // TxtPhonePrivate
             // 
-            this.TxtPhonePrivate.Location = new System.Drawing.Point(489, 233);
+            this.TxtPhonePrivate.Location = new System.Drawing.Point(492, 233);
             this.TxtPhonePrivate.Name = "TxtPhonePrivate";
             this.TxtPhonePrivate.Size = new System.Drawing.Size(172, 20);
             this.TxtPhonePrivate.TabIndex = 27;
+            this.TxtPhonePrivate.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblPhoneMobile
             // 
             this.LblPhoneMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhoneMobile.AutoSize = true;
-            this.LblPhoneMobile.Location = new System.Drawing.Point(380, 212);
+            this.LblPhoneMobile.Location = new System.Drawing.Point(385, 212);
             this.LblPhoneMobile.Name = "LblPhoneMobile";
             this.LblPhoneMobile.Size = new System.Drawing.Size(55, 13);
             this.LblPhoneMobile.TabIndex = 16;
@@ -432,16 +425,17 @@ namespace ContactManager.UI
             // 
             // TxtPhoneMobile
             // 
-            this.TxtPhoneMobile.Location = new System.Drawing.Point(489, 210);
+            this.TxtPhoneMobile.Location = new System.Drawing.Point(492, 210);
             this.TxtPhoneMobile.Name = "TxtPhoneMobile";
             this.TxtPhoneMobile.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneMobile.TabIndex = 28;
+            this.TxtPhoneMobile.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblPhoneBussines
             // 
             this.LblPhoneBussines.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblPhoneBussines.AutoSize = true;
-            this.LblPhoneBussines.Location = new System.Drawing.Point(380, 189);
+            this.LblPhoneBussines.Location = new System.Drawing.Point(385, 189);
             this.LblPhoneBussines.Name = "LblPhoneBussines";
             this.LblPhoneBussines.Size = new System.Drawing.Size(88, 13);
             this.LblPhoneBussines.TabIndex = 15;
@@ -449,16 +443,17 @@ namespace ContactManager.UI
             // 
             // TxtPhoneBussines
             // 
-            this.TxtPhoneBussines.Location = new System.Drawing.Point(489, 187);
+            this.TxtPhoneBussines.Location = new System.Drawing.Point(492, 187);
             this.TxtPhoneBussines.Name = "TxtPhoneBussines";
             this.TxtPhoneBussines.Size = new System.Drawing.Size(172, 20);
             this.TxtPhoneBussines.TabIndex = 29;
+            this.TxtPhoneBussines.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblCountry
             // 
             this.LblCountry.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblCountry.AutoSize = true;
-            this.LblCountry.Location = new System.Drawing.Point(380, 166);
+            this.LblCountry.Location = new System.Drawing.Point(385, 166);
             this.LblCountry.Name = "LblCountry";
             this.LblCountry.Size = new System.Drawing.Size(34, 13);
             this.LblCountry.TabIndex = 14;
@@ -466,16 +461,17 @@ namespace ContactManager.UI
             // 
             // TxtCountry
             // 
-            this.TxtCountry.Location = new System.Drawing.Point(489, 164);
+            this.TxtCountry.Location = new System.Drawing.Point(492, 164);
             this.TxtCountry.Name = "TxtCountry";
             this.TxtCountry.Size = new System.Drawing.Size(172, 20);
             this.TxtCountry.TabIndex = 30;
+            this.TxtCountry.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblZip
             // 
             this.LblZip.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblZip.AutoSize = true;
-            this.LblZip.Location = new System.Drawing.Point(380, 143);
+            this.LblZip.Location = new System.Drawing.Point(385, 143);
             this.LblZip.Name = "LblZip";
             this.LblZip.Size = new System.Drawing.Size(30, 13);
             this.LblZip.TabIndex = 13;
@@ -483,21 +479,22 @@ namespace ContactManager.UI
             // 
             // NumZip
             // 
-            this.NumZip.Location = new System.Drawing.Point(489, 141);
+            this.NumZip.Location = new System.Drawing.Point(492, 141);
             this.NumZip.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.NumZip.Name = "NumZip";
-            this.NumZip.Size = new System.Drawing.Size(171, 20);
+            this.NumZip.Size = new System.Drawing.Size(172, 20);
             this.NumZip.TabIndex = 36;
+            this.NumZip.Leave += new System.EventHandler(this.NummericUpDownChanged);
             // 
             // LbLCity
             // 
             this.LbLCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LbLCity.AutoSize = true;
-            this.LbLCity.Location = new System.Drawing.Point(380, 120);
+            this.LbLCity.Location = new System.Drawing.Point(385, 120);
             this.LbLCity.Name = "LbLCity";
             this.LbLCity.Size = new System.Drawing.Size(24, 13);
             this.LbLCity.TabIndex = 34;
@@ -506,16 +503,17 @@ namespace ContactManager.UI
             // TxtCity
             // 
             this.TxtCity.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtCity.Location = new System.Drawing.Point(489, 118);
+            this.TxtCity.Location = new System.Drawing.Point(492, 118);
             this.TxtCity.Name = "TxtCity";
             this.TxtCity.Size = new System.Drawing.Size(172, 20);
             this.TxtCity.TabIndex = 35;
+            this.TxtCity.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblNumber
             // 
             this.LblNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblNumber.AutoSize = true;
-            this.LblNumber.Location = new System.Drawing.Point(380, 97);
+            this.LblNumber.Location = new System.Drawing.Point(385, 97);
             this.LblNumber.Name = "LblNumber";
             this.LblNumber.Size = new System.Drawing.Size(49, 13);
             this.LblNumber.TabIndex = 12;
@@ -523,16 +521,17 @@ namespace ContactManager.UI
             // 
             // TxtNumber
             // 
-            this.TxtNumber.Location = new System.Drawing.Point(489, 95);
+            this.TxtNumber.Location = new System.Drawing.Point(492, 95);
             this.TxtNumber.Name = "TxtNumber";
             this.TxtNumber.Size = new System.Drawing.Size(172, 20);
             this.TxtNumber.TabIndex = 32;
+            this.TxtNumber.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // lblStreet
             // 
             this.lblStreet.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblStreet.AutoSize = true;
-            this.lblStreet.Location = new System.Drawing.Point(380, 74);
+            this.lblStreet.Location = new System.Drawing.Point(385, 74);
             this.lblStreet.Name = "lblStreet";
             this.lblStreet.Size = new System.Drawing.Size(45, 13);
             this.lblStreet.TabIndex = 11;
@@ -540,61 +539,98 @@ namespace ContactManager.UI
             // 
             // TxtStreet
             // 
-            this.TxtStreet.Location = new System.Drawing.Point(489, 72);
+            this.TxtStreet.Location = new System.Drawing.Point(492, 72);
             this.TxtStreet.Name = "TxtStreet";
             this.TxtStreet.Size = new System.Drawing.Size(172, 20);
             this.TxtStreet.TabIndex = 33;
+            this.TxtStreet.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // LblLevel
             // 
             this.LblLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLevel.AutoSize = true;
-            this.LblLevel.Location = new System.Drawing.Point(380, 51);
+            this.LblLevel.Location = new System.Drawing.Point(385, 51);
             this.LblLevel.Name = "LblLevel";
             this.LblLevel.Size = new System.Drawing.Size(61, 13);
             this.LblLevel.TabIndex = 42;
             this.LblLevel.Text = "Kaderstufe:";
             // 
-            // TxtLevel
-            // 
-            this.TxtLevel.Location = new System.Drawing.Point(489, 49);
-            this.TxtLevel.Name = "TxtLevel";
-            this.TxtLevel.Size = new System.Drawing.Size(172, 20);
-            this.TxtLevel.TabIndex = 43;
-            // 
             // LblLevelOfEmployment
             // 
             this.LblLevelOfEmployment.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLevelOfEmployment.AutoSize = true;
-            this.LblLevelOfEmployment.Location = new System.Drawing.Point(380, 28);
+            this.LblLevelOfEmployment.Location = new System.Drawing.Point(385, 28);
             this.LblLevelOfEmployment.Name = "LblLevelOfEmployment";
             this.LblLevelOfEmployment.Size = new System.Drawing.Size(48, 13);
             this.LblLevelOfEmployment.TabIndex = 44;
             this.LblLevelOfEmployment.Text = "Pensum:";
             // 
-            // TxtLevelOfEmployment
-            // 
-            this.TxtLevelOfEmployment.Location = new System.Drawing.Point(489, 26);
-            this.TxtLevelOfEmployment.Name = "TxtLevelOfEmployment";
-            this.TxtLevelOfEmployment.Size = new System.Drawing.Size(172, 20);
-            this.TxtLevelOfEmployment.TabIndex = 45;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 5);
+            this.label1.Location = new System.Drawing.Point(385, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 46;
             this.label1.Text = "Kündigungsdatum:";
             // 
+            // LblDepartment
+            // 
+            this.LblDepartment.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblDepartment.AutoSize = true;
+            this.LblDepartment.Location = new System.Drawing.Point(3, 189);
+            this.LblDepartment.Name = "LblDepartment";
+            this.LblDepartment.Size = new System.Drawing.Size(54, 13);
+            this.LblDepartment.TabIndex = 10;
+            this.LblDepartment.Text = "Abteilung:";
+            // 
+            // LblInsuranceNumber
+            // 
+            this.LblInsuranceNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.LblInsuranceNumber.AutoSize = true;
+            this.LblInsuranceNumber.Location = new System.Drawing.Point(3, 212);
+            this.LblInsuranceNumber.Name = "LblInsuranceNumber";
+            this.LblInsuranceNumber.Size = new System.Drawing.Size(114, 13);
+            this.LblInsuranceNumber.TabIndex = 6;
+            this.LblInsuranceNumber.Text = "Versicherungsnummer:";
+            // 
+            // NumLevelOfEmployment
+            // 
+            this.NumLevelOfEmployment.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.NumLevelOfEmployment.Location = new System.Drawing.Point(492, 26);
+            this.NumLevelOfEmployment.Name = "NumLevelOfEmployment";
+            this.NumLevelOfEmployment.Size = new System.Drawing.Size(172, 20);
+            this.NumLevelOfEmployment.TabIndex = 54;
+            this.NumLevelOfEmployment.Leave += new System.EventHandler(this.NummericUpDownChanged);
+            // 
+            // TxtFunction
+            // 
+            this.TxtFunction.Location = new System.Drawing.Point(134, 141);
+            this.TxtFunction.Name = "TxtFunction";
+            this.TxtFunction.Size = new System.Drawing.Size(172, 20);
+            this.TxtFunction.TabIndex = 24;
+            this.TxtFunction.Leave += new System.EventHandler(this.TextBoxChanged);
+            // 
+            // TxtDateOfBirth
+            // 
+            this.TxtDateOfBirth.Location = new System.Drawing.Point(134, 164);
+            this.TxtDateOfBirth.Name = "TxtDateOfBirth";
+            this.TxtDateOfBirth.Size = new System.Drawing.Size(172, 20);
+            this.TxtDateOfBirth.TabIndex = 57;
+            this.TxtDateOfBirth.Leave += new System.EventHandler(this.TextBoxChanged);
+            // 
             // TxtSeparationDate
             // 
-            this.TxtSeparationDate.Location = new System.Drawing.Point(489, 3);
+            this.TxtSeparationDate.Location = new System.Drawing.Point(492, 3);
             this.TxtSeparationDate.Name = "TxtSeparationDate";
             this.TxtSeparationDate.Size = new System.Drawing.Size(172, 20);
-            this.TxtSeparationDate.TabIndex = 47;
+            this.TxtSeparationDate.TabIndex = 58;
+            this.TxtSeparationDate.Leave += new System.EventHandler(this.TextBoxChanged);
             // 
             // UCEditEmployeeObject
             // 
@@ -605,7 +641,9 @@ namespace ContactManager.UI
             this.Size = new System.Drawing.Size(778, 449);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumZip)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumLevelOfEmployment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,16 +668,14 @@ namespace ContactManager.UI
         private System.Windows.Forms.TextBox TxtLastname;
         private System.Windows.Forms.TextBox TxtSex;
         private System.Windows.Forms.TextBox TxtFunction;
-        private System.Windows.Forms.TextBox TxtDateOfBirth;
         private System.Windows.Forms.TextBox TxtNumber;
         private System.Windows.Forms.TextBox TxtStreet;
-        private System.Windows.Forms.Label LblEmail;
+        private System.Windows.Forms.Label LblInsuranceNumber;
         private System.Windows.Forms.Label LblPhonePrivate;
         private System.Windows.Forms.Label LblPhoneMobile;
         private System.Windows.Forms.Label LblPhoneBussines;
         private System.Windows.Forms.Label LblCountry;
         private System.Windows.Forms.Label LblZip;
-        private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.TextBox TxtPhonePrivate;
         private System.Windows.Forms.TextBox TxtPhoneMobile;
         private System.Windows.Forms.TextBox TxtPhoneBussines;
@@ -649,17 +685,19 @@ namespace ContactManager.UI
         private System.Windows.Forms.NumericUpDown NumZip;
         private System.Windows.Forms.ComboBox CmbState;
         private System.Windows.Forms.Label lblStreet;
-        private System.Windows.Forms.Label LblInsuranceNumber;
         private System.Windows.Forms.TextBox TxtInsuranceNumber;
         private System.Windows.Forms.Label LblCitizenship;
         private System.Windows.Forms.TextBox TxtCitizenship;
-        private System.Windows.Forms.TextBox TxtEntryDate;
         private System.Windows.Forms.Label LblEntryDate;
         private System.Windows.Forms.Label LblLevel;
-        private System.Windows.Forms.TextBox TxtLevel;
         private System.Windows.Forms.Label LblLevelOfEmployment;
-        private System.Windows.Forms.TextBox TxtLevelOfEmployment;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown NumLevelOfEmployment;
+        private System.Windows.Forms.NumericUpDown NumLevel;
+        private System.Windows.Forms.TextBox TxtEntryDate;
+        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.TextBox TxtDateOfBirth;
         private System.Windows.Forms.TextBox TxtSeparationDate;
     }
 }
