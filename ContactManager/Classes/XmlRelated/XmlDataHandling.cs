@@ -313,7 +313,7 @@ namespace ContactManager
             DataTable dt = new DataTable();
 
             // Array mit Ueberschriften erstellen
-            string[] columns = { "Id", "Attribut", "Origianlwert", "Aktualwert", "Zeitpunkt", };
+            string[] columns = { "Id", "Attribut", "Originalwert", "Aktualwert", "Zeitpunkt", };
 
             // Die Spaltennamen der DataTable hinzufügen
             foreach (string column in columns)
