@@ -103,6 +103,16 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit_2860 {
+            get {
+                object obj = ResourceManager.GetObject("exit_2860", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap foreman_32 {
             get {
                 object obj = ResourceManager.GetObject("foreman_32", resourceCulture);

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ContactManager
 {
     public partial class Login : Form
@@ -53,6 +54,8 @@ namespace ContactManager
             }
         }
 
+        
+
         private static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
 
@@ -89,6 +92,15 @@ namespace ContactManager
         private void LblExitLogin_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private void TxtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    CmdLogin_Click(sender, e);
+                }
         }
     }
 }

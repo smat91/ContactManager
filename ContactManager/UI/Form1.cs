@@ -233,5 +233,10 @@ namespace ContactManager
         {
             this.CmdHome.BackColor = ColorTranslator.FromHtml("#33334C");
         }
+
+        private void PicExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

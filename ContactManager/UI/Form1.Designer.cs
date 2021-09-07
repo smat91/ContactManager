@@ -32,14 +32,16 @@ namespace ContactManager
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
-            this.CmdKunde = new System.Windows.Forms.Button();
-            this.CmdMitarbeiter = new System.Windows.Forms.Button();
-            this.CmdLernende = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelContainerMain = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.PanelContainerTop = new System.Windows.Forms.Panel();
+            this.CmdLernende = new System.Windows.Forms.Button();
+            this.CmdMitarbeiter = new System.Windows.Forms.Button();
+            this.CmdKunde = new System.Windows.Forms.Button();
+            this.PicExit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicExit)).BeginInit();
             this.SuspendLayout();
             // 
             // button7
@@ -68,7 +70,7 @@ namespace ContactManager
             // 
             this.CmdHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.CmdHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CmdHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CmdHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.CmdHome.Location = new System.Drawing.Point(0, 0);
             this.CmdHome.Margin = new System.Windows.Forms.Padding(0);
             this.CmdHome.Name = "CmdHome";
@@ -80,81 +82,10 @@ namespace ContactManager
             this.CmdHome.MouseEnter += new System.EventHandler(this.CmdHome_MouseEnter);
             this.CmdHome.MouseLeave += new System.EventHandler(this.CmdHome_MouseLeave);
             // 
-            // CmdKunde
-            // 
-            this.CmdKunde.BackColor = System.Drawing.Color.Transparent;
-            this.CmdKunde.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CmdKunde.FlatAppearance.BorderSize = 0;
-            this.CmdKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.CmdKunde.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdKunde.Image = global::ContactManager.Properties.Resources.user_group_296__1_;
-            this.CmdKunde.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CmdKunde.Location = new System.Drawing.Point(0, 77);
-            this.CmdKunde.Margin = new System.Windows.Forms.Padding(0);
-            this.CmdKunde.Name = "CmdKunde";
-            this.CmdKunde.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CmdKunde.Size = new System.Drawing.Size(164, 50);
-            this.CmdKunde.TabIndex = 1;
-            this.CmdKunde.Text = "  Kunde";
-            this.CmdKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CmdKunde.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CmdKunde.UseVisualStyleBackColor = false;
-            this.CmdKunde.Click += new System.EventHandler(this.CmdKunde_Click);
-            this.CmdKunde.MouseEnter += new System.EventHandler(this.CmdKunde_MouseEnter);
-            this.CmdKunde.MouseLeave += new System.EventHandler(this.CmdKunde_MouseLeave);
-            // 
-            // CmdMitarbeiter
-            // 
-            this.CmdMitarbeiter.BackColor = System.Drawing.Color.Transparent;
-            this.CmdMitarbeiter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CmdMitarbeiter.FlatAppearance.BorderSize = 0;
-            this.CmdMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.CmdMitarbeiter.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdMitarbeiter.Image = global::ContactManager.Properties.Resources.manager_9843;
-            this.CmdMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 127);
-            this.CmdMitarbeiter.Margin = new System.Windows.Forms.Padding(0);
-            this.CmdMitarbeiter.Name = "CmdMitarbeiter";
-            this.CmdMitarbeiter.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CmdMitarbeiter.Size = new System.Drawing.Size(164, 50);
-            this.CmdMitarbeiter.TabIndex = 2;
-            this.CmdMitarbeiter.Text = "  Mitarbeitende";
-            this.CmdMitarbeiter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CmdMitarbeiter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CmdMitarbeiter.UseVisualStyleBackColor = false;
-            this.CmdMitarbeiter.Click += new System.EventHandler(this.CmdMitarbeiter_Click);
-            this.CmdMitarbeiter.MouseEnter += new System.EventHandler(this.CmdMitarbeiter_MouseEnter);
-            this.CmdMitarbeiter.MouseLeave += new System.EventHandler(this.CmdMitarbeiter_MouseLeave);
-            // 
-            // CmdLernende
-            // 
-            this.CmdLernende.BackColor = System.Drawing.Color.Transparent;
-            this.CmdLernende.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CmdLernende.FlatAppearance.BorderSize = 0;
-            this.CmdLernende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmdLernende.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.CmdLernende.ForeColor = System.Drawing.Color.Gainsboro;
-            this.CmdLernende.Image = global::ContactManager.Properties.Resources.foreman_9497__1_;
-            this.CmdLernende.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CmdLernende.Location = new System.Drawing.Point(0, 177);
-            this.CmdLernende.Margin = new System.Windows.Forms.Padding(0);
-            this.CmdLernende.Name = "CmdLernende";
-            this.CmdLernende.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.CmdLernende.Size = new System.Drawing.Size(164, 50);
-            this.CmdLernende.TabIndex = 3;
-            this.CmdLernende.Text = "  Lernende";
-            this.CmdLernende.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CmdLernende.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CmdLernende.UseVisualStyleBackColor = false;
-            this.CmdLernende.Click += new System.EventHandler(this.CmdLernende_Click);
-            this.CmdLernende.MouseEnter += new System.EventHandler(this.CmdLernende_MouseEnter);
-            this.CmdLernende.MouseLeave += new System.EventHandler(this.CmdLernende_MouseLeave);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.PicExit);
             this.panel1.Controls.Add(this.CmdLernende);
             this.panel1.Controls.Add(this.CmdMitarbeiter);
             this.panel1.Controls.Add(this.CmdKunde);
@@ -183,6 +114,88 @@ namespace ContactManager
             this.PanelContainerTop.Size = new System.Drawing.Size(908, 77);
             this.PanelContainerTop.TabIndex = 9;
             // 
+            // CmdLernende
+            // 
+            this.CmdLernende.BackColor = System.Drawing.Color.Transparent;
+            this.CmdLernende.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdLernende.FlatAppearance.BorderSize = 0;
+            this.CmdLernende.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdLernende.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CmdLernende.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CmdLernende.Image = global::ContactManager.Properties.Resources.foreman_9497__1_;
+            this.CmdLernende.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdLernende.Location = new System.Drawing.Point(0, 177);
+            this.CmdLernende.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdLernende.Name = "CmdLernende";
+            this.CmdLernende.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CmdLernende.Size = new System.Drawing.Size(164, 50);
+            this.CmdLernende.TabIndex = 3;
+            this.CmdLernende.Text = "  Lernende";
+            this.CmdLernende.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdLernende.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CmdLernende.UseVisualStyleBackColor = false;
+            this.CmdLernende.Click += new System.EventHandler(this.CmdLernende_Click);
+            this.CmdLernende.MouseEnter += new System.EventHandler(this.CmdLernende_MouseEnter);
+            this.CmdLernende.MouseLeave += new System.EventHandler(this.CmdLernende_MouseLeave);
+            // 
+            // CmdMitarbeiter
+            // 
+            this.CmdMitarbeiter.BackColor = System.Drawing.Color.Transparent;
+            this.CmdMitarbeiter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdMitarbeiter.FlatAppearance.BorderSize = 0;
+            this.CmdMitarbeiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdMitarbeiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CmdMitarbeiter.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CmdMitarbeiter.Image = global::ContactManager.Properties.Resources.manager_9843;
+            this.CmdMitarbeiter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdMitarbeiter.Location = new System.Drawing.Point(0, 127);
+            this.CmdMitarbeiter.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdMitarbeiter.Name = "CmdMitarbeiter";
+            this.CmdMitarbeiter.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CmdMitarbeiter.Size = new System.Drawing.Size(164, 50);
+            this.CmdMitarbeiter.TabIndex = 2;
+            this.CmdMitarbeiter.Text = "  Mitarbeitende";
+            this.CmdMitarbeiter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdMitarbeiter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CmdMitarbeiter.UseVisualStyleBackColor = false;
+            this.CmdMitarbeiter.Click += new System.EventHandler(this.CmdMitarbeiter_Click);
+            this.CmdMitarbeiter.MouseEnter += new System.EventHandler(this.CmdMitarbeiter_MouseEnter);
+            this.CmdMitarbeiter.MouseLeave += new System.EventHandler(this.CmdMitarbeiter_MouseLeave);
+            // 
+            // CmdKunde
+            // 
+            this.CmdKunde.BackColor = System.Drawing.Color.Transparent;
+            this.CmdKunde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CmdKunde.FlatAppearance.BorderSize = 0;
+            this.CmdKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.CmdKunde.ForeColor = System.Drawing.Color.Gainsboro;
+            this.CmdKunde.Image = global::ContactManager.Properties.Resources.user_group_296__1_;
+            this.CmdKunde.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdKunde.Location = new System.Drawing.Point(0, 77);
+            this.CmdKunde.Margin = new System.Windows.Forms.Padding(0);
+            this.CmdKunde.Name = "CmdKunde";
+            this.CmdKunde.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.CmdKunde.Size = new System.Drawing.Size(164, 50);
+            this.CmdKunde.TabIndex = 1;
+            this.CmdKunde.Text = "  Kunde";
+            this.CmdKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CmdKunde.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CmdKunde.UseVisualStyleBackColor = false;
+            this.CmdKunde.Click += new System.EventHandler(this.CmdKunde_Click);
+            this.CmdKunde.MouseEnter += new System.EventHandler(this.CmdKunde_MouseEnter);
+            this.CmdKunde.MouseLeave += new System.EventHandler(this.CmdKunde_MouseLeave);
+            // 
+            // PicExit
+            // 
+            this.PicExit.Image = global::ContactManager.Properties.Resources.exit_2860;
+            this.PicExit.Location = new System.Drawing.Point(65, 533);
+            this.PicExit.Name = "PicExit";
+            this.PicExit.Size = new System.Drawing.Size(30, 50);
+            this.PicExit.TabIndex = 4;
+            this.PicExit.TabStop = false;
+            this.PicExit.Click += new System.EventHandler(this.PicExit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -197,6 +210,7 @@ namespace ContactManager
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +226,7 @@ namespace ContactManager
         private System.Windows.Forms.Panel PanelContainerMain;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel PanelContainerTop;
+        private System.Windows.Forms.PictureBox PicExit;
     }
 }
 
