@@ -569,7 +569,7 @@ namespace ContactManager
             return new XElement("MutationLog",
                         new XElement("Id", id_.ToString()),
                         new XElement("Attribut", attribute),
-                        new XElement("Origianlwert", valueOriginal),
+                        new XElement("Originalwert", valueOriginal),
                         new XElement("Aktualwert", valueEdited),
                         new XElement("Zeitpunkt", DateTime.Now.ToString())
                        );

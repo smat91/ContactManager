@@ -30,14 +30,14 @@
         <MutationLog>
           <Id>1</Id>
           <Attribut>Nachname</Attribut>
-          <Origianlwert>Halter</Origianlwert>
+          <Originalwert>Halter</Originalwert>
           <Aktualwert>Muster</Aktualwert>
           <Zeitpunkt>07.09.2021 23:17:47</Zeitpunkt>
         </MutationLog>
         <MutationLog>
           <Id>1</Id>
           <Attribut>Funktion</Attribut>
-          <Origianlwert>Einkaufsleiter</Origianlwert>
+          <Originalwert>Einkaufsleiter</Originalwert>
           <Aktualwert>Verkaufsleiter</Aktualwert>
           <Zeitpunkt>07.09.2021 23:17:47</Zeitpunkt>
         </MutationLog>
@@ -79,14 +79,14 @@
         <MutationLog>
           <Id>2</Id>
           <Attribut>Anrede</Attribut>
-          <Origianlwert>Herr</Origianlwert>
+          <Originalwert>Herr</Originalwert>
           <Aktualwert>Frau</Aktualwert>
           <Zeitpunkt>07.09.2021 23:18:08</Zeitpunkt>
         </MutationLog>
         <MutationLog>
           <Id>2</Id>
           <Attribut>Nachname</Attribut>
-          <Origianlwert>sdfv</Origianlwert>
+          <Originalwert>sdfv</Originalwert>
           <Aktualwert>Reichelt</Aktualwert>
           <Zeitpunkt>07.09.2021 23:18:08</Zeitpunkt>
         </MutationLog>
@@ -130,14 +130,14 @@
         <MutationLog>
           <Id>3</Id>
           <Attribut>Ort</Attribut>
-          <Origianlwert>Montlingen</Origianlwert>
+          <Originalwert>Montlingen</Originalwert>
           <Aktualwert>Kriessern</Aktualwert>
           <Zeitpunkt>07.09.2021 23:18:34</Zeitpunkt>
         </MutationLog>
         <MutationLog>
           <Id>3</Id>
           <Attribut>Abteilung</Attribut>
-          <Origianlwert>Produktion</Origianlwert>
+          <Originalwert>Produktion</Originalwert>
           <Aktualwert>Prüffeld</Aktualwert>
           <Zeitpunkt>07.09.2021 23:18:34</Zeitpunkt>
         </MutationLog>
