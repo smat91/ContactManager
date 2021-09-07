@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net48</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>team-management-9842-_1_.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
