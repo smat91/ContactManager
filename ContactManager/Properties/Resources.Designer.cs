@@ -81,32 +81,12 @@ namespace ContactManager.Properties {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
-        /// </summary>
-        internal static System.Drawing.Icon CM_Logo_ico_mit_hintergrund {
-            get {
-                object obj = ResourceManager.GetObject("CM_Logo_ico_mit_hintergrund", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap CM_Logo_mit_Background {
             get {
                 object obj = ResourceManager.GetObject("CM_Logo_mit_Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
-        /// </summary>
-        internal static System.Drawing.Icon CM_Logo_ohne_Hintergrund {
-            get {
-                object obj = ResourceManager.GetObject("CM_Logo_ohne_Hintergrund", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -277,26 +257,6 @@ namespace ContactManager.Properties {
             get {
                 object obj = ResourceManager.GetObject("sign_in_3301__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
-        /// </summary>
-        internal static System.Drawing.Icon team_management_9842 {
-            get {
-                object obj = ResourceManager.GetObject("team_management_9842", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
-        /// </summary>
-        internal static System.Drawing.Icon team_management_9842__1_ {
-            get {
-                object obj = ResourceManager.GetObject("team_management_9842__1_", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
         
