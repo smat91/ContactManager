@@ -32,6 +32,14 @@
         <MutationLog>Personen Id: 1; Attribut: Nachname; Wert alt: Muster; Wert neu: Halter; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
         <MutationLog>Personen Id: 1; Attribut: Hausnummer; Wert alt: 5; Wert neu: 6; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
         <MutationLog>Personen Id: 1; Attribut: Ort; Wert alt: Zürich; Wert neu: Luzern; Zeitpunkt; 06.09.2021 19:30:11</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: E-Mail; Wert alt: max.muster@admin.ch; Wert neu: max.muster; Zeitpunkt; 07.09.2021 15:17:30</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Titel; Wert alt: Dr; Wert neu: ; Zeitpunkt; 07.09.2021 15:18:03</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Titel; Wert alt: ; Wert neu: Dr; Zeitpunkt; 07.09.2021 15:18:16</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Geschlecht; Wert alt: männlich; Wert neu: ; Zeitpunkt; 07.09.2021 15:43:56</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Funktion; Wert alt: Einkaufsleiter; Wert neu: ; Zeitpunkt; 07.09.2021 15:43:56</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Geschlecht; Wert alt: ; Wert neu: männlich; Zeitpunkt; 07.09.2021 15:45:10</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: Funktion; Wert alt: ; Wert neu: Einkaufsleiter; Zeitpunkt; 07.09.2021 15:45:10</MutationLog>
+        <MutationLog>Personen Id: 1; Attribut: E-Mail; Wert alt: max.muster; Wert neu: max.muster@admin.ch; Zeitpunkt; 07.09.2021 15:45:10</MutationLog>
       </MutationLogs>
     </Customer>
   </Customers>

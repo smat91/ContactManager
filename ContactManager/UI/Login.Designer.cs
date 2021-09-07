@@ -92,11 +92,11 @@ namespace ContactManager
             // TxtPassword
             // 
             this.TxtPassword.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.TxtPassword.Font = new System.Drawing.Font("Segoe UI Historic", 9F);
+            this.TxtPassword.Font = new System.Drawing.Font("Segoe UI Historic", 7F);
             this.TxtPassword.Location = new System.Drawing.Point(39, 182);
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
-            this.TxtPassword.Size = new System.Drawing.Size(153, 23);
+            this.TxtPassword.Size = new System.Drawing.Size(153, 20);
             this.TxtPassword.TabIndex = 3;
             this.TxtPassword.UseSystemPasswordChar = true;
             // 
@@ -104,11 +104,11 @@ namespace ContactManager
             // 
             this.LblLoginText.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.LblLoginText.AutoSize = true;
-            this.LblLoginText.Font = new System.Drawing.Font("Segoe UI Historic", 12F);
+            this.LblLoginText.Font = new System.Drawing.Font("Segoe UI Historic", 13F);
             this.LblLoginText.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.LblLoginText.Location = new System.Drawing.Point(55, 87);
+            this.LblLoginText.Location = new System.Drawing.Point(38, 80);
             this.LblLoginText.Name = "LblLoginText";
-            this.LblLoginText.Size = new System.Drawing.Size(139, 21);
+            this.LblLoginText.Size = new System.Drawing.Size(158, 25);
             this.LblLoginText.TabIndex = 5;
             this.LblLoginText.Text = "Melden Sie sich an";
             // 
@@ -119,7 +119,7 @@ namespace ContactManager
             this.LblExitLogin.BackColor = System.Drawing.Color.Transparent;
             this.LblExitLogin.Font = new System.Drawing.Font("Segoe UI Historic", 9F, System.Drawing.FontStyle.Underline);
             this.LblExitLogin.ForeColor = System.Drawing.Color.White;
-            this.LblExitLogin.Location = new System.Drawing.Point(104, 292);
+            this.LblExitLogin.Location = new System.Drawing.Point(100, 289);
             this.LblExitLogin.Name = "LblExitLogin";
             this.LblExitLogin.Size = new System.Drawing.Size(25, 15);
             this.LblExitLogin.TabIndex = 6;
@@ -129,7 +129,7 @@ namespace ContactManager
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ContactManager.Properties.Resources.sign_in_3301__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(88, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(85, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 65);
             this.pictureBox1.TabIndex = 7;
