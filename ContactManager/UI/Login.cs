@@ -102,5 +102,17 @@ namespace ContactManager
                     CmdLogin_Click(sender, e);
                 }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+          // Login Form zentriet einrichten
+          int breite = Screen.PrimaryScreen.Bounds.Width;
+          int höhe = Screen.PrimaryScreen.Bounds.Height;
+
+          int x = breite - this.Width;
+          int y = höhe - this.Height;
+
+          this.Location = new Point(x / 2, y / 2); 
+        }
     }
 }

@@ -33,13 +33,13 @@ namespace ContactManager
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.PanelContainerMain = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.PanelContainerTop = new System.Windows.Forms.Panel();
+            this.PicExit = new System.Windows.Forms.PictureBox();
             this.CmdLernende = new System.Windows.Forms.Button();
             this.CmdMitarbeiter = new System.Windows.Forms.Button();
             this.CmdKunde = new System.Windows.Forms.Button();
-            this.PicExit = new System.Windows.Forms.PictureBox();
+            this.PanelContainerMain = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.PanelContainerTop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicExit)).BeginInit();
             this.SuspendLayout();
@@ -97,22 +97,15 @@ namespace ContactManager
             this.panel1.Size = new System.Drawing.Size(164, 595);
             this.panel1.TabIndex = 5;
             // 
-            // PanelContainerMain
+            // PicExit
             // 
-            this.PanelContainerMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PanelContainerMain.Location = new System.Drawing.Point(164, 77);
-            this.PanelContainerMain.Name = "PanelContainerMain";
-            this.PanelContainerMain.Size = new System.Drawing.Size(908, 518);
-            this.PanelContainerMain.TabIndex = 8;
-            // 
-            // PanelContainerTop
-            // 
-            this.PanelContainerTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PanelContainerTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.PanelContainerTop.Location = new System.Drawing.Point(164, 0);
-            this.PanelContainerTop.Name = "PanelContainerTop";
-            this.PanelContainerTop.Size = new System.Drawing.Size(908, 77);
-            this.PanelContainerTop.TabIndex = 9;
+            this.PicExit.Image = global::ContactManager.Properties.Resources.exit_2860;
+            this.PicExit.Location = new System.Drawing.Point(65, 533);
+            this.PicExit.Name = "PicExit";
+            this.PicExit.Size = new System.Drawing.Size(30, 50);
+            this.PicExit.TabIndex = 4;
+            this.PicExit.TabStop = false;
+            this.PicExit.Click += new System.EventHandler(this.PicExit_Click);
             // 
             // CmdLernende
             // 
@@ -186,15 +179,22 @@ namespace ContactManager
             this.CmdKunde.MouseEnter += new System.EventHandler(this.CmdKunde_MouseEnter);
             this.CmdKunde.MouseLeave += new System.EventHandler(this.CmdKunde_MouseLeave);
             // 
-            // PicExit
+            // PanelContainerMain
             // 
-            this.PicExit.Image = global::ContactManager.Properties.Resources.exit_2860;
-            this.PicExit.Location = new System.Drawing.Point(65, 533);
-            this.PicExit.Name = "PicExit";
-            this.PicExit.Size = new System.Drawing.Size(30, 50);
-            this.PicExit.TabIndex = 4;
-            this.PicExit.TabStop = false;
-            this.PicExit.Click += new System.EventHandler(this.PicExit_Click);
+            this.PanelContainerMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PanelContainerMain.Location = new System.Drawing.Point(164, 77);
+            this.PanelContainerMain.Name = "PanelContainerMain";
+            this.PanelContainerMain.Size = new System.Drawing.Size(908, 518);
+            this.PanelContainerMain.TabIndex = 8;
+            // 
+            // PanelContainerTop
+            // 
+            this.PanelContainerTop.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PanelContainerTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.PanelContainerTop.Location = new System.Drawing.Point(164, 0);
+            this.PanelContainerTop.Name = "PanelContainerTop";
+            this.PanelContainerTop.Size = new System.Drawing.Size(908, 77);
+            this.PanelContainerTop.TabIndex = 9;
             // 
             // Form1
             // 
@@ -207,7 +207,7 @@ namespace ContactManager
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Contact Manager";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicExit)).EndInit();

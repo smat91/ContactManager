@@ -207,7 +207,7 @@ namespace ContactManager
 
             // Prüfen, ob String zusammenhängend ist, wenn nach Attributen gesucht wird
             if (attribute != null && searchTerms.Count() > 1) {
-                string message = "String must be contiguous if attribute search is used!";
+                string message = "Eingabe darf nur aus einem Begriff bestehen, wenn die Attributsuche genutzt wird!";
                 string caption = "Fehler in Eingabe erkannt";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
 

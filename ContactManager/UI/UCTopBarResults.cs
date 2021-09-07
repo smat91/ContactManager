@@ -220,7 +220,7 @@ namespace ContactManager.UI
 
                         // Der Form das zu bearbeitende Employee Objekt übergebeb
                         (Form1.Instance.PnlContainerMain.Controls["UCEditEmployeeObject"] as UI.UCEditEmployeeObject).SetEmployee(ref employee);
-                        (Form1.Instance.PnlContainerTop.Controls["UCTopBarEdit"] as UI.UCTopBarEdit).SetPersonObject(employee);
+                        (Form1.Instance.PnlContainerTop.Controls["UCTopBarEdit"] as UI.UCTopBarEdit).SetPersonObject(employee, employeeOriginal);
 
                         // Die Form in den Vordergrund bringen und anzeigen
                         Form1.Instance.PnlContainerMain.Controls["UCEditEmployeeObject"].BringToFront();
@@ -259,7 +259,7 @@ namespace ContactManager.UI
 
                         // Der Form das zu bearbeitende Trainee Objekt übergebeb
                         (Form1.Instance.PnlContainerMain.Controls["UCEditTraineeObject"] as UI.UCEditTraineeObject).SetTrainee(ref trainee);
-                        (Form1.Instance.PnlContainerTop.Controls["UCTopBarEdit"] as UI.UCTopBarEdit).SetPersonObject(trainee);
+                        (Form1.Instance.PnlContainerTop.Controls["UCTopBarEdit"] as UI.UCTopBarEdit).SetPersonObject(trainee, traineeOriginal);
 
                         // Die Form in den Vordergrund bringen und anzeigen
                         Form1.Instance.PnlContainerMain.Controls["UCEditTraineeObject"].BringToFront();
