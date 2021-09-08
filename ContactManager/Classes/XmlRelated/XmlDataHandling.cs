@@ -21,7 +21,7 @@ namespace ContactManager
         {
 
             // Variable für Landesinfo anlegen 
-            CultureInfo culture = new CultureInfo("de-CH", true);
+            CultureInfo culture = new CultureInfo("de-CH");
 
             if (!target.HasElements && target.Parent.Name.LocalName.ToString() != "Log")
             {

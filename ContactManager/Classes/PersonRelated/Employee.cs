@@ -12,6 +12,10 @@ namespace ContactManager
 {
     public class Employee : Person
     {
+        // Variable für Landesinfo und DateTime anlegen wird zur Datumsumwandlung benötigt
+        private CultureInfo cultureInfo = new CultureInfo("de-CH");
+        private DateTime dateValue = new DateTime();
+
         public string birthday_
         {
             get
@@ -25,8 +29,23 @@ namespace ContactManager
 
             set
             {
-                (from element in employee_.Descendants("Geburtsdatum")
-                select element).FirstOrDefault().SetValue(value);
+                if (value != "")
+                { 
+                    if (DateTime.TryParseExact(value, "dd.MM.yyyy", cultureInfo,
+                                               DateTimeStyles.None, out dateValue))
+                    {
+                        (from element in employee_.Descendants("Geburtsdatum")
+                         select element).FirstOrDefault().SetValue(value);
+                    }
+                    else
+                    {
+                        string message = "Eingabe muss ein Datum sein und dem folgenden Format entsprechen: TT.MM.JJJJ!";
+                        string caption = "Fehler in Eingabe erkannt";
+                        MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                        MessageBox.Show(message, caption, buttons);
+                    }
+                }
             }
         }
 
@@ -122,11 +141,23 @@ namespace ContactManager
 
             set
             {
-                var cultureInfo = new CultureInfo("de-CH", true);
+                if (value != "")
+                {
+                    if (DateTime.TryParseExact(value, "dd.MM.yyyy", cultureInfo,
+                                               DateTimeStyles.None, out dateValue))
+                    {
+                        (from element in employee_.Descendants("Eintrittsdatum")
+                         select element).FirstOrDefault().SetValue(value);
+                    }
+                    else
+                    {
+                        string message = "Eingabe muss ein Datum sein und dem folgenden Format entsprechen: TT.MM.JJJJ!";
+                        string caption = "Fehler in Eingabe erkannt";
+                        MessageBoxButtons buttons = MessageBoxButtons.OK;
 
-
-                (from element in employee_.Descendants("Eintrittsdatum")
-                select element).FirstOrDefault().SetValue(value);
+                        MessageBox.Show(message, caption, buttons);
+                    }
+                }
             }
         }
 
@@ -141,18 +172,33 @@ namespace ContactManager
 
             set
             {
-                if (entryDate_ != null)
+                if (value != "")
                 {
-                    (from element in employee_.Descendants("Austrittsdatum")
-                     select element).FirstOrDefault().SetValue(value);
-                }
-                else 
-                {
-                    string message = "Eingabe muss grösser als das Eintrittsdatum sein!";
-                    string caption = "Fehler in Eingabe erkannt";
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    if (DateTime.TryParseExact(value, "dd.MM.yyyy", cultureInfo,
+                                               DateTimeStyles.None, out dateValue))
+                    {
+                        if (DateTime.ParseExact(entryDate_, "dd.MM.yyyy", cultureInfo) < dateValue)
+                        {
+                            (from element in employee_.Descendants("Austrittsdatum")
+                             select element).FirstOrDefault().SetValue(value);
+                        }
+                        else
+                        {
+                            string message = "Das Kündigungsdatum darf nicht kleiner oder gleich dem Eintrittsdatum sein!";
+                            string caption = "Fehler in Eingabe erkannt";
+                            MessageBoxButtons buttons = MessageBoxButtons.OK;
 
-                    MessageBox.Show(message, caption, buttons);
+                            MessageBox.Show(message, caption, buttons);
+                        }
+                    }
+                    else
+                    {
+                        string message = "Eingabe muss ein Datum sein und dem folgenden Format entsprechen: TT.MM.JJJJ!";
+                        string caption = "Fehler in Eingabe erkannt";
+                        MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                        MessageBox.Show(message, caption, buttons);
+                    }
                 }
             }
         }
