@@ -30,6 +30,7 @@ namespace ContactManager
         private void InitializeComponent()
         {
             System.Windows.Forms.Button CmdLogin;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.LblUser = new System.Windows.Forms.Label();
             this.LblPassword = new System.Windows.Forms.Label();
             this.TxtUser = new System.Windows.Forms.TextBox();
@@ -151,6 +152,7 @@ namespace ContactManager
             this.Controls.Add(this.LblPassword);
             this.Controls.Add(this.LblUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = Properties.Resources.ContactManagerIcon;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

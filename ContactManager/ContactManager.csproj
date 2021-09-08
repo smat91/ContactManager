@@ -4,7 +4,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net48</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>team-management-9842-_1_.ico</ApplicationIcon>
+    <ApplicationIcon>Ressources\ContactManagerIcon.ico</ApplicationIcon>
+    <StartupObject>ContactManager.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,10 +29,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Ressources\" />
   </ItemGroup>
 
   <ItemGroup>
