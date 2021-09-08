@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Schema;
 
 
 namespace ContactManager
@@ -50,26 +51,50 @@ namespace ContactManager
             set { CmdHome = value; }
         }
 
-        private const string filePath = "..\\..\\..\\XmlData\\Persons.xml";
-        private XDocument xdocument = XDocument.Load(filePath);
-        private XDocument xdocumentOriginal = XDocument.Load(filePath);
+        private string filePath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\ContactManager\";
+        private string fileName = @"Persons.xml";
+        private XDocument xdocument;
+        private XDocument xdocumentOriginal;
 
         public void LoadFromXml()
         {
-            XDocument xdocumentTemp = XDocument.Load(filePath);
+            XDocument xdocumentTemp = XDocument.Load($"{filePath}{fileName}");
             xdocument.ReplaceNodes(xdocumentTemp.Elements());
         }
 
         public void SaveToXml()
         {
-            xdocument.Save(filePath);
-            XDocument xdocumentTemp = XDocument.Load(filePath);
+            xdocument.Save($"{filePath}{fileName}");
+            XDocument xdocumentTemp = XDocument.Load($"{filePath}{fileName}");
             xdocumentOriginal.ReplaceNodes(xdocumentTemp.Elements());
         }
 
         public Form1()
         {
-            LoadFromXml();
+            // prüfen ob File existiert und falls nötig erstellen
+            if (!File.Exists($"{filePath}{fileName}"))
+            {
+                // XDocument template erstellen
+                XDocument template = new XDocument(
+                                            new XElement("Persons",
+                                                new XElement("Customers", ""),
+                                                new XElement("Employees", ""),
+                                                new XElement("Trainees", "")
+                                                ));
+
+                // prüfen ob Pfad existiert und falls nötig erstellen
+                if (!Directory.Exists(filePath))
+                {
+                    Directory.CreateDirectory(filePath);
+                }
+
+                // XDocument template als Persons.xml abspeichern
+                template.Save($"{filePath}{fileName}");
+            }
+
+            xdocument = XDocument.Load($"{filePath}{fileName}");
+            xdocumentOriginal = XDocument.Load($"{filePath}{fileName}");
+
             InitializeComponent();
         }
 
@@ -145,6 +170,7 @@ namespace ContactManager
             }
 
             Form1.Instance.PnlContainerMain.Controls["UCCustomer"].BringToFront();
+            (Form1.Instance.PnlContainerMain.Controls["UCCustomer"] as UI.UCCustomer).RefreshData();
             Form1.Instance.PnlContainerTop.Show();
             Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
             sideBarStatus = 1;
@@ -172,6 +198,7 @@ namespace ContactManager
             }
 
             Form1.Instance.PnlContainerMain.Controls["UCEmployee"].BringToFront();
+            (Form1.Instance.PnlContainerMain.Controls["UCEmployee"] as UI.UCEmployee).RefreshData();
             Form1.Instance.PnlContainerTop.Show();
             Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
             sideBarStatus = 2;
@@ -199,6 +226,7 @@ namespace ContactManager
             }
 
             Form1.Instance.PnlContainerMain.Controls["UCTrainee"].BringToFront();
+            (Form1.Instance.PnlContainerMain.Controls["UCTrainee"] as UI.UCTrainee).RefreshData();
             Form1.Instance.PnlContainerTop.Show();
             Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
             sideBarStatus = 3;
@@ -248,6 +276,56 @@ namespace ContactManager
         private void PicExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void CmdXmlDataImport_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.DefaultExt = "xml";
+                openFileDialog.Filter = "XML Files|*.xml";
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Pfad des gewählten files einlesen
+                    string path = openFileDialog.FileName;
+
+                    // File importieren
+                    XDocument xdocumentImport = XDocument.Load(path);
+
+                    // XML Schemaset erzeugen
+                    XmlSchemaSet schemas = new XmlSchemaSet();
+                    schemas.Add("", XmlReader.Create(new StringReader(Properties.Resources.Persons)));
+
+                    // importiertes File prüfen
+                    bool errors = false;
+                    xdocumentImport.Validate(schemas, (o, ex) =>
+                                            {
+                                                string message = "Fehler bei XML prüfung:\n\r" + ex.Message;
+                                                string caption = "Fehler in XML erkannt";
+                                                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                                                MessageBox.Show(message, caption, buttons);
+                                                errors = true;
+                                            });
+
+                    // falls File in ordnung ist import abschliessen
+                    if (!errors)
+                    {
+                        xdocument.ReplaceNodes(xdocumentImport.Elements());
+                        SaveToXml();
+                        LoadFromXml();
+                        (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

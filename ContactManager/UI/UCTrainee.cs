@@ -23,7 +23,18 @@ namespace ContactManager.UI
 
         private void UCTrainee_Load(object sender, EventArgs e)
         {
-            DgvTrainee.DataSource = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+            RefreshData();
+        }
+
+        public void RefreshData()
+        {
+            var dt = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+
+            if (dt.Columns.Count > 0)
+            {
+                dt.DefaultView.Sort = "Id ASC";
+                DgvTrainee.DataSource = dt;
+            }
         }
     }
 }

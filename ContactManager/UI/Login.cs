@@ -54,8 +54,6 @@ namespace ContactManager
             }
         }
 
-        
-
         private static string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
 

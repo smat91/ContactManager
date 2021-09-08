@@ -21,15 +21,21 @@ namespace ContactManager.UI
             InitializeComponent();
             xdocument_ = xdocument;
         }
-        
+
         private void UCCustomer_Load(object sender, EventArgs e)
         {
+            RefreshData();
+        }
+
+        public void RefreshData()
+        {
             var dt = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+
             if (dt.Columns.Count > 0)
             {
                 dt.DefaultView.Sort = "Id ASC";
                 DgvCustomer.DataSource = dt;
-            }            
+            }
         }
     }
 }

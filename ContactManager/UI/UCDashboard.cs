@@ -36,6 +36,11 @@ namespace ContactManager.UI
             {
                 dt.DefaultView.Sort = "Zeitpunkt DESC";
                 DvgMutationLogs.DataSource = dt;
+                DvgMutationLogs.Columns[0].FillWeight = 8;      // Spaltenbreite in % für Id
+                DvgMutationLogs.Columns[1].FillWeight = 23;     // Spaltenbreite in % für Attribut
+                DvgMutationLogs.Columns[3].FillWeight = 23;     // Spaltenbreite in % für Originalwert
+                DvgMutationLogs.Columns[4].FillWeight = 23;     // Spaltenbreite in % für Aktualwert
+                DvgMutationLogs.Columns[2].FillWeight = 23;     // Spaltenbreite in % für Zeitpunkt
             }
         }
     }
