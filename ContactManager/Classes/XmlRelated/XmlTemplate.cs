@@ -83,7 +83,7 @@ namespace ContactManager
                               new XElement("Nationalität", ""),
                               new XElement("Eintrittsdatum", ""),
                               new XElement("Austrittsdatum", ""),
-                              new XElement("Beschäftigungsgrad", "0"),
+                              new XElement("Beschäftigungsgrad", "10"),
                               new XElement("Kaderstufe", "0"));
 
             // Neue mitarbeiterbezogene Kontaktattribute hinzufügen

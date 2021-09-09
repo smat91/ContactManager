@@ -15,9 +15,9 @@
       <Address>
         <Strasse>Oberdorfstrasse</Strasse>
         <Nummer>6</Nummer>
+		<Land>Schweiz</Land>
         <Ort>Luzern</Ort>
         <PLZ>8000</PLZ>
-        <Land>Schweiz</Land>
       </Address>
       <ContactData>
         <Telefon Type="geschäftlich">+41-12-123-1234</Telefon>
@@ -25,7 +25,6 @@
         <Fax>+41-12-123-3456</Fax>
         <EMail>max.muster@admin.ch</EMail>
       </ContactData>
-      <Logs></Logs>
       <MutationLogs>
         <MutationLog>
           <Id>1</Id>
@@ -42,6 +41,7 @@
           <Zeitpunkt>07.09.2021 23:17:47</Zeitpunkt>
         </MutationLog>
       </MutationLogs>
+	  <Logs></Logs>
     </Customer>
   </Customers>
   <Employees>
@@ -65,9 +65,9 @@
       <Address>
         <Strasse>Nordstrasse</Strasse>
         <Nummer>6</Nummer>
+		<Land>Schweiz</Land>
         <Ort>Goldach</Ort>
         <PLZ>9403</PLZ>
-        <Land>Schweiz</Land>
       </Address>
       <ContactData>
         <Telefon Type="geschäftlich">+41-23-123-1234</Telefon>
@@ -116,9 +116,9 @@
       <Address>
         <Strasse>Gäbeliweg</Strasse>
         <Nummer>6</Nummer>
+		<Land>Schweiz</Land>
         <Ort>Kriessern</Ort>
         <PLZ>9462</PLZ>
-        <Land>Schweiz</Land>
       </Address>
       <ContactData>
         <Telefon Type="geschäftlich">+41-23-123-1243</Telefon>
