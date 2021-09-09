@@ -22,7 +22,7 @@ namespace ContactManager.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace ContactManager.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ContactManager.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace ContactManager.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap businessman_280 {
+        public static System.Drawing.Bitmap businessman_280 {
             get {
                 object obj = ResourceManager.GetObject("businessman_280", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close_877 {
+        public static System.Drawing.Bitmap close_877 {
             get {
                 object obj = ResourceManager.GetObject("close_877", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -83,7 +83,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CM_Logo_mit_Background {
+        public static System.Drawing.Bitmap CM_Logo_mit_Background {
             get {
                 object obj = ResourceManager.GetObject("CM_Logo_mit_Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -93,7 +93,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon ContactManagerIcon {
+        public static System.Drawing.Icon ContactManagerIcon {
             get {
                 object obj = ResourceManager.GetObject("ContactManagerIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
@@ -103,7 +103,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap craftsman_9498 {
+        public static System.Drawing.Bitmap craftsman_9498 {
             get {
                 object obj = ResourceManager.GetObject("craftsman_9498", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -113,7 +113,17 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap craftsman_9521 {
+        public static System.Drawing.Bitmap craftsman_9517 {
+            get {
+                object obj = ResourceManager.GetObject("craftsman_9517", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap craftsman_9521 {
             get {
                 object obj = ResourceManager.GetObject("craftsman_9521", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -123,7 +133,17 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap exit_2860 {
+        public static System.Drawing.Bitmap database {
+            get {
+                object obj = ResourceManager.GetObject("database", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap exit_2860 {
             get {
                 object obj = ResourceManager.GetObject("exit_2860", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -133,7 +153,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap foreman_32 {
+        public static System.Drawing.Bitmap foreman_32 {
             get {
                 object obj = ResourceManager.GetObject("foreman_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -143,7 +163,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap foreman_9497 {
+        public static System.Drawing.Bitmap foreman_9497 {
             get {
                 object obj = ResourceManager.GetObject("foreman_9497", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -153,7 +173,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap foreman_9497__1_ {
+        public static System.Drawing.Bitmap foreman_9497__1_ {
             get {
                 object obj = ResourceManager.GetObject("foreman_9497__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -163,7 +183,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoginIcon {
+        public static System.Drawing.Bitmap LoginIcon {
             get {
                 object obj = ResourceManager.GetObject("LoginIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -173,7 +193,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap manager_9843 {
+        public static System.Drawing.Bitmap manager_9843 {
             get {
                 object obj = ResourceManager.GetObject("manager_9843", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -183,7 +203,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pencil_938 {
+        public static System.Drawing.Bitmap pencil_938 {
             get {
                 object obj = ResourceManager.GetObject("pencil_938", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -193,7 +213,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pencil_938__1_ {
+        public static System.Drawing.Bitmap pencil_938__1_ {
             get {
                 object obj = ResourceManager.GetObject("pencil_938__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -203,7 +223,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pencil_938__2_ {
+        public static System.Drawing.Bitmap pencil_938__2_ {
             get {
                 object obj = ResourceManager.GetObject("pencil_938__2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -211,31 +231,9 @@ namespace ContactManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-        ///&lt;xs:schema attributeFormDefault=&quot;unqualified&quot; elementFormDefault=&quot;qualified&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
-        ///  &lt;xs:element name=&quot;Persons&quot;&gt;
-        ///    &lt;xs:complexType&gt;
-        ///      &lt;xs:sequence&gt;
-        ///        &lt;xs:element name=&quot;Customers&quot;&gt;
-        ///          &lt;xs:complexType&gt;
-        ///            &lt;xs:sequence&gt;
-        ///              &lt;xs:any processContents=&quot;skip&quot; minOccurs=&quot;0&quot;/&gt;
-        ///            &lt;/xs:sequence&gt;
-        ///          &lt;/xs:complexType&gt;
-        ///        &lt;/xs:element&gt;
-        ///        &lt;xs:element name=&quot;Employees&quot;&gt;
-        /// [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string Persons {
-            get {
-                return ResourceManager.GetString("Persons", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plus_3107 {
+        public static System.Drawing.Bitmap plus_3107 {
             get {
                 object obj = ResourceManager.GetObject("plus_3107", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -245,7 +243,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plus_945 {
+        public static System.Drawing.Bitmap plus_945 {
             get {
                 object obj = ResourceManager.GetObject("plus_945", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -255,7 +253,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap save_file_5320 {
+        public static System.Drawing.Bitmap save_file_5320 {
             get {
                 object obj = ResourceManager.GetObject("save_file_5320", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -265,7 +263,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap search_2903 {
+        public static System.Drawing.Bitmap search_2903 {
             get {
                 object obj = ResourceManager.GetObject("search_2903", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -275,7 +273,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sign_in_3301 {
+        public static System.Drawing.Bitmap sign_in_3301 {
             get {
                 object obj = ResourceManager.GetObject("sign_in_3301", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -285,7 +283,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sign_in_3301__1_ {
+        public static System.Drawing.Bitmap sign_in_3301__1_ {
             get {
                 object obj = ResourceManager.GetObject("sign_in_3301__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -295,7 +293,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_group_296 {
+        public static System.Drawing.Bitmap user_group_296 {
             get {
                 object obj = ResourceManager.GetObject("user_group_296", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -305,7 +303,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_group_296__1_ {
+        public static System.Drawing.Bitmap user_group_296__1_ {
             get {
                 object obj = ResourceManager.GetObject("user_group_296__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -315,7 +313,7 @@ namespace ContactManager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_group_296__2_ {
+        public static System.Drawing.Bitmap user_group_296__2_ {
             get {
                 object obj = ResourceManager.GetObject("user_group_296__2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));

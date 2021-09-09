@@ -56,6 +56,7 @@ namespace ContactManager
         private XDocument xdocument;
         private XDocument xdocumentOriginal;
 
+        private XmlDataHandling xmlDataHandling = new XmlDataHandling();
         public void LoadFromXml()
         {
             XDocument xdocumentTemp = XDocument.Load($"{filePath}{fileName}");
@@ -94,16 +95,11 @@ namespace ContactManager
                 xdocument = XDocument.Load($"{filePath}{fileName}");
                 xdocumentOriginal = XDocument.Load($"{filePath}{fileName}");
 
-                string message = "Der Datensatz wurde neu erzeugt. Möchten Sie Daten aus einem bestehendem Datensat importieren?";
+                string message = "Der Datensatz wurde neu erzeugt. Sie können anschliessend Daten im CSV-Format über den Importbutton importieren.";
                 string caption = "Datenimport";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                 var result = MessageBox.Show(message, caption, buttons);
-
-                if (result == DialogResult.Yes)
-                {
-                    DataImport();
-                }
             }
 
             xdocument = XDocument.Load($"{filePath}{fileName}");
@@ -133,16 +129,18 @@ namespace ContactManager
             this.PanelContainerTop.BackColor = ColorTranslator.FromHtml("#33334c");
             this.PanelContainerMain.BackColor = ColorTranslator.FromHtml("#9B59B6");
 
-            {
-                // Contact Manager From zentriet einrichten
-                int breite = Screen.PrimaryScreen.Bounds.Width;
-                int höhe = Screen.PrimaryScreen.Bounds.Height;
+            // ToolTip erstellen
+            ToolTip toolTip1 = new ToolTip();
 
-                int x = breite - this.Width;
-                int y = höhe - this.Height;
+            // Eigenschaften für ToolTip setzen
+            toolTip1.AutoPopDelay = 2000;
+            toolTip1.InitialDelay = 500;
+            toolTip1.ReshowDelay = 500;
+            toolTip1.ShowAlways = true;
 
-                this.Location = new Point(x / 2, y / 2);
-            }
+            // ToolTip texte setzen
+            toolTip1.SetToolTip(this.PicExit, "Anwendung schliessen");
+            toolTip1.SetToolTip(this.PixImport, "Daten im CSV-Vormalt importieren");
         }
 
         private void CmdHome_Click(object sender, EventArgs e)
@@ -292,48 +290,10 @@ namespace ContactManager
             Application.Exit();
         }
 
-        private void DataImport()
+        private void PixImport_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.DefaultExt = "xml";
-                openFileDialog.Filter = "XML Files|*.xml";
-                openFileDialog.RestoreDirectory = true;
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    // Pfad des gewählten files einlesen
-                    string path = openFileDialog.FileName;
-
-                    // File importieren
-                    XDocument xdocumentImport = XDocument.Load(path);
-
-                    // XML Schemaset erzeugen
-                    XmlSchemaSet schemas = new XmlSchemaSet();
-                    schemas.Add("", XmlReader.Create(new StringReader(Properties.Resources.Persons)));
-
-                    // importiertes File prüfen
-                    bool errors = false;
-                    xdocumentImport.Validate(schemas, (o, ex) =>
-                                            {
-                                                string message = "Fehler bei XML prüfung:\n\r" + ex.Message;
-                                                string caption = "Fehler in XML erkannt";
-                                                MessageBoxButtons buttons = MessageBoxButtons.OK;
-
-                                                MessageBox.Show(message, caption, buttons);
-                                                errors = true;
-                                            });
-
-                    // falls File in ordnung ist import abschliessen
-                    if (!errors)
-                    {
-                        xdocument.ReplaceNodes(xdocumentImport.Elements());
-                        SaveToXml();
-                        LoadFromXml();
-                    }
-                }
-            }
+            xmlDataHandling.DataImportCsv(ref xdocument);
+            (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
         }
     }
 }

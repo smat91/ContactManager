@@ -91,7 +91,7 @@ namespace ContactManager
                 .Where(element => (string)element.Attribute("Type") == "mobil")
                 .FirstOrDefault()
                 .AddAfterSelf(new XElement("Telefon", "",
-                                    new XAttribute("Type", "Privat")));
+                                    new XAttribute("Type", "privat")));
 
             return employee;
         }

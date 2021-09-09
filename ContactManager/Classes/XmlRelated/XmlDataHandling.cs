@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Data;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -338,6 +339,130 @@ namespace ContactManager
             }
 
             return dt;
+        }
+
+        public void DataImportCsv(ref XDocument xdocument)
+        {
+            XmlTemplate xmlTemplate = new XmlTemplate();
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.DefaultExt = "csv";
+                openFileDialog.Filter = "CSV Files|*.csv";
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Pfad des gewählten files einlesen
+                    string path = openFileDialog.FileName;
+
+                    // File importieren
+                    string[] lines = File.ReadAllLines(path, System.Text.Encoding.UTF8);
+
+                    // Array mit den Header Daten erzeugen
+                    string[] headers = lines[0].Split(',').Select(x => x.Trim('\"')).ToArray();
+
+                    // Template-Objekte in die die Daten Abgefüllt werden
+                    XElement customer = xmlTemplate.XelementTemplateCustomer();
+                    XElement employee = xmlTemplate.XelementTemplateEmployee();
+                    XElement trainee = xmlTemplate.XelementTemplateTrainee();
+
+                    // Linie für Linie Einlesen und Objekte erzeugen
+                    for (int i = 1; i < lines.Count(); i++)
+                    {
+                        // Linie aufsplitten
+                        string[] lineContent = lines[i].Split(',').Select(x => x.Trim('\"')).ToArray();
+
+                        // Id generieren
+                        IEnumerable<XElement> idList =
+                            from ids in xdocument.Descendants("Id")
+                            orderby int.Parse(ids.Value)
+                            select ids;
+
+                        int id = (idList.Count() > 0) ? 1 + (int)idList.Last() : 1;
+
+                        // Werte aus csv abfüllen
+                        for (int j = 1; j < lineContent.Count(); j++)
+                        {
+
+                            string element = "";
+                            string attribute = "";
+
+                            // prüfen ob zulesendes Element leer ist
+                            if (lineContent[j].All(char.IsWhiteSpace))
+                            {
+                                continue;
+                            }
+
+                            // Prüfen ob Header string aus mehteren Teilen besteht
+                            if (headers[j].Any(char.IsWhiteSpace))
+                            {
+                                element = headers[j].Split(' ')[0];
+                                attribute = headers[j].Split(' ')[1];
+                            }
+                            else
+                            {
+                                element = headers[j];
+                            }
+
+                            // Daten in jeweiliges Objekt abfüllen
+                            if (lineContent[0] == "Kunde")
+                            {
+                                customer.Descendants(element)
+                                    .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
+                                    .FirstOrDefault().SetValue(lineContent[j]);
+                            }
+                            else if (lineContent[0] == "Mitarbeiter")
+                            {
+                                employee.Descendants(element)
+                                    .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
+                                    .FirstOrDefault().SetValue(lineContent[j]);
+                            }
+                            else if (lineContent[0] == "Lernender")
+                            {
+                                trainee.Descendants(element)
+                                    .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
+                                    .FirstOrDefault().SetValue(lineContent[j]);
+                            }
+                            else
+                            {
+                                string message = "Fehler bei csv prüfung ungültiger Eintrag erkannt";
+                                string caption = "Fehler in csv erkannt";
+                                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                                MessageBox.Show(message, caption, buttons);
+                                break;
+                            }
+                        }
+
+                        // id setzen und Objekt dem xdocument hinzufügen
+                        if (lineContent[0] == "Kunde")
+                        {
+                            customer.Descendants("Id")
+                                .FirstOrDefault().SetValue(id);
+                            xdocument.Descendants("Customers").FirstOrDefault().AddFirst(customer);
+                        }
+                        else if (lineContent[0] == "Mitarbeiter")
+                        {
+                            employee.Descendants("Id")
+                                .FirstOrDefault().SetValue(id);
+                            xdocument.Descendants("Employees").FirstOrDefault().AddFirst(employee);
+                        }
+                        else if (lineContent[0] == "Lernender")
+                        {
+                            trainee.Descendants("Id")
+                                .FirstOrDefault().SetValue(id);
+                            xdocument.Descendants("Trainees").FirstOrDefault().AddFirst(trainee);
+                        }
+
+                        // Import abschliessen
+                        Form1.Instance.SaveToXml();
+                        Form1.Instance.LoadFromXml();
+                    }
+
+                }
+            }
         }
     }
 }
