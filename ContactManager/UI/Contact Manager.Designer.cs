@@ -33,7 +33,6 @@ namespace ContactManager
             this.button8 = new System.Windows.Forms.Button();
             this.CmdHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CmdXmlDataImport = new System.Windows.Forms.Button();
             this.PicExit = new System.Windows.Forms.PictureBox();
             this.CmdLernende = new System.Windows.Forms.Button();
             this.CmdMitarbeiter = new System.Windows.Forms.Button();
@@ -86,7 +85,6 @@ namespace ContactManager
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel1.Controls.Add(this.CmdXmlDataImport);
             this.panel1.Controls.Add(this.PicExit);
             this.panel1.Controls.Add(this.CmdLernende);
             this.panel1.Controls.Add(this.CmdMitarbeiter);
@@ -98,17 +96,6 @@ namespace ContactManager
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(164, 595);
             this.panel1.TabIndex = 5;
-            // 
-            // CmdXmlDataImport
-            // 
-            this.CmdXmlDataImport.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.CmdXmlDataImport.Location = new System.Drawing.Point(3, 460);
-            this.CmdXmlDataImport.Name = "CmdXmlDataImport";
-            this.CmdXmlDataImport.Size = new System.Drawing.Size(158, 52);
-            this.CmdXmlDataImport.TabIndex = 0;
-            this.CmdXmlDataImport.Text = "XmlDaten Importieren";
-            this.CmdXmlDataImport.UseVisualStyleBackColor = true;
-            this.CmdXmlDataImport.Click += new System.EventHandler(this.CmdXmlDataImport_Click);
             // 
             // PicExit
             // 
@@ -240,7 +227,6 @@ namespace ContactManager
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel PanelContainerTop;
         private System.Windows.Forms.PictureBox PicExit;
-        private System.Windows.Forms.Button CmdXmlDataImport;
     }
 }
 

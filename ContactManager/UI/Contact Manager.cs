@@ -90,6 +90,20 @@ namespace ContactManager
 
                 // XDocument template als Persons.xml abspeichern
                 template.Save($"{filePath}{fileName}");
+
+                xdocument = XDocument.Load($"{filePath}{fileName}");
+                xdocumentOriginal = XDocument.Load($"{filePath}{fileName}");
+
+                string message = "Der Datensatz wurde neu erzeugt. Möchten Sie Daten aus einem bestehendem Datensat importieren?";
+                string caption = "Datenimport";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+
+                var result = MessageBox.Show(message, caption, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                    DataImport();
+                }
             }
 
             xdocument = XDocument.Load($"{filePath}{fileName}");
@@ -278,7 +292,7 @@ namespace ContactManager
             Application.Exit();
         }
 
-        private void CmdXmlDataImport_Click(object sender, EventArgs e)
+        private void DataImport()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -317,15 +331,9 @@ namespace ContactManager
                         xdocument.ReplaceNodes(xdocumentImport.Elements());
                         SaveToXml();
                         LoadFromXml();
-                        (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
                     }
                 }
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
