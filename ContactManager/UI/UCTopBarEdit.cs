@@ -18,12 +18,14 @@ namespace ContactManager.UI
             xdocument_ = xdocument;
         }
 
+        // Personen Objekte setzen Methode für Neuerstellugn
         public void SetPersonObject(Object personEdit)
         {
             person_ = personEdit;
             personOriginal_ = personEdit;
         }
 
+        // Personen Objekte setzen Methode für Bearbeitung
         public void SetPersonObject(Object personEdit, Object personOrigianl)
         {
             person_ = personEdit;
@@ -35,6 +37,7 @@ namespace ContactManager.UI
             ReloadDataAndView();
         }
 
+        // Bearbeitung speichern
         private void CmdSave_Click(object sender, EventArgs e)
         {
             //Prüfen, ob Vor-und Nachname der Person eingegeben wurde
@@ -73,6 +76,7 @@ namespace ContactManager.UI
             }
         }
 
+        // Jeweilige Übersichtsanzeige neu laden und deren Inhalt aktualisieren
         private void ReloadDataAndView() 
         {
             Form1.Instance.LoadFromXml();

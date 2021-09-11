@@ -25,17 +25,21 @@ namespace ContactManager.UI
 
         public void LoadDashboard()
         {
+            // Anzahl Datensätze zum jeweiligen Personentyp ermitteln
             LblNumberOfCustomers.Text = $" {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.customer)}";
 
             LblNumberOfEmployees.Text = $" {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.employee)}";
 
             LblNumberOfTrainees.Text = $" {xmlDataHandling.GetNumberOfDataSets(ref xdocument_, XmlDataHandling.personType.trainee)}";
 
+            // Daten zu Mutationslogs soritert anzeigen
             var dt = xmlDataHandling.GetMutationLogs(ref xdocument_);
             if (dt.Columns.Count > 0)
             {
                 dt.DefaultView.Sort = "Zeitpunkt DESC";
                 DvgMutationLogs.DataSource = dt;
+
+                // Spaltenbreite festlegen
                 DvgMutationLogs.Columns[0].FillWeight = 8;      // Spaltenbreite in % für Id
                 DvgMutationLogs.Columns[1].FillWeight = 23;     // Spaltenbreite in % für Attribut
                 DvgMutationLogs.Columns[3].FillWeight = 23;     // Spaltenbreite in % für Originalwert

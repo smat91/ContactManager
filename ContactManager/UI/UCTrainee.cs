@@ -26,6 +26,7 @@ namespace ContactManager.UI
             RefreshData();
         }
 
+        // siehe UCCustomer
         public void RefreshData()
         {
             var dt = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);

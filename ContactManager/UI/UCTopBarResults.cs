@@ -18,7 +18,7 @@ namespace ContactManager.UI
             xdocumentOriginal_ = xdocumentOriginal;
         }
 
-
+        // Suchfeld und Combox leeren
         private void CmdReset_Click(object sender, EventArgs e)
         {
             TxtSearch.Clear();
@@ -26,6 +26,7 @@ namespace ContactManager.UI
             CmdSearch_Click(sender, e);
         }
 
+        // Objekt neu erstellen
         private void CmdNew_Click(object sender, EventArgs e)
         {
             switch (Form1.Instance.sideBarStatus)
@@ -144,6 +145,7 @@ namespace ContactManager.UI
             }
         }
 
+        // Objekt bearbeiten
         private void CmdEdit_Click(object sender, EventArgs e)
         {
             if (CheckRowSelcected())
@@ -282,6 +284,7 @@ namespace ContactManager.UI
             }
         }
 
+        // Suche ausführen
         private void CmdSearch_Click(object sender, EventArgs e)
         {
             switch (Form1.Instance.sideBarStatus)
@@ -324,6 +327,7 @@ namespace ContactManager.UI
             }
         }
 
+        // Objekte in Combobox laden sobald diese angeklickt wird
         private void CmbFilter_Click(object sender, EventArgs e)
         {
             CmbFilter.Items.Clear();
@@ -363,6 +367,7 @@ namespace ContactManager.UI
             }
         }
 
+        // Prüfung ob eine Zeile selektiert ist, bevor gelöscht oder bearbeitet werden kann
         private bool CheckRowSelcected()
         {
             bool selectionOk = false;
@@ -393,6 +398,7 @@ namespace ContactManager.UI
             return selectionOk;
         }
 
+        // Objekt löschen
         private void CmdDelete_Click(object sender, EventArgs e)
         {
             if (CheckRowSelcected())

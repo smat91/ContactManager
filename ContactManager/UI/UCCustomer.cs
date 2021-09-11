@@ -27,10 +27,12 @@ namespace ContactManager.UI
             RefreshData();
         }
 
+        // Anzeige Daten aktualisieren
         public void RefreshData()
         {
             var dt = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
 
+            // falls Daten anzuzeigen sind diese noch vor Anzeige sortieren
             if (dt.Columns.Count > 0)
             {
                 dt.DefaultView.Sort = "Id ASC";

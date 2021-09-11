@@ -21,12 +21,15 @@ namespace ContactManager.UI
             InitializeComponent();
         }
 
+        // Mit dieser Methode wird das zu bearbeitende Personen Objekt gesetzt
+        // und die Werte initial geladen
         public void SetCustomer(ref Customer customer)
         {
             customer_ = customer;
             SetControllStartValues();
         }
 
+        // Werte aus Personen Objekt in Ui laden
         private void SetControllStartValues()
         {
             if (customer_ != null)
