@@ -31,15 +31,19 @@ namespace ContactManager
 
             using (SHA256 sha256Hash = SHA256.Create())
             {
+                // Prüfen ob Hash stimmt
                 if (VerifyHash(sha256Hash, TxtUser.Text, user) && VerifyHash(sha256Hash, TxtPassword.Text, password))
                 {
+                    // Form erzeugen und anzeigen
                     this.Hide();
                     Form1 f1 = new Form1();
                     f1.ShowDialog();
                 }
                 else
                 {
+                    // Login versuche hochzählen und Passwortfeld leeren
                     ++loginTrys;
+                    TxtPassword.Clear();
 
                     string message = $"Password or username is invalid. Try {loginTrys} of 3.";
                     string caption = "Error detected in input";
