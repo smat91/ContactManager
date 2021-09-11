@@ -18,21 +18,25 @@ namespace ContactManager
 
     public partial class Form1 : Form
     {
-        static Form1 obj_;
+        static Form1 form1_;
         public int sideBarStatus = 0;
 
+        // Instanz von Form
         public static Form1 Instance
         {
+            // liefert eine Referenz auf form1_ zurück
+            // falls form1_ noch nicht erzeugt wurde wird form1_ erzeugt
             get
             {
-                if (obj_ == null)
+                if (form1_ == null)
                 {
-                    obj_ = new Form1();
+                    form1_ = new Form1();
                 }
-                return obj_;
+                return form1_;
             }
         }
 
+        // Hauptelemente in Form1 
         public Panel PnlContainerMain
         {
             get { return PanelContainerMain; }
@@ -51,18 +55,28 @@ namespace ContactManager
             set { CmdHome = value; }
         }
 
+        // Datenpfade für Xml
         private string filePath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}\ContactManager\";
         private string fileName = @"Persons.xml";
+
+        // XDocument das zur bearbeitung genutzt wird
         private XDocument xdocument;
+
+        // XDocument das als Referenz genutzt wird um Veränderungen am
+        // nachvollziehnen zu können
         private XDocument xdocumentOriginal;
 
+        // Neues Objekt zum Datenhandling erzeugen
         private XmlDataHandling xmlDataHandling = new XmlDataHandling();
+
+        // Methode um Daten aus Xml zu laden
         public void LoadFromXml()
         {
             XDocument xdocumentTemp = XDocument.Load($"{filePath}{fileName}");
             xdocument.ReplaceNodes(xdocumentTemp.Elements());
         }
 
+        // Methode um Daten in Xml zu laden
         public void SaveToXml()
         {
             xdocument.Save($"{filePath}{fileName}");
@@ -92,6 +106,7 @@ namespace ContactManager
                 // XDocument template als Persons.xml abspeichern
                 template.Save($"{filePath}{fileName}");
 
+                // Daten in XDokuments laden
                 xdocument = XDocument.Load($"{filePath}{fileName}");
                 xdocumentOriginal = XDocument.Load($"{filePath}{fileName}");
 
@@ -102,6 +117,7 @@ namespace ContactManager
                 var result = MessageBox.Show(message, caption, buttons);
             }
 
+            // Daten in XDokuments laden
             xdocument = XDocument.Load($"{filePath}{fileName}");
             xdocumentOriginal = XDocument.Load($"{filePath}{fileName}");
 
@@ -110,10 +126,12 @@ namespace ContactManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Daten initial laden 
             LoadFromXml();
 
-            obj_ = this;
+            form1_ = this;
 
+            // Dashboard dem Panel hinzufügen, falls noch nicht vorhanden
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCDashboard"))
             {
                 UI.UCDashboard un = new UI.UCDashboard(ref xdocument);
@@ -121,6 +139,7 @@ namespace ContactManager
                 Form1.Instance.PnlContainerMain.Controls.Add(un);
             }
 
+            // Daten laden und anzeigen
             Form1.Instance.PnlContainerMain.Controls["UCDashboard"].BringToFront();
             (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
             Form1.Instance.PnlContainerTop.Hide();
@@ -145,6 +164,7 @@ namespace ContactManager
 
         private void CmdHome_Click(object sender, EventArgs e)
         {
+            // siehe Kommentare in Form1_Load
             LoadFromXml();
 
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCDashboard"))
@@ -165,6 +185,7 @@ namespace ContactManager
 
         private void CmdKunde_Click(object sender, EventArgs e)
         {
+            // siehe Kommentare in Form1_Load
             LoadFromXml();
 
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCCustomer"))
@@ -193,6 +214,7 @@ namespace ContactManager
 
         private void CmdMitarbeiter_Click(object sender, EventArgs e)
         {
+            // siehe Kommentare in Form1_Load
             LoadFromXml();
 
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCEmployee"))
@@ -221,6 +243,7 @@ namespace ContactManager
 
         private void CmdLernende_Click(object sender, EventArgs e)
         {
+            // siehe Kommentare in Form1_Load
             LoadFromXml();
 
             if (!Form1.Instance.PnlContainerMain.Controls.ContainsKey("UCTrainee"))
