@@ -23,10 +23,10 @@ namespace ContactManager
 
         private void CmdLogin_Click(object sender, EventArgs e)
         {
-            // User = Admin !!! NUR ZU DEBUG ZWECKEN HIER KOMMENTAR VOR ROLLOUT LÖSCHEN !!!
+            // Hash für Usernamen
             string user = "c1c224b03cd9bc7b6a86d77f5dace40191766c485cd55dc48caf9ac873335d6f";
 
-            // PW = Admin2021Q3 !!! NUR ZU DEBUG ZWECKEN HIER KOMMENTAR VOR ROLLOUT LÖSCHEN !!!
+            // Hash für Passwort
             string password = "4b84cf5edf20d6dbf0d25b37f4d4eae2f7faaf2fdf4fe4e6b4dd9f9b3df2be0c";
 
             using (SHA256 sha256Hash = SHA256.Create())
