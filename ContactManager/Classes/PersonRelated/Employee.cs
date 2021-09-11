@@ -16,12 +16,11 @@ namespace ContactManager
         private CultureInfo cultureInfo = new CultureInfo("de-CH");
         private DateTime dateValue = new DateTime();
 
+        // siehe Kommentare zu Properties in Person.cs
         public string birthday_
         {
             get
             {
-                // return gibt einen Int zurück / Descendants liefert eine Sammlung der Nachfahrenelemente für
-                // dieses Dokument oder Element in der Reihenfolge der Dokumente.
                 return (string)
                   (from element in employee_.Descendants("Geburtsdatum")
                    select element).FirstOrDefault();
@@ -31,6 +30,7 @@ namespace ContactManager
             {
                 if (value != "")
                 { 
+                    // Prüfen ob sich die Eingabe in ein Datum wandeln lässt
                     if (DateTime.TryParseExact(value, "dd.MM.yyyy", cultureInfo,
                                                DateTimeStyles.None, out dateValue))
                     {
@@ -177,6 +177,7 @@ namespace ContactManager
                     if (DateTime.TryParseExact(value, "dd.MM.yyyy", cultureInfo,
                                                DateTimeStyles.None, out dateValue))
                     {
+                        // Prüfen ob das eingegebene Datum grösser ist, als das Eintrittsdatum
                         if (DateTime.ParseExact(entryDate_, "dd.MM.yyyy", cultureInfo) < dateValue)
                         {
                             (from element in employee_.Descendants("Austrittsdatum")
@@ -289,6 +290,7 @@ namespace ContactManager
         // lokales XElement employee_ anlegen
         public XElement employee_ { get; private set; }
 
+        // Konstruktor für Employee
         public Employee(ref XElement employee)
             : base(ref employee)
         {
@@ -298,6 +300,8 @@ namespace ContactManager
         // Mit dieser Methode wird dem XML eine neue Person Employee hinzugefügt
         public virtual void AddToXDocument(ref XDocument personsXml)
         {
+            // Prüfen ob die Id des Objektes einzigartig ist und wenn ja,
+            // das Objekt dem XDocumten hinzufügen
             if (base.IdIsUnique(ref personsXml))
             {
                 base.SetNewId(ref personsXml);
@@ -305,11 +309,15 @@ namespace ContactManager
             }
             else
             {
-                throw new ArgumentException("Employee with this id is allready existing in XML");
+                string message = "Datensatz existiert bereits!";
+                string caption = "Fehler erkannt";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                MessageBox.Show(message, caption, buttons);
             }
         }
 
-        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
+        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind
         public override bool Equals(object obj)
         {
             return obj is Employee employee &&
@@ -325,7 +333,7 @@ namespace ContactManager
                    phonePrivat_ == employee.phonePrivat_;
         }
 
-        // Hier werden Veränderungen am Objekt ausgegeben
+        // Hier werden Veränderungen am Objekt als Liste ausgegeben
         public override List<XElement> Diff(object obj)
         {
             List<XElement> diff = base.Diff(obj);
@@ -370,6 +378,7 @@ namespace ContactManager
             return diff;
         }
 
+        // Alle Inhalte als String zurückgegeben
         public override string ToString()
         {
             return base.ToString() + ", " + 

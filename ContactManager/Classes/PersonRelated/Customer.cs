@@ -11,6 +11,7 @@ namespace ContactManager
 {
     public class Customer : Person
     {
+        // siehe Kommentare zu Properties in Person.cs
         public string companyName_
         {
             get
@@ -111,16 +112,20 @@ namespace ContactManager
         // lokales XElement customer_ anlegen
         public XElement customer_ { get; private set; }
 
+        // Konstruktor für Customer
         public Customer(ref XElement customer)
             : base(ref customer)
         {
             customer_ = customer;
         }
 
+        // Fügt Customer einen Log hinzu
         public void AddLog(string text)
         {
+            // Anzahl logs ermitteln
             int count = customer_.Descendants("Log").Count();     
 
+            // Neuer Log Logs hinzufügen
             customer_.Descendants("Logs")
                 .FirstOrDefault()
                 .Add(new XElement("Log", 
@@ -132,6 +137,7 @@ namespace ContactManager
                 );
         }
 
+        // Gibt alle Logs von customer aus
         public XElement[] GetLogs()
         {
             return customer_.Descendants("Logs").Elements().ToArray();
@@ -140,6 +146,8 @@ namespace ContactManager
         // Mit dieser Methode wird dem XML eine neue Person Customer hinzugefügt
         public virtual void AddToXDocument(ref XDocument personsXml)
         {
+            // Prüfen ob die Id des Objektes einzigartig ist und wenn ja,
+            // das Objekt dem XDocumten hinzufügen
             if (base.IdIsUnique(ref personsXml))
             {
                 base.SetNewId(ref personsXml);
@@ -155,16 +163,7 @@ namespace ContactManager
             }
         }
 
-        // Alle Inhalte (bspw. int) wird als String zurückgegeben.
-        public override string ToString()
-        {
-            return base.ToString() + ", " + 
-                companyName_ + ", " + 
-                customerType_ + ", " + 
-                fax_;
-        }
-
-        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
+        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind
         public override bool Equals(object obj)
         {
             return obj is Customer customer &&
@@ -174,7 +173,7 @@ namespace ContactManager
                 fax_ == customer.fax_;
         }
 
-        // Hier werden Veränderungen am Objekt ausgegeben
+        // Hier werden Veränderungen am Objekt als Liste ausgegeben
         public override List<XElement> Diff(object obj)
         {
             List<XElement> diff = base.Diff(obj);
@@ -193,6 +192,15 @@ namespace ContactManager
             }
 
             return diff;
+        }
+
+        // Alle Inhalte als String zurückgegeben
+        public override string ToString()
+        {
+            return base.ToString() + ", " +
+                companyName_ + ", " +
+                customerType_ + ", " +
+                fax_;
         }
     }
 }

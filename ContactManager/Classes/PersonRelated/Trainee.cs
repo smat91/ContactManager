@@ -11,6 +11,7 @@ namespace ContactManager
 {
     public class Trainee : Employee
     {
+        // siehe Kommentare zu Properties in Person.cs
         public int numberOfTraineeYears_
         {
             get
@@ -68,6 +69,7 @@ namespace ContactManager
         // lokales XElement trainee_ anlegen
         public XElement trainee_ { get; private set; }
 
+        // Konstruktor für Trainee
         public Trainee(ref XElement trainee)
             : base(ref trainee)
         {
@@ -77,6 +79,8 @@ namespace ContactManager
         // Mit dieser Methode wird dem XML eine neue Person Trainee hinzugefügt
         public virtual void AddToXDocument(ref XDocument personsXml)
         {
+            // Prüfen ob die Id des Objektes einzigartig ist und wenn ja,
+            // das Objekt dem XDocumten hinzufügen
             if (base.IdIsUnique(ref personsXml))
             {
                 base.SetNewId(ref personsXml);
@@ -92,7 +96,7 @@ namespace ContactManager
             }
         }
 
-        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
+        // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind
         public override bool Equals(object obj)
         {
             return obj is Trainee trainee &&
@@ -118,6 +122,7 @@ namespace ContactManager
             return diff;
         }
 
+        // Alle Inhalte als String zurückgegeben
         public override string ToString()
         {
             return base.ToString() + ", " + 

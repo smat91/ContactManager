@@ -12,14 +12,19 @@ namespace ContactManager
 {
     public class Person
     {
-        // Variable für "ID" erstellt. Wird von XML bezogen | weitere Variablen folgen
+        // Property von "ID". Wird von XML bezogen und in XML geschrieben
+        // für die folgenden Properties gilt das selbe Prinzip
         public int id_
         {
-            // Get- und Set-Methode vorbereitet. Bezogen auf XML
+            
             get
             {
-                // return gibt einen Int zurück / Descendants liefert eine Sammlung der Nachfahrenelemente für
-                // dieses Dokument oder Element in der Reihenfolge der Dokumente.
+                // Descendants liefert eine Sammlung der Nachfahrenelemente für
+                // des im Konstruktor übergebenen XElemtent zurück.
+                // Mit dem String der Descendants über geben wird, werden nur
+                // Elemente mit diesem Namen zurück gegeben.
+                // Mit FirstOrDefault wird auf das erste Element das zurückgegeben wird
+                // zugegriffen.
                 return (int)
                     (from element in person_.Descendants("Id")
                      select element).FirstOrDefault();
@@ -27,6 +32,8 @@ namespace ContactManager
 
             private set
             {
+                // Siehe get nur das hier noch mit set Value der Wert des Elements
+                // geschrieben wird
                 (from element in person_.Descendants("Id")
                     select element).FirstOrDefault().SetValue(value);
             }
@@ -424,6 +431,7 @@ namespace ContactManager
         // XElement mit den personenbezogenen Daten
         private XElement person_;
 
+        // Kontsruktor für Person
         public Person(ref XElement person)
         {
             person_ = person;
@@ -565,6 +573,7 @@ namespace ContactManager
             return diff;
         }
 
+        // hier wird das Xelement für die Mutations-Logs erzeugt
         protected internal XElement DiffToXElement(string attribute, string valueOriginal, string valueEdited) {
             return new XElement("MutationLog",
                         new XElement("Id", id_.ToString()),
@@ -575,7 +584,18 @@ namespace ContactManager
                        );
         }
 
-        // Alle Inhalte (bspw. int) wird als String zurückgegeben.
+        // Mit dieser Methode werden die Einträge für den Mutations-Log erstellt
+        public void AddLog(List<XElement> diff, Object person)
+        {
+            foreach (XElement mutationLog in diff)
+            {
+                (person as XElement).Descendants("MutationLogs")
+                    .FirstOrDefault()
+                    .Add(mutationLog);
+            }
+        }
+
+        // Alle Inhalte als String zurückgegeben
         public override string ToString()
         {
             return  id_ + ", " + 
@@ -594,18 +614,6 @@ namespace ContactManager
                     phoneBusiness_ + ", " + 
                     phoneMob_ + ", " + 
                     eMail_;
-        }
-
-        // Mit dieser Methode werden die Einträge für den Mutations-Log erstellt
-        public void AddLog(List<XElement> diff, Object person )
-        {
-            foreach (XElement mutationLog in diff) 
-            {
-                (person as XElement).Descendants("MutationLogs")
-                    .FirstOrDefault()
-                    .Add(mutationLog);
-            }
-
         }
     }
 }
