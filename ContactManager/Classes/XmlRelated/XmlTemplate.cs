@@ -35,7 +35,6 @@ namespace ContactManager
                                 new XElement("Telefon", "",
                                     new XAttribute("Type", "mobil")),
                                 new XElement("EMail", "bsp@bsp.ch")
-
                                 ),
                             new XElement("MutationLogs", "")
                        );
@@ -111,6 +110,5 @@ namespace ContactManager
 
             return trainee;
         }
-
     }
 }

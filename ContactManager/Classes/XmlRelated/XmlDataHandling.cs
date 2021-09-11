@@ -21,20 +21,17 @@ namespace ContactManager
         private bool CheckTerm(XElement referenzElement, personType type, XElement target, string attribute, string term) 
         {
 
-            // Variable für Landesinfo anlegen 
-            CultureInfo culture = new CultureInfo("de-CH");
-
             if (!target.HasElements && target.Parent.Name.LocalName.ToString() != "Log")
             {
                 if (attribute == null)
                 {
                     // Falls kein Attribut angewählt wurde alle Einträge Prüfen
-                    return culture.CompareInfo.IndexOf(target.Value.ToString(), term, CompareOptions.IgnoreCase) >= 0;
+                    return target.Value.ToString().Contains(term, StringComparison.OrdinalIgnoreCase);
                 }
                 else
                 {
                     // Falls ein Wert übereinstimmt
-                    if (culture.CompareInfo.IndexOf(target.Value.ToString(), term, CompareOptions.IgnoreCase) >= 0)
+                    if (target.Value.ToString().Contains(term, StringComparison.OrdinalIgnoreCase))
                     {
                         if (target.HasAttributes && referenzElement.HasAttributes)
                         {
@@ -69,7 +66,7 @@ namespace ContactManager
 
         }
 
-        // Methode um alle Spalten zu ermitteln, die der gewünschte Datensatz hat
+        // Methode um alle Spalten zu ermitteln, die der übergebene Datensatz hat
         public XElement[] GetColumns(personType type)
         {
             XmlTemplate xmlTemplate = new XmlTemplate();
@@ -89,7 +86,8 @@ namespace ContactManager
             }
 
             // Liest alle XElemente aus dem ersten XElement das dem gewünschten Typ enspricht,
-            // selbst keine Unterelemente haben und nicht zu Log gehörten aus (Spalten in der Tabelle)
+            // selbst keine Unterelemente haben und nicht zu Log oder MutationsLog gehörten aus
+            // (Spalten in der Tabelle)
             return template.Descendants().
                 Where(x => !x.HasElements &&
                             x.Name.LocalName.ToString() != "Logs" &&
@@ -211,6 +209,7 @@ namespace ContactManager
             return ref columns[0];
         }
 
+        // Löscht ein Element anhand der zugehörigen Id
         public void DeleteElementById(ref XDocument xdocument, personType type, string id) 
         {
             IdToXElement(ref xdocument, type, id).DescendantsAndSelf().Remove();
@@ -341,17 +340,21 @@ namespace ContactManager
             return dt;
         }
 
+        // Importiert Daten aus einer CSV-Datei
         public void DataImportCsv(ref XDocument xdocument)
         {
             XmlTemplate xmlTemplate = new XmlTemplate();
 
+            // Dialog zur Fileauswahl erzeugen
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                // Grundeinstellungen am Dialog setzen
                 openFileDialog.InitialDirectory = "c:\\";
                 openFileDialog.DefaultExt = "csv";
                 openFileDialog.Filter = "CSV Files|*.csv";
                 openFileDialog.RestoreDirectory = true;
 
+                // File dialog öffnen
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     // Pfad des gewählten files einlesen
