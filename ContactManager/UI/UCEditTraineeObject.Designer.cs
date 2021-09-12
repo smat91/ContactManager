@@ -194,9 +194,9 @@ namespace ContactManager.UI
             this.label2.Location = new System.Drawing.Point(450, 303);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 50;
-            this.label2.Text = "Email:";
+            this.label2.Text = "Email:*";
             // 
             // LblEntryDate
             // 
@@ -300,9 +300,9 @@ namespace ContactManager.UI
             this.LblLastname.Location = new System.Drawing.Point(4, 114);
             this.LblLastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblLastname.Name = "LblLastname";
-            this.LblLastname.Size = new System.Drawing.Size(68, 15);
+            this.LblLastname.Size = new System.Drawing.Size(73, 15);
             this.LblLastname.TabIndex = 18;
-            this.LblLastname.Text = "Nachname:";
+            this.LblLastname.Text = "Nachname:*";
             // 
             // LblFirstname
             // 
@@ -311,9 +311,9 @@ namespace ContactManager.UI
             this.LblFirstname.Location = new System.Drawing.Point(4, 87);
             this.LblFirstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblFirstname.Name = "LblFirstname";
-            this.LblFirstname.Size = new System.Drawing.Size(57, 15);
+            this.LblFirstname.Size = new System.Drawing.Size(62, 15);
             this.LblFirstname.TabIndex = 5;
-            this.LblFirstname.Text = "Vorname:";
+            this.LblFirstname.Text = "Vorname:*";
             // 
             // TxtTitle
             // 
@@ -451,9 +451,9 @@ namespace ContactManager.UI
             this.LblPhoneBussines.Location = new System.Drawing.Point(450, 222);
             this.LblPhoneBussines.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPhoneBussines.Name = "LblPhoneBussines";
-            this.LblPhoneBussines.Size = new System.Drawing.Size(94, 15);
+            this.LblPhoneBussines.Size = new System.Drawing.Size(99, 15);
             this.LblPhoneBussines.TabIndex = 15;
-            this.LblPhoneBussines.Text = "Tel. geschäftlich:";
+            this.LblPhoneBussines.Text = "Tel. geschäftlich:*";
             // 
             // TxtPhoneBussines
             // 
@@ -471,9 +471,9 @@ namespace ContactManager.UI
             this.LblCountry.Location = new System.Drawing.Point(450, 195);
             this.LblCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCountry.Name = "LblCountry";
-            this.LblCountry.Size = new System.Drawing.Size(36, 15);
+            this.LblCountry.Size = new System.Drawing.Size(41, 15);
             this.LblCountry.TabIndex = 14;
-            this.LblCountry.Text = "Land:";
+            this.LblCountry.Text = "Land:*";
             // 
             // TxtCountry
             // 
@@ -526,9 +526,9 @@ namespace ContactManager.UI
             this.LbLCity.Location = new System.Drawing.Point(450, 141);
             this.LbLCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LbLCity.Name = "LbLCity";
-            this.LbLCity.Size = new System.Drawing.Size(27, 15);
+            this.LbLCity.Size = new System.Drawing.Size(32, 15);
             this.LbLCity.TabIndex = 34;
-            this.LbLCity.Text = "Ort:";
+            this.LbLCity.Text = "Ort:*";
             // 
             // TxtCity
             // 
@@ -547,9 +547,9 @@ namespace ContactManager.UI
             this.LblNumber.Location = new System.Drawing.Point(450, 114);
             this.LblNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNumber.Name = "LblNumber";
-            this.LblNumber.Size = new System.Drawing.Size(58, 15);
+            this.LblNumber.Size = new System.Drawing.Size(63, 15);
             this.LblNumber.TabIndex = 12;
-            this.LblNumber.Text = "Nummer:";
+            this.LblNumber.Text = "Nummer:*";
             // 
             // TxtNumber
             // 
@@ -567,9 +567,9 @@ namespace ContactManager.UI
             this.lblStreet.Location = new System.Drawing.Point(450, 87);
             this.lblStreet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStreet.Name = "lblStreet";
-            this.lblStreet.Size = new System.Drawing.Size(46, 15);
+            this.lblStreet.Size = new System.Drawing.Size(51, 15);
             this.lblStreet.TabIndex = 11;
-            this.lblStreet.Text = "Strasse:";
+            this.lblStreet.Text = "Strasse:*";
             // 
             // TxtStreet
             // 

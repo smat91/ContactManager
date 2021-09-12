@@ -316,7 +316,7 @@ namespace ContactManager
         private void PixImport_Click(object sender, EventArgs e)
         {
             xmlDataHandling.DataImportCsv(ref xdocument);
-            (Form1.Instance.PnlContainerMain.Controls["UCDashboard"] as UI.UCDashboard).LoadDashboard();
+            CmdHome_Click(sender, e);
         }
     }
 }

@@ -275,5 +275,10 @@ namespace ContactManager.UI
         {
             CmdShowLog.Enabled = (DgvLogs.SelectedCells.Count > 0);
         }
+
+        private void LblFirstname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

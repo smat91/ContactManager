@@ -34,7 +34,7 @@ namespace ContactManager
                                     new XAttribute("Type", "geschäftlich")),
                                 new XElement("Telefon", "",
                                     new XAttribute("Type", "mobil")),
-                                new XElement("EMail", "bsp@bsp.ch")
+                                new XElement("EMail", "")
                                 ),
                             new XElement("MutationLogs", "")
                        );

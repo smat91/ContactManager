@@ -462,10 +462,17 @@ namespace ContactManager
             id_ = (idList.Count() > 0) ? 1 + (int)idList.Last() : 1;
         }
 
-        // Prüfen ob mindestens Name und Vorname eingegeben wurden
+        // Prüfen ob Minimalangaben eingegeben wurden
         public bool CheckMinimalInforamtion() 
         {
-            return firstname_.Length >= 2 && lastname_.Length >= 2; 
+            return  firstname_.Length >= 2 &&
+                    lastname_.Length >= 2 &&
+                    street_.Length >= 2 &&
+                    number_.Length >= 1 &&
+                    city_.Length >= 2 &&
+                    country_.Length >= 2 &&
+                    phoneBusiness_.Length >= 2 &&
+                    eMail_.Length >= 2;
         }
 
         // Hier wird der Vergleich gemacht, ob die Instanzen gleich sind wie im XML, wenn nicht, dann kommt "false"
