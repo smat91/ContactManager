@@ -63,7 +63,7 @@ Quelle: Semesterprojekt "contact manager", Aufgabenstellung (2021, Version 1.4).
 
 Wir bedanken uns ganz herzlich an das ZbW und an Herr Palmer für die Zeit und die Möglichkeit, so ein Projekt in Angriff zu nehmen und es von Grund auf aufzubauen. Diese Erfahrung war notwendig um Theorie und Praxis zu fusionieren. Wir sind an Problemen gestossen und haben überlegt und getüftelt, wie wir es lösen können und wenn wir es geschafft haben, war die Freude gross.
 
-Ganz herzlich bedanken wir uns an unsere Testpersonen, welche sich die paar Minuten genommen haben, um das Programm zu benutzen. So konnten wir firschen Wind reinbringen und das Programm von einem anderen Blickwinkel betrachten.
+Ganz herzlich bedanken wir uns an unsere Testpersonen, welche sich die paar Minuten genommen haben, um das Programm zu benutzen. So konnten wir frischen Wind reinbringen und das Programm von einem anderen Blickwinkel betrachten.
 
 Ein grosses Dankeschön geht an unser Team. Die Zusammenarbeit war sehr angenehmen und die individuellen Erfahrungen, welche wir alle einbringen konnten, war mehr als nützlich. Der Background war sehr durchmischt, so dass wir unsere Erfahrungen aus dem IT Bereich, aus dem Verkaufsbereich und aus dem kaufmännischen Bereich geteilt haben und somit sehr vieles für unsere IT-Ausbildung mitnehmen konnten.
 
