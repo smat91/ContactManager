@@ -87,25 +87,42 @@ namespace ContactManager.UI
                 case 1:
                     Form1.Instance.PnlContainerMain.Controls["UCCustomer"].BringToFront();
                     Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
-                    (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).DataSource =
-                     xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
 
+                    var dtCustomer = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+
+                    if (dtCustomer.Columns.Count > 0)
+                    {
+                        dtCustomer.DefaultView.Sort = "Id ASC";
+                        (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).DataSource = dtCustomer;
+                    }
                     break;
                     
                 // case employee
                 case 2:
                     Form1.Instance.PnlContainerMain.Controls["UCEmployee"].BringToFront();
                     Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
-                    (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).DataSource =
-                        xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.employee);
+
+                    var dtEmployee = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.employee);
+
+                    if (dtEmployee.Columns.Count > 0)
+                    {
+                        dtEmployee.DefaultView.Sort = "Id ASC";
+                        (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).DataSource = dtEmployee;
+                    }
                     break;
 
                 // case trainee
                 case 3:
                     Form1.Instance.PnlContainerMain.Controls["UCTrainee"].BringToFront();
                     Form1.Instance.PnlContainerTop.Controls["UCTopBarResults"].BringToFront();
-                    (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).DataSource =
-                        xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+
+                    var dtTrainee = xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+
+                    if (dtTrainee.Columns.Count > 0)
+                    {
+                        dtTrainee.DefaultView.Sort = "Id ASC";
+                        (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).DataSource = dtTrainee;
+                    }
                     break;
 
                 // default 

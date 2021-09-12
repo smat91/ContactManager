@@ -291,34 +291,56 @@ namespace ContactManager.UI
             {
                 // case customer
                 case 1:
-                    (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].
-                        Controls["DgvCustomer"] as DataGridView).DataSource = xmlDataHandling.SearchInXDocument(
-                            ref xdocument_,
-                            XmlDataHandling.personType.customer,
-                            TxtSearch.Text,
-                            (string)CmbFilter.SelectedItem);
+                    var dtCutsomer = xmlDataHandling.SearchInXDocument(
+                                ref xdocument_,
+                                XmlDataHandling.personType.customer,
+                                TxtSearch.Text,
+                                (string)CmbFilter.SelectedItem);
 
-                    xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+                    if (dtCutsomer.Columns.Count > 0)
+                    {
+                        dtCutsomer.DefaultView.Sort = "Id ASC";
+
+                        (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].
+                        Controls["DgvCustomer"] as DataGridView).DataSource = dtCutsomer;
+                    }
+
                     break;
 
                 // case employee
                 case 2:
-                    (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].
-                         Controls["DgvEmployee"] as DataGridView).DataSource = xmlDataHandling.SearchInXDocument(
-                             ref xdocument_,
-                             XmlDataHandling.personType.employee,
-                             TxtSearch.Text,
-                             (string)CmbFilter.SelectedItem);
+                    var dtEmployee = xmlDataHandling.SearchInXDocument(
+                                 ref xdocument_,
+                                 XmlDataHandling.personType.employee,
+                                 TxtSearch.Text,
+                                 (string)CmbFilter.SelectedItem);
+
+                    if (dtEmployee.Columns.Count > 0)
+                    {
+                        dtEmployee.DefaultView.Sort = "Id ASC";
+
+                        (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].
+                        Controls["DgvEmployee"] as DataGridView).DataSource = dtEmployee;
+                    }
+
                     break;
 
                 // case trainee
                 case 3:
-                    (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].
-                         Controls["DgvTrainee"] as DataGridView).DataSource = xmlDataHandling.SearchInXDocument(
-                             ref xdocument_,
-                             XmlDataHandling.personType.trainee,
-                             TxtSearch.Text,
-                             (string)CmbFilter.SelectedItem);
+                    var dtTrainee = xmlDataHandling.SearchInXDocument(
+                                 ref xdocument_,
+                                 XmlDataHandling.personType.trainee,
+                                 TxtSearch.Text,
+                                 (string)CmbFilter.SelectedItem);
+
+                    if (dtTrainee.Columns.Count > 0)
+                    {
+                        dtTrainee.DefaultView.Sort = "Id ASC";
+
+                        (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].
+                        Controls["DgvTrainee"] as DataGridView).DataSource = dtTrainee;
+                    }
+
                     break;
 
                 // default 
