@@ -45,8 +45,8 @@ namespace ContactManager
                     ++loginTrys;
                     TxtPassword.Clear();
 
-                    string message = $"Password or username is invalid. Try {loginTrys} of 3.";
-                    string caption = "Error detected in input";
+                    string message = $"Benutzername oder Passwort ist falsch. Versuch {loginTrys} von 3.";
+                    string caption = "Falsche Benutzerdaten";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
 
                     DialogResult  result = MessageBox.Show(message, caption, buttons);
