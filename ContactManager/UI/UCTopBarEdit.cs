@@ -94,6 +94,7 @@ namespace ContactManager.UI
                     {
                         dtCustomer.DefaultView.Sort = "Id ASC";
                         (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).DataSource = dtCustomer;
+                        (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).AutoResizeColumns();
                     }
                     break;
                     
@@ -108,6 +109,7 @@ namespace ContactManager.UI
                     {
                         dtEmployee.DefaultView.Sort = "Id ASC";
                         (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).DataSource = dtEmployee;
+                        (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).AutoResizeColumns();
                     }
                     break;
 
@@ -122,6 +124,7 @@ namespace ContactManager.UI
                     {
                         dtTrainee.DefaultView.Sort = "Id ASC";
                         (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).DataSource = dtTrainee;
+                        (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).AutoResizeColumns();
                     }
                     break;
 

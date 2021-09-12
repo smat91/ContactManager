@@ -303,6 +303,8 @@ namespace ContactManager.UI
 
                         (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].
                         Controls["DgvCustomer"] as DataGridView).DataSource = dtCutsomer;
+                        (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].
+                        Controls["DgvCustomer"] as DataGridView).AutoResizeColumns();
                     }
 
                     break;
@@ -321,6 +323,8 @@ namespace ContactManager.UI
 
                         (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].
                         Controls["DgvEmployee"] as DataGridView).DataSource = dtEmployee;
+                        (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].
+                        Controls["DgvEmployee"] as DataGridView).AutoResizeColumns();
                     }
 
                     break;
@@ -339,6 +343,8 @@ namespace ContactManager.UI
 
                         (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].
                         Controls["DgvTrainee"] as DataGridView).DataSource = dtTrainee;
+                        (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].
+                        Controls["DgvTrainee"] as DataGridView).AutoResizeColumns();
                     }
 
                     break;

@@ -35,6 +35,7 @@ namespace ContactManager.UI
             {
                 dt.DefaultView.Sort = "Id ASC";
                 DgvTrainee.DataSource = dt;
+                DgvTrainee.AutoResizeColumns();
             }
         }
     }
