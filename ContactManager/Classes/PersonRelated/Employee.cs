@@ -264,7 +264,7 @@ namespace ContactManager
             {
                 return (string)
                   (from element in employee_.Descendants("Telefon").
-                   Where(x => x.Attribute("Type").Value == "Privat")
+                   Where(x => x.Attribute("Type").Value == "privat")
                    select element).FirstOrDefault();
             }
 
@@ -273,7 +273,7 @@ namespace ContactManager
                 if (value != null && (value.Length > 0 || value == citizenship_))
                 {
                     (from element in employee_.Descendants("Telefon").
-                     Where(x => x.Attribute("Type").Value == "Privat")
+                     Where(x => x.Attribute("Type").Value == "privat")
                      select element).FirstOrDefault().SetValue(value);
                 }
                 else
