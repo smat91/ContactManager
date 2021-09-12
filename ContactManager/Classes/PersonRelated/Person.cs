@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -83,7 +84,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && !value.Any(char.IsDigit))
+                if (value != null && (!value.Any(char.IsDigit) || value == title_))
                 {
                     (from element in person_.Descendants("Titel")
                      select element).FirstOrDefault().SetValue(value);
@@ -163,7 +164,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.All(char.IsLetter))
+                if (value != null && (value.All(char.IsLetter) || value == sex_))
                 {
                     (from element in person_.Descendants("Geschlecht")
                      select element).FirstOrDefault().SetValue(value);
@@ -190,7 +191,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && !value.Any(char.IsDigit))
+                if (value != null && (!value.Any(char.IsDigit) || value == function_))
                 {
                     (from element in person_.Descendants("Funktion")
                      select element).FirstOrDefault().SetValue(value);
@@ -217,7 +218,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.All(char.IsLetter))
+                if (value != null && (value.All(char.IsLetter) || value == street_))
                 {
                     (from element in person_.Descendants("Strasse")
                      select element).FirstOrDefault().SetValue(value);
@@ -244,7 +245,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.Length > 0)
+                if (value != null && (value.Length > 0 || value == number_))
                 {
                     (from element in person_.Descendants("Nummer")
                      select element).FirstOrDefault().SetValue(value);
@@ -271,7 +272,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.All(char.IsLetter))
+                if (value != null && (!value.Any(char.IsDigit) || value == city_))
                 {
                     (from element in person_.Descendants("Ort")
                      select element).FirstOrDefault().SetValue(value);
@@ -327,7 +328,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.All(char.IsLetter))
+                if (value != null && (value.All(char.IsLetter) || value == country_))
                 {
                     (from element in person_.Descendants("Land")
                      select element).FirstOrDefault().SetValue(value);
@@ -355,7 +356,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && !value.Any(char.IsLetter))
+                if (value != null && (!value.Any(char.IsLetter) || value == phoneBusiness_))
                 {
                     (from element in person_.Descendants("Telefon").
                     Where(x => x.Attribute("Type").Value == "geschäftlich")
@@ -384,7 +385,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && !value.Any(char.IsLetter))
+                if (value != null && (!value.Any(char.IsLetter) || value == phoneMob_))
                 {
                     (from element in person_.Descendants("Telefon").
                    Where(x => x.Attribute("Type").Value == "mobil")
@@ -412,7 +413,9 @@ namespace ContactManager
 
             set
             {
-                if (value != null && new EmailAddressAttribute().IsValid(value))
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+
+                if (value != null && (regex.Match(value).Success || value == eMail_))
                 {
                     (from element in person_.Descendants("EMail")
                      select element).FirstOrDefault().SetValue(value);

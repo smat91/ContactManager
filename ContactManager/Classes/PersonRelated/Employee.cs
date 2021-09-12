@@ -60,7 +60,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && !value.Any(char.IsDigit))
+                if (value != null && (!value.Any(char.IsDigit) || value == department_))
                 {
                     (from element in employee_.Descendants("Abteilung")
                      select element).FirstOrDefault().SetValue(value);
@@ -87,7 +87,7 @@ namespace ContactManager
 
             set
             { 
-                if (value != null && value.Length > 0 && !value.Any(char.IsLetter))
+                if (value != null && (!value.Any(char.IsLetter) || value == insuranceNumber_))
                 {
                     (from element in employee_.Descendants("Versicherungsnummer")
                      select element).FirstOrDefault().SetValue(value);
@@ -114,7 +114,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.All(char.IsLetter))
+                if (value != null && (value.All(char.IsLetter) || value == citizenship_))
                 {
                     (from element in employee_.Descendants("Nationalität")
                      select element).FirstOrDefault().SetValue(value);
@@ -270,7 +270,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null)
+                if (value != null && (value.Length > 0 || value == citizenship_))
                 {
                     (from element in employee_.Descendants("Telefon").
                      Where(x => x.Attribute("Type").Value == "Privat")

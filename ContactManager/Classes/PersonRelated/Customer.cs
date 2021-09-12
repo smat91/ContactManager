@@ -23,7 +23,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && value.Length > 0)
+                if (value != null && (value.Length > 0 || value == companyName_))
                 {
                     (from element in customer_.Descendants("Firmenname")
                      select element).FirstOrDefault().SetValue(value);
@@ -93,7 +93,7 @@ namespace ContactManager
 
             set
             {
-                if (value != null && !value.Any(char.IsLetter))
+                if (value != null && (!value.Any(char.IsLetter) || value == companyName_))
                 {
                     (from element in customer_.Descendants("Fax")
                      select element).FirstOrDefault().SetValue(value);
