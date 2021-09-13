@@ -1,4 +1,126 @@
-Personentyp,Status,Begrüssung,Titel,Vorname,Nachname,Geschlecht,Funktion,Firmenname,Kundentyp,Strasse,Nummer,Land,Ort,PLZ,Telefon geschäftlich,Telefon mobil,Telefon privat,Fax,EMail,Geburtsdatum,Abteilung,Versicherungsnummer,Nationalität,Eintrittsdatum,Austrittsdatum,Beschäftigungsgrad,Kaderstufe,Lehrjahre,Lehrjahr
-Kunde,Aktiv,Herr,Dr,Max,Muster,männlich,Verkaufsleiter,Test AG,A,Oberdorfstrasse,6,Schweiz,Luzern,8000,+41-78-746-88-88,+41-78-746-88-88, ,+41-78-746-88-88,max.muster@admin.ch,, , , , ,,,,,
-Mitarbeiter,Aktiv,Frau, ,Anna,Reichelt,weiblich,Verkaufsleiter, , ,Nordstrasse,6,Schweiz,Goldach,9403,+41-78-746-88-88,+41-78-746-88-88,+41-78-746-88-88, ,anna.bolika@verkauf.ch,15.01.1980,Verkauf,123.1234.1234.13,Schweiz,02.01.2015,,80,2,,
-Lernender,Aktiv,Herr, ,Mario,Richter,männlich,Lernender Elektroniker, , ,Gäbeliweg,6,Schweiz,Kriessern,9462,+41-78-746-88-88,+41-78-746-88-88,+41-78-746-88-88, ,mario.richter@produktion.ch,15.01.2005,Prüffeld,123.1234.1234.21,Schweiz,02.08.2020,,100,0,4,4
+﻿Personentyp;Status;Begrüssung;Titel;Vorname;Nachname;Geschlecht;Funktion;Firmenname;Kundentyp;Strasse;Nummer;Land;Ort;PLZ;Telefon geschäftlich;Telefon mobil;Telefon privat;Fax;EMail;Geburtsdatum;Abteilung;Versicherungsnummer;Nationalität;Eintrittsdatum;Austrittsdatum;Beschäftigungsgrad;Kaderstufe;Lehrjahre;Lehrjahr
+Kunde;Aktiv;Frau;;Helene;Lederer;weiblich;Verkauf;Matrox;E;Froschkönigweg;6;Deutschland;Köln;50733;87126534;967584483;;;lele@lederer-world.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Diana;Dietrich;weiblich;Einkauf;Epson;C;Waidmarkt;54;Deutschland;Wiesbaden;65199;999657324;10684937;;;diedietrich@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Sarah;Badel;weiblich;Einkaufsleitung;Dell;C;Langweidenstraße;85f;Deutschland;Köln;51147;2857204;10275748;;;s.badel@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Andrea;Elson;weiblich;Verkaufsleitung;Terratec;E;Herzog-Alf-Weg;8;Deutschland;Hamburg;20459;;564736540;;;elson@elsons-laedchen.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Gabrielle;Glaister;weiblich;Technischer Support;Epson;B;Simrockallee;9;Deutschland;Bonn;53227;29786682;9987890;;;gabyglaister@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Helene;Waring;weiblich;Rechnungswesen;Samsung;E;Merkenicher Ringstraße;6;Deutschland;Köln;51103;47382765;879685740;;;waring@polstermoebel-schmidt.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Diana;Brisebois;weiblich;Verkauf;Matrox;C;Bismarckstraße;5;Deutschland;Siegburg;53721;57483910;197867580;;;danielle@tricatel.fr;;;;;;;;;;
+Kunde;Aktiv;Frau;;Sarah;May;weiblich;Einkauf;Microsoft;C;In der Daslade;1;Deutschland;Leverkusen;51373;197867513;38295647;;;mayday@pc-helfer-leverkusen.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Andrea;Lenhart;weiblich;Einkaufsleitung;Sony;E;Mozartstraße;485;Deutschland;Leverkusen;51371;23142312;10395738;;;heidi@montana-dreaming.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Gabrielle;Masur;weiblich;Verkaufsleitung;Matrox;B;Up den Wiemen;52;Deutschland;Hamburg;22609;37685940;28547639;;;masur@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Miriam;Steuer;weiblich;Technischer Support;Acer;D;Langweidenstraße;783;Deutschland;Frankfurt Main;60386;97860927;16453271;;;paul.steuer@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Danielle;Kay;weiblich;Rechnungswesen;Samsung;C;Gutzkowstraße;8;Deutschland;Hamburg;21079;96857682;28675942;;;kay@web-postfaecher.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Margarete;Penner;weiblich;Verkauf;Terratec;B;Von-Lapp-Straße;4;Deutschland;Bonn;53125;19463827;97867261;;;penner@lola.com;;;;;;;;;;
+Kunde;Aktiv;Frau;;Anna;Rasche;weiblich;Einkauf;Epson;D;Boxgraben;56;Deutschland;Aachen;52078;96857486;87926715;;;dave@com-cafe.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Irene;Lukas;weiblich;Einkaufsleitung;Acer;C;Max-Hartig-Weg;6;Deutschland;Frankfurt Main;60386;97860231;27681930;;;k.lukas@lola.com;;;;;;;;;;
+Kunde;Aktiv;Frau;;Heidi;Sim;weiblich;Verkaufsleitung;betamax;E;Lobositzstraße;87;Deutschland;Köln;51103;18796851;4437193;;;gerald.s@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Jessica;Kerr;weiblich;Technischer Support;Matrox;E;Brander Heide;78;Deutschland;Aachen;52066;67581930;26574619;;;anette.kerr@modehaus-kerr-aachen.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Natalie;Fleischer;weiblich;Rechnungswesen;Canon;B;Kriemhildstraße;78;Deutschland;Hamburg;21109;96847392;7869237;;;fleischer@web-postfaecher.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Lisa;Kaufmann;weiblich;Verkauf;Epson;C;Fabriciusstieg;52;Deutschland;Hamburg;20257;98362781;37586472;;;andreas.kaufmann@zmuda.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Marion;Stoller;weiblich;Einkauf;Asus;A;Voltastraße;876;Deutschland;Frankfurt Main;60388;29675813;17685743;;;alfi.stoller@lola.com;;;;;;;;;;
+Kunde;Aktiv;Frau;;Sylvia;Durdan;weiblich;Einkaufsleitung;Dell;C;Görlitzer Straße;28;Deutschland;Frankfurt Main;60313;36277361;;;;dickdurdan@lola.com;;;;;;;;;;
+Kunde;Aktiv;Frau;;Annette;Baden-Semper;weiblich;Verkaufsleitung;Belinea;E;Brookdamm;2;Deutschland;Hamburg;20457;56473329;29186753;;;nina@web-postfaecher.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Gina;Mandan;weiblich;Technischer Support;Samsung;A;Kösener Weg;72;Deutschland;Düsseldorf;40489;19685493;29186753;;;robert.mandan@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Susanne;Scolari;weiblich;Rechnungswesen;Terratec;E;Ella-Kay-Straße ;827;Deutschland;Berlin;13357;28576462;29186753;;;peter.scolari@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Melanie;Kraft;weiblich;Verkauf;Epson;B;Hohenzollernring;78;Deutschland;Berlin;14129;18679684;29186753;;;kraft@tierhaus-kraft.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Melissa;Eiding;weiblich;Einkauf;Dell;B;Goerdelerstraße;8;Deutschland;Wiesbaden;65195;27584637;29186753;;;admin@admin.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Gudrun;Ritter;weiblich;Einkaufsleitung;betamax;C;Emschertalstraße ;2;Deutschland;Dortmund;44149;18675943;29186753;;;hannes.ritter@lola.com;;;;;;;;;;
+Kunde;Aktiv;Frau;;Mina;Adrian;weiblich;Verkaufsleitung;Belinea;D;Vulkanstraße ;;Deutschland;Köln;50677;28574635;29186753;;;iris.adrian@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Frau;;Annette;Slotky;weiblich;Technischer Support;Samsung;E;Anita-Ree-Straße;3;Deutschland;Hamburg;22087;28574635;29186753;;;slotky@zzzorro.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Arthur;Loewe;männlich;Rechnungswesen;Belinea;A;Fröbelstraße;134;Deutschland;Köln;50737;9856023452;98760438;;;admin@admin.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Felix;Adler;männlich;Verkauf;Samsung;B;Berberitzenweg;4;Deutschland;Hannover;30453;99746227;11768462;;;adler@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Johannes;Stein;männlich;Einkauf;Sony;C;Kleiner Griechenmarkt;23;Deutschland;Bonn;53111;13726583;849647286;;;johnny@hip.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Michael;Falkner;männlich;Einkaufsleitung;HP;D;Mozartstraße;21;Deutschland;Wiesbaden;65187;87126534;61969285;;;mischa24@wysiwyg.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Arnold;Kogen;männlich;Verkaufsleitung;Terratec;A;Up den Wiemen;18;Deutschland;Bonn;53179;87126534;96857385;;;admin@admin.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Benedikt;Schneider;männlich;Technischer Support;Canon;B;Neptunstraße;15;Deutschland;Hamburg;21075;87126534;304760583;;;benni@postfach-online.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Jakob;Voglin;männlich;Rechnungswesen;Fujitsu;D;Im Teich;652;Deutschland;Berlin;12487;72891174;17589375;;;voglin@berliner-tagblatt.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Martin;Stern;männlich;Verkauf;Microsoft;E;Neue ABC-Straße;58;Deutschland;Köln;50858;16547326;47294978;;;martin.stern@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Ronald;Marsch;männlich;Einkauf;Asus;A;Mittelstraße;58;Deutschland;Köln;50769;67346248;94728395;;;ronnie@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Leon;Fromkess;männlich;Einkaufsleitung;Acer;B;Keplerstraße;48a;Deutschland;Bonn;53129;17483763;91650376;;;leon.fromkess@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Willi;Schäfer;männlich;Verkaufsleitung;betamax;D;Jan-Wellem-Straße;87;Deutschland;Hamburg;22083;5685710;19786743;;;schaefer32@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Jeremias;Front;männlich;Technischer Support;Belinea;E;Reichskanzlerstraße;98;Deutschland;Hamburg;22525;19785737;71835738;;;jerry@gartenlaubenfreunde.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Simon;Wilhelms;männlich;Rechnungswesen;Samsung;A;Gustav-Freytag-Straße;2;Deutschland;Köln;51069;918574736;19684758;;;admin@admin.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Sascha;Grunpeter;männlich;Rechnungswesen;Sony;B;Pascalstraße;87;Deutschland;Bonn;52121;2759285;10894519;;;sagrun@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Alfred;Marx;männlich;Verkauf;HP;C;Gabriele-Muenter-Straße;89;Deutschland;Leverkusen;51371;10675849;27685710;;;alfred_marx@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Bernhard;Kops;männlich;Einkauf;Matrox;D;Gunther-Plüschow-Straße;5;Deutschland;Köln;50739;28795823;153424352;;;berniekops@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Marvin;Kaplan;männlich;Einkaufsleitung;Canon;A;Oskar-Schlemmer-Straße;74;Deutschland;Köln;50933;97857358;9978699;;;marvin@marc-aurel-jg-2001.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Robert;Knutt;männlich;Verkaufsleitung;Fujitsu;C;Metzgerstraße;4;Deutschland;Aachen;52076;19587238;19785673;;;robert@robert-knutt.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Robert;Reiner;männlich;Technischer Support;Microsoft;D;Pattscheider Weg;4;Deutschland;Köln;51147;19473825;154635241;;;meathead@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Paul;Grunert;männlich;Rechnungswesen;Asus;E;Jütländer Allee;5;Deutschland;Hamburg;22415;19473067;1758362;;;paul@briefmarken-hamburg.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Arthur;Free;männlich;Verkauf;Acer;A;Pferdmengesstraße;23;Deutschland;Köln;50672;10264738;13246359;;;ollifree@fc-koelle-for-ever.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Felix;Frankau;männlich;Einkauf;Dell;B;Rennbahnstraße;874;Deutschland;Wiesbaden;65207;57480399;57297867;;;nick.frank@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Johannes;Weinberger;männlich;Einkaufsleitung;betamax;C;Modersohnstraße;5;Deutschland;Berlin;10965;19786854;98675842;;;weinberger@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Michael;Mann;männlich;Verkaufsleitung;Belinea;D;Wielandplatz;7;Deutschland;Weimar;99425;1896748;186759472;;;miriam-mann@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Arnold;Locke;männlich;Technischer Support;Sony;A;Bundesgrenzschutzplatz;4;Deutschland;Bonn;53177;86758685;6905964;;;Bertie@Wooster.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Benedikt;Mills;männlich;Rechnungswesen;HP;B;Im Grund;8;Deutschland;Köln;51063;91856748;29685749;;;michael@mills-and-more.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Jakob;Dorning;männlich;Verkauf;Terratec;D;Hunnebeckweg;7;Deutschland;Münster;48147;67582978;57483657;;;dorne@hip.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Martin;Sperber;männlich;Einkauf;Canon;E;Zypressenweg;99;Deutschland;Hamburg;22457;142398079;98786029;;;milo@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Ronald;Fabrizi;männlich;Einkaufsleitung;Epson;A;Auf dem Hunnenrücken;4;Deutschland;Köln;50999;27685741;57192060;;;mario.fabrizi@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Leon;Anderson;männlich;Verkaufsleitung;Fujitsu;B;Machabäerstraße;4;Deutschland;Köln;50735;197869504;91254341;;;gretel.anderson@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Willi;Palk;männlich;Technischer Support;Asus;D;Winston-Churchill-Straße;7;Deutschland;Bonn;53129;796835460;19887960;;;anpal@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Jeremias;Kaufmann;männlich;Rechnungswesen;Acer;E;Am Alten Brauhaus;8;Deutschland;Köln;51105;473829201;37681936;;;andy@koelner-taxis.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Simon;Bussell;männlich;Verkauf;Dell;A;Hanfgartenstraße;6;Deutschland;München;81475;;91703275;;;bussell@bavaria-bank.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Sascha;Clement;männlich;Einkauf;betamax;B;Fröbelstraße;5;Deutschland;Berlin;12161;84736291;57463524;;;clem@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Alfred;Handl;männlich;Einkaufsleitung;Belinea;C;Berberitzenweg;78;Deutschland;Köln;50678;8978569;17584637;;;irenehandl@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Bernhard;Landesberg;männlich;Verkaufsleitung;Samsung;D;Kleiner Griechenmarkt;453;Deutschland;Köln;51107;19705832;19685733;;;Steve@metal-rules.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Marvin;Wendt;männlich;Technischer Support;HP;A;Froschkönigweg;478;Deutschland;Köln;50767;29671323;83746293;;;Georg@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Robert;Gross;männlich;Rechnungswesen;Terratec;C;Neptunstraße;87;Deutschland;Berlin;12621;19783060;12647366;;;m.gross@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Robert;Hirsch;männlich;Verkauf;Canon;D;Waidmarkt;57;Deutschland;Köln;50735;26453756;19574838;;;andreas.hirsch@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Paul;Hecht;männlich;Einkauf;Epson;E;Im Teich;8;Deutschland;Köln;51105;97860169;768574676;;;jessie.hecht@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Oliver;Kaminski;männlich;Einkaufsleitung;Fujitsu;A;Neue ABC-Straße;5;Deutschland;Hamburg;22607;58672901;46375483;;;mel@bancroft-and-brooks.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Nicholas;Schäfer;männlich;Verkaufsleitung;Microsoft;B;Mittelstraße;76;Deutschland;Bonn;53225;19562109;97867586;;;nati@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Eduard;Persky;männlich;Technischer Support;Asus;C;Keplerstraße;;Deutschland;Düsseldorf;40489;1867493;35462817;;;lisa.persky@kunsthaus-persky.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Georg;Karn;männlich;Rechnungswesen;Dell;E;Jan-Wellem-Straße;3;Deutschland;Köln;50668;13241735;18675290;;;karn.koeln@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Albert;Barron;männlich;Verkauf;betamax;A;Im Fuldchen;8;Deutschland;Frankfurt Main;60435;10923874;57481503;;;barron.marion@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Michael;Mull;männlich;Einkauf;Belinea;B;Rautendeleinweg;827;Deutschland;Düsseldorf;40593;95847772;37685749;;;mamu@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Robert;Singer;männlich;Einkaufsleitung;Sony;D;Neumoorstück;82;Deutschland;Hamburg;20459;286957483;16574638;;;alex@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Milo;Zagorsky;männlich;Verkaufsleitung;HP;E;Isarstraße;5;Deutschland;Hannover;30559;195748372;97867592;;;annette@zagorsky-verlag-und-druck.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Mario;Hecht;männlich;Technischer Support;Matrox;A;Schulgasse;;Deutschland;Wiesbaden;65207;17581253;19786024;;;gina.hecht@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Jakob;Kampmann;männlich;Rechnungswesen;Canon;C;Gustav-Mahler-Straße;7;Deutschland;Köln;50733;18675943;53427164;;;kampmann@computer-kampmann.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Andreas;Wolf;männlich;Verkauf;Fujitsu;E;Veilchenstieg;86;Deutschland;Hamburg;22297;;83756493;;;susi.wolf@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Mark;Barber;männlich;Einkauf;Microsoft;A;Mühlenweg;5;Deutschland;Berlin;10405;57465748;65884192;;;admin@admin.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Richard;Martin;männlich;Einkaufsleitung;Asus;B;Löwengasse;5;Deutschland;Köln;51105;91657438;16475855;;;melanie.martin@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Stefan;Zucker;männlich;Verkaufsleitung;Dell;D;Abbestraße;;Deutschland;Chemnitz;9114;57463892;17564832;;;d.zucker@zucker-suess.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Georg;Arnold;männlich;Technischer Support;Belinea;A;Industriestraße;27;Deutschland;Hamburg;21109;94768592;17564932;;;tom@mayim-bialik-fans.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Richard;Hart;männlich;Rechnungswesen;Samsung;B;Gurkenweg;8;Deutschland;Hannover;30655;;57463829;;;lisa.hart@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Michael;Ure;männlich;Verkauf;Sony;C;Lochumer Weg;28;Deutschland;Köln;50668;19675849;375847650;;;gudrun.ure@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Andreas;Anwar;männlich;Einkauf;HP;D;Putzdelle;7;Deutschland;Leverkusen;51379;19786758;95768323;;;m.anwar@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Melvin;Lembeck;männlich;Einkaufsleitung;Terratec;A;Fuldaer Straße;857;Deutschland;Frankfurt Main;60486;18695783;82868584;;;lele39@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Paul;Eles;männlich;Verkaufsleitung;Fujitsu;D;Diedenhofer Straße;87;Deutschland;Hamburg;22419;86932710;17564834;;;sandor.eles@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Richard;Voland;männlich;Technischer Support;Microsoft;E;Düsseldorfer Straße;278;Deutschland;Köln;50939;418673;85647291;;;herbert.voland@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Martin;Martin;männlich;Rechnungswesen;Acer;B;Hermesgasse;78;Deutschland;Köln;51145;96815376;27564832;;;g.martin@web-postfaecher.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Alex;Bonner;männlich;Verkauf;betamax;D;Shakespeareplatz;82;Deutschland;Berlin;14055;27564932;27564839;;;frank.bonner2@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Jonathan;Fenacolini;männlich;Einkauf;Sony;B;Josef-Hirn-Platz;872;Deutschland;Stuttgart;50597;19685723;29186753;;;anna.fenacolini@stuttgart-uni.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Stefan;Hordern;männlich;Einkaufsleitung;HP;C;Schwengelkamp;78;Deutschland;Hamburg;20255;195647382;29186753;;;michael.hordern@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;David;Dane;männlich;Verkaufsleitung;Matrox;D;Langeler Kreuzweg;78;Deutschland;Köln;51063;18574639;29186753;;;xandra@fc-koelle-for-ever.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Paul;Herbert;männlich;Technischer Support;Canon;A;Am Pulverhof;82;Deutschland;Hamburg;22045;18463728;29186753;;;philipp.herbert@lola.com;;;;;;;;;;
+Kunde;Aktiv;Herr;;Karl;Donner;männlich;Rechnungswesen;Fujitsu;C;Bebelplatz;778;Deutschland;Köln;51149;96857328;29186753;;;donner@donner-und-blitz-medien.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;David;Sadowsky;männlich;Verkauf;Microsoft;D;Colmarer Straße;72;Deutschland;Bremen;28327;29371826;29186753;;;adam.sadowsky@on-line.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Gerald;Hartman;männlich;Einkauf;Asus;E;Hamburger Hochstraße;78;Deutschland;Hamburg;22767;28574639;29186753;;;philipp@radio-bill.de;;;;;;;;;;
+Kunde;Aktiv;Herr;;Thomas;Piekarsky;männlich;Einkaufsleitung;Acer;A;Quinxer Straße;78;Deutschland;Aachen;52074;;29186753;;;piekarsky@web-postfaecher.de;;;;;;;;;;
+Mitarbeiter;Aktiv;Frau; ;Anna;Reichelt;weiblich;Verkaufsleitung;; ;Nordstrasse;164.9404762;Deutschland;Bonn;53121;43567890;99746228;37277385; ;anna.bolika@verkauf.ch;;Support;123.1234.1234.13;Deutschland;42006;;80;2;;
+Mitarbeiter;Aktiv;Frau;;Connie;Michaels;weiblich;Technischer Support;;;Im Grund;120.3571429;Deutschland;St. Augustin;53756;12345655;55819269;19467383;;connie.michaels@beispielfirma.de;;Rechnungswesen;123.1234.1234.69;Deutschland;32254;;60;2;;
+Mitarbeiter;Aktiv;Frau;;Karin;Koppes;weiblich;Rechnungswesen;;;Hunnebeckweg;107.6190476;Deutschland;Bonn;53177;98766754;56112894;10562382;;karin.koppes@beispielfirma.de;;Vertrieb;123.1234.1234.85;Deutschland;35925;;80;4;;
+Mitarbeiter;Aktiv;Frau;;Luise;Klammer;weiblich;Verkauf;;;Am Alten Brauhaus;69.4047619;Deutschland;Bonn;53113;12341756;86756251;2547881.1;;luise.lehne@beispielfirma.de;;Vertrieb;123.1234.1234.133;Deutschland;37094;;80;5;;
+Mitarbeiter;Aktiv;Herr;Dr;Max;Muster;männlich;Einkauf;;;Oberdorfstrasse;171.3095238;Deutschland;Bonn;53120;43567890;19467383;39948885.3;;max.muster@admin.ch;;Geschäftsführung;123.1234.1234.134;Deutschland;;;100;0;;
+Mitarbeiter;Aktiv;Herr; ;Mario;Richter;männlich;Einkaufsleitung;; ;Fabrikstrasse;158.5714286;Deutschland;Bonn;53122;43567890;99746228;34605884.7; ;mario.richter@produktion.ch;;Rechnungswesen;123.1234.1234.21;Deutschland;44045;;60;0;;
+Mitarbeiter;Aktiv;Herr;;Hagen;Ross;männlich;Verkaufsleitung;;;Rennbahnstraße;152.202381;Deutschland;Bonn;53123;43567890;99746228;31934384.4;;hagen.ross@beispielfirma.de;;Einkauf;123.1234.1234.29;Deutschland;31461;;100;1;;
+Mitarbeiter;Aktiv;Herr;;Patrick;Roberts;männlich;Technischer Support;;;Modersohnstraße;145.8333333;Deutschland;Bonn;53229;98761462;99746228;29262884.1;;p.roberts@beispielfirma.de;;Vertrieb;123.1234.1234.37;Deutschland;32436;;80;2;;
+Mitarbeiter;Aktiv;Herr;;Stefan;Hummer;männlich;Rechnungswesen;;;Wielandplatz;139.4642857;Deutschland;Bonn;53175;98120421;99746228;26591383.8;;stefanhummer@beispielfirma.de;;Verwaltung;123.1234.1234.45;Deutschland;33817;;60;3;;
+Mitarbeiter;Aktiv;Herr;;David;Gerhard;männlich;Verkauf;;;Merkenicher Ringstraße;133.0952381;Deutschland;Bonn;52115;67294738;48892768;23919883.5;;dave.g@beispielfirma.de;;Geschäftsführung;123.1234.1234.53;Deutschland;31971;;100;4;;
+Mitarbeiter;Aktiv;Herr;;Eduard;Weinert;männlich;Einkauf;;;Bundesgrenzschutzplatz;126.7261905;Deutschland;Bonn;53177;78646193;32675491;19467383;;eduard.weinert@beispielfirma.de;;Support;123.1234.1234.61;Deutschland;39466;;80;1;;
+Mitarbeiter;Aktiv;Herr;;Bernd;Osser;männlich;Einkaufsleitung;;;Bismarckstraße;113.9880952;Deutschland;Köln;50732;27913020;93728815;19467383;;b.osser@beispielfirma.de;;Einkauf;123.1234.1234.77;Deutschland;34855;;100;3;;
+Mitarbeiter;Aktiv;Herr;;Alexander;Wilding;männlich;Verkaufsleitung;;;Zypressenweg;101.25;Deutschland;Bonn;53229;28652947;12432673;10562382;;alex.wilding@beispielfirma.de;;Verwaltung;123.1234.1234.93;Deutschland;38898;;60;1;;
+Mitarbeiter;Aktiv;Herr;;Peter;Schmidt;männlich;Technischer Support;;;Auf dem Hunnenrücken;94.88095238;Deutschland;Köln;50997;68371020;17582964;7890881.7;;p.schmidt@beispielfirma.de;;Geschäftsführung;123.1234.1234.101;Deutschland;37199;;100;5;;
+Mitarbeiter;Aktiv;Herr;;Ole;Müller;männlich;Rechnungswesen;;;Machabäerstraße;88.51190476;Deutschland;Köln;50823;682037741;99234713;5219381.4;;o.mueller@beispielfirma.de;;Support;123.1234.1234.109;Deutschland;36221;;80;0;;
+Mitarbeiter;Aktiv;Herr;;Wilhelm;Meier;männlich;Verkauf;;;In der Daslade;82.14285714;Deutschland;Bonn;53229;91821573;19684375;2547881.1;;willi.meier@beispielfirma.de;;Rechnungswesen;123.1234.1234.117;Deutschland;34548;;60;5;;
+Mitarbeiter;Aktiv;Herr;;Martin;Schiff;männlich;Einkauf;;;Winston-Churchill-Straße;75.77380952;Deutschland;Bonn;53127;65744583;82675271;2547881.1;;martin.schiff@beispielfirma.de;;Einkauf;123.1234.1234.125;Deutschland;37527;;100;4;;
+Mitarbeiter;Aktiv;Herr;;Kevin;Remsen;männlich;Einkaufsleitung;;;Hanfgartenstraße;63.03571429;Deutschland;Köln;50672;94128882;86957248;2547881.1;;kevin.remsen@beispielfirma.de;;Verwaltung;123.1234.1234.141;Deutschland;37988;;60;2;;
+Lernender;Aktiv;Herr;;Bernd;Osser;männlich;Prüffeld;;;Bismarckstraße;113.9880952;Deutschland;Köln;50732;27913020;93728815;19467383;;b.osser@beispielfirma.de;;Prüffeld;123.1234.1234.77;Deutschland;34855;;100;3;1;4
+Lernender;Aktiv;Herr;;Alexander;Wilding;männlich;Prüffeld;;;Zypressenweg;101.25;Deutschland;Bonn;53229;28652947;12432673;10562382;;alex.wilding@beispielfirma.de;;Prüffeld;123.1234.1234.93;Deutschland;38898;;100;1;2;4
+Lernender;Aktiv;Herr;;Peter;Schmidt;männlich;Prüffeld;;;Auf dem Hunnenrücken;94.88095238;Deutschland;Köln;50997;68371020;17582964;7890881.7;;p.schmidt@beispielfirma.de;;Prüffeld;123.1234.1234.101;Deutschland;37199;;100;5;3;4
+Lernender;Aktiv;Herr;;Ole;Müller;männlich;Prüffeld;;;Machabäerstraße;88.51190476;Deutschland;Köln;50823;682037741;99234713;5219381.4;;o.mueller@beispielfirma.de;;Prüffeld;123.1234.1234.109;Deutschland;36221;;100;0;4;4
+Lernender;Aktiv;Herr;;Wilhelm;Meier;männlich;Prüffeld;;;In der Daslade;82.14285714;Deutschland;Bonn;53229;91821573;19684375;2547881.1;;willi.meier@beispielfirma.de;;Prüffeld;123.1234.1234.117;Deutschland;34548;;100;5;1;4
+Lernender;Aktiv;Herr;;Martin;Schiff;männlich;Prüffeld;;;Winston-Churchill-Straße;75.77380952;Deutschland;Bonn;53127;65744583;82675271;2547881.1;;martin.schiff@beispielfirma.de;;Prüffeld;123.1234.1234.125;Deutschland;37527;;100;4;2;4
+Lernender;Aktiv;Herr;;Kevin;Remsen;männlich;Prüffeld;;;Hanfgartenstraße;63.03571429;Deutschland;Köln;50672;94128882;86957248;2547881.1;;kevin.remsen@beispielfirma.de;;Prüffeld;123.1234.1234.141;Deutschland;37988;;100;2;3;4

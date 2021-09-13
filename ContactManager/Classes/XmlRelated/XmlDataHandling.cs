@@ -156,7 +156,14 @@ namespace ContactManager
             // Die Spaltennamen der DataTable hinzufügen
             foreach (string columnName in columnNames)
             {
-                dt.Columns.Add(columnName, typeof(string));
+                if (columnName == "Id")
+                {
+                    dt.Columns.Add(columnName, typeof(int));
+                }
+                else
+                {
+                    dt.Columns.Add(columnName, typeof(string));
+                }
             }
 
             // Die Zeilen der DataTable hinzufügen
@@ -264,7 +271,14 @@ namespace ContactManager
             // Die Spaltennamen der DataTable hinzufügen
             foreach (string columnName in columnNames)
             {
-                dt.Columns.Add(columnName, typeof(string));
+                if (columnName == "Id")
+                {
+                    dt.Columns.Add(columnName, typeof(int));
+                }
+                else
+                {
+                    dt.Columns.Add(columnName, typeof(string));
+                }
             }
 
             // Die Zeilen der DataTable hinzufügen
@@ -318,7 +332,14 @@ namespace ContactManager
             // Die Spaltennamen der DataTable hinzufügen
             foreach (string column in columns)
             {
-                dt.Columns.Add(column, typeof(string));
+                if (column == "Id")
+                {
+                    dt.Columns.Add(column, typeof(int));
+                }
+                else
+                { 
+                    dt.Columns.Add(column, typeof(string));
+                }
             }
 
             // Die Zeilen der DataTable hinzufügen
@@ -364,7 +385,7 @@ namespace ContactManager
                     string[] lines = File.ReadAllLines(path, System.Text.Encoding.UTF8);
 
                     // Array mit den Header Daten erzeugen
-                    string[] headers = lines[0].Split(',').Select(x => x.Trim('\"')).ToArray();
+                    string[] headers = lines[0].Split(';').Select(x => x.Trim('\"')).ToArray();
 
                     // Template-Objekte in die die Daten Abgefüllt werden
                     XElement customer = xmlTemplate.XelementTemplateCustomer();
@@ -375,7 +396,7 @@ namespace ContactManager
                     for (int i = 1; i < lines.Count(); i++)
                     {
                         // Linie aufsplitten
-                        string[] lineContent = lines[i].Split(',').Select(x => x.Trim('\"')).ToArray();
+                        string[] lineContent = lines[i].Split(';').Select(x => x.Trim('\"')).ToArray();
 
                         // Id generieren
                         IEnumerable<XElement> idList =
@@ -393,7 +414,7 @@ namespace ContactManager
                             string attribute = "";
 
                             // prüfen ob zulesendes Element leer ist
-                            if (lineContent[j].All(char.IsWhiteSpace))
+                            if (lineContent[j].All(char.IsWhiteSpace) || lineContent[j].Length == 0)
                             {
                                 continue;
                             }
