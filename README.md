@@ -25,6 +25,8 @@ Firmenname, Geschäftsadresse, Kundentyp (A-E), Firmenkontakt
 
 Quelle: Semesterprojekt "contact manager", Aufgabenstellung (2021, Version 1.4). 
 
+__________________________________________________
+
 ### Was funktioniert:
 <b>Funktionale Anforderungen</b>
 - Erfassung von Mitarbeitenden und Kunden
@@ -43,21 +45,30 @@ Quelle: Semesterprojekt "contact manager", Aufgabenstellung (2021, Version 1.4).
 
 - Automatisches Speichern des Datenstamms auf Festplatte
 
-<b>Optionale Anforderungen</b>
+__________________________________________________
+
+<b>Optionale Anforderungen welche implementiert sind</b>
 - Mutationshistorie von Kontaktdaten: Im Dashboard implementiert
 
 - Login: Gilt als 1. Form und wenn die Daten stimmen, öffnet sich die 2. Form (Contact Manager)
 
 - Dashboard-View
 
-- Import von Kontakten im CSV-Format
+- Import von Kontakten im CSV-Format. Im Repository Ordner gibt es eine CSV-Datei, welche man als Test importieren lassen kann.
+
+<b>Optionale Anforderung welche NICHT implementiert ist</b>
+- Das Importieren von VCards haben wir nicht eingebaut.
+
+__________________________________________________
 
 <b>Nicht funktionale Anforderungen</b>
 - Die Umsetzung des "Contact Manager" erfolgte in C#, .NET und Windows-Forms Framework
 - Die Applikationsarchitektur wurde so gut wie möglich umgesetzt. Vererbungen wurden angewendet und die verschiedenen Klassen kommunizieren erfolgreich miteinander. Wir haben uns für 2 Forms entscheiden (Login und Contact Manager). Im Contact Manager haben wir dann eine allgemeine Struktur aufgebaut und danach mit UserControls gearbeitet.
 - Die Benutzbarkeit haben wir im Friends & Family-Umkreis getestet und verbessert.
 - Damit die Stabilität des Programms gewährleistet ist, haben wir durch Fehleingaben, die Fehler abgefangen und korrigiert - Abstürtze natürlich auch.
-- Die Quellcodes wurden im Programm an Stellen wo es notwendig war, ausreichend kommentiert.
+- Die Quellcodes wurden im Programm, an Stellen wo es notwendig war, ausreichend kommentiert.
+
+__________________________________________________
 
 <b>Danksagung</b>
 
