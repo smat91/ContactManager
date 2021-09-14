@@ -433,21 +433,59 @@ namespace ContactManager
                             // Daten in jeweiliges Objekt abfüllen
                             if (lineContent[0] == "Kunde")
                             {
-                                customer.Descendants(element)
-                                    .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
-                                    .FirstOrDefault().SetValue(lineContent[j]);
+                                XElement xElementCustomer = customer.Descendants(element)
+                                     .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
+                                     .FirstOrDefault();
+                                if (xElementCustomer != null)
+                                {
+                                    xElementCustomer.SetValue(lineContent[j]);
+                                }
+                                else
+                                {
+                                    string message = $"Attribut {element} im Personentyp {lineContent[0]} nicht vorhanden";
+                                    string caption = "Fehler in csv erkannt";
+                                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                                    MessageBox.Show(message, caption, buttons);
+                                }
                             }
                             else if (lineContent[0] == "Mitarbeiter")
                             {
-                                employee.Descendants(element)
+                                XElement xElementEmployee = employee.Descendants(element)
                                     .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
-                                    .FirstOrDefault().SetValue(lineContent[j]);
+                                    .FirstOrDefault();
+
+                                if (xElementEmployee != null)
+                                {
+                                    xElementEmployee.SetValue(lineContent[j]);
+                                }
+                                else
+                                {
+                                    string message = $"Attribut {element} im Personentyp {lineContent[0]} nicht vorhanden";
+                                    string caption = "Fehler in csv erkannt";
+                                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                                    MessageBox.Show(message, caption, buttons);
+                                }
                             }
                             else if (lineContent[0] == "Lernender")
                             {
-                                trainee.Descendants(element)
+                                XElement xElementTrainee = trainee.Descendants(element)
                                     .Where(x => x.HasAttributes ? x.Attribute("Type").Value == attribute : true)
-                                    .FirstOrDefault().SetValue(lineContent[j]);
+                                    .FirstOrDefault();
+
+                                if (xElementTrainee != null)
+                                {
+                                    xElementTrainee.SetValue(lineContent[j]);
+                                }
+                                else
+                                {
+                                    string message = $"Attribut {element} im Personentyp {lineContent[0]} nicht vorhanden";
+                                    string caption = "Fehler in csv erkannt";
+                                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+
+                                    MessageBox.Show(message, caption, buttons);
+                                }
                             }
                             else
                             {
