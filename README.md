@@ -56,9 +56,6 @@ __________________________________________________
 
 - Import von Kontakten im CSV-Format. Im Repository Ordner gibt es eine CSV-Datei, welche man als Test importieren lassen kann.
 
-<b>Optionale Anforderung welche NICHT implementiert ist</b>
-- Das Importieren von VCards haben wir nicht eingebaut.
-
 __________________________________________________
 
 <b>Nicht funktionale Anforderungen</b>
