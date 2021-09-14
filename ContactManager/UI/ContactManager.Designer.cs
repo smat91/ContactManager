@@ -182,7 +182,7 @@ namespace ContactManager
             this.CmdKunde.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.CmdKunde.Size = new System.Drawing.Size(164, 50);
             this.CmdKunde.TabIndex = 1;
-            this.CmdKunde.Text = "  Kunde";
+            this.CmdKunde.Text = "  Kunden";
             this.CmdKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CmdKunde.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CmdKunde.UseVisualStyleBackColor = false;

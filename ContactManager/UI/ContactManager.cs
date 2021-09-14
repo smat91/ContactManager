@@ -181,6 +181,10 @@ namespace ContactManager
 
             this.PanelContainerTop.BackColor = ColorTranslator.FromHtml("#33334c");
             this.PanelContainerMain.BackColor = ColorTranslator.FromHtml("#9B59B6");
+
+            this.CmdKunde.BackColor = ColorTranslator.FromHtml("#33334C");
+            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#33334C");
+            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
         }
 
         private void CmdKunde_Click(object sender, EventArgs e)
@@ -210,6 +214,10 @@ namespace ContactManager
 
             this.PnlContainerMain.BackColor = ColorTranslator.FromHtml("#FDC006");
             this.PanelContainerTop.BackColor = ColorTranslator.FromHtml("#FDC006");
+
+            this.CmdKunde.BackColor = ColorTranslator.FromHtml("#FDC006");
+            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#33334C");
+            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
         }
 
         private void CmdMitarbeiter_Click(object sender, EventArgs e)
@@ -239,6 +247,10 @@ namespace ContactManager
 
             this.PnlContainerMain.BackColor = ColorTranslator.FromHtml("#019587");
             this.PanelContainerTop.BackColor = ColorTranslator.FromHtml("#019587");
+
+            this.CmdKunde.BackColor = ColorTranslator.FromHtml("#33334C");
+            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#019587");
+            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
         }
 
         private void CmdLernende_Click(object sender, EventArgs e)
@@ -268,6 +280,10 @@ namespace ContactManager
 
             this.PnlContainerMain.BackColor = ColorTranslator.FromHtml("#02A8F4");
             this.PanelContainerTop.BackColor = ColorTranslator.FromHtml("#02A8F4");
+
+            this.CmdKunde.BackColor = ColorTranslator.FromHtml("#33334C");
+            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#33334C");
+            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#02A8F4");
         }
 
         
@@ -279,7 +295,10 @@ namespace ContactManager
         }
         private void CmdKunde_MouseLeave(object sender, EventArgs e)
         {
-            this.CmdKunde.BackColor = ColorTranslator.FromHtml("#33334C");
+            if (sideBarStatus != 1)
+            {
+                this.CmdKunde.BackColor = ColorTranslator.FromHtml("#33334C");
+            }
         }
 
         private void CmdMitarbeiter_MouseEnter(object sender, EventArgs e)
@@ -288,7 +307,10 @@ namespace ContactManager
         }
         private void CmdMitarbeiter_MouseLeave(object sender, EventArgs e)
         {
-            this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#33334C");
+            if (sideBarStatus != 2)
+            {
+                this.CmdMitarbeiter.BackColor = ColorTranslator.FromHtml("#33334C");
+            }
         }
 
         private void CmdLernende_MouseEnter(object sender, EventArgs e)
@@ -297,7 +319,10 @@ namespace ContactManager
         }
         private void CmdLernende_MouseLeave(object sender, EventArgs e)
         {
-            this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
+            if (sideBarStatus != 3)
+            {
+                this.CmdLernende.BackColor = ColorTranslator.FromHtml("#33334C");
+            }            
         }
         private void CmdHome_MouseEnter(object sender, EventArgs e)
         {
