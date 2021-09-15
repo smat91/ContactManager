@@ -40,7 +40,7 @@ namespace ContactManager.UI
         // Bearbeitung speichern
         private void CmdSave_Click(object sender, EventArgs e)
         {
-            //Prüfen, ob Vor-und Nachname der Person eingegeben wurde
+            //Prüfen, ob die Pflichfelder, für das Anlegen einer Person, ausgefüllt worden sind
             if ((person_ as Person).CheckMinimalInforamtion())
             {
                 // Prüfen ob Änderungen geloggt werden müssen
@@ -64,6 +64,12 @@ namespace ContactManager.UI
                 }
 
                 Form1.Instance.SaveToXml();
+
+                string message = "Die Daten wurden erfolgreich gespeichert!";
+                string caption = "Gespeichert";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(message, caption, buttons);
+
                 ReloadDataAndView();
             }
             else
