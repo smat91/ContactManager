@@ -431,46 +431,55 @@ namespace ContactManager.UI
         {
             if (CheckRowSelcected())
             {
-                switch (Form1.Instance.sideBarStatus)
-                {
-                    // case customer
-                    case 1:
-                        xmlDataHandling.DeleteElementById(ref xdocument_,
-                                                          XmlDataHandling.personType.customer,
-                                                          (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].
-                                                           Controls["DgvCustomer"] as DataGridView).SelectedCells[0].Value.ToString());
+                string message = "Möchten Sie den Datensatz wirklich löschen?";
+                string caption = "Achtung";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
 
-                        (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).DataSource =
-                            xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
-                        break;
+                var result = MessageBox.Show(message, caption, buttons);
 
-                    // case employee
-                    case 2:
-                        xmlDataHandling.DeleteElementById(ref xdocument_,
-                                                          XmlDataHandling.personType.employee,
-                                                          (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].
-                                                           Controls["DgvEmployee"] as DataGridView).SelectedCells[0].Value.ToString());
+                if (result == DialogResult.Yes)
+                { 
+                    switch (Form1.Instance.sideBarStatus)
+                    {
+                        // case customer
+                        case 1:
+                            xmlDataHandling.DeleteElementById(ref xdocument_,
+                                                              XmlDataHandling.personType.customer,
+                                                              (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].
+                                                               Controls["DgvCustomer"] as DataGridView).SelectedCells[0].Value.ToString());
 
-                        (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).DataSource =
-                            xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.employee);
-                        break;
+                            (Form1.Instance.PnlContainerMain.Controls["UCCustomer"].Controls["DgvCustomer"] as DataGridView).DataSource =
+                                xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.customer);
+                            break;
 
-                    // case trainee
-                    case 3:
-                        xmlDataHandling.DeleteElementById(ref xdocument_,
-                                                          XmlDataHandling.personType.trainee,
-                                                          (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].
-                                                           Controls["DgvTrainee"] as DataGridView).SelectedCells[0].Value.ToString());
+                        // case employee
+                        case 2:
+                            xmlDataHandling.DeleteElementById(ref xdocument_,
+                                                              XmlDataHandling.personType.employee,
+                                                              (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].
+                                                               Controls["DgvEmployee"] as DataGridView).SelectedCells[0].Value.ToString());
 
-                        (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).DataSource =
-                            xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
-                        break;
+                            (Form1.Instance.PnlContainerMain.Controls["UCEmployee"].Controls["DgvEmployee"] as DataGridView).DataSource =
+                                xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.employee);
+                            break;
 
-                    // default 
-                    default:
-                        break;
+                        // case trainee
+                        case 3:
+                            xmlDataHandling.DeleteElementById(ref xdocument_,
+                                                              XmlDataHandling.personType.trainee,
+                                                              (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].
+                                                               Controls["DgvTrainee"] as DataGridView).SelectedCells[0].Value.ToString());
+
+                            (Form1.Instance.PnlContainerMain.Controls["UCTrainee"].Controls["DgvTrainee"] as DataGridView).DataSource =
+                                xmlDataHandling.XElementToDataTable(ref xdocument_, XmlDataHandling.personType.trainee);
+                            break;
+
+                        // default 
+                        default:
+                            break;
+                    }
+                    Form1.Instance.SaveToXml();
                 }
-                Form1.Instance.SaveToXml();
             }
             else
             {

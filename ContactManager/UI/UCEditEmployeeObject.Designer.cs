@@ -164,13 +164,13 @@ namespace ContactManager.UI
             // 
             // NumLevel
             // 
-            this.NumLevel.Increment = new decimal(new int[] {
-            10,
+            this.NumLevel.Location = new System.Drawing.Point(575, 57);
+            this.NumLevel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NumLevel.Maximum = new decimal(new int[] {
+            5,
             0,
             0,
             0});
-            this.NumLevel.Location = new System.Drawing.Point(575, 57);
-            this.NumLevel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NumLevel.Name = "NumLevel";
             this.NumLevel.Size = new System.Drawing.Size(201, 23);
             this.NumLevel.TabIndex = 55;
